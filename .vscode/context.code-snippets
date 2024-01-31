@@ -1,0 +1,13 @@
+{
+    ".of(context)": {
+      "prefix": "contextOf",
+      "scope": "dart",
+      "body": [
+          "final l10n = context.l10n;"
+          "final theme = Theme.of(context);",
+          "final colorScheme = theme.colorScheme;",
+          "final textTheme = theme.textTheme;",
+      ]
+    }
+  }
+  
