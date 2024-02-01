@@ -6,7 +6,36 @@ import 'package:change_case/change_case.dart';
 import 'map.dart';
 import 'swagger/parse.dart';
 
-final String _dir = Directory.current.path + "/bin/generated/";
+final String _dir = Directory.current.path + "/lib/src/generated/";
+final String _dirDefinitions = _dir + "definitions/";
+
+final _defaults = <String, dynamic>{
+  "id": 1,
+  "rub_el_hizb_number": 1,
+};
+
+final _overrides = <String, Map<String, SwaggerDefinitionProperty>>{
+  "audiofile": {
+    "segments": _.list(_.list(_.list(_.int()))),
+  },
+};
+
+String _default(String value) => "@Default($value)";
+String _jsonKey(String name) => "@JsonKey(name: '$name')";
+String _className(String key) => key.replaceAll(" ", "").toPascalCase();
+String _fieldName(String value) {
+  if (int.tryParse(value) != null) return "key$value";
+  return value.toCamelCase();
+}
+
+void main(List<String> args) {
+  Directory(_dir).createSync(recursive: true);
+  Directory(_dirDefinitions).createSync(recursive: true);
+
+  _generateSwagger();
+
+  Process.runSync("dart", ["format", _dir]);
+}
 
 class _ {
   static SwaggerDefinitionProperty int() {
@@ -22,27 +51,7 @@ class _ {
   }
 }
 
-final _defaults = <String, dynamic>{
-  "id": 1,
-  "rub_el_hizb_number": 1,
-};
-
-final _overrides = <String, Map<String, SwaggerDefinitionProperty>>{
-  "audiofile": {
-    "segments": _.list(_.list(_.list(_.int()))),
-  },
-};
-
-String _default(String value) => "@Default($value)";
-String _jsonKey(String name) => "@JsonKey(name: '$name')";
-
-void main(List<String> args) {
-  _swagger();
-
-  Process.runSync("dart", ["format", _dir]);
-}
-
-void _swagger() {
+void _generateSwagger() {
   final swagger = Swagger.fromJson(openapiMap);
 
   for (var entry in swagger.definitions.entries) {
@@ -51,7 +60,7 @@ void _swagger() {
       definition: entry.value,
       addImports: true,
     );
-    final file = File("$_dir${result.filename}.dart");
+    final file = File("$_dirDefinitions${result.filename}.dart");
     file.writeAsStringSync(result.code);
   }
 }
@@ -131,10 +140,6 @@ $nestedClassesCode
   return (filename: filename, code: code);
 }
 
-String _className(String key) {
-  return key.replaceAll(" ", "").toPascalCase();
-}
-
 String _generatePropertyCode({
   required String key,
   required SwaggerDefinitionProperty property,
@@ -190,14 +195,6 @@ String _generatePropertyTypeCode(
       },
     ),
   );
-}
-
-String _fieldName(String value) {
-  if (int.tryParse(value) != null) {
-    return "key$value";
-  } else {
-    return value.toCamelCase();
-  }
 }
 
 String _definitionExample({
