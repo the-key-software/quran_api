@@ -30,7 +30,7 @@ mixin _$Swagger {
   List<String> get schemes => throw _privateConstructorUsedError;
   List<String> get produces => throw _privateConstructorUsedError;
   Map<String, SwaggerPath> get paths => throw _privateConstructorUsedError;
-  Map<String, SwaggerDefinition> get definitions =>
+  Map<String, SwaggerDefinitionPropertyObject> get definitions =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -52,7 +52,7 @@ abstract class $SwaggerCopyWith<$Res> {
       List<String> schemes,
       List<String> produces,
       Map<String, SwaggerPath> paths,
-      Map<String, SwaggerDefinition> definitions});
+      Map<String, SwaggerDefinitionPropertyObject> definitions});
 
   $SwaggerXStoplightCopyWith<$Res> get xStoplight;
   $SwaggerInfoCopyWith<$Res> get info;
@@ -117,7 +117,7 @@ class _$SwaggerCopyWithImpl<$Res, $Val extends Swagger>
       definitions: null == definitions
           ? _value.definitions
           : definitions // ignore: cast_nullable_to_non_nullable
-              as Map<String, SwaggerDefinition>,
+              as Map<String, SwaggerDefinitionPropertyObject>,
     ) as $Val);
   }
 
@@ -154,7 +154,7 @@ abstract class _$$SwaggerImplCopyWith<$Res> implements $SwaggerCopyWith<$Res> {
       List<String> schemes,
       List<String> produces,
       Map<String, SwaggerPath> paths,
-      Map<String, SwaggerDefinition> definitions});
+      Map<String, SwaggerDefinitionPropertyObject> definitions});
 
   @override
   $SwaggerXStoplightCopyWith<$Res> get xStoplight;
@@ -219,7 +219,7 @@ class __$$SwaggerImplCopyWithImpl<$Res>
       definitions: null == definitions
           ? _value._definitions
           : definitions // ignore: cast_nullable_to_non_nullable
-              as Map<String, SwaggerDefinition>,
+              as Map<String, SwaggerDefinitionPropertyObject>,
     ));
   }
 }
@@ -236,7 +236,7 @@ class _$SwaggerImpl implements _Swagger {
       required final List<String> schemes,
       required final List<String> produces,
       required final Map<String, SwaggerPath> paths,
-      required final Map<String, SwaggerDefinition> definitions})
+      required final Map<String, SwaggerDefinitionPropertyObject> definitions})
       : _schemes = schemes,
         _produces = produces,
         _paths = paths,
@@ -281,9 +281,9 @@ class _$SwaggerImpl implements _Swagger {
     return EqualUnmodifiableMapView(_paths);
   }
 
-  final Map<String, SwaggerDefinition> _definitions;
+  final Map<String, SwaggerDefinitionPropertyObject> _definitions;
   @override
-  Map<String, SwaggerDefinition> get definitions {
+  Map<String, SwaggerDefinitionPropertyObject> get definitions {
     if (_definitions is EqualUnmodifiableMapView) return _definitions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_definitions);
@@ -351,7 +351,7 @@ abstract class _Swagger implements Swagger {
       required final List<String> schemes,
       required final List<String> produces,
       required final Map<String, SwaggerPath> paths,
-      required final Map<String, SwaggerDefinition>
+      required final Map<String, SwaggerDefinitionPropertyObject>
           definitions}) = _$SwaggerImpl;
 
   factory _Swagger.fromJson(Map<String, dynamic> json) = _$SwaggerImpl.fromJson;
@@ -375,7 +375,7 @@ abstract class _Swagger implements Swagger {
   @override
   Map<String, SwaggerPath> get paths;
   @override
-  Map<String, SwaggerDefinition> get definitions;
+  Map<String, SwaggerDefinitionPropertyObject> get definitions;
   @override
   @JsonKey(ignore: true)
   _$$SwaggerImplCopyWith<_$SwaggerImpl> get copyWith =>
@@ -1837,266 +1837,6 @@ abstract class _SwaggerXStoplight implements SwaggerXStoplight {
       throw _privateConstructorUsedError;
 }
 
-SwaggerDefinition _$SwaggerDefinitionFromJson(Map<String, dynamic> json) {
-  return _SwaggerDefinition.fromJson(json);
-}
-
-/// @nodoc
-mixin _$SwaggerDefinition {
-  String get title => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  List<String> get required => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get example => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-  Map<String, SwaggerDefinitionProperty> get properties =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $SwaggerDefinitionCopyWith<SwaggerDefinition> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SwaggerDefinitionCopyWith<$Res> {
-  factory $SwaggerDefinitionCopyWith(
-          SwaggerDefinition value, $Res Function(SwaggerDefinition) then) =
-      _$SwaggerDefinitionCopyWithImpl<$Res, SwaggerDefinition>;
-  @useResult
-  $Res call(
-      {String title,
-      String type,
-      List<String> required,
-      Map<String, dynamic>? example,
-      @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-      Map<String, SwaggerDefinitionProperty> properties});
-}
-
-/// @nodoc
-class _$SwaggerDefinitionCopyWithImpl<$Res, $Val extends SwaggerDefinition>
-    implements $SwaggerDefinitionCopyWith<$Res> {
-  _$SwaggerDefinitionCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = null,
-    Object? type = null,
-    Object? required = null,
-    Object? example = freezed,
-    Object? properties = null,
-  }) {
-    return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      required: null == required
-          ? _value.required
-          : required // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      example: freezed == example
-          ? _value.example
-          : example // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      properties: null == properties
-          ? _value.properties
-          : properties // ignore: cast_nullable_to_non_nullable
-              as Map<String, SwaggerDefinitionProperty>,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$SwaggerDefinitionImplCopyWith<$Res>
-    implements $SwaggerDefinitionCopyWith<$Res> {
-  factory _$$SwaggerDefinitionImplCopyWith(_$SwaggerDefinitionImpl value,
-          $Res Function(_$SwaggerDefinitionImpl) then) =
-      __$$SwaggerDefinitionImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String title,
-      String type,
-      List<String> required,
-      Map<String, dynamic>? example,
-      @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-      Map<String, SwaggerDefinitionProperty> properties});
-}
-
-/// @nodoc
-class __$$SwaggerDefinitionImplCopyWithImpl<$Res>
-    extends _$SwaggerDefinitionCopyWithImpl<$Res, _$SwaggerDefinitionImpl>
-    implements _$$SwaggerDefinitionImplCopyWith<$Res> {
-  __$$SwaggerDefinitionImplCopyWithImpl(_$SwaggerDefinitionImpl _value,
-      $Res Function(_$SwaggerDefinitionImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = null,
-    Object? type = null,
-    Object? required = null,
-    Object? example = freezed,
-    Object? properties = null,
-  }) {
-    return _then(_$SwaggerDefinitionImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      required: null == required
-          ? _value._required
-          : required // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      example: freezed == example
-          ? _value._example
-          : example // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      properties: null == properties
-          ? _value._properties
-          : properties // ignore: cast_nullable_to_non_nullable
-              as Map<String, SwaggerDefinitionProperty>,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$SwaggerDefinitionImpl implements _SwaggerDefinition {
-  _$SwaggerDefinitionImpl(
-      {required this.title,
-      required this.type,
-      final List<String> required = const [],
-      required final Map<String, dynamic>? example,
-      @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-      required final Map<String, SwaggerDefinitionProperty> properties})
-      : _required = required,
-        _example = example,
-        _properties = properties;
-
-  factory _$SwaggerDefinitionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SwaggerDefinitionImplFromJson(json);
-
-  @override
-  final String title;
-  @override
-  final String type;
-  final List<String> _required;
-  @override
-  @JsonKey()
-  List<String> get required {
-    if (_required is EqualUnmodifiableListView) return _required;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_required);
-  }
-
-  final Map<String, dynamic>? _example;
-  @override
-  Map<String, dynamic>? get example {
-    final value = _example;
-    if (value == null) return null;
-    if (_example is EqualUnmodifiableMapView) return _example;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final Map<String, SwaggerDefinitionProperty> _properties;
-  @override
-  @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-  Map<String, SwaggerDefinitionProperty> get properties {
-    if (_properties is EqualUnmodifiableMapView) return _properties;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_properties);
-  }
-
-  @override
-  String toString() {
-    return 'SwaggerDefinition(title: $title, type: $type, required: $required, example: $example, properties: $properties)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SwaggerDefinitionImpl &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._required, _required) &&
-            const DeepCollectionEquality().equals(other._example, _example) &&
-            const DeepCollectionEquality()
-                .equals(other._properties, _properties));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      title,
-      type,
-      const DeepCollectionEquality().hash(_required),
-      const DeepCollectionEquality().hash(_example),
-      const DeepCollectionEquality().hash(_properties));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SwaggerDefinitionImplCopyWith<_$SwaggerDefinitionImpl> get copyWith =>
-      __$$SwaggerDefinitionImplCopyWithImpl<_$SwaggerDefinitionImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerDefinitionImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _SwaggerDefinition implements SwaggerDefinition {
-  factory _SwaggerDefinition(
-          {required final String title,
-          required final String type,
-          final List<String> required,
-          required final Map<String, dynamic>? example,
-          @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-          required final Map<String, SwaggerDefinitionProperty> properties}) =
-      _$SwaggerDefinitionImpl;
-
-  factory _SwaggerDefinition.fromJson(Map<String, dynamic> json) =
-      _$SwaggerDefinitionImpl.fromJson;
-
-  @override
-  String get title;
-  @override
-  String get type;
-  @override
-  List<String> get required;
-  @override
-  Map<String, dynamic>? get example;
-  @override
-  @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-  Map<String, SwaggerDefinitionProperty> get properties;
-  @override
-  @JsonKey(ignore: true)
-  _$$SwaggerDefinitionImplCopyWith<_$SwaggerDefinitionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
 SwaggerDefinitionProperty _$SwaggerDefinitionPropertyFromJson(
     Map<String, dynamic> json) {
   switch (json['type']) {
@@ -2144,9 +1884,13 @@ mixin _$SwaggerDefinitionProperty {
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -2173,9 +1917,13 @@ mixin _$SwaggerDefinitionProperty {
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -2202,9 +1950,13 @@ mixin _$SwaggerDefinitionProperty {
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -2413,9 +2165,13 @@ class _$SwaggerDefinitionPropertyStringImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -2445,9 +2201,13 @@ class _$SwaggerDefinitionPropertyStringImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -2477,9 +2237,13 @@ class _$SwaggerDefinitionPropertyStringImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -2683,9 +2447,13 @@ class _$SwaggerDefinitionPropertyIntegerImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -2715,9 +2483,13 @@ class _$SwaggerDefinitionPropertyIntegerImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -2747,9 +2519,13 @@ class _$SwaggerDefinitionPropertyIntegerImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -2951,9 +2727,13 @@ class _$SwaggerDefinitionPropertyNumberImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -2983,9 +2763,13 @@ class _$SwaggerDefinitionPropertyNumberImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -3015,9 +2799,13 @@ class _$SwaggerDefinitionPropertyNumberImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -3219,9 +3007,13 @@ class _$SwaggerDefinitionPropertyBooleanImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -3251,9 +3043,13 @@ class _$SwaggerDefinitionPropertyBooleanImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -3283,9 +3079,13 @@ class _$SwaggerDefinitionPropertyBooleanImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -3487,9 +3287,13 @@ class _$SwaggerDefinitionPropertyDynamicImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -3519,9 +3323,13 @@ class _$SwaggerDefinitionPropertyDynamicImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -3551,9 +3359,13 @@ class _$SwaggerDefinitionPropertyDynamicImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -3654,9 +3466,13 @@ abstract class _$$SwaggerDefinitionPropertyObjectImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? description,
+      {Map<String, SwaggerDefinitionProperty> properties,
+      String? description,
       @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-      Map<String, SwaggerDefinitionProperty> properties});
+      String title,
+      String type,
+      List<String> required,
+      Map<String, dynamic>? example});
 }
 
 /// @nodoc
@@ -3672,11 +3488,19 @@ class __$$SwaggerDefinitionPropertyObjectImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? properties = null,
     Object? description = freezed,
     Object? default_ = freezed,
-    Object? properties = null,
+    Object? title = null,
+    Object? type = null,
+    Object? required = null,
+    Object? example = freezed,
   }) {
     return _then(_$SwaggerDefinitionPropertyObjectImpl(
+      properties: null == properties
+          ? _value._properties
+          : properties // ignore: cast_nullable_to_non_nullable
+              as Map<String, SwaggerDefinitionProperty>,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -3685,10 +3509,22 @@ class __$$SwaggerDefinitionPropertyObjectImplCopyWithImpl<$Res>
           ? _value._default_
           : default_ // ignore: cast_nullable_to_non_nullable
               as Map<dynamic, dynamic>?,
-      properties: null == properties
-          ? _value._properties
-          : properties // ignore: cast_nullable_to_non_nullable
-              as Map<String, SwaggerDefinitionProperty>,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      required: null == required
+          ? _value._required
+          : required // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      example: freezed == example
+          ? _value._example
+          : example // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -3698,17 +3534,29 @@ class __$$SwaggerDefinitionPropertyObjectImplCopyWithImpl<$Res>
 class _$SwaggerDefinitionPropertyObjectImpl
     implements SwaggerDefinitionPropertyObject {
   _$SwaggerDefinitionPropertyObjectImpl(
-      {this.description,
+      {required final Map<String, SwaggerDefinitionProperty> properties,
+      this.description,
       @JsonKey(name: 'default') final Map<dynamic, dynamic>? default_,
-      required final Map<String, SwaggerDefinitionProperty> properties,
-      final String? $type})
-      : _default_ = default_,
-        _properties = properties,
-        $type = $type ?? 'object';
+      required this.title,
+      required this.type,
+      final List<String> required = const [],
+      required final Map<String, dynamic>? example})
+      : _properties = properties,
+        _default_ = default_,
+        _required = required,
+        _example = example;
 
   factory _$SwaggerDefinitionPropertyObjectImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$SwaggerDefinitionPropertyObjectImplFromJson(json);
+
+  final Map<String, SwaggerDefinitionProperty> _properties;
+  @override
+  Map<String, SwaggerDefinitionProperty> get properties {
+    if (_properties is EqualUnmodifiableMapView) return _properties;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_properties);
+  }
 
   @override
   final String? description;
@@ -3723,20 +3571,32 @@ class _$SwaggerDefinitionPropertyObjectImpl
     return EqualUnmodifiableMapView(value);
   }
 
-  final Map<String, SwaggerDefinitionProperty> _properties;
   @override
-  Map<String, SwaggerDefinitionProperty> get properties {
-    if (_properties is EqualUnmodifiableMapView) return _properties;
+  final String title;
+  @override
+  final String type;
+  final List<String> _required;
+  @override
+  @JsonKey()
+  List<String> get required {
+    if (_required is EqualUnmodifiableListView) return _required;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_properties);
+    return EqualUnmodifiableListView(_required);
   }
 
-  @JsonKey(name: 'type')
-  final String $type;
+  final Map<String, dynamic>? _example;
+  @override
+  Map<String, dynamic>? get example {
+    final value = _example;
+    if (value == null) return null;
+    if (_example is EqualUnmodifiableMapView) return _example;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
-    return 'SwaggerDefinitionProperty.object(description: $description, default_: $default_, properties: $properties)';
+    return 'SwaggerDefinitionProperty.object(properties: $properties, description: $description, default_: $default_, title: $title, type: $type, required: $required, example: $example)';
   }
 
   @override
@@ -3744,20 +3604,28 @@ class _$SwaggerDefinitionPropertyObjectImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SwaggerDefinitionPropertyObjectImpl &&
+            const DeepCollectionEquality()
+                .equals(other._properties, _properties) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             const DeepCollectionEquality().equals(other._default_, _default_) &&
-            const DeepCollectionEquality()
-                .equals(other._properties, _properties));
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality().equals(other._required, _required) &&
+            const DeepCollectionEquality().equals(other._example, _example));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(_properties),
       description,
       const DeepCollectionEquality().hash(_default_),
-      const DeepCollectionEquality().hash(_properties));
+      title,
+      type,
+      const DeepCollectionEquality().hash(_required),
+      const DeepCollectionEquality().hash(_example));
 
   @JsonKey(ignore: true)
   @override
@@ -3786,9 +3654,13 @@ class _$SwaggerDefinitionPropertyObjectImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -3796,7 +3668,8 @@ class _$SwaggerDefinitionPropertyObjectImpl
             SwaggerDefinitionPropertyArrayItem items)
         array,
   }) {
-    return object(description, default_, properties);
+    return object(
+        properties, description, default_, title, type, required, example);
   }
 
   @override
@@ -3818,9 +3691,13 @@ class _$SwaggerDefinitionPropertyObjectImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -3828,7 +3705,8 @@ class _$SwaggerDefinitionPropertyObjectImpl
             SwaggerDefinitionPropertyArrayItem items)?
         array,
   }) {
-    return object?.call(description, default_, properties);
+    return object?.call(
+        properties, description, default_, title, type, required, example);
   }
 
   @override
@@ -3850,9 +3728,13 @@ class _$SwaggerDefinitionPropertyObjectImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,
@@ -3862,7 +3744,8 @@ class _$SwaggerDefinitionPropertyObjectImpl
     required TResult orElse(),
   }) {
     if (object != null) {
-      return object(description, default_, properties);
+      return object(
+          properties, description, default_, title, type, required, example);
     }
     return orElse();
   }
@@ -3924,20 +3807,28 @@ class _$SwaggerDefinitionPropertyObjectImpl
 abstract class SwaggerDefinitionPropertyObject
     implements SwaggerDefinitionProperty {
   factory SwaggerDefinitionPropertyObject(
-          {final String? description,
+          {required final Map<String, SwaggerDefinitionProperty> properties,
+          final String? description,
           @JsonKey(name: 'default') final Map<dynamic, dynamic>? default_,
-          required final Map<String, SwaggerDefinitionProperty> properties}) =
+          required final String title,
+          required final String type,
+          final List<String> required,
+          required final Map<String, dynamic>? example}) =
       _$SwaggerDefinitionPropertyObjectImpl;
 
   factory SwaggerDefinitionPropertyObject.fromJson(Map<String, dynamic> json) =
       _$SwaggerDefinitionPropertyObjectImpl.fromJson;
 
+  Map<String, SwaggerDefinitionProperty> get properties;
   @override
   String? get description;
   @override
   @JsonKey(name: 'default')
   Map<dynamic, dynamic>? get default_;
-  Map<String, SwaggerDefinitionProperty> get properties;
+  String get title;
+  String get type;
+  List<String> get required;
+  Map<String, dynamic>? get example;
   @override
   @JsonKey(ignore: true)
   _$$SwaggerDefinitionPropertyObjectImplCopyWith<
@@ -4088,9 +3979,13 @@ class _$SwaggerDefinitionPropertyArrayImpl
             String? description, @JsonKey(name: 'default') dynamic default_)
         dynamic,
     required TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)
         object,
     required TResult Function(
             String? description,
@@ -4120,9 +4015,13 @@ class _$SwaggerDefinitionPropertyArrayImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult? Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult? Function(
             String? description,
@@ -4152,9 +4051,13 @@ class _$SwaggerDefinitionPropertyArrayImpl
             String? description, @JsonKey(name: 'default') dynamic default_)?
         dynamic,
     TResult Function(
+            Map<String, SwaggerDefinitionProperty> properties,
             String? description,
             @JsonKey(name: 'default') Map<dynamic, dynamic>? default_,
-            Map<String, SwaggerDefinitionProperty> properties)?
+            String title,
+            String type,
+            List<String> required,
+            Map<String, dynamic>? example)?
         object,
     TResult Function(
             String? description,

@@ -22,8 +22,10 @@ _$SwaggerImpl _$$SwaggerImplFromJson(Map<String, dynamic> json) =>
         (k, e) => MapEntry(k, SwaggerPath.fromJson(e as Map<String, dynamic>)),
       ),
       definitions: (json['definitions'] as Map<String, dynamic>).map(
-        (k, e) =>
-            MapEntry(k, SwaggerDefinition.fromJson(e as Map<String, dynamic>)),
+        (k, e) => MapEntry(
+            k,
+            SwaggerDefinitionPropertyObject.fromJson(
+                e as Map<String, dynamic>)),
       ),
     );
 
@@ -155,30 +157,6 @@ Map<String, dynamic> _$$SwaggerXStoplightImplToJson(
       'id': instance.id,
     };
 
-_$SwaggerDefinitionImpl _$$SwaggerDefinitionImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SwaggerDefinitionImpl(
-      title: json['title'] as String,
-      type: json['type'] as String,
-      required: (json['required'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      example: json['example'] as Map<String, dynamic>?,
-      properties: SwaggerDefinition._propertiesFromJson(
-          json['properties'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$SwaggerDefinitionImplToJson(
-        _$SwaggerDefinitionImpl instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-      'type': instance.type,
-      'required': instance.required,
-      'example': instance.example,
-      'properties': instance.properties.map((k, e) => MapEntry(k, e.toJson())),
-    };
-
 _$SwaggerDefinitionPropertyStringImpl
     _$$SwaggerDefinitionPropertyStringImplFromJson(Map<String, dynamic> json) =>
         _$SwaggerDefinitionPropertyStringImpl(
@@ -267,22 +245,31 @@ Map<String, dynamic> _$$SwaggerDefinitionPropertyDynamicImplToJson(
 _$SwaggerDefinitionPropertyObjectImpl
     _$$SwaggerDefinitionPropertyObjectImplFromJson(Map<String, dynamic> json) =>
         _$SwaggerDefinitionPropertyObjectImpl(
-          description: json['description'] as String?,
-          default_: json['default'] as Map<String, dynamic>?,
           properties: (json['properties'] as Map<String, dynamic>).map(
             (k, e) => MapEntry(k,
                 SwaggerDefinitionProperty.fromJson(e as Map<String, dynamic>)),
           ),
-          $type: json['type'] as String?,
+          description: json['description'] as String?,
+          default_: json['default'] as Map<String, dynamic>?,
+          title: json['title'] as String,
+          type: json['type'] as String,
+          required: (json['required'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          example: json['example'] as Map<String, dynamic>?,
         );
 
 Map<String, dynamic> _$$SwaggerDefinitionPropertyObjectImplToJson(
         _$SwaggerDefinitionPropertyObjectImpl instance) =>
     <String, dynamic>{
+      'properties': instance.properties.map((k, e) => MapEntry(k, e.toJson())),
       'description': instance.description,
       'default': instance.default_,
-      'properties': instance.properties.map((k, e) => MapEntry(k, e.toJson())),
-      'type': instance.$type,
+      'title': instance.title,
+      'type': instance.type,
+      'required': instance.required,
+      'example': instance.example,
     };
 
 _$SwaggerDefinitionPropertyArrayImpl

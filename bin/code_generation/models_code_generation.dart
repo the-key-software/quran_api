@@ -15,61 +15,60 @@ class ModelsCodeGeneration {
 
   void generate() {
     for (var entry in swagger.definitions.entries) {
-      final result = _definitionCode(
+      final result = _buildDefinition(
         addImport: true,
         key: entry.key,
         definition: entry.value,
       );
 
       writeDartFile(
-        dir: dir,
+        dir: dirModels,
         filename: result.filename,
         code: result.code,
       );
     }
   }
 
-  ({String code, String filename}) _definitionCode({
+  ({String code, String filename}) _buildDefinition({
     required bool addImport,
     required String key,
-    required SwaggerDefinition definition,
+    required SwaggerDefinitionPropertyObject definition,
+    String? parentName,
   }) {
-    final className = Template.class_(key);
+    final name = Template.class_(definition.title);
+    final className = parentName == null ? name : "$parentName$name";
     final filename = definition.title.toSnakeCase();
-
-    final propertiesCode = StringBuffer();
     final properties = definition.properties;
-
     final override = overrides[key];
 
+    final propertiesCode = StringBuffer();
     properties.forEach((key, value) {
       propertiesCode.write(
-        _propertyCode(
-          key: key,
+        _buildPropertyCode(
+          parentName: className,
+          propertyKey: key,
           property: override?[key] ?? value,
         ),
       );
     });
 
-    final String exampleCode = _buildExample(definition: definition);
+    final exampleCode = _buildExample(definition: definition);
 
     String nestedClassesCode = "";
 
     properties.forEach((key, value) {
-      if (value is SwaggerDefinitionPropertyObject) {
-        final result = _definitionCode(
-          addImport: false,
-          key: key,
-          definition: SwaggerDefinition(
-            title: "${key.replaceAll(" ", "").toPascalCase()}",
-            type: "object",
-            example: null,
-            properties: value.properties,
-          ),
-        );
+      value.mapOrNull(
+        object: (value) {
+          final result = _buildDefinition(
+            addImport: false,
+            parentName: className,
+            key: key,
+            definition: value,
+          );
 
-        nestedClassesCode += result.code;
-      }
+          nestedClassesCode += result.code;
+        },
+      );
     });
 
     final classCode = Template.freezed(
@@ -82,6 +81,7 @@ class ModelsCodeGeneration {
 factory $className.fromJson(Map<String, dynamic> json) => 
     _\$${className}FromJson(json);""",
     );
+
     final code = """
 ${classCode}
 $nestedClassesCode
@@ -90,15 +90,17 @@ $nestedClassesCode
     return (filename: filename, code: code);
   }
 
-  String _propertyCode({
-    required String key,
+  String _buildPropertyCode({
+    required String parentName,
+    required String propertyKey,
     required SwaggerDefinitionProperty property,
   }) {
-    final fieldName = Template.fieldName(key);
+    final fieldName = Template.fieldName(propertyKey);
     String code = "$fieldName";
 
-    final type = _propertyTypeCode(
-      key: key,
+    final type = _buildPropertyType(
+      parentName: parentName,
+      key: propertyKey,
       property: property,
     );
 
@@ -113,7 +115,7 @@ $nestedClassesCode
       code = "required $code";
     }
 
-    code = Template.jsonKey(key) + " " + code;
+    code = Template.jsonKey(propertyKey) + " " + code;
 
     if (description != null && description.isNotEmpty) {
       final comment =
@@ -123,7 +125,8 @@ $nestedClassesCode
     return code;
   }
 
-  String _propertyTypeCode({
+  String _buildPropertyType({
+    required String parentName,
     required String key,
     required SwaggerDefinitionProperty property,
     List<String> nestedClasses = const [],
@@ -135,13 +138,16 @@ $nestedClassesCode
       boolean: (value) => "bool",
       dynamic: (value) => "Object?",
       object: (value) {
-        return Template.class_(key);
+        return "$parentName${Template.class_(key)}";
       },
       array: (value) => value.items.when(
         () => "List<Object>",
-        ref: (ref) => "List<Object>",
+        ref: (ref) {
+          return "List<${Template.class_(ref.split("/").last)}>";
+        },
         property: (property) {
-          final type = _propertyTypeCode(
+          final type = _buildPropertyType(
+            parentName: parentName,
             key: key,
             property: property,
             nestedClasses: nestedClasses,
@@ -153,7 +159,7 @@ $nestedClassesCode
   }
 
   String _buildExample({
-    required SwaggerDefinition definition,
+    required SwaggerDefinitionPropertyObject definition,
   }) {
     final example = definition.example;
     final className = Template.class_(definition.title);
@@ -169,30 +175,48 @@ $nestedClassesCode
         parametersCode.write("$name: ${jsonEncode(fieldValue)},");
       });
 
-      return """static const $className example = ${_buildInstance(definition: definition, example: example)};""";
+      final instanceCode = _buildInstance(
+        parentClassName: definition.className,
+        example: example,
+        definition: definition,
+      );
+      return """static const $className example = ${instanceCode};""";
     } else {
       return "";
     }
   }
 
   String _buildInstance({
-    required SwaggerDefinition definition,
     required Map<String, dynamic> example,
-    String? parent = null,
+    required SwaggerDefinitionPropertyObject definition,
+    String? parentClassName,
   }) {
-    final className = Template.class_(definition.title);
-    final properties = definition.properties;
-
     final parametersCode = StringBuffer();
 
-    properties.forEach((key, value) {
+    definition.properties.forEach((key, value) {
       final name = Template.fieldName(key);
 
-      final fieldValue = example[key];
+      final exampleMap = example[key];
 
-      parametersCode.write("$name: ${jsonEncode(fieldValue)},");
+      value.maybeMap(
+        object: (value) {
+          final className = _buildInstance(
+            example: exampleMap,
+            definition: value,
+          );
+
+          parametersCode.write("$name: $parentClassName$className,");
+        },
+        orElse: () {
+          parametersCode.write("$name: ${jsonEncode(exampleMap)},");
+        },
+      );
     });
 
-    return """$className($parametersCode);""";
+    return """${definition.className}($parametersCode)""";
   }
+}
+
+extension on SwaggerDefinitionPropertyObject {
+  String get className => Template.class_(title);
 }

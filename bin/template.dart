@@ -66,7 +66,7 @@ class $className with _\$$className {
     if (includeImport) {
       return """
 import 'package:freezed_annotation/freezed_annotation.dart'; 
-
+import 'models.dart';
 part '$filename.freezed.dart';
 part '$filename.g.dart';
 $code""";

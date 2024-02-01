@@ -14,7 +14,7 @@ class Swagger with _$Swagger {
     required List<String> schemes,
     required List<String> produces,
     required Map<String, SwaggerPath> paths,
-    required Map<String, SwaggerDefinition> definitions,
+    required Map<String, SwaggerDefinitionPropertyObject> definitions,
   }) = _Swagger;
 
   static SwaggerDefinitionProperty int() => SwaggerDefinitionProperty.integer();
@@ -129,32 +129,6 @@ class SwaggerXStoplight with _$SwaggerXStoplight {
       _$SwaggerXStoplightFromJson(json);
 }
 
-@freezed
-class SwaggerDefinition with _$SwaggerDefinition {
-  factory SwaggerDefinition({
-    required String title,
-    required String type,
-    @Default([]) List<String> required,
-    required Map<String, dynamic>? example,
-    @JsonKey(fromJson: SwaggerDefinition._propertiesFromJson)
-    required Map<String, SwaggerDefinitionProperty> properties,
-  }) = _SwaggerDefinition;
-
-  factory SwaggerDefinition.fromJson(Map<String, dynamic> json) =>
-      _$SwaggerDefinitionFromJson(json);
-
-  static Map<String, SwaggerDefinitionProperty> _propertiesFromJson(
-    Map<String, dynamic> json,
-  ) {
-    return {
-      for (final entry in json.entries)
-        entry.key: SwaggerDefinitionProperty.fromJson2(
-          entry.value as Map<String, dynamic>,
-        ),
-    };
-  }
-}
-
 mixin _SwaggerDefinitionPropertyMixin {
   String? get description;
   @JsonKey(name: 'default')
@@ -192,9 +166,13 @@ class SwaggerDefinitionProperty
   }) = SwaggerDefinitionPropertyDynamic;
 
   factory SwaggerDefinitionProperty.object({
+    required Map<String, SwaggerDefinitionProperty> properties,
     String? description,
     @JsonKey(name: 'default') Map? default_,
-    required Map<String, SwaggerDefinitionProperty> properties,
+    required String title,
+    required String type,
+    @Default([]) List<String> required,
+    required Map<String, dynamic>? example,
   }) = SwaggerDefinitionPropertyObject;
 
   factory SwaggerDefinitionProperty.array({
