@@ -26,15 +26,14 @@ Map<String, dynamic> _$$ResourceImplToJson(_$ResourceImpl instance) =>
       'translated_name': instance.translatedName,
     };
 
-_$ResourceTranslatedNameImpl _$$ResourceTranslatedNameImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ResourceTranslatedNameImpl(
+_$TranslatedNameImpl _$$TranslatedNameImplFromJson(Map<String, dynamic> json) =>
+    _$TranslatedNameImpl(
       name: json['name'] as String,
       languageName: json['language_name'] as String,
     );
 
-Map<String, dynamic> _$$ResourceTranslatedNameImplToJson(
-        _$ResourceTranslatedNameImpl instance) =>
+Map<String, dynamic> _$$TranslatedNameImplToJson(
+        _$TranslatedNameImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'language_name': instance.languageName,

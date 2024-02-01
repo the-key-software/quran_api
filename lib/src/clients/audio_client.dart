@@ -12,7 +12,7 @@ abstract class AudioClient {
   /// [id] The Id of the reciter
   /// [chapterNumber] The number of the chapter
   @GET('/chapter_recitations/{id}/{chapter_number}')
-  Future<ChapterRecitation> chapterReciterAudioFile({
+  Future<Object> chapterReciterAudioFile({
     @Path('id') required int id,
     @Path('chapter_number') required int chapterNumber,
   });
@@ -70,6 +70,7 @@ abstract class AudioClient {
 
   /// Get Ayah recitations for specific Rub el Hizb
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
+
   @GET('/recitations/{recitation_id}/by_rub/{rub_el_hizb_number}')
   Future<Object> listRubElHizbRecitation({
     @Path('recitation_id') required int recitationId,

@@ -25,6 +25,7 @@ mixin _$Swagger {
   SwaggerXStoplight get xStoplight => throw _privateConstructorUsedError;
   SwaggerInfo get info => throw _privateConstructorUsedError;
   String get host => throw _privateConstructorUsedError;
+  @JsonKey(name: "basePath")
   String get basePath => throw _privateConstructorUsedError;
   List<String> get schemes => throw _privateConstructorUsedError;
   List<String> get produces => throw _privateConstructorUsedError;
@@ -47,7 +48,7 @@ abstract class $SwaggerCopyWith<$Res> {
       @JsonKey(name: 'x-stoplight') SwaggerXStoplight xStoplight,
       SwaggerInfo info,
       String host,
-      String basePath,
+      @JsonKey(name: "basePath") String basePath,
       List<String> schemes,
       List<String> produces,
       Map<String, SwaggerPath> paths,
@@ -149,7 +150,7 @@ abstract class _$$SwaggerImplCopyWith<$Res> implements $SwaggerCopyWith<$Res> {
       @JsonKey(name: 'x-stoplight') SwaggerXStoplight xStoplight,
       SwaggerInfo info,
       String host,
-      String basePath,
+      @JsonKey(name: "basePath") String basePath,
       List<String> schemes,
       List<String> produces,
       Map<String, SwaggerPath> paths,
@@ -231,7 +232,7 @@ class _$SwaggerImpl implements _Swagger {
       @JsonKey(name: 'x-stoplight') required this.xStoplight,
       required this.info,
       required this.host,
-      required this.basePath,
+      @JsonKey(name: "basePath") required this.basePath,
       required final List<String> schemes,
       required final List<String> produces,
       required final Map<String, SwaggerPath> paths,
@@ -254,6 +255,7 @@ class _$SwaggerImpl implements _Swagger {
   @override
   final String host;
   @override
+  @JsonKey(name: "basePath")
   final String basePath;
   final List<String> _schemes;
   @override
@@ -345,7 +347,7 @@ abstract class _Swagger implements Swagger {
       @JsonKey(name: 'x-stoplight') required final SwaggerXStoplight xStoplight,
       required final SwaggerInfo info,
       required final String host,
-      required final String basePath,
+      @JsonKey(name: "basePath") required final String basePath,
       required final List<String> schemes,
       required final List<String> produces,
       required final Map<String, SwaggerPath> paths,
@@ -364,6 +366,7 @@ abstract class _Swagger implements Swagger {
   @override
   String get host;
   @override
+  @JsonKey(name: "basePath")
   String get basePath;
   @override
   List<String> get schemes;

@@ -228,13 +228,12 @@ abstract class _Recitation extends Recitation {
       throw _privateConstructorUsedError;
 }
 
-RecitationTranslatedName _$RecitationTranslatedNameFromJson(
-    Map<String, dynamic> json) {
-  return _RecitationTranslatedName.fromJson(json);
+TranslatedName _$TranslatedNameFromJson(Map<String, dynamic> json) {
+  return _TranslatedName.fromJson(json);
 }
 
 /// @nodoc
-mixin _$RecitationTranslatedName {
+mixin _$TranslatedName {
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'language_name')
@@ -242,15 +241,15 @@ mixin _$RecitationTranslatedName {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecitationTranslatedNameCopyWith<RecitationTranslatedName> get copyWith =>
+  $TranslatedNameCopyWith<TranslatedName> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RecitationTranslatedNameCopyWith<$Res> {
-  factory $RecitationTranslatedNameCopyWith(RecitationTranslatedName value,
-          $Res Function(RecitationTranslatedName) then) =
-      _$RecitationTranslatedNameCopyWithImpl<$Res, RecitationTranslatedName>;
+abstract class $TranslatedNameCopyWith<$Res> {
+  factory $TranslatedNameCopyWith(
+          TranslatedName value, $Res Function(TranslatedName) then) =
+      _$TranslatedNameCopyWithImpl<$Res, TranslatedName>;
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
@@ -258,10 +257,9 @@ abstract class $RecitationTranslatedNameCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecitationTranslatedNameCopyWithImpl<$Res,
-        $Val extends RecitationTranslatedName>
-    implements $RecitationTranslatedNameCopyWith<$Res> {
-  _$RecitationTranslatedNameCopyWithImpl(this._value, this._then);
+class _$TranslatedNameCopyWithImpl<$Res, $Val extends TranslatedName>
+    implements $TranslatedNameCopyWith<$Res> {
+  _$TranslatedNameCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -288,12 +286,11 @@ class _$RecitationTranslatedNameCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$RecitationTranslatedNameImplCopyWith<$Res>
-    implements $RecitationTranslatedNameCopyWith<$Res> {
-  factory _$$RecitationTranslatedNameImplCopyWith(
-          _$RecitationTranslatedNameImpl value,
-          $Res Function(_$RecitationTranslatedNameImpl) then) =
-      __$$RecitationTranslatedNameImplCopyWithImpl<$Res>;
+abstract class _$$TranslatedNameImplCopyWith<$Res>
+    implements $TranslatedNameCopyWith<$Res> {
+  factory _$$TranslatedNameImplCopyWith(_$TranslatedNameImpl value,
+          $Res Function(_$TranslatedNameImpl) then) =
+      __$$TranslatedNameImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -302,13 +299,11 @@ abstract class _$$RecitationTranslatedNameImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RecitationTranslatedNameImplCopyWithImpl<$Res>
-    extends _$RecitationTranslatedNameCopyWithImpl<$Res,
-        _$RecitationTranslatedNameImpl>
-    implements _$$RecitationTranslatedNameImplCopyWith<$Res> {
-  __$$RecitationTranslatedNameImplCopyWithImpl(
-      _$RecitationTranslatedNameImpl _value,
-      $Res Function(_$RecitationTranslatedNameImpl) _then)
+class __$$TranslatedNameImplCopyWithImpl<$Res>
+    extends _$TranslatedNameCopyWithImpl<$Res, _$TranslatedNameImpl>
+    implements _$$TranslatedNameImplCopyWith<$Res> {
+  __$$TranslatedNameImplCopyWithImpl(
+      _$TranslatedNameImpl _value, $Res Function(_$TranslatedNameImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -317,7 +312,7 @@ class __$$RecitationTranslatedNameImplCopyWithImpl<$Res>
     Object? name = null,
     Object? languageName = null,
   }) {
-    return _then(_$RecitationTranslatedNameImpl(
+    return _then(_$TranslatedNameImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -332,14 +327,14 @@ class __$$RecitationTranslatedNameImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$RecitationTranslatedNameImpl extends _RecitationTranslatedName {
-  const _$RecitationTranslatedNameImpl(
+class _$TranslatedNameImpl extends _TranslatedName {
+  const _$TranslatedNameImpl(
       {@JsonKey(name: 'name') required this.name,
       @JsonKey(name: 'language_name') required this.languageName})
       : super._();
 
-  factory _$RecitationTranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RecitationTranslatedNameImplFromJson(json);
+  factory _$TranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TranslatedNameImplFromJson(json);
 
   @override
   @JsonKey(name: 'name')
@@ -350,14 +345,14 @@ class _$RecitationTranslatedNameImpl extends _RecitationTranslatedName {
 
   @override
   String toString() {
-    return 'RecitationTranslatedName(name: $name, languageName: $languageName)';
+    return 'TranslatedName(name: $name, languageName: $languageName)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RecitationTranslatedNameImpl &&
+            other is _$TranslatedNameImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.languageName, languageName) ||
                 other.languageName == languageName));
@@ -370,27 +365,27 @@ class _$RecitationTranslatedNameImpl extends _RecitationTranslatedName {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecitationTranslatedNameImplCopyWith<_$RecitationTranslatedNameImpl>
-      get copyWith => __$$RecitationTranslatedNameImplCopyWithImpl<
-          _$RecitationTranslatedNameImpl>(this, _$identity);
+  _$$TranslatedNameImplCopyWith<_$TranslatedNameImpl> get copyWith =>
+      __$$TranslatedNameImplCopyWithImpl<_$TranslatedNameImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecitationTranslatedNameImplToJson(
+    return _$$TranslatedNameImplToJson(
       this,
     );
   }
 }
 
-abstract class _RecitationTranslatedName extends RecitationTranslatedName {
-  const factory _RecitationTranslatedName(
+abstract class _TranslatedName extends TranslatedName {
+  const factory _TranslatedName(
           {@JsonKey(name: 'name') required final String name,
           @JsonKey(name: 'language_name') required final String languageName}) =
-      _$RecitationTranslatedNameImpl;
-  const _RecitationTranslatedName._() : super._();
+      _$TranslatedNameImpl;
+  const _TranslatedName._() : super._();
 
-  factory _RecitationTranslatedName.fromJson(Map<String, dynamic> json) =
-      _$RecitationTranslatedNameImpl.fromJson;
+  factory _TranslatedName.fromJson(Map<String, dynamic> json) =
+      _$TranslatedNameImpl.fromJson;
 
   @override
   @JsonKey(name: 'name')
@@ -400,6 +395,6 @@ abstract class _RecitationTranslatedName extends RecitationTranslatedName {
   String get languageName;
   @override
   @JsonKey(ignore: true)
-  _$$RecitationTranslatedNameImplCopyWith<_$RecitationTranslatedNameImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$TranslatedNameImplCopyWith<_$TranslatedNameImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -32,15 +32,15 @@ class Recitation with _$Recitation {
 
 @freezed
 
-/// RecitationTranslatedName
-class RecitationTranslatedName with _$RecitationTranslatedName {
-  const RecitationTranslatedName._();
+/// TranslatedName
+class TranslatedName with _$TranslatedName {
+  const TranslatedName._();
 
-  const factory RecitationTranslatedName({
+  const factory TranslatedName({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'language_name') required String languageName,
-  }) = _RecitationTranslatedName;
+  }) = _TranslatedName;
 
-  factory RecitationTranslatedName.fromJson(Map<String, dynamic> json) =>
-      _$RecitationTranslatedNameFromJson(json);
+  factory TranslatedName.fromJson(Map<String, dynamic> json) =>
+      _$TranslatedNameFromJson(json);
 }

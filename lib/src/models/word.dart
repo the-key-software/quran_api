@@ -72,30 +72,30 @@ class Word with _$Word {
 
 @freezed
 
-/// WordTranslation
-class WordTranslation with _$WordTranslation {
-  const WordTranslation._();
+/// Translation
+class Translation with _$Translation {
+  const Translation._();
 
-  const factory WordTranslation({
+  const factory Translation({
     @JsonKey(name: 'text') required String text,
     @JsonKey(name: 'language_name') required String languageName,
-  }) = _WordTranslation;
+  }) = _Translation;
 
-  factory WordTranslation.fromJson(Map<String, dynamic> json) =>
-      _$WordTranslationFromJson(json);
+  factory Translation.fromJson(Map<String, dynamic> json) =>
+      _$TranslationFromJson(json);
 }
 
 @freezed
 
-/// WordTransliteration
-class WordTransliteration with _$WordTransliteration {
-  const WordTransliteration._();
+/// Transliteration
+class Transliteration with _$Transliteration {
+  const Transliteration._();
 
-  const factory WordTransliteration({
+  const factory Transliteration({
     @JsonKey(name: 'text') required String text,
     @JsonKey(name: 'language_name') required String languageName,
-  }) = _WordTransliteration;
+  }) = _Transliteration;
 
-  factory WordTransliteration.fromJson(Map<String, dynamic> json) =>
-      _$WordTransliterationFromJson(json);
+  factory Transliteration.fromJson(Map<String, dynamic> json) =>
+      _$TransliterationFromJson(json);
 }

@@ -14,9 +14,10 @@ void main(List<String> args) {
   _generateSwagger();
 
   Process.runSync("dart", ["format", _dir]);
+  Process.runSync("exports", []);
 }
 
-final String _dir = Directory.current.path + "/lib/src/generated/";
+final String _dir = Directory.current.path + "/lib/src/";
 final String _dirDefinitions = _dir + "models/";
 final String _dirPaths = _dir + "clients/";
 
@@ -35,15 +36,6 @@ final _overrides = <String, Map<String, SwaggerDefinitionProperty>>{
   },
   "juz": {
     "verse_mapping": _.map(_.string(), _.string()),
-  }
-};
-
-final _overrideSchemas = <String, Map<String, SwaggerDefinitionProperty>>{
-  "/juzs": {
-    "default": _.dynamic(),
-  },
-  "/search": {
-    "default": _.dynamic(),
   }
 };
 

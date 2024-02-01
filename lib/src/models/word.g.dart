@@ -47,29 +47,27 @@ Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) =>
       'v2_page': instance.v2Page,
     };
 
-_$WordTranslationImpl _$$WordTranslationImplFromJson(
-        Map<String, dynamic> json) =>
-    _$WordTranslationImpl(
+_$TranslationImpl _$$TranslationImplFromJson(Map<String, dynamic> json) =>
+    _$TranslationImpl(
       text: json['text'] as String,
       languageName: json['language_name'] as String,
     );
 
-Map<String, dynamic> _$$WordTranslationImplToJson(
-        _$WordTranslationImpl instance) =>
+Map<String, dynamic> _$$TranslationImplToJson(_$TranslationImpl instance) =>
     <String, dynamic>{
       'text': instance.text,
       'language_name': instance.languageName,
     };
 
-_$WordTransliterationImpl _$$WordTransliterationImplFromJson(
+_$TransliterationImpl _$$TransliterationImplFromJson(
         Map<String, dynamic> json) =>
-    _$WordTransliterationImpl(
+    _$TransliterationImpl(
       text: json['text'] as String,
       languageName: json['language_name'] as String,
     );
 
-Map<String, dynamic> _$$WordTransliterationImplToJson(
-        _$WordTransliterationImpl instance) =>
+Map<String, dynamic> _$$TransliterationImplToJson(
+        _$TransliterationImpl instance) =>
     <String, dynamic>{
       'text': instance.text,
       'language_name': instance.languageName,

@@ -33,15 +33,15 @@ class Resource with _$Resource {
 
 @freezed
 
-/// ResourceTranslatedName
-class ResourceTranslatedName with _$ResourceTranslatedName {
-  const ResourceTranslatedName._();
+/// TranslatedName
+class TranslatedName with _$TranslatedName {
+  const TranslatedName._();
 
-  const factory ResourceTranslatedName({
+  const factory TranslatedName({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'language_name') required String languageName,
-  }) = _ResourceTranslatedName;
+  }) = _TranslatedName;
 
-  factory ResourceTranslatedName.fromJson(Map<String, dynamic> json) =>
-      _$ResourceTranslatedNameFromJson(json);
+  factory TranslatedName.fromJson(Map<String, dynamic> json) =>
+      _$TranslatedNameFromJson(json);
 }

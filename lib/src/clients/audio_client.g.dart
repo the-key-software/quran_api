@@ -19,7 +19,7 @@ class _AudioClient implements AudioClient {
   String? baseUrl;
 
   @override
-  Future<ChapterRecitation> chapterReciterAudioFile({
+  Future<Object> chapterReciterAudioFile({
     required int id,
     required int chapterNumber,
   }) async {
@@ -27,8 +27,8 @@ class _AudioClient implements AudioClient {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<ChapterRecitation>(Options(
+    final _result =
+        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Object>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -44,7 +44,7 @@ class _AudioClient implements AudioClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = ChapterRecitation.fromJson(_result.data!);
+    final value = Object.fromJson(_result.data!);
     return value;
   }
 

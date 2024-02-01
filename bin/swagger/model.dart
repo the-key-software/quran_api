@@ -10,7 +10,7 @@ class Swagger with _$Swagger {
     @JsonKey(name: 'x-stoplight') required SwaggerXStoplight xStoplight,
     required SwaggerInfo info,
     required String host,
-    required String basePath,
+    @JsonKey(name: "basePath") required String basePath,
     required List<String> schemes,
     required List<String> produces,
     required Map<String, SwaggerPath> paths,

@@ -22,15 +22,14 @@ Map<String, dynamic> _$$RecitationImplToJson(_$RecitationImpl instance) =>
       'translated_name': instance.translatedName,
     };
 
-_$RecitationTranslatedNameImpl _$$RecitationTranslatedNameImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RecitationTranslatedNameImpl(
+_$TranslatedNameImpl _$$TranslatedNameImplFromJson(Map<String, dynamic> json) =>
+    _$TranslatedNameImpl(
       name: json['name'] as String,
       languageName: json['language_name'] as String,
     );
 
-Map<String, dynamic> _$$RecitationTranslatedNameImplToJson(
-        _$RecitationTranslatedNameImpl instance) =>
+Map<String, dynamic> _$$TranslatedNameImplToJson(
+        _$TranslatedNameImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'language_name': instance.languageName,

@@ -94,7 +94,7 @@ class Verse with _$Verse {
       }
     ],
     audio: null,
-    translations: translation,
+    translations: null,
     codeV1: null,
     codeV2: null,
     v1Page: null,

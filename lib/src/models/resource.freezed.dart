@@ -274,13 +274,12 @@ abstract class _Resource extends Resource {
       throw _privateConstructorUsedError;
 }
 
-ResourceTranslatedName _$ResourceTranslatedNameFromJson(
-    Map<String, dynamic> json) {
-  return _ResourceTranslatedName.fromJson(json);
+TranslatedName _$TranslatedNameFromJson(Map<String, dynamic> json) {
+  return _TranslatedName.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ResourceTranslatedName {
+mixin _$TranslatedName {
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'language_name')
@@ -288,15 +287,15 @@ mixin _$ResourceTranslatedName {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ResourceTranslatedNameCopyWith<ResourceTranslatedName> get copyWith =>
+  $TranslatedNameCopyWith<TranslatedName> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ResourceTranslatedNameCopyWith<$Res> {
-  factory $ResourceTranslatedNameCopyWith(ResourceTranslatedName value,
-          $Res Function(ResourceTranslatedName) then) =
-      _$ResourceTranslatedNameCopyWithImpl<$Res, ResourceTranslatedName>;
+abstract class $TranslatedNameCopyWith<$Res> {
+  factory $TranslatedNameCopyWith(
+          TranslatedName value, $Res Function(TranslatedName) then) =
+      _$TranslatedNameCopyWithImpl<$Res, TranslatedName>;
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
@@ -304,10 +303,9 @@ abstract class $ResourceTranslatedNameCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResourceTranslatedNameCopyWithImpl<$Res,
-        $Val extends ResourceTranslatedName>
-    implements $ResourceTranslatedNameCopyWith<$Res> {
-  _$ResourceTranslatedNameCopyWithImpl(this._value, this._then);
+class _$TranslatedNameCopyWithImpl<$Res, $Val extends TranslatedName>
+    implements $TranslatedNameCopyWith<$Res> {
+  _$TranslatedNameCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -334,12 +332,11 @@ class _$ResourceTranslatedNameCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ResourceTranslatedNameImplCopyWith<$Res>
-    implements $ResourceTranslatedNameCopyWith<$Res> {
-  factory _$$ResourceTranslatedNameImplCopyWith(
-          _$ResourceTranslatedNameImpl value,
-          $Res Function(_$ResourceTranslatedNameImpl) then) =
-      __$$ResourceTranslatedNameImplCopyWithImpl<$Res>;
+abstract class _$$TranslatedNameImplCopyWith<$Res>
+    implements $TranslatedNameCopyWith<$Res> {
+  factory _$$TranslatedNameImplCopyWith(_$TranslatedNameImpl value,
+          $Res Function(_$TranslatedNameImpl) then) =
+      __$$TranslatedNameImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -348,13 +345,11 @@ abstract class _$$ResourceTranslatedNameImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ResourceTranslatedNameImplCopyWithImpl<$Res>
-    extends _$ResourceTranslatedNameCopyWithImpl<$Res,
-        _$ResourceTranslatedNameImpl>
-    implements _$$ResourceTranslatedNameImplCopyWith<$Res> {
-  __$$ResourceTranslatedNameImplCopyWithImpl(
-      _$ResourceTranslatedNameImpl _value,
-      $Res Function(_$ResourceTranslatedNameImpl) _then)
+class __$$TranslatedNameImplCopyWithImpl<$Res>
+    extends _$TranslatedNameCopyWithImpl<$Res, _$TranslatedNameImpl>
+    implements _$$TranslatedNameImplCopyWith<$Res> {
+  __$$TranslatedNameImplCopyWithImpl(
+      _$TranslatedNameImpl _value, $Res Function(_$TranslatedNameImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -363,7 +358,7 @@ class __$$ResourceTranslatedNameImplCopyWithImpl<$Res>
     Object? name = null,
     Object? languageName = null,
   }) {
-    return _then(_$ResourceTranslatedNameImpl(
+    return _then(_$TranslatedNameImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -378,14 +373,14 @@ class __$$ResourceTranslatedNameImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ResourceTranslatedNameImpl extends _ResourceTranslatedName {
-  const _$ResourceTranslatedNameImpl(
+class _$TranslatedNameImpl extends _TranslatedName {
+  const _$TranslatedNameImpl(
       {@JsonKey(name: 'name') required this.name,
       @JsonKey(name: 'language_name') required this.languageName})
       : super._();
 
-  factory _$ResourceTranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResourceTranslatedNameImplFromJson(json);
+  factory _$TranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TranslatedNameImplFromJson(json);
 
   @override
   @JsonKey(name: 'name')
@@ -396,14 +391,14 @@ class _$ResourceTranslatedNameImpl extends _ResourceTranslatedName {
 
   @override
   String toString() {
-    return 'ResourceTranslatedName(name: $name, languageName: $languageName)';
+    return 'TranslatedName(name: $name, languageName: $languageName)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResourceTranslatedNameImpl &&
+            other is _$TranslatedNameImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.languageName, languageName) ||
                 other.languageName == languageName));
@@ -416,27 +411,27 @@ class _$ResourceTranslatedNameImpl extends _ResourceTranslatedName {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResourceTranslatedNameImplCopyWith<_$ResourceTranslatedNameImpl>
-      get copyWith => __$$ResourceTranslatedNameImplCopyWithImpl<
-          _$ResourceTranslatedNameImpl>(this, _$identity);
+  _$$TranslatedNameImplCopyWith<_$TranslatedNameImpl> get copyWith =>
+      __$$TranslatedNameImplCopyWithImpl<_$TranslatedNameImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceTranslatedNameImplToJson(
+    return _$$TranslatedNameImplToJson(
       this,
     );
   }
 }
 
-abstract class _ResourceTranslatedName extends ResourceTranslatedName {
-  const factory _ResourceTranslatedName(
+abstract class _TranslatedName extends TranslatedName {
+  const factory _TranslatedName(
           {@JsonKey(name: 'name') required final String name,
           @JsonKey(name: 'language_name') required final String languageName}) =
-      _$ResourceTranslatedNameImpl;
-  const _ResourceTranslatedName._() : super._();
+      _$TranslatedNameImpl;
+  const _TranslatedName._() : super._();
 
-  factory _ResourceTranslatedName.fromJson(Map<String, dynamic> json) =
-      _$ResourceTranslatedNameImpl.fromJson;
+  factory _TranslatedName.fromJson(Map<String, dynamic> json) =
+      _$TranslatedNameImpl.fromJson;
 
   @override
   @JsonKey(name: 'name')
@@ -446,6 +441,6 @@ abstract class _ResourceTranslatedName extends ResourceTranslatedName {
   String get languageName;
   @override
   @JsonKey(ignore: true)
-  _$$ResourceTranslatedNameImplCopyWith<_$ResourceTranslatedNameImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$TranslatedNameImplCopyWith<_$TranslatedNameImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

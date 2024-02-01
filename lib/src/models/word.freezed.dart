@@ -596,12 +596,12 @@ abstract class _Word extends Word {
       throw _privateConstructorUsedError;
 }
 
-WordTranslation _$WordTranslationFromJson(Map<String, dynamic> json) {
-  return _WordTranslation.fromJson(json);
+Translation _$TranslationFromJson(Map<String, dynamic> json) {
+  return _Translation.fromJson(json);
 }
 
 /// @nodoc
-mixin _$WordTranslation {
+mixin _$Translation {
   @JsonKey(name: 'text')
   String get text => throw _privateConstructorUsedError;
   @JsonKey(name: 'language_name')
@@ -609,15 +609,15 @@ mixin _$WordTranslation {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WordTranslationCopyWith<WordTranslation> get copyWith =>
+  $TranslationCopyWith<Translation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WordTranslationCopyWith<$Res> {
-  factory $WordTranslationCopyWith(
-          WordTranslation value, $Res Function(WordTranslation) then) =
-      _$WordTranslationCopyWithImpl<$Res, WordTranslation>;
+abstract class $TranslationCopyWith<$Res> {
+  factory $TranslationCopyWith(
+          Translation value, $Res Function(Translation) then) =
+      _$TranslationCopyWithImpl<$Res, Translation>;
   @useResult
   $Res call(
       {@JsonKey(name: 'text') String text,
@@ -625,9 +625,9 @@ abstract class $WordTranslationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$WordTranslationCopyWithImpl<$Res, $Val extends WordTranslation>
-    implements $WordTranslationCopyWith<$Res> {
-  _$WordTranslationCopyWithImpl(this._value, this._then);
+class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
+    implements $TranslationCopyWith<$Res> {
+  _$TranslationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -654,11 +654,11 @@ class _$WordTranslationCopyWithImpl<$Res, $Val extends WordTranslation>
 }
 
 /// @nodoc
-abstract class _$$WordTranslationImplCopyWith<$Res>
-    implements $WordTranslationCopyWith<$Res> {
-  factory _$$WordTranslationImplCopyWith(_$WordTranslationImpl value,
-          $Res Function(_$WordTranslationImpl) then) =
-      __$$WordTranslationImplCopyWithImpl<$Res>;
+abstract class _$$TranslationImplCopyWith<$Res>
+    implements $TranslationCopyWith<$Res> {
+  factory _$$TranslationImplCopyWith(
+          _$TranslationImpl value, $Res Function(_$TranslationImpl) then) =
+      __$$TranslationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -667,11 +667,11 @@ abstract class _$$WordTranslationImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$WordTranslationImplCopyWithImpl<$Res>
-    extends _$WordTranslationCopyWithImpl<$Res, _$WordTranslationImpl>
-    implements _$$WordTranslationImplCopyWith<$Res> {
-  __$$WordTranslationImplCopyWithImpl(
-      _$WordTranslationImpl _value, $Res Function(_$WordTranslationImpl) _then)
+class __$$TranslationImplCopyWithImpl<$Res>
+    extends _$TranslationCopyWithImpl<$Res, _$TranslationImpl>
+    implements _$$TranslationImplCopyWith<$Res> {
+  __$$TranslationImplCopyWithImpl(
+      _$TranslationImpl _value, $Res Function(_$TranslationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -680,7 +680,7 @@ class __$$WordTranslationImplCopyWithImpl<$Res>
     Object? text = null,
     Object? languageName = null,
   }) {
-    return _then(_$WordTranslationImpl(
+    return _then(_$TranslationImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -695,14 +695,14 @@ class __$$WordTranslationImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WordTranslationImpl extends _WordTranslation {
-  const _$WordTranslationImpl(
+class _$TranslationImpl extends _Translation {
+  const _$TranslationImpl(
       {@JsonKey(name: 'text') required this.text,
       @JsonKey(name: 'language_name') required this.languageName})
       : super._();
 
-  factory _$WordTranslationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WordTranslationImplFromJson(json);
+  factory _$TranslationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TranslationImplFromJson(json);
 
   @override
   @JsonKey(name: 'text')
@@ -713,14 +713,14 @@ class _$WordTranslationImpl extends _WordTranslation {
 
   @override
   String toString() {
-    return 'WordTranslation(text: $text, languageName: $languageName)';
+    return 'Translation(text: $text, languageName: $languageName)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WordTranslationImpl &&
+            other is _$TranslationImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.languageName, languageName) ||
                 other.languageName == languageName));
@@ -733,27 +733,26 @@ class _$WordTranslationImpl extends _WordTranslation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WordTranslationImplCopyWith<_$WordTranslationImpl> get copyWith =>
-      __$$WordTranslationImplCopyWithImpl<_$WordTranslationImpl>(
-          this, _$identity);
+  _$$TranslationImplCopyWith<_$TranslationImpl> get copyWith =>
+      __$$TranslationImplCopyWithImpl<_$TranslationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WordTranslationImplToJson(
+    return _$$TranslationImplToJson(
       this,
     );
   }
 }
 
-abstract class _WordTranslation extends WordTranslation {
-  const factory _WordTranslation(
+abstract class _Translation extends Translation {
+  const factory _Translation(
           {@JsonKey(name: 'text') required final String text,
           @JsonKey(name: 'language_name') required final String languageName}) =
-      _$WordTranslationImpl;
-  const _WordTranslation._() : super._();
+      _$TranslationImpl;
+  const _Translation._() : super._();
 
-  factory _WordTranslation.fromJson(Map<String, dynamic> json) =
-      _$WordTranslationImpl.fromJson;
+  factory _Translation.fromJson(Map<String, dynamic> json) =
+      _$TranslationImpl.fromJson;
 
   @override
   @JsonKey(name: 'text')
@@ -763,16 +762,16 @@ abstract class _WordTranslation extends WordTranslation {
   String get languageName;
   @override
   @JsonKey(ignore: true)
-  _$$WordTranslationImplCopyWith<_$WordTranslationImpl> get copyWith =>
+  _$$TranslationImplCopyWith<_$TranslationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-WordTransliteration _$WordTransliterationFromJson(Map<String, dynamic> json) {
-  return _WordTransliteration.fromJson(json);
+Transliteration _$TransliterationFromJson(Map<String, dynamic> json) {
+  return _Transliteration.fromJson(json);
 }
 
 /// @nodoc
-mixin _$WordTransliteration {
+mixin _$Transliteration {
   @JsonKey(name: 'text')
   String get text => throw _privateConstructorUsedError;
   @JsonKey(name: 'language_name')
@@ -780,15 +779,15 @@ mixin _$WordTransliteration {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WordTransliterationCopyWith<WordTransliteration> get copyWith =>
+  $TransliterationCopyWith<Transliteration> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WordTransliterationCopyWith<$Res> {
-  factory $WordTransliterationCopyWith(
-          WordTransliteration value, $Res Function(WordTransliteration) then) =
-      _$WordTransliterationCopyWithImpl<$Res, WordTransliteration>;
+abstract class $TransliterationCopyWith<$Res> {
+  factory $TransliterationCopyWith(
+          Transliteration value, $Res Function(Transliteration) then) =
+      _$TransliterationCopyWithImpl<$Res, Transliteration>;
   @useResult
   $Res call(
       {@JsonKey(name: 'text') String text,
@@ -796,9 +795,9 @@ abstract class $WordTransliterationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$WordTransliterationCopyWithImpl<$Res, $Val extends WordTransliteration>
-    implements $WordTransliterationCopyWith<$Res> {
-  _$WordTransliterationCopyWithImpl(this._value, this._then);
+class _$TransliterationCopyWithImpl<$Res, $Val extends Transliteration>
+    implements $TransliterationCopyWith<$Res> {
+  _$TransliterationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -825,11 +824,11 @@ class _$WordTransliterationCopyWithImpl<$Res, $Val extends WordTransliteration>
 }
 
 /// @nodoc
-abstract class _$$WordTransliterationImplCopyWith<$Res>
-    implements $WordTransliterationCopyWith<$Res> {
-  factory _$$WordTransliterationImplCopyWith(_$WordTransliterationImpl value,
-          $Res Function(_$WordTransliterationImpl) then) =
-      __$$WordTransliterationImplCopyWithImpl<$Res>;
+abstract class _$$TransliterationImplCopyWith<$Res>
+    implements $TransliterationCopyWith<$Res> {
+  factory _$$TransliterationImplCopyWith(_$TransliterationImpl value,
+          $Res Function(_$TransliterationImpl) then) =
+      __$$TransliterationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -838,11 +837,11 @@ abstract class _$$WordTransliterationImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$WordTransliterationImplCopyWithImpl<$Res>
-    extends _$WordTransliterationCopyWithImpl<$Res, _$WordTransliterationImpl>
-    implements _$$WordTransliterationImplCopyWith<$Res> {
-  __$$WordTransliterationImplCopyWithImpl(_$WordTransliterationImpl _value,
-      $Res Function(_$WordTransliterationImpl) _then)
+class __$$TransliterationImplCopyWithImpl<$Res>
+    extends _$TransliterationCopyWithImpl<$Res, _$TransliterationImpl>
+    implements _$$TransliterationImplCopyWith<$Res> {
+  __$$TransliterationImplCopyWithImpl(
+      _$TransliterationImpl _value, $Res Function(_$TransliterationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -851,7 +850,7 @@ class __$$WordTransliterationImplCopyWithImpl<$Res>
     Object? text = null,
     Object? languageName = null,
   }) {
-    return _then(_$WordTransliterationImpl(
+    return _then(_$TransliterationImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -866,14 +865,14 @@ class __$$WordTransliterationImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WordTransliterationImpl extends _WordTransliteration {
-  const _$WordTransliterationImpl(
+class _$TransliterationImpl extends _Transliteration {
+  const _$TransliterationImpl(
       {@JsonKey(name: 'text') required this.text,
       @JsonKey(name: 'language_name') required this.languageName})
       : super._();
 
-  factory _$WordTransliterationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WordTransliterationImplFromJson(json);
+  factory _$TransliterationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransliterationImplFromJson(json);
 
   @override
   @JsonKey(name: 'text')
@@ -884,14 +883,14 @@ class _$WordTransliterationImpl extends _WordTransliteration {
 
   @override
   String toString() {
-    return 'WordTransliteration(text: $text, languageName: $languageName)';
+    return 'Transliteration(text: $text, languageName: $languageName)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WordTransliterationImpl &&
+            other is _$TransliterationImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.languageName, languageName) ||
                 other.languageName == languageName));
@@ -904,27 +903,27 @@ class _$WordTransliterationImpl extends _WordTransliteration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WordTransliterationImplCopyWith<_$WordTransliterationImpl> get copyWith =>
-      __$$WordTransliterationImplCopyWithImpl<_$WordTransliterationImpl>(
+  _$$TransliterationImplCopyWith<_$TransliterationImpl> get copyWith =>
+      __$$TransliterationImplCopyWithImpl<_$TransliterationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WordTransliterationImplToJson(
+    return _$$TransliterationImplToJson(
       this,
     );
   }
 }
 
-abstract class _WordTransliteration extends WordTransliteration {
-  const factory _WordTransliteration(
+abstract class _Transliteration extends Transliteration {
+  const factory _Transliteration(
           {@JsonKey(name: 'text') required final String text,
           @JsonKey(name: 'language_name') required final String languageName}) =
-      _$WordTransliterationImpl;
-  const _WordTransliteration._() : super._();
+      _$TransliterationImpl;
+  const _Transliteration._() : super._();
 
-  factory _WordTransliteration.fromJson(Map<String, dynamic> json) =
-      _$WordTransliterationImpl.fromJson;
+  factory _Transliteration.fromJson(Map<String, dynamic> json) =
+      _$TransliterationImpl.fromJson;
 
   @override
   @JsonKey(name: 'text')
@@ -934,6 +933,6 @@ abstract class _WordTransliteration extends WordTransliteration {
   String get languageName;
   @override
   @JsonKey(ignore: true)
-  _$$WordTransliterationImplCopyWith<_$WordTransliterationImpl> get copyWith =>
+  _$$TransliterationImplCopyWith<_$TransliterationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
