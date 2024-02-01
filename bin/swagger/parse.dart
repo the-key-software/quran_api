@@ -88,42 +88,41 @@ mixin _SwaggerDefinitionPropertyMixin {
 class SwaggerDefinitionProperty
     with _$SwaggerDefinitionProperty, _SwaggerDefinitionPropertyMixin {
   factory SwaggerDefinitionProperty.string({
-    required String? description,
+    String? description,
     @Default(false) bool nullable,
-    @JsonKey(name: 'default') required String? default_,
+    @JsonKey(name: 'default') String? default_,
   }) = SwaggerDefinitionPropertyString;
 
   factory SwaggerDefinitionProperty.integer({
-    required String? description,
-    @JsonKey(name: 'default') required int? default_,
+    String? description,
+    @JsonKey(name: 'default') int? default_,
   }) = SwaggerDefinitionPropertyInteger;
 
   factory SwaggerDefinitionProperty.number({
-    required String? description,
-    @JsonKey(name: 'default') required num? default_,
+    String? description,
+    @JsonKey(name: 'default') num? default_,
   }) = SwaggerDefinitionPropertyNumber;
 
   factory SwaggerDefinitionProperty.boolean({
-    required String? description,
-    @JsonKey(name: 'default') required bool? default_,
+    String? description,
+    @JsonKey(name: 'default') bool? default_,
   }) = SwaggerDefinitionPropertyBoolean;
 
   @FreezedUnionValue("null")
   factory SwaggerDefinitionProperty.dynamic({
-    required String? description,
-    @JsonKey(name: 'default') required dynamic default_,
+    String? description,
+    @JsonKey(name: 'default') dynamic default_,
   }) = SwaggerDefinitionPropertyDynamic;
 
   factory SwaggerDefinitionProperty.object({
-    required String? description,
-    @JsonKey(name: 'default') required Map? default_,
-    @Default([]) List<String> required,
+    String? description,
+    @JsonKey(name: 'default') Map? default_,
     required Map<String, SwaggerDefinitionProperty> properties,
   }) = SwaggerDefinitionPropertyObject;
 
   factory SwaggerDefinitionProperty.array({
-    required String? description,
-    @JsonKey(name: 'default') required List? default_,
+    String? description,
+    @JsonKey(name: 'default') List? default_,
     required SwaggerDefinitionPropertyArrayItem items,
   }) = SwaggerDefinitionPropertyArray;
 
@@ -193,6 +192,7 @@ class SwaggerDefinitionPropertyArrayItem
   }) = _SwaggerDefinitionPropertyArrayItemProperty;
 
   factory SwaggerDefinitionPropertyArrayItem.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       _$SwaggerDefinitionPropertyArrayItemFromJson(json);
 }

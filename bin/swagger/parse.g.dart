@@ -179,10 +179,6 @@ _$SwaggerDefinitionPropertyObjectImpl
         _$SwaggerDefinitionPropertyObjectImpl(
           description: json['description'] as String?,
           default_: json['default'] as Map<String, dynamic>?,
-          required: (json['required'] as List<dynamic>?)
-                  ?.map((e) => e as String)
-                  .toList() ??
-              const [],
           properties: (json['properties'] as Map<String, dynamic>).map(
             (k, e) => MapEntry(k,
                 SwaggerDefinitionProperty.fromJson(e as Map<String, dynamic>)),
@@ -195,7 +191,6 @@ Map<String, dynamic> _$$SwaggerDefinitionPropertyObjectImplToJson(
     <String, dynamic>{
       'description': instance.description,
       'default': instance.default_,
-      'required': instance.required,
       'properties': instance.properties.map((k, e) => MapEntry(k, e.toJson())),
       'type': instance.$type,
     };

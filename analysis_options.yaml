@@ -1,6 +1,5 @@
 linter:
   rules:
-    require_trailing_commas: true
     prefer_relative_imports: false
 
 analyzer:
