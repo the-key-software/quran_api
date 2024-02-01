@@ -17,43 +17,24 @@ class Swagger with _$Swagger {
     required Map<String, SwaggerDefinition> definitions,
   }) = _Swagger;
 
+  static SwaggerDefinitionProperty int() => SwaggerDefinitionProperty.integer();
+
+  static SwaggerDefinitionProperty dynamic_() =>
+      SwaggerDefinitionProperty.dynamic();
+
+  static SwaggerDefinitionProperty list(SwaggerDefinitionProperty property) =>
+      SwaggerDefinitionProperty.array(
+        items: SwaggerDefinitionPropertyArrayItem.property(
+          property: property,
+        ),
+      );
+
+  static SwaggerDefinitionProperty string() =>
+      SwaggerDefinitionProperty.string();
+
   factory Swagger.fromJson(Map<String, dynamic> json) =>
       _$SwaggerFromJson(json);
 }
-
-const x = {
-  "get": {
-    "operationId": "chapter-reciter-audio-file",
-    "summary": "Get chapter's audio file of a reciter",
-    "description": "Get chapter's audio file of a reciter ",
-    "responses": {
-      "200": {
-        "description": "",
-        "schema": {
-          "type": "object",
-          "properties": {
-            "audio_file": {r"$ref": "#/definitions/chapter-recitation"},
-          },
-        },
-        "examples": {
-          "application/json": {
-            "audio_file": {
-              "id": 43,
-              "chapter_id": 22,
-              "file_size": 19779712,
-              "format": "mp3",
-              "total_files": 1,
-              "audio_url":
-                  "https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee//022.mp3",
-            },
-          },
-        },
-      },
-    },
-    "tags": ["Audio"],
-    "parameters": [],
-  },
-};
 
 @freezed
 class SwaggerPath with _$SwaggerPath {
