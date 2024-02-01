@@ -1,4 +1,4 @@
-final openapiMap = {
+final openApiMap = {
   "swagger": "2.0",
   "x-stoplight": {"id": "xmulprojamrcd"},
   "info": {
