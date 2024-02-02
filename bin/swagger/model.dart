@@ -3,9 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'model.freezed.dart';
 part 'model.g.dart';
 
-@freezed
+const _freezed = Freezed(toJson: false);
+
+@_freezed
 class Swagger with _$Swagger {
-  factory Swagger({
+  const Swagger._();
+  const factory Swagger({
     required String swagger,
     @JsonKey(name: 'x-stoplight') required SwaggerXStoplight xStoplight,
     required SwaggerInfo info,
@@ -27,9 +30,10 @@ class Swagger with _$Swagger {
       _$SwaggerFromJson(json);
 }
 
-@freezed
+@_freezed
 class SwaggerPath with _$SwaggerPath {
-  factory SwaggerPath({
+  const SwaggerPath._();
+  const factory SwaggerPath({
     @Default([]) List<SwaggerPathParameter> parameters,
     required SwaggerPathGet get,
   }) = _SwaggerPath;
@@ -38,9 +42,10 @@ class SwaggerPath with _$SwaggerPath {
       _$SwaggerPathFromJson(json);
 }
 
-@freezed
+@_freezed
 class SwaggerPathGet with _$SwaggerPathGet {
-  factory SwaggerPathGet({
+  const SwaggerPathGet._();
+  const factory SwaggerPathGet({
     required String operationId,
     required String? summary,
     required String? description,
@@ -53,9 +58,10 @@ class SwaggerPathGet with _$SwaggerPathGet {
       _$SwaggerPathGetFromJson(json);
 }
 
-@freezed
+@_freezed
 class SwaggerPathResponse with _$SwaggerPathResponse {
-  factory SwaggerPathResponse({
+  const SwaggerPathResponse._();
+  const factory SwaggerPathResponse({
     required String description,
     @JsonKey(fromJson: SwaggerPathResponseSchema.fromJson2)
     required SwaggerPathResponseSchema? schema,
@@ -66,9 +72,10 @@ class SwaggerPathResponse with _$SwaggerPathResponse {
       _$SwaggerPathResponseFromJson(json);
 }
 
-@freezed
+@_freezed
 class SwaggerPathResponseSchema with _$SwaggerPathResponseSchema {
-  factory SwaggerPathResponseSchema({
+  const SwaggerPathResponseSchema._();
+  const factory SwaggerPathResponseSchema({
     required Map<String, dynamic> properties,
   }) = _SwaggerPathResponseSchema;
 
@@ -83,7 +90,7 @@ class SwaggerPathResponseSchema with _$SwaggerPathResponseSchema {
       _$SwaggerPathResponseSchemaFromJson(json);
 }
 
-@Freezed(unionKey: 'type')
+@_freezed
 class SwaggerPathParameter with _$SwaggerPathParameter {
   factory SwaggerPathParameter.number({
     required String name,
@@ -98,9 +105,10 @@ class SwaggerPathParameter with _$SwaggerPathParameter {
       _$SwaggerPathParameterFromJson(json);
 }
 
-@freezed
+@_freezed
 class SwaggerInfo with _$SwaggerInfo {
-  factory SwaggerInfo({
+  const SwaggerInfo._();
+  const factory SwaggerInfo({
     required String version,
     required String title,
     required String description,
@@ -110,7 +118,7 @@ class SwaggerInfo with _$SwaggerInfo {
       _$SwaggerInfoFromJson(json);
 }
 
-@freezed
+@_freezed
 class SwaggerXStoplight with _$SwaggerXStoplight {
   factory SwaggerXStoplight({
     required String id,
@@ -120,7 +128,6 @@ class SwaggerXStoplight with _$SwaggerXStoplight {
       _$SwaggerXStoplightFromJson(json);
 }
 
-@JsonSerializable()
 sealed class SwaggerDefinition {
   final String? description;
   final Object? default_;
@@ -130,12 +137,10 @@ sealed class SwaggerDefinition {
     this.default_,
   });
 
-  factory SwaggerDefinition.dynamic() => SwaggerDefinitionDynamic();
-
   factory SwaggerDefinition.fromJson(Map<String, dynamic> json) {
     switch (json['type']) {
       case null:
-        return SwaggerDefinition.fromJson(json);
+        return SwaggerDefinitionDynamic.fromJson(json);
       case ["string", "null"] || ["null", "string"]:
         return SwaggerDefinitionString.fromJson(json);
       case 'string':
@@ -163,7 +168,7 @@ sealed class SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
+// @_jsonSerializable
 class SwaggerDefinitionString extends SwaggerDefinition {
   final bool nullable;
 
@@ -183,7 +188,7 @@ class SwaggerDefinitionString extends SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
+// @_jsonSerializable
 class SwaggerDefinitionInteger extends SwaggerDefinition {
   const SwaggerDefinitionInteger({
     super.description,
@@ -198,7 +203,7 @@ class SwaggerDefinitionInteger extends SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
+// @_jsonSerializable
 class SwaggerDefinitionNumber extends SwaggerDefinition {
   const SwaggerDefinitionNumber({
     super.description,
@@ -213,7 +218,7 @@ class SwaggerDefinitionNumber extends SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
+// @_jsonSerializable
 class SwaggerDefinitionBoolean extends SwaggerDefinition {
   const SwaggerDefinitionBoolean({
     super.description,
@@ -228,7 +233,7 @@ class SwaggerDefinitionBoolean extends SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
+// @_jsonSerializable
 class SwaggerDefinitionDynamic extends SwaggerDefinition {
   const SwaggerDefinitionDynamic({
     super.description,
@@ -243,7 +248,7 @@ class SwaggerDefinitionDynamic extends SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
+// @_jsonSerializable
 class SwaggerDefinitionObject extends SwaggerDefinition {
   final String title;
   final List<String>? required;
@@ -273,7 +278,6 @@ class SwaggerDefinitionObject extends SwaggerDefinition {
   }
 }
 
-@JsonSerializable()
 sealed class SwaggerDefinitionArray extends SwaggerDefinition {
   const SwaggerDefinitionArray({
     super.description,
@@ -307,6 +311,7 @@ sealed class SwaggerDefinitionArray extends SwaggerDefinition {
   }
 }
 
+// @_jsonSerializable
 class SwaggerDefinitionArrayRef extends SwaggerDefinitionArray {
   final String ref;
 
@@ -317,6 +322,7 @@ class SwaggerDefinitionArrayRef extends SwaggerDefinitionArray {
   });
 }
 
+// @_jsonSerializable
 class SwaggerDefinitionArrayProperty extends SwaggerDefinitionArray {
   final SwaggerDefinition property;
 
@@ -327,6 +333,7 @@ class SwaggerDefinitionArrayProperty extends SwaggerDefinitionArray {
   });
 }
 
+// @_jsonSerializable
 class SwaggerDefinitionArrayEmpty extends SwaggerDefinitionArray {
   SwaggerDefinitionArrayEmpty({
     super.description,

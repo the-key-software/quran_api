@@ -9,14 +9,13 @@ import '../utils/file.dart';
 import 'clients_code_generation.dart';
 
 class ModelsCodeGeneration {
-  final Swagger swagger;
-
   const ModelsCodeGeneration(this.swagger);
+  final Swagger swagger;
 
   void generate() {
     for (var entry in swagger.definitions.entries) {
       final result = _buildDefinition(
-        addImport: true,
+        includeImports: true,
         key: entry.key,
         definition: entry.value,
       );
@@ -29,11 +28,11 @@ class ModelsCodeGeneration {
     }
   }
 
-  ({String code, String filename}) _buildDefinition({
-    required bool addImport,
+  ({String filename, String code}) _buildDefinition({
+    required bool includeImports,
+    String? parentName,
     required String key,
     required SwaggerDefinitionObject definition,
-    String? parentName,
   }) {
     final name = Template.class_(definition.title);
     final className = parentName == null ? name : "$parentName$name";
@@ -60,7 +59,7 @@ class ModelsCodeGeneration {
       switch (value) {
         case SwaggerDefinitionObject():
           final result = _buildDefinition(
-            addImport: false,
+            includeImports: false,
             parentName: className,
             key: key,
             definition: value,
@@ -73,19 +72,14 @@ class ModelsCodeGeneration {
 
     final classCode = Template.freezed(
       className: className,
-      includeImport: addImport,
       filename: filename,
+      includeImports: includeImports,
       comment: Template.comment(definition.title),
       propertiesCode: propertiesCode.toString(),
-      bodyCode: """$exampleCode
-factory $className.fromJson(Map<String, dynamic> json) => 
-    _\$${className}FromJson(json);""",
+      bodyCode: "$exampleCode\n${_buildFromJson(className)}",
     );
 
-    final code = """
-${classCode}
-$nestedClassesCode
-""";
+    final code = "${classCode}\n$nestedClassesCode";
 
     return (filename: filename, code: code);
   }
@@ -134,15 +128,23 @@ $nestedClassesCode
     return switch (property) {
       SwaggerDefinitionString() => property.nullable ? "String?" : "String",
       SwaggerDefinitionInteger() => "int",
-      SwaggerDefinitionNumber() => "double",
+      SwaggerDefinitionNumber() => "int",
       SwaggerDefinitionBoolean() => "bool",
       SwaggerDefinitionDynamic() => "Object?",
       SwaggerDefinitionObject() => "$parentName${Template.class_(key)}",
       SwaggerDefinitionArrayEmpty() => "List<Object>",
       SwaggerDefinitionArrayRef() => "List<${Template.class_(key)}>",
-      SwaggerDefinitionArrayProperty() =>
-        "List<${_buildPropertyType(parentName: parentName, key: key, property: property, nestedClasses: nestedClasses)}>"
+      SwaggerDefinitionArrayProperty property => "List<${_buildPropertyType(
+          parentName: parentName,
+          key: key,
+          property: property.property,
+          nestedClasses: nestedClasses,
+        )}>"
     };
+  }
+
+  String _buildFromJson(String className) {
+    return "factory $className.fromJson(Map<String, dynamic> json) =>  _\$${className}FromJson(json);";
   }
 
   String _buildExample({

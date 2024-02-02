@@ -15,9 +15,8 @@ final overrides = <String, Map<String, SwaggerDefinition>>{
 };
 
 class ClientsCodeGeneration {
-  final Swagger swagger;
-
   const ClientsCodeGeneration(this.swagger);
+  final Swagger swagger;
 
   void generate() {
     final tags = _buildTags();

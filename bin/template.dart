@@ -45,7 +45,7 @@ ${classes.toList().join("\n")}
 
   static String freezed({
     required String comment,
-    required bool includeImport,
+    required bool includeImports,
     required String filename,
     required String className,
     required String propertiesCode,
@@ -65,8 +65,10 @@ class $className with _\$$className {
 }
 """;
 
-    if (includeImport) {
+    if (includeImports) {
       return """
+// ignore_for_file: unused_import
+
 import 'package:freezed_annotation/freezed_annotation.dart'; 
 import 'models.dart';
 part '$filename.freezed.dart';

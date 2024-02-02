@@ -33,7 +33,6 @@ mixin _$Swagger {
   Map<String, SwaggerDefinitionObject> get definitions =>
       throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerCopyWith<Swagger> get copyWith => throw _privateConstructorUsedError;
 }
@@ -225,9 +224,9 @@ class __$$SwaggerImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SwaggerImpl implements _Swagger {
-  _$SwaggerImpl(
+@JsonSerializable(createToJson: false)
+class _$SwaggerImpl extends _Swagger {
+  const _$SwaggerImpl(
       {required this.swagger,
       @JsonKey(name: 'x-stoplight') required this.xStoplight,
       required this.info,
@@ -240,7 +239,8 @@ class _$SwaggerImpl implements _Swagger {
       : _schemes = schemes,
         _produces = produces,
         _paths = paths,
-        _definitions = definitions;
+        _definitions = definitions,
+        super._();
 
   factory _$SwaggerImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwaggerImplFromJson(json);
@@ -332,17 +332,10 @@ class _$SwaggerImpl implements _Swagger {
   @pragma('vm:prefer-inline')
   _$$SwaggerImplCopyWith<_$SwaggerImpl> get copyWith =>
       __$$SwaggerImplCopyWithImpl<_$SwaggerImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _Swagger implements Swagger {
-  factory _Swagger(
+abstract class _Swagger extends Swagger {
+  const factory _Swagger(
       {required final String swagger,
       @JsonKey(name: 'x-stoplight') required final SwaggerXStoplight xStoplight,
       required final SwaggerInfo info,
@@ -353,6 +346,7 @@ abstract class _Swagger implements Swagger {
       required final Map<String, SwaggerPath> paths,
       required final Map<String, SwaggerDefinitionObject>
           definitions}) = _$SwaggerImpl;
+  const _Swagger._() : super._();
 
   factory _Swagger.fromJson(Map<String, dynamic> json) = _$SwaggerImpl.fromJson;
 
@@ -392,7 +386,6 @@ mixin _$SwaggerPath {
       throw _privateConstructorUsedError;
   SwaggerPathGet get get => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerPathCopyWith<SwaggerPath> get copyWith =>
       throw _privateConstructorUsedError;
@@ -488,12 +481,13 @@ class __$$SwaggerPathImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SwaggerPathImpl implements _SwaggerPath {
-  _$SwaggerPathImpl(
+@JsonSerializable(createToJson: false)
+class _$SwaggerPathImpl extends _SwaggerPath {
+  const _$SwaggerPathImpl(
       {final List<SwaggerPathParameter> parameters = const [],
       required this.get})
-      : _parameters = parameters;
+      : _parameters = parameters,
+        super._();
 
   factory _$SwaggerPathImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwaggerPathImplFromJson(json);
@@ -535,19 +529,13 @@ class _$SwaggerPathImpl implements _SwaggerPath {
   @pragma('vm:prefer-inline')
   _$$SwaggerPathImplCopyWith<_$SwaggerPathImpl> get copyWith =>
       __$$SwaggerPathImplCopyWithImpl<_$SwaggerPathImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerPathImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _SwaggerPath implements SwaggerPath {
-  factory _SwaggerPath(
+abstract class _SwaggerPath extends SwaggerPath {
+  const factory _SwaggerPath(
       {final List<SwaggerPathParameter> parameters,
       required final SwaggerPathGet get}) = _$SwaggerPathImpl;
+  const _SwaggerPath._() : super._();
 
   factory _SwaggerPath.fromJson(Map<String, dynamic> json) =
       _$SwaggerPathImpl.fromJson;
@@ -575,7 +563,6 @@ mixin _$SwaggerPathGet {
       throw _privateConstructorUsedError;
   List<String> get tags => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerPathGetCopyWith<SwaggerPathGet> get copyWith =>
       throw _privateConstructorUsedError;
@@ -698,16 +685,17 @@ class __$$SwaggerPathGetImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SwaggerPathGetImpl implements _SwaggerPathGet {
-  _$SwaggerPathGetImpl(
+@JsonSerializable(createToJson: false)
+class _$SwaggerPathGetImpl extends _SwaggerPathGet {
+  const _$SwaggerPathGetImpl(
       {required this.operationId,
       required this.summary,
       required this.description,
       required final Map<String, SwaggerPathResponse> responses,
       required final List<String> tags})
       : _responses = responses,
-        _tags = tags;
+        _tags = tags,
+        super._();
 
   factory _$SwaggerPathGetImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwaggerPathGetImplFromJson(json);
@@ -770,22 +758,16 @@ class _$SwaggerPathGetImpl implements _SwaggerPathGet {
   _$$SwaggerPathGetImplCopyWith<_$SwaggerPathGetImpl> get copyWith =>
       __$$SwaggerPathGetImplCopyWithImpl<_$SwaggerPathGetImpl>(
           this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerPathGetImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _SwaggerPathGet implements SwaggerPathGet {
-  factory _SwaggerPathGet(
+abstract class _SwaggerPathGet extends SwaggerPathGet {
+  const factory _SwaggerPathGet(
       {required final String operationId,
       required final String? summary,
       required final String? description,
       required final Map<String, SwaggerPathResponse> responses,
       required final List<String> tags}) = _$SwaggerPathGetImpl;
+  const _SwaggerPathGet._() : super._();
 
   factory _SwaggerPathGet.fromJson(Map<String, dynamic> json) =
       _$SwaggerPathGetImpl.fromJson;
@@ -817,7 +799,6 @@ mixin _$SwaggerPathResponse {
   SwaggerPathResponseSchema? get schema => throw _privateConstructorUsedError;
   Map<String, dynamic>? get examples => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerPathResponseCopyWith<SwaggerPathResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -935,14 +916,15 @@ class __$$SwaggerPathResponseImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SwaggerPathResponseImpl implements _SwaggerPathResponse {
-  _$SwaggerPathResponseImpl(
+@JsonSerializable(createToJson: false)
+class _$SwaggerPathResponseImpl extends _SwaggerPathResponse {
+  const _$SwaggerPathResponseImpl(
       {required this.description,
       @JsonKey(fromJson: SwaggerPathResponseSchema.fromJson2)
       required this.schema,
       required final Map<String, dynamic>? examples})
-      : _examples = examples;
+      : _examples = examples,
+        super._();
 
   factory _$SwaggerPathResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwaggerPathResponseImplFromJson(json);
@@ -989,22 +971,16 @@ class _$SwaggerPathResponseImpl implements _SwaggerPathResponse {
   _$$SwaggerPathResponseImplCopyWith<_$SwaggerPathResponseImpl> get copyWith =>
       __$$SwaggerPathResponseImplCopyWithImpl<_$SwaggerPathResponseImpl>(
           this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerPathResponseImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _SwaggerPathResponse implements SwaggerPathResponse {
-  factory _SwaggerPathResponse(
+abstract class _SwaggerPathResponse extends SwaggerPathResponse {
+  const factory _SwaggerPathResponse(
           {required final String description,
           @JsonKey(fromJson: SwaggerPathResponseSchema.fromJson2)
           required final SwaggerPathResponseSchema? schema,
           required final Map<String, dynamic>? examples}) =
       _$SwaggerPathResponseImpl;
+  const _SwaggerPathResponse._() : super._();
 
   factory _SwaggerPathResponse.fromJson(Map<String, dynamic> json) =
       _$SwaggerPathResponseImpl.fromJson;
@@ -1031,7 +1007,6 @@ SwaggerPathResponseSchema _$SwaggerPathResponseSchemaFromJson(
 mixin _$SwaggerPathResponseSchema {
   Map<String, dynamic> get properties => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerPathResponseSchemaCopyWith<SwaggerPathResponseSchema> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1108,11 +1083,12 @@ class __$$SwaggerPathResponseSchemaImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SwaggerPathResponseSchemaImpl implements _SwaggerPathResponseSchema {
-  _$SwaggerPathResponseSchemaImpl(
+@JsonSerializable(createToJson: false)
+class _$SwaggerPathResponseSchemaImpl extends _SwaggerPathResponseSchema {
+  const _$SwaggerPathResponseSchemaImpl(
       {required final Map<String, dynamic> properties})
-      : _properties = properties;
+      : _properties = properties,
+        super._();
 
   factory _$SwaggerPathResponseSchemaImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwaggerPathResponseSchemaImplFromJson(json);
@@ -1150,19 +1126,13 @@ class _$SwaggerPathResponseSchemaImpl implements _SwaggerPathResponseSchema {
   _$$SwaggerPathResponseSchemaImplCopyWith<_$SwaggerPathResponseSchemaImpl>
       get copyWith => __$$SwaggerPathResponseSchemaImplCopyWithImpl<
           _$SwaggerPathResponseSchemaImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerPathResponseSchemaImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _SwaggerPathResponseSchema implements SwaggerPathResponseSchema {
-  factory _SwaggerPathResponseSchema(
+abstract class _SwaggerPathResponseSchema extends SwaggerPathResponseSchema {
+  const factory _SwaggerPathResponseSchema(
           {required final Map<String, dynamic> properties}) =
       _$SwaggerPathResponseSchemaImpl;
+  const _SwaggerPathResponseSchema._() : super._();
 
   factory _SwaggerPathResponseSchema.fromJson(Map<String, dynamic> json) =
       _$SwaggerPathResponseSchemaImpl.fromJson;
@@ -1226,7 +1196,7 @@ mixin _$SwaggerPathParameter {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SwaggerPathParameterCopyWith<SwaggerPathParameter> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1365,7 +1335,7 @@ class __$$SwaggerPathParameterNumberImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class _$SwaggerPathParameterNumberImpl implements _SwaggerPathParameterNumber {
   _$SwaggerPathParameterNumberImpl(
       {required this.name,
@@ -1486,13 +1456,6 @@ class _$SwaggerPathParameterNumberImpl implements _SwaggerPathParameterNumber {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerPathParameterNumberImplToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SwaggerPathParameterNumber implements SwaggerPathParameter {
@@ -1536,7 +1499,6 @@ mixin _$SwaggerInfo {
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerInfoCopyWith<SwaggerInfo> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1629,10 +1591,11 @@ class __$$SwaggerInfoImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SwaggerInfoImpl implements _SwaggerInfo {
-  _$SwaggerInfoImpl(
-      {required this.version, required this.title, required this.description});
+@JsonSerializable(createToJson: false)
+class _$SwaggerInfoImpl extends _SwaggerInfo {
+  const _$SwaggerInfoImpl(
+      {required this.version, required this.title, required this.description})
+      : super._();
 
   factory _$SwaggerInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwaggerInfoImplFromJson(json);
@@ -1669,20 +1632,14 @@ class _$SwaggerInfoImpl implements _SwaggerInfo {
   @pragma('vm:prefer-inline')
   _$$SwaggerInfoImplCopyWith<_$SwaggerInfoImpl> get copyWith =>
       __$$SwaggerInfoImplCopyWithImpl<_$SwaggerInfoImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerInfoImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _SwaggerInfo implements SwaggerInfo {
-  factory _SwaggerInfo(
+abstract class _SwaggerInfo extends SwaggerInfo {
+  const factory _SwaggerInfo(
       {required final String version,
       required final String title,
       required final String description}) = _$SwaggerInfoImpl;
+  const _SwaggerInfo._() : super._();
 
   factory _SwaggerInfo.fromJson(Map<String, dynamic> json) =
       _$SwaggerInfoImpl.fromJson;
@@ -1707,7 +1664,6 @@ SwaggerXStoplight _$SwaggerXStoplightFromJson(Map<String, dynamic> json) {
 mixin _$SwaggerXStoplight {
   String get id => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SwaggerXStoplightCopyWith<SwaggerXStoplight> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1780,7 +1736,7 @@ class __$$SwaggerXStoplightImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class _$SwaggerXStoplightImpl implements _SwaggerXStoplight {
   _$SwaggerXStoplightImpl({required this.id});
 
@@ -1813,13 +1769,6 @@ class _$SwaggerXStoplightImpl implements _SwaggerXStoplight {
   _$$SwaggerXStoplightImplCopyWith<_$SwaggerXStoplightImpl> get copyWith =>
       __$$SwaggerXStoplightImplCopyWithImpl<_$SwaggerXStoplightImpl>(
           this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwaggerXStoplightImplToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SwaggerXStoplight implements SwaggerXStoplight {
