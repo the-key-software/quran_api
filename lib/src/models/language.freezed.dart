@@ -33,7 +33,7 @@ mixin _$Language {
   @JsonKey(name: 'direction')
   String get direction => throw _privateConstructorUsedError;
   @JsonKey(name: 'translated_names')
-  List<TranslatedNames> get translatedNames =>
+  List<TranslatedName> get translatedNames =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -53,8 +53,7 @@ abstract class $LanguageCopyWith<$Res> {
       @JsonKey(name: 'native_name') String nativeName,
       @JsonKey(name: 'iso_code') String isoCode,
       @JsonKey(name: 'direction') String direction,
-      @JsonKey(name: 'translated_names')
-      List<TranslatedNames> translatedNames});
+      @JsonKey(name: 'translated_names') List<TranslatedName> translatedNames});
 }
 
 /// @nodoc
@@ -101,7 +100,7 @@ class _$LanguageCopyWithImpl<$Res, $Val extends Language>
       translatedNames: null == translatedNames
           ? _value.translatedNames
           : translatedNames // ignore: cast_nullable_to_non_nullable
-              as List<TranslatedNames>,
+              as List<TranslatedName>,
     ) as $Val);
   }
 }
@@ -120,8 +119,7 @@ abstract class _$$LanguageImplCopyWith<$Res>
       @JsonKey(name: 'native_name') String nativeName,
       @JsonKey(name: 'iso_code') String isoCode,
       @JsonKey(name: 'direction') String direction,
-      @JsonKey(name: 'translated_names')
-      List<TranslatedNames> translatedNames});
+      @JsonKey(name: 'translated_names') List<TranslatedName> translatedNames});
 }
 
 /// @nodoc
@@ -166,7 +164,7 @@ class __$$LanguageImplCopyWithImpl<$Res>
       translatedNames: null == translatedNames
           ? _value._translatedNames
           : translatedNames // ignore: cast_nullable_to_non_nullable
-              as List<TranslatedNames>,
+              as List<TranslatedName>,
     ));
   }
 }
@@ -181,7 +179,7 @@ class _$LanguageImpl extends _Language {
       @JsonKey(name: 'iso_code') required this.isoCode,
       @JsonKey(name: 'direction') required this.direction,
       @JsonKey(name: 'translated_names')
-      required final List<TranslatedNames> translatedNames})
+      required final List<TranslatedName> translatedNames})
       : _translatedNames = translatedNames,
         super._();
 
@@ -205,10 +203,10 @@ class _$LanguageImpl extends _Language {
   @override
   @JsonKey(name: 'direction')
   final String direction;
-  final List<TranslatedNames> _translatedNames;
+  final List<TranslatedName> _translatedNames;
   @override
   @JsonKey(name: 'translated_names')
-  List<TranslatedNames> get translatedNames {
+  List<TranslatedName> get translatedNames {
     if (_translatedNames is EqualUnmodifiableListView) return _translatedNames;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_translatedNames);
@@ -262,7 +260,7 @@ abstract class _Language extends Language {
       @JsonKey(name: 'iso_code') required final String isoCode,
       @JsonKey(name: 'direction') required final String direction,
       @JsonKey(name: 'translated_names')
-      required final List<TranslatedNames> translatedNames}) = _$LanguageImpl;
+      required final List<TranslatedName> translatedNames}) = _$LanguageImpl;
   const _Language._() : super._();
 
   factory _Language.fromJson(Map<String, dynamic> json) =
@@ -287,7 +285,7 @@ abstract class _Language extends Language {
   String get direction;
   @override
   @JsonKey(name: 'translated_names')
-  List<TranslatedNames> get translatedNames;
+  List<TranslatedName> get translatedNames;
   @override
   @JsonKey(ignore: true)
   _$$LanguageImplCopyWith<_$LanguageImpl> get copyWith =>

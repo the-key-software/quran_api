@@ -24,12 +24,16 @@ Map<String, dynamic> _$$JuzImplToJson(_$JuzImpl instance) => <String, dynamic>{
       'verse_mapping': instance.verseMapping,
     };
 
-_$JuzImpl _$$JuzImplFromJson(Map<String, dynamic> json) => _$JuzImpl(
+_$JuzVerseMappingImpl _$$JuzVerseMappingImplFromJson(
+        Map<String, dynamic> json) =>
+    _$JuzVerseMappingImpl(
       key1: json['1'] as String,
       key2: json['2'] as String,
     );
 
-Map<String, dynamic> _$$JuzImplToJson(_$JuzImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$JuzVerseMappingImplToJson(
+        _$JuzVerseMappingImpl instance) =>
+    <String, dynamic>{
       '1': instance.key1,
       '2': instance.key2,
     };

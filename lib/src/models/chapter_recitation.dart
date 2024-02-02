@@ -40,6 +40,7 @@ class ChapterRecitation with _$ChapterRecitation {
     audioUrl:
         "https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee//001.mp3",
   );
+
   factory ChapterRecitation.fromJson(Map<String, dynamic> json) =>
       _$ChapterRecitationFromJson(json);
 }

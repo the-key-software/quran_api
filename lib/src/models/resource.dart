@@ -27,26 +27,27 @@ class Resource with _$Resource {
     authorName: "Hafiz Ibn Kathir",
     slug: "en-tafisr-ibn-kathir",
     languageName: "english",
-    translatedName: Resource(
+    translatedName: ResourceTranslatedName(
       name: "Tafsir Ibn Kathir",
       languageName: "english",
     ),
   );
+
   factory Resource.fromJson(Map<String, dynamic> json) =>
       _$ResourceFromJson(json);
 }
 
 @freezed
 
-///
-class Resource with _$Resource {
-  const Resource._();
+/// translated_name
+class ResourceTranslatedName with _$ResourceTranslatedName {
+  const ResourceTranslatedName._();
 
-  const factory Resource({
+  const factory ResourceTranslatedName({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'language_name') required String languageName,
-  }) = _Resource;
+  }) = _ResourceTranslatedName;
 
-  factory Resource.fromJson(Map<String, dynamic> json) =>
-      _$ResourceFromJson(json);
+  factory ResourceTranslatedName.fromJson(Map<String, dynamic> json) =>
+      _$ResourceTranslatedNameFromJson(json);
 }

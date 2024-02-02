@@ -293,12 +293,12 @@ abstract class _Juz extends Juz {
       throw _privateConstructorUsedError;
 }
 
-Juz _$JuzFromJson(Map<String, dynamic> json) {
-  return _Juz.fromJson(json);
+JuzVerseMapping _$JuzVerseMappingFromJson(Map<String, dynamic> json) {
+  return _JuzVerseMapping.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Juz {
+mixin _$JuzVerseMapping {
   @JsonKey(name: '1')
   String get key1 => throw _privateConstructorUsedError;
   @JsonKey(name: '2')
@@ -306,20 +306,23 @@ mixin _$Juz {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $JuzCopyWith<Juz> get copyWith => throw _privateConstructorUsedError;
+  $JuzVerseMappingCopyWith<JuzVerseMapping> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $JuzCopyWith<$Res> {
-  factory $JuzCopyWith(Juz value, $Res Function(Juz) then) =
-      _$JuzCopyWithImpl<$Res, Juz>;
+abstract class $JuzVerseMappingCopyWith<$Res> {
+  factory $JuzVerseMappingCopyWith(
+          JuzVerseMapping value, $Res Function(JuzVerseMapping) then) =
+      _$JuzVerseMappingCopyWithImpl<$Res, JuzVerseMapping>;
   @useResult
   $Res call({@JsonKey(name: '1') String key1, @JsonKey(name: '2') String key2});
 }
 
 /// @nodoc
-class _$JuzCopyWithImpl<$Res, $Val extends Juz> implements $JuzCopyWith<$Res> {
-  _$JuzCopyWithImpl(this._value, this._then);
+class _$JuzVerseMappingCopyWithImpl<$Res, $Val extends JuzVerseMapping>
+    implements $JuzVerseMappingCopyWith<$Res> {
+  _$JuzVerseMappingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -346,18 +349,22 @@ class _$JuzCopyWithImpl<$Res, $Val extends Juz> implements $JuzCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$JuzImplCopyWith<$Res> implements $JuzCopyWith<$Res> {
-  factory _$$JuzImplCopyWith(_$JuzImpl value, $Res Function(_$JuzImpl) then) =
-      __$$JuzImplCopyWithImpl<$Res>;
+abstract class _$$JuzVerseMappingImplCopyWith<$Res>
+    implements $JuzVerseMappingCopyWith<$Res> {
+  factory _$$JuzVerseMappingImplCopyWith(_$JuzVerseMappingImpl value,
+          $Res Function(_$JuzVerseMappingImpl) then) =
+      __$$JuzVerseMappingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: '1') String key1, @JsonKey(name: '2') String key2});
 }
 
 /// @nodoc
-class __$$JuzImplCopyWithImpl<$Res> extends _$JuzCopyWithImpl<$Res, _$JuzImpl>
-    implements _$$JuzImplCopyWith<$Res> {
-  __$$JuzImplCopyWithImpl(_$JuzImpl _value, $Res Function(_$JuzImpl) _then)
+class __$$JuzVerseMappingImplCopyWithImpl<$Res>
+    extends _$JuzVerseMappingCopyWithImpl<$Res, _$JuzVerseMappingImpl>
+    implements _$$JuzVerseMappingImplCopyWith<$Res> {
+  __$$JuzVerseMappingImplCopyWithImpl(
+      _$JuzVerseMappingImpl _value, $Res Function(_$JuzVerseMappingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -366,7 +373,7 @@ class __$$JuzImplCopyWithImpl<$Res> extends _$JuzCopyWithImpl<$Res, _$JuzImpl>
     Object? key1 = null,
     Object? key2 = null,
   }) {
-    return _then(_$JuzImpl(
+    return _then(_$JuzVerseMappingImpl(
       key1: null == key1
           ? _value.key1
           : key1 // ignore: cast_nullable_to_non_nullable
@@ -381,14 +388,14 @@ class __$$JuzImplCopyWithImpl<$Res> extends _$JuzCopyWithImpl<$Res, _$JuzImpl>
 
 /// @nodoc
 @JsonSerializable()
-class _$JuzImpl extends _Juz {
-  const _$JuzImpl(
+class _$JuzVerseMappingImpl extends _JuzVerseMapping {
+  const _$JuzVerseMappingImpl(
       {@JsonKey(name: '1') required this.key1,
       @JsonKey(name: '2') required this.key2})
       : super._();
 
-  factory _$JuzImpl.fromJson(Map<String, dynamic> json) =>
-      _$$JuzImplFromJson(json);
+  factory _$JuzVerseMappingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$JuzVerseMappingImplFromJson(json);
 
   @override
   @JsonKey(name: '1')
@@ -399,14 +406,14 @@ class _$JuzImpl extends _Juz {
 
   @override
   String toString() {
-    return 'Juz(key1: $key1, key2: $key2)';
+    return 'JuzVerseMapping(key1: $key1, key2: $key2)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$JuzImpl &&
+            other is _$JuzVerseMappingImpl &&
             (identical(other.key1, key1) || other.key1 == key1) &&
             (identical(other.key2, key2) || other.key2 == key2));
   }
@@ -418,24 +425,26 @@ class _$JuzImpl extends _Juz {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$JuzImplCopyWith<_$JuzImpl> get copyWith =>
-      __$$JuzImplCopyWithImpl<_$JuzImpl>(this, _$identity);
+  _$$JuzVerseMappingImplCopyWith<_$JuzVerseMappingImpl> get copyWith =>
+      __$$JuzVerseMappingImplCopyWithImpl<_$JuzVerseMappingImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JuzImplToJson(
+    return _$$JuzVerseMappingImplToJson(
       this,
     );
   }
 }
 
-abstract class _Juz extends Juz {
-  const factory _Juz(
+abstract class _JuzVerseMapping extends JuzVerseMapping {
+  const factory _JuzVerseMapping(
       {@JsonKey(name: '1') required final String key1,
-      @JsonKey(name: '2') required final String key2}) = _$JuzImpl;
-  const _Juz._() : super._();
+      @JsonKey(name: '2') required final String key2}) = _$JuzVerseMappingImpl;
+  const _JuzVerseMapping._() : super._();
 
-  factory _Juz.fromJson(Map<String, dynamic> json) = _$JuzImpl.fromJson;
+  factory _JuzVerseMapping.fromJson(Map<String, dynamic> json) =
+      _$JuzVerseMappingImpl.fromJson;
 
   @override
   @JsonKey(name: '1')
@@ -445,6 +454,6 @@ abstract class _Juz extends Juz {
   String get key2;
   @override
   @JsonKey(ignore: true)
-  _$$JuzImplCopyWith<_$JuzImpl> get copyWith =>
+  _$$JuzVerseMappingImplCopyWith<_$JuzVerseMappingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

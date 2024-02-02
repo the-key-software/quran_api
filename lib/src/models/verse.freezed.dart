@@ -75,11 +75,11 @@ mixin _$Verse {
   @JsonKey(name: 'image_width')
   int get imageWidth => throw _privateConstructorUsedError;
   @JsonKey(name: 'words')
-  List<Words> get words => throw _privateConstructorUsedError;
+  List<Word> get words => throw _privateConstructorUsedError;
   @JsonKey(name: 'audio')
   Object? get audio => throw _privateConstructorUsedError;
   @JsonKey(name: 'translations')
-  List<Translations> get translations => throw _privateConstructorUsedError;
+  List<Translation> get translations => throw _privateConstructorUsedError;
 
   /// Glyphs codes for QCF v1 fonts
   @JsonKey(name: 'code_v1')
@@ -127,9 +127,9 @@ abstract class $VerseCopyWith<$Res> {
       @JsonKey(name: 'page_number') int pageNumber,
       @JsonKey(name: 'image_url') String imageUrl,
       @JsonKey(name: 'image_width') int imageWidth,
-      @JsonKey(name: 'words') List<Words> words,
+      @JsonKey(name: 'words') List<Word> words,
       @JsonKey(name: 'audio') Object? audio,
-      @JsonKey(name: 'translations') List<Translations> translations,
+      @JsonKey(name: 'translations') List<Translation> translations,
       @JsonKey(name: 'code_v1') String codeV1,
       @JsonKey(name: 'code_v2') String codeV2,
       @JsonKey(name: 'v1_page') int v1Page,
@@ -251,12 +251,12 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
       words: null == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Words>,
+              as List<Word>,
       audio: freezed == audio ? _value.audio : audio,
       translations: null == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
-              as List<Translations>,
+              as List<Translation>,
       codeV1: null == codeV1
           ? _value.codeV1
           : codeV1 // ignore: cast_nullable_to_non_nullable
@@ -304,9 +304,9 @@ abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
       @JsonKey(name: 'page_number') int pageNumber,
       @JsonKey(name: 'image_url') String imageUrl,
       @JsonKey(name: 'image_width') int imageWidth,
-      @JsonKey(name: 'words') List<Words> words,
+      @JsonKey(name: 'words') List<Word> words,
       @JsonKey(name: 'audio') Object? audio,
-      @JsonKey(name: 'translations') List<Translations> translations,
+      @JsonKey(name: 'translations') List<Translation> translations,
       @JsonKey(name: 'code_v1') String codeV1,
       @JsonKey(name: 'code_v2') String codeV2,
       @JsonKey(name: 'v1_page') int v1Page,
@@ -426,12 +426,12 @@ class __$$VerseImplCopyWithImpl<$Res>
       words: null == words
           ? _value._words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Words>,
+              as List<Word>,
       audio: freezed == audio ? _value.audio : audio,
       translations: null == translations
           ? _value._translations
           : translations // ignore: cast_nullable_to_non_nullable
-              as List<Translations>,
+              as List<Translation>,
       codeV1: null == codeV1
           ? _value.codeV1
           : codeV1 // ignore: cast_nullable_to_non_nullable
@@ -475,10 +475,10 @@ class _$VerseImpl extends _Verse {
       @JsonKey(name: 'page_number') required this.pageNumber,
       @JsonKey(name: 'image_url') required this.imageUrl,
       @JsonKey(name: 'image_width') required this.imageWidth,
-      @JsonKey(name: 'words') required final List<Words> words,
+      @JsonKey(name: 'words') required final List<Word> words,
       @JsonKey(name: 'audio') required this.audio,
       @JsonKey(name: 'translations')
-      required final List<Translations> translations,
+      required final List<Translation> translations,
       @JsonKey(name: 'code_v1') required this.codeV1,
       @JsonKey(name: 'code_v2') required this.codeV2,
       @JsonKey(name: 'v1_page') required this.v1Page,
@@ -563,10 +563,10 @@ class _$VerseImpl extends _Verse {
   @override
   @JsonKey(name: 'image_width')
   final int imageWidth;
-  final List<Words> _words;
+  final List<Word> _words;
   @override
   @JsonKey(name: 'words')
-  List<Words> get words {
+  List<Word> get words {
     if (_words is EqualUnmodifiableListView) return _words;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_words);
@@ -575,10 +575,10 @@ class _$VerseImpl extends _Verse {
   @override
   @JsonKey(name: 'audio')
   final Object? audio;
-  final List<Translations> _translations;
+  final List<Translation> _translations;
   @override
   @JsonKey(name: 'translations')
-  List<Translations> get translations {
+  List<Translation> get translations {
     if (_translations is EqualUnmodifiableListView) return _translations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_translations);
@@ -731,10 +731,10 @@ abstract class _Verse extends Verse {
       @JsonKey(name: 'page_number') required final int pageNumber,
       @JsonKey(name: 'image_url') required final String imageUrl,
       @JsonKey(name: 'image_width') required final int imageWidth,
-      @JsonKey(name: 'words') required final List<Words> words,
+      @JsonKey(name: 'words') required final List<Word> words,
       @JsonKey(name: 'audio') required final Object? audio,
       @JsonKey(name: 'translations')
-      required final List<Translations> translations,
+      required final List<Translation> translations,
       @JsonKey(name: 'code_v1') required final String codeV1,
       @JsonKey(name: 'code_v2') required final String codeV2,
       @JsonKey(name: 'v1_page') required final int v1Page,
@@ -818,13 +818,13 @@ abstract class _Verse extends Verse {
   int get imageWidth;
   @override
   @JsonKey(name: 'words')
-  List<Words> get words;
+  List<Word> get words;
   @override
   @JsonKey(name: 'audio')
   Object? get audio;
   @override
   @JsonKey(name: 'translations')
-  List<Translations> get translations;
+  List<Translation> get translations;
   @override
 
   /// Glyphs codes for QCF v1 fonts

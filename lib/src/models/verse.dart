@@ -47,9 +47,9 @@ class Verse with _$Verse {
     @JsonKey(name: 'page_number') required int pageNumber,
     @JsonKey(name: 'image_url') required String imageUrl,
     @JsonKey(name: 'image_width') required int imageWidth,
-    @JsonKey(name: 'words') required List<Words> words,
+    @JsonKey(name: 'words') required List<Word> words,
     @JsonKey(name: 'audio') required Object? audio,
-    @JsonKey(name: 'translations') required List<Translations> translations,
+    @JsonKey(name: 'translations') required List<Translation> translations,
 
     /// Glyphs codes for QCF v1 fonts
     @JsonKey(name: 'code_v1') required String codeV1,
@@ -102,5 +102,6 @@ class Verse with _$Verse {
     v1Page: null,
     v2Page: null,
   );
+
   factory Verse.fromJson(Map<String, dynamic> json) => _$VerseFromJson(json);
 }

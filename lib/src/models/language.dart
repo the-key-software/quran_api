@@ -20,7 +20,7 @@ class Language with _$Language {
     @JsonKey(name: 'iso_code') required String isoCode,
     @JsonKey(name: 'direction') required String direction,
     @JsonKey(name: 'translated_names')
-    required List<TranslatedNames> translatedNames,
+    required List<TranslatedName> translatedNames,
   }) = _Language;
 
   static const Language example = Language(
@@ -30,9 +30,13 @@ class Language with _$Language {
     isoCode: "en",
     direction: "ltr",
     translatedNames: [
-      {"name": "انگریزی", "language_name": "Urdu"}
+      TranslatedName(
+        languageName: "Urdu",
+        name: "انگریزی",
+      )
     ],
   );
+
   factory Language.fromJson(Map<String, dynamic> json) =>
       _$LanguageFromJson(json);
 }

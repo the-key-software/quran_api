@@ -32,24 +32,26 @@ class Juz with _$Juz {
     firstVerseId: 1,
     lastVerseId: 148,
     versesCount: 148,
-    verseMapping: Juz(
+    verseMapping: JuzVerseMapping(
       key1: "1-7",
       key2: "1-141",
     ),
   );
+
   factory Juz.fromJson(Map<String, dynamic> json) => _$JuzFromJson(json);
 }
 
 @freezed
 
-///
-class Juz with _$Juz {
-  const Juz._();
+/// verse_mapping
+class JuzVerseMapping with _$JuzVerseMapping {
+  const JuzVerseMapping._();
 
-  const factory Juz({
+  const factory JuzVerseMapping({
     @JsonKey(name: '1') required String key1,
     @JsonKey(name: '2') required String key2,
-  }) = _Juz;
+  }) = _JuzVerseMapping;
 
-  factory Juz.fromJson(Map<String, dynamic> json) => _$JuzFromJson(json);
+  factory JuzVerseMapping.fromJson(Map<String, dynamic> json) =>
+      _$JuzVerseMappingFromJson(json);
 }

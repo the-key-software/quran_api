@@ -1,6 +1,6 @@
 import 'package:change_case/change_case.dart';
 
-import '../generate.dart';
+import '../main.dart';
 import '../swagger/model.dart';
 import '../template.dart';
 import '../utils/file.dart';

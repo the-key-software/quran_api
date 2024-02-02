@@ -37,6 +37,7 @@ class ChapterReciters with _$ChapterReciters {
     format: "mp3",
     filesSize: 1258422528,
   );
+
   factory ChapterReciters.fromJson(Map<String, dynamic> json) =>
       _$ChapterRecitersFromJson(json);
 }

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:change_case/change_case.dart';
 
-import '../generate.dart';
+import '../main.dart';
 import '../swagger/model.dart';
 import '../template.dart';
 import '../utils/file.dart';
@@ -35,7 +35,7 @@ class ModelsCodeGeneration {
     required SwaggerDefinitionObject definition,
   }) {
     final name = Template.class_(definition.title);
-    final className = parentName == null ? name : "$parentName$name";
+    final className = parentName != null ? "$parentName$name" : name;
     final filename = definition.title.toSnakeCase();
     final properties = definition.properties;
     final override = overrides[key];
@@ -57,12 +57,12 @@ class ModelsCodeGeneration {
 
     properties.forEach((key, value) {
       switch (value) {
-        case SwaggerDefinitionObject():
+        case SwaggerDefinitionObject value:
           final result = _buildDefinition(
             includeImports: false,
             parentName: className,
             key: key,
-            definition: value,
+            definition: value.copyWith(title: key),
           );
           nestedClassesCode += result.code;
 
@@ -76,7 +76,7 @@ class ModelsCodeGeneration {
       includeImports: includeImports,
       comment: Template.comment(definition.title),
       propertiesCode: propertiesCode.toString(),
-      bodyCode: "$exampleCode\n${_buildFromJson(className)}",
+      bodyCode: "$exampleCode\n\n${_buildFromJson(className)}",
     );
 
     final code = "${classCode}\n$nestedClassesCode";
@@ -126,14 +126,15 @@ class ModelsCodeGeneration {
     List<String> nestedClasses = const [],
   }) {
     return switch (property) {
+      SwaggerDefinitionDynamic() => "Object?",
       SwaggerDefinitionString() => property.nullable ? "String?" : "String",
       SwaggerDefinitionInteger() => "int",
       SwaggerDefinitionNumber() => "int",
       SwaggerDefinitionBoolean() => "bool",
-      SwaggerDefinitionDynamic() => "Object?",
       SwaggerDefinitionObject() => "$parentName${Template.class_(key)}",
       SwaggerDefinitionArrayEmpty() => "List<Object>",
-      SwaggerDefinitionArrayRef() => "List<${Template.class_(key)}>",
+      SwaggerDefinitionArrayRef property =>
+        "List<${Template.class_(property.name)}>",
       SwaggerDefinitionArrayProperty property => "List<${_buildPropertyType(
           parentName: parentName,
           key: key,
@@ -152,20 +153,9 @@ class ModelsCodeGeneration {
   }) {
     final example = definition.example;
     final className = Template.class_(definition.title);
-    final properties = definition.properties;
 
-    final parametersCode = StringBuffer();
     if (example is Map<String, dynamic>) {
-      properties.forEach((key, value) {
-        final name = Template.fieldName(key);
-
-        final fieldValue = example[key];
-
-        parametersCode.write("$name: ${jsonEncode(fieldValue)},");
-      });
-
       final instanceCode = _buildInstance(
-        parentClassName: definition.className,
         example: example,
         definition: definition,
       );
@@ -178,31 +168,35 @@ class ModelsCodeGeneration {
   String _buildInstance({
     required Map<String, dynamic> example,
     required SwaggerDefinitionObject definition,
-    String? parentClassName,
   }) {
-    final parametersCode = StringBuffer();
-
+    final className = Template.class_(definition.title);
+    final code = StringBuffer();
     definition.properties.forEach((key, value) {
       final name = Template.fieldName(key);
 
       final exampleMap = example[key];
 
       switch (value) {
-        case SwaggerDefinitionObject():
+        case SwaggerDefinitionObject value:
           final className = _buildInstance(
-            example: exampleMap,
-            definition: value,
+            example: exampleMap as Map<String, dynamic>,
+            definition: value.copyWith(title: key),
           );
-          parametersCode.write("$name: $parentClassName$className,");
+          code.write("$name: $className,");
+        case SwaggerDefinitionArrayRef value:
+          final className = _buildInstance(
+            example: exampleMap.first as Map<String, dynamic>,
+            definition: swagger.definitions.entries
+                .firstWhere((element) => element.key == value.name)
+                .value
+                .copyWith(title: value.name),
+          );
+          code.write("$name: [$className],");
         default:
-          parametersCode.write("$name: ${jsonEncode(exampleMap)},");
+          code.write("$name: ${jsonEncode(exampleMap)},");
       }
     });
 
-    return """${definition.className}($parametersCode)""";
+    return """${className}($code)""";
   }
-}
-
-extension on SwaggerDefinitionObject {
-  String get className => Template.class_(title);
 }

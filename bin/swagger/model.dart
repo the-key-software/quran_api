@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'model.freezed.dart';
@@ -272,8 +273,26 @@ class SwaggerDefinitionObject extends SwaggerDefinition {
       required: (json['required'] as List?)?.map((e) => e as String).toList(),
       example: json['example'] as Map<String, dynamic>?,
       properties: (json['properties'] as Map<String, dynamic>).map(
-        (key, value) => MapEntry(key, SwaggerDefinition.fromJson(value)),
+        (key, value) {
+          final definition = SwaggerDefinition.fromJson(value);
+
+          return MapEntry(key, definition);
+        },
       ),
+    );
+  }
+
+  SwaggerDefinitionObject copyWith({
+    String? title,
+    List<String>? required,
+    Map<String, dynamic>? example,
+    Map<String, SwaggerDefinition>? properties,
+  }) {
+    return SwaggerDefinitionObject(
+      title: title ?? this.title,
+      required: required ?? this.required,
+      example: example ?? this.example,
+      properties: properties ?? this.properties,
     );
   }
 }
@@ -314,6 +333,8 @@ sealed class SwaggerDefinitionArray extends SwaggerDefinition {
 // @_jsonSerializable
 class SwaggerDefinitionArrayRef extends SwaggerDefinitionArray {
   final String ref;
+
+  String get name => ref.split("/").last;
 
   SwaggerDefinitionArrayRef({
     required this.ref,

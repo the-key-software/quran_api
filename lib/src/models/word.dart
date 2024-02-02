@@ -64,44 +64,47 @@ class Word with _$Word {
     charTypeName: "word",
     codeV1: "&#xfb51;",
     codeV2: null,
-    translation: Word(
+    translation: WordTranslation(
       text: "In (the) name",
       languageName: "english",
     ),
-    transliteration: Word(
+    transliteration: WordTransliteration(
       text: "bis'mi",
       languageName: "english",
     ),
     v1Page: null,
     v2Page: null,
   );
-  factory Word.fromJson(Map<String, dynamic> json) => _$WordFromJson(json);
-}
-
-@freezed
-
-///
-class Word with _$Word {
-  const Word._();
-
-  const factory Word({
-    @JsonKey(name: 'text') required String text,
-    @JsonKey(name: 'language_name') required String languageName,
-  }) = _Word;
 
   factory Word.fromJson(Map<String, dynamic> json) => _$WordFromJson(json);
 }
 
 @freezed
 
-///
-class Word with _$Word {
-  const Word._();
+/// translation
+class WordTranslation with _$WordTranslation {
+  const WordTranslation._();
 
-  const factory Word({
+  const factory WordTranslation({
     @JsonKey(name: 'text') required String text,
     @JsonKey(name: 'language_name') required String languageName,
-  }) = _Word;
+  }) = _WordTranslation;
 
-  factory Word.fromJson(Map<String, dynamic> json) => _$WordFromJson(json);
+  factory WordTranslation.fromJson(Map<String, dynamic> json) =>
+      _$WordTranslationFromJson(json);
+}
+
+@freezed
+
+/// transliteration
+class WordTransliteration with _$WordTransliteration {
+  const WordTransliteration._();
+
+  const factory WordTransliteration({
+    @JsonKey(name: 'text') required String text,
+    @JsonKey(name: 'language_name') required String languageName,
+  }) = _WordTransliteration;
+
+  factory WordTransliteration.fromJson(Map<String, dynamic> json) =>
+      _$WordTransliterationFromJson(json);
 }

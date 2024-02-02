@@ -31,6 +31,7 @@ class Pagination with _$Pagination {
     totalPages: 7,
     totalRecords: 7,
   );
+
   factory Pagination.fromJson(Map<String, dynamic> json) =>
       _$PaginationFromJson(json);
 }

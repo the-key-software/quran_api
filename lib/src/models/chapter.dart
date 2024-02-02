@@ -34,6 +34,7 @@ class Chapter with _$Chapter {
     pages: [1, 1],
     translatedName: {"language_name": "english", "name": "The Opener"},
   );
+
   factory Chapter.fromJson(Map<String, dynamic> json) =>
       _$ChapterFromJson(json);
 }
