@@ -24,6 +24,8 @@ abstract final class Template {
     required List<String> classes,
   }) {
     return """
+// ignore_for_file: unused_import
+
 import 'package:dio/dio.dart';
 import '../models/models.dart';
 import 'package:retrofit/retrofit.dart';

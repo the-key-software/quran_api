@@ -6,6 +6,132 @@ part of 'model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+SwaggerDefinition _$SwaggerDefinitionFromJson(Map<String, dynamic> json) =>
+    SwaggerDefinition(
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionToJson(SwaggerDefinition instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+    };
+
+SwaggerDefinitionString _$SwaggerDefinitionStringFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionString(
+      nullable: json['nullable'] as bool? ?? false,
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionStringToJson(
+        SwaggerDefinitionString instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+      'nullable': instance.nullable,
+    };
+
+SwaggerDefinitionInteger _$SwaggerDefinitionIntegerFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionInteger(
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionIntegerToJson(
+        SwaggerDefinitionInteger instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+    };
+
+SwaggerDefinitionNumber _$SwaggerDefinitionNumberFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionNumber(
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionNumberToJson(
+        SwaggerDefinitionNumber instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+    };
+
+SwaggerDefinitionBoolean _$SwaggerDefinitionBooleanFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionBoolean(
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionBooleanToJson(
+        SwaggerDefinitionBoolean instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+    };
+
+SwaggerDefinitionDynamic _$SwaggerDefinitionDynamicFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionDynamic(
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionDynamicToJson(
+        SwaggerDefinitionDynamic instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+    };
+
+SwaggerDefinitionObject _$SwaggerDefinitionObjectFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionObject(
+      description: json['description'] as String?,
+      default_: json['default_'],
+      title: json['title'] as String,
+      required: (json['required'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      example: json['example'] as Map<String, dynamic>?,
+      properties: (json['properties'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                k, SwaggerDefinition.fromJson(e as Map<String, dynamic>)),
+          ) ??
+          const {},
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionObjectToJson(
+        SwaggerDefinitionObject instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+      'title': instance.title,
+      'required': instance.required,
+      'example': instance.example,
+      'properties': instance.properties.map((k, e) => MapEntry(k, e.toJson())),
+    };
+
+SwaggerDefinitionArray _$SwaggerDefinitionArrayFromJson(
+        Map<String, dynamic> json) =>
+    SwaggerDefinitionArray(
+      description: json['description'] as String?,
+      default_: json['default_'],
+    );
+
+Map<String, dynamic> _$SwaggerDefinitionArrayToJson(
+        SwaggerDefinitionArray instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'default_': instance.default_,
+    };
+
 _$SwaggerImpl _$$SwaggerImplFromJson(Map<String, dynamic> json) =>
     _$SwaggerImpl(
       swagger: json['swagger'] as String,
@@ -23,9 +149,7 @@ _$SwaggerImpl _$$SwaggerImplFromJson(Map<String, dynamic> json) =>
       ),
       definitions: (json['definitions'] as Map<String, dynamic>).map(
         (k, e) => MapEntry(
-            k,
-            SwaggerDefinitionPropertyObject.fromJson(
-                e as Map<String, dynamic>)),
+            k, SwaggerDefinitionObject.fromJson(e as Map<String, dynamic>)),
       ),
     );
 
@@ -155,182 +279,4 @@ Map<String, dynamic> _$$SwaggerXStoplightImplToJson(
         _$SwaggerXStoplightImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-    };
-
-_$SwaggerDefinitionPropertyStringImpl
-    _$$SwaggerDefinitionPropertyStringImplFromJson(Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyStringImpl(
-          description: json['description'] as String?,
-          nullable: json['nullable'] as bool? ?? false,
-          default_: json['default'] as String?,
-          $type: json['type'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyStringImplToJson(
-        _$SwaggerDefinitionPropertyStringImpl instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'nullable': instance.nullable,
-      'default': instance.default_,
-      'type': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyIntegerImpl
-    _$$SwaggerDefinitionPropertyIntegerImplFromJson(
-            Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyIntegerImpl(
-          description: json['description'] as String?,
-          default_: json['default'] as int?,
-          $type: json['type'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyIntegerImplToJson(
-        _$SwaggerDefinitionPropertyIntegerImpl instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'default': instance.default_,
-      'type': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyNumberImpl
-    _$$SwaggerDefinitionPropertyNumberImplFromJson(Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyNumberImpl(
-          description: json['description'] as String?,
-          default_: json['default'] as num?,
-          $type: json['type'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyNumberImplToJson(
-        _$SwaggerDefinitionPropertyNumberImpl instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'default': instance.default_,
-      'type': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyBooleanImpl
-    _$$SwaggerDefinitionPropertyBooleanImplFromJson(
-            Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyBooleanImpl(
-          description: json['description'] as String?,
-          default_: json['default'] as bool?,
-          $type: json['type'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyBooleanImplToJson(
-        _$SwaggerDefinitionPropertyBooleanImpl instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'default': instance.default_,
-      'type': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyDynamicImpl
-    _$$SwaggerDefinitionPropertyDynamicImplFromJson(
-            Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyDynamicImpl(
-          description: json['description'] as String?,
-          default_: json['default'],
-          $type: json['type'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyDynamicImplToJson(
-        _$SwaggerDefinitionPropertyDynamicImpl instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'default': instance.default_,
-      'type': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyObjectImpl
-    _$$SwaggerDefinitionPropertyObjectImplFromJson(Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyObjectImpl(
-          properties: (json['properties'] as Map<String, dynamic>).map(
-            (k, e) => MapEntry(k,
-                SwaggerDefinitionProperty.fromJson(e as Map<String, dynamic>)),
-          ),
-          description: json['description'] as String?,
-          default_: json['default'] as Map<String, dynamic>?,
-          title: json['title'] as String,
-          type: json['type'] as String,
-          required: (json['required'] as List<dynamic>?)
-                  ?.map((e) => e as String)
-                  .toList() ??
-              const [],
-          example: json['example'] as Map<String, dynamic>?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyObjectImplToJson(
-        _$SwaggerDefinitionPropertyObjectImpl instance) =>
-    <String, dynamic>{
-      'properties': instance.properties.map((k, e) => MapEntry(k, e.toJson())),
-      'description': instance.description,
-      'default': instance.default_,
-      'title': instance.title,
-      'type': instance.type,
-      'required': instance.required,
-      'example': instance.example,
-    };
-
-_$SwaggerDefinitionPropertyArrayImpl
-    _$$SwaggerDefinitionPropertyArrayImplFromJson(Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyArrayImpl(
-          description: json['description'] as String?,
-          default_: json['default'] as List<dynamic>?,
-          items: SwaggerDefinitionPropertyArrayItem.fromJson(
-              json['items'] as Map<String, dynamic>),
-          $type: json['type'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyArrayImplToJson(
-        _$SwaggerDefinitionPropertyArrayImpl instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'default': instance.default_,
-      'items': instance.items.toJson(),
-      'type': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyArrayItemEmptyImpl
-    _$$SwaggerDefinitionPropertyArrayItemEmptyImplFromJson(
-            Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyArrayItemEmptyImpl(
-          $type: json['runtimeType'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyArrayItemEmptyImplToJson(
-        _$SwaggerDefinitionPropertyArrayItemEmptyImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyArrayItemImpl
-    _$$SwaggerDefinitionPropertyArrayItemImplFromJson(
-            Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyArrayItemImpl(
-          ref: json['ref'] as String,
-          $type: json['runtimeType'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyArrayItemImplToJson(
-        _$SwaggerDefinitionPropertyArrayItemImpl instance) =>
-    <String, dynamic>{
-      'ref': instance.ref,
-      'runtimeType': instance.$type,
-    };
-
-_$SwaggerDefinitionPropertyArrayItemPropertyImpl
-    _$$SwaggerDefinitionPropertyArrayItemPropertyImplFromJson(
-            Map<String, dynamic> json) =>
-        _$SwaggerDefinitionPropertyArrayItemPropertyImpl(
-          property: SwaggerDefinitionProperty.fromJson(
-              json['property'] as Map<String, dynamic>),
-          $type: json['runtimeType'] as String?,
-        );
-
-Map<String, dynamic> _$$SwaggerDefinitionPropertyArrayItemPropertyImplToJson(
-        _$SwaggerDefinitionPropertyArrayItemPropertyImpl instance) =>
-    <String, dynamic>{
-      'property': instance.property.toJson(),
-      'runtimeType': instance.$type,
     };

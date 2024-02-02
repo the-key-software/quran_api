@@ -5,7 +5,7 @@ import '../swagger/model.dart';
 import '../template.dart';
 import '../utils/file.dart';
 
-final overrides = <String, Map<String, SwaggerDefinitionProperty>>{
+final overrides = <String, Map<String, SwaggerDefinition>>{
   "audiofile": {
     "segments": Swagger.list(Swagger.list(Swagger.list(Swagger.int()))),
   },
