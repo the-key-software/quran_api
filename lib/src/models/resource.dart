@@ -21,17 +21,17 @@ class Resource with _$Resource {
     required ResourceTranslatedName translatedName,
   }) = _Resource;
 
-  static const Resource example = Resource(
-    id: 169,
-    name: "Tafsir Ibn Kathir",
-    authorName: "Hafiz Ibn Kathir",
-    slug: "en-tafisr-ibn-kathir",
-    languageName: "english",
-    translatedName: ResourceTranslatedName(
-      name: "Tafsir Ibn Kathir",
-      languageName: "english",
-    ),
-  );
+  static Resource get example => Resource.fromJson({
+        "id": 169,
+        "name": "Tafsir Ibn Kathir",
+        "author_name": "Hafiz Ibn Kathir",
+        "slug": "en-tafisr-ibn-kathir",
+        "language_name": "english",
+        "translated_name": {
+          "name": "Tafsir Ibn Kathir",
+          "language_name": "english"
+        }
+      });
 
   factory Resource.fromJson(Map<String, dynamic> json) =>
       _$ResourceFromJson(json);

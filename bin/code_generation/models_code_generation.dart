@@ -155,48 +155,9 @@ class ModelsCodeGeneration {
     final className = Template.class_(definition.title);
 
     if (example is Map<String, dynamic>) {
-      final instanceCode = _buildInstance(
-        example: example,
-        definition: definition,
-      );
-      return """static const $className example = ${instanceCode};""";
+      return """static $className get example => $className.fromJson(${jsonEncode(example)});""";
     } else {
       return "";
     }
-  }
-
-  String _buildInstance({
-    required Map<String, dynamic> example,
-    required SwaggerDefinitionObject definition,
-  }) {
-    final className = Template.class_(definition.title);
-    final code = StringBuffer();
-    definition.properties.forEach((key, value) {
-      final name = Template.fieldName(key);
-
-      final exampleMap = example[key];
-
-      switch (value) {
-        case SwaggerDefinitionObject value:
-          final className = _buildInstance(
-            example: exampleMap as Map<String, dynamic>,
-            definition: value.copyWith(title: key),
-          );
-          code.write("$name: $className,");
-        case SwaggerDefinitionArrayRef value:
-          final className = _buildInstance(
-            example: exampleMap.first as Map<String, dynamic>,
-            definition: swagger.definitions.entries
-                .firstWhere((element) => element.key == value.name)
-                .value
-                .copyWith(title: value.name),
-          );
-          code.write("$name: [$className],");
-        default:
-          code.write("$name: ${jsonEncode(exampleMap)},");
-      }
-    });
-
-    return """${className}($code)""";
   }
 }

@@ -50,31 +50,22 @@ class Word with _$Word {
     @JsonKey(name: 'v2_page') required int v2Page,
   }) = _Word;
 
-  static const Word example = Word(
-    id: 1,
-    position: 1,
-    textUthmani: "بِسْمِ",
-    textIndopak: "بِسۡمِ",
-    textImlaei: "بِسْمِ",
-    verseKey: "1:1",
-    pageNumber: 1,
-    lineNumber: 2,
-    audioUrl: "wbw/001_001_001.mp3",
-    location: "1:1:1",
-    charTypeName: "word",
-    codeV1: "&#xfb51;",
-    codeV2: null,
-    translation: WordTranslation(
-      text: "In (the) name",
-      languageName: "english",
-    ),
-    transliteration: WordTransliteration(
-      text: "bis'mi",
-      languageName: "english",
-    ),
-    v1Page: null,
-    v2Page: null,
-  );
+  static Word get example => Word.fromJson({
+        "id": 1,
+        "position": 1,
+        "text_uthmani": "بِسْمِ",
+        "text_indopak": "بِسۡمِ",
+        "text_imlaei": "بِسْمِ",
+        "verse_key": "1:1",
+        "page_number": 1,
+        "line_number": 2,
+        "audio_url": "wbw/001_001_001.mp3",
+        "location": "1:1:1",
+        "char_type_name": "word",
+        "code_v1": "&#xfb51;",
+        "translation": {"text": "In (the) name", "language_name": "english"},
+        "transliteration": {"text": "bis'mi", "language_name": "english"}
+      });
 
   factory Word.fromJson(Map<String, dynamic> json) => _$WordFromJson(json);
 }

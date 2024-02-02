@@ -31,15 +31,15 @@ class ChapterRecitation with _$ChapterRecitation {
     @JsonKey(name: 'audio_url') required String audioUrl,
   }) = _ChapterRecitation;
 
-  static const ChapterRecitation example = ChapterRecitation(
-    id: 1,
-    chapterId: 1,
-    fileSize: 710784,
-    format: "mp3",
-    totalFiles: 1,
-    audioUrl:
-        "https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee//001.mp3",
-  );
+  static ChapterRecitation get example => ChapterRecitation.fromJson({
+        "id": 1,
+        "chapter_id": 1,
+        "file_size": 710784,
+        "format": "mp3",
+        "total_files": 1,
+        "audio_url":
+            "https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee//001.mp3"
+      });
 
   factory ChapterRecitation.fromJson(Map<String, dynamic> json) =>
       _$ChapterRecitationFromJson(json);

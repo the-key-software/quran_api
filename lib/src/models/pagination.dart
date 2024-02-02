@@ -24,13 +24,13 @@ class Pagination with _$Pagination {
     @JsonKey(name: 'total_records=') required int totalRecords,
   }) = _Pagination;
 
-  static const Pagination example = Pagination(
-    perPage: 1,
-    currentPage: 1,
-    nextPage: 2,
-    totalPages: 7,
-    totalRecords: 7,
-  );
+  static Pagination get example => Pagination.fromJson({
+        "per_page": 1,
+        "current_page": 1,
+        "next_page": 2,
+        "total_pages=": 7,
+        "total_records=": 7
+      });
 
   factory Pagination.fromJson(Map<String, dynamic> json) =>
       _$PaginationFromJson(json);

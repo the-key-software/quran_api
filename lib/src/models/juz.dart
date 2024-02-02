@@ -26,17 +26,13 @@ class Juz with _$Juz {
     @JsonKey(name: 'verse_mapping') required Object? verseMapping,
   }) = _Juz;
 
-  static const Juz example = Juz(
-    id: null,
-    juzNumber: 1,
-    firstVerseId: 1,
-    lastVerseId: 148,
-    versesCount: 148,
-    verseMapping: JuzVerseMapping(
-      key1: "1-7",
-      key2: "1-141",
-    ),
-  );
+  static Juz get example => Juz.fromJson({
+        "juz_number": 1,
+        "first_verse_id": 1,
+        "last_verse_id": 148,
+        "verses_count": 148,
+        "verse_mapping": {"1": "1-7", "2": "1-141"}
+      });
 
   factory Juz.fromJson(Map<String, dynamic> json) => _$JuzFromJson(json);
 }

@@ -17,8 +17,8 @@ void main(List<String> args) {
   generateSwagger();
 
   Process.runSync("dart", ["format", dir]);
-  Process.runSync("dart", ["format", dirModels]);
-  Process.runSync("dart", ["format", dirClients]);
+  Process.runSync("dart", ["format", dir + dirModels]);
+  Process.runSync("dart", ["format", dir + dirClients]);
   Process.runSync("exports", []);
 }
 

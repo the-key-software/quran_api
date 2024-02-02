@@ -64,44 +64,41 @@ class Verse with _$Verse {
     @JsonKey(name: 'v2_page') required int v2Page,
   }) = _Verse;
 
-  static const Verse example = Verse(
-    id: 1,
-    chapterId: 1,
-    verseNumber: 1,
-    verseKey: "1:1",
-    verseIndex: 1,
-    textUthmani: "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
-    textUthmaniSimple: "بسم الله الرحمن الرحيم",
-    textImlaei: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-    textImlaeiSimple: "بسم الله الرحمن الرحيم",
-    textIndopak: "بِسۡمِ اللهِ الرَّحۡمٰنِ الرَّحِيۡمِ",
-    textUthmaniTajweed:
-        "بِسْمِ <tajweed class=ham_wasl>ٱ</tajweed>للَّهِ <tajweed class=ham_wasl>ٱ</tajweed><tajweed class=laam_shamsiyah>ل</tajweed>رَّحْمَ<tajweed class=madda_normal>ـٰ</tajweed>نِ <tajweed class=ham_wasl>ٱ</tajweed><tajweed class=laam_shamsiyah>ل</tajweed>رَّح<tajweed class=madda_permissible>ِي</tajweed>مِ <span class=end>١</span>",
-    juzNumber: 1,
-    hizbNumber: 1,
-    rubNumber: 1,
-    sajdahType: null,
-    sajdahNumber: null,
-    pageNumber: 1,
-    imageUrl: "//c22506.r6.cf1.rackcdn.com/1_1.png",
-    imageWidth: 675,
-    words: [
-      {
+  static Verse get example => Verse.fromJson({
         "id": 1,
-        "position": 1,
-        "audio_url": "wbw/001_001_001.mp3",
-        "char_type_name": "word",
-        "translation": {"text": "In (the) name", "language_name": "english"},
-        "transliteration": {"text": "bis'mi", "language_name": "english"}
-      }
-    ],
-    audio: null,
-    translations: null,
-    codeV1: null,
-    codeV2: null,
-    v1Page: null,
-    v2Page: null,
-  );
+        "chapter_id": 1,
+        "verse_number": 1,
+        "verse_key": "1:1",
+        "verse_index": 1,
+        "text_uthmani": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+        "text_uthmani_simple": "بسم الله الرحمن الرحيم",
+        "text_imlaei": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "text_imlaei_simple": "بسم الله الرحمن الرحيم",
+        "text_indopak": "بِسۡمِ اللهِ الرَّحۡمٰنِ الرَّحِيۡمِ",
+        "text_uthmani_tajweed":
+            "بِسْمِ <tajweed class=ham_wasl>ٱ</tajweed>للَّهِ <tajweed class=ham_wasl>ٱ</tajweed><tajweed class=laam_shamsiyah>ل</tajweed>رَّحْمَ<tajweed class=madda_normal>ـٰ</tajweed>نِ <tajweed class=ham_wasl>ٱ</tajweed><tajweed class=laam_shamsiyah>ل</tajweed>رَّح<tajweed class=madda_permissible>ِي</tajweed>مِ <span class=end>١</span>",
+        "juz_number": 1,
+        "hizb_number": 1,
+        "rub_number": 1,
+        "sajdah_type": null,
+        "sajdah_number": null,
+        "page_number": 1,
+        "image_url": "//c22506.r6.cf1.rackcdn.com/1_1.png",
+        "image_width": 675,
+        "words": [
+          {
+            "id": 1,
+            "position": 1,
+            "audio_url": "wbw/001_001_001.mp3",
+            "char_type_name": "word",
+            "translation": {
+              "text": "In (the) name",
+              "language_name": "english"
+            },
+            "transliteration": {"text": "bis'mi", "language_name": "english"}
+          }
+        ]
+      });
 
   factory Verse.fromJson(Map<String, dynamic> json) => _$VerseFromJson(json);
 }

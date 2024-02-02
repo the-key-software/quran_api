@@ -29,14 +29,14 @@ class ChapterReciters with _$ChapterReciters {
     @JsonKey(name: 'files_size') required int filesSize,
   }) = _ChapterReciters;
 
-  static const ChapterReciters example = ChapterReciters(
-    id: 3,
-    name: "Abu Bakr al-Shatri",
-    arabicName: "أبو بكر الشاطرى",
-    relativePath: "abu_bakr_ash-shaatree/",
-    format: "mp3",
-    filesSize: 1258422528,
-  );
+  static ChapterReciters get example => ChapterReciters.fromJson({
+        "id": 3,
+        "name": "Abu Bakr al-Shatri",
+        "arabic_name": "أبو بكر الشاطرى",
+        "relative_path": "abu_bakr_ash-shaatree/",
+        "format": "mp3",
+        "files_size": 1258422528
+      });
 
   factory ChapterReciters.fromJson(Map<String, dynamic> json) =>
       _$ChapterRecitersFromJson(json);

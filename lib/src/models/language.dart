@@ -23,19 +23,16 @@ class Language with _$Language {
     required List<TranslatedName> translatedNames,
   }) = _Language;
 
-  static const Language example = Language(
-    id: 1,
-    name: "English",
-    nativeName: "English",
-    isoCode: "en",
-    direction: "ltr",
-    translatedNames: [
-      TranslatedName(
-        languageName: "Urdu",
-        name: "انگریزی",
-      )
-    ],
-  );
+  static Language get example => Language.fromJson({
+        "id": 1,
+        "name": "English",
+        "native_name": "English",
+        "iso_code": "en",
+        "direction": "ltr",
+        "translated_names": [
+          {"name": "انگریزی", "language_name": "Urdu"}
+        ]
+      });
 
   factory Language.fromJson(Map<String, dynamic> json) =>
       _$LanguageFromJson(json);

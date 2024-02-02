@@ -23,17 +23,17 @@ class Chapter with _$Chapter {
     @JsonKey(name: 'translated_name') required Object? translatedName,
   }) = _Chapter;
 
-  static const Chapter example = Chapter(
-    id: 1,
-    revelationPlace: "makkah",
-    revelationOrder: 5,
-    bismillahPre: false,
-    nameComplex: "Al-Fātiĥah",
-    nameArabic: "الفاتحة",
-    versesCount: 7,
-    pages: [1, 1],
-    translatedName: {"language_name": "english", "name": "The Opener"},
-  );
+  static Chapter get example => Chapter.fromJson({
+        "id": 1,
+        "revelation_place": "makkah",
+        "revelation_order": 5,
+        "bismillah_pre": false,
+        "name_complex": "Al-Fātiĥah",
+        "name_arabic": "الفاتحة",
+        "verses_count": 7,
+        "pages": [1, 1],
+        "translated_name": {"language_name": "english", "name": "The Opener"}
+      });
 
   factory Chapter.fromJson(Map<String, dynamic> json) =>
       _$ChapterFromJson(json);
