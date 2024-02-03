@@ -2,6 +2,7 @@ export "pagination.dart";
 export "recitation.dart";
 export "juz.dart";
 export "chapter_info.dart";
+export "search_response.dart";
 export "word.dart";
 export "verse.dart";
 export "author.dart";
