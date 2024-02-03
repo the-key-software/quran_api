@@ -13,47 +13,47 @@ abstract class VersesClient {
   /// By Chapter
   /// [chapterNumber] Chapter number ( 1  - 114 )
   @GET('/verses/by_chapter/{chapter_number}')
-  Future<Object> versesByChapterNumber({
+  Future<dynamic> versesByChapterNumber({
     @Path('chapter_number') required int chapterNumber,
   });
 
   /// By Page
   /// [pageNumber] Madani Mushaf page number. Valid range is 1-604
   @GET('/verses/by_page/{page_number}')
-  Future<Object> versesByPageNumber({
+  Future<dynamic> versesByPageNumber({
     @Path('page_number') required int pageNumber,
   });
 
   /// By Juz
 
   @GET('/verses/by_juz/{juz_number}')
-  Future<Object> versesByJuzNumber({
+  Future<dynamic> versesByJuzNumber({
     @Path('juz_number') required int juzNumber,
   });
 
   /// By Hizb number
   /// [hizbNumber] Hizb number(1-60)
   @GET('/verses/by_hizb/{hizb_number}')
-  Future<Object> versesByHizbNumber({
+  Future<dynamic> versesByHizbNumber({
     @Path('hizb_number') required int hizbNumber,
   });
 
   /// By Rub el Hizb number
   /// [rubElHizbNumber] Rub el Hizb number(1-240)
   @GET('/verses/by_rub/{rub_el_hizb_number}')
-  Future<Object> versesByRubElHizbNumber({
+  Future<dynamic> versesByRubElHizbNumber({
     @Path('rub_el_hizb_number') required int rubElHizbNumber,
   });
 
   /// By Specific Verse By Key
   /// [verseKey] Verse key ( chapter:verse)
   @GET('/verses/by_key/{verse_key}')
-  Future<Object> versesByVerseKey({
+  Future<dynamic> versesByVerseKey({
     @Path('verse_key') required int verseKey,
   });
 
   /// Get random ayah
 
   @GET('/verses/random')
-  Future<Object> randomVerse();
+  Future<dynamic> randomVerse();
 }

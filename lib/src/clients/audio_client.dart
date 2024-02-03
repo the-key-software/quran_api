@@ -14,7 +14,7 @@ abstract class AudioClient {
   /// [id] The Id of the reciter
   /// [chapterNumber] The number of the chapter
   @GET('/chapter_recitations/{id}/{chapter_number}')
-  Future<Object> chapterReciterAudioFile({
+  Future<dynamic> chapterReciterAudioFile({
     @Path('id') required int id,
     @Path('chapter_number') required int chapterNumber,
   });
@@ -22,32 +22,32 @@ abstract class AudioClient {
   /// List of all chapter audio files of a reciter
   /// [id] The Id of the reciter
   @GET('/chapter_recitations/{id}')
-  Future<Object> chapterReciterAudioFiles({
+  Future<dynamic> chapterReciterAudioFiles({
     @Path('id') required int id,
   });
 
   /// Recitations
 
   @GET('/resources/recitations')
-  Future<Object> recitations();
+  Future<dynamic> recitations();
 
   /// Get list of Audio files of single recitation
   /// [recitationId] Recitation id
   @GET('/quran/recitations/{recitation_id}')
-  Future<Object> recitationAutioFiles({
+  Future<dynamic> recitationAutioFiles({
     @Path('recitation_id') required int recitationId,
   });
 
   /// List of Chapter Reciters
 
   @GET('/resources/chapter_reciters')
-  Future<Object> chapterReciters();
+  Future<dynamic> chapterReciters();
 
   /// Get Ayah recitations for specific Surah
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
 
   @GET('/recitations/{recitation_id}/by_chapter/{chapter_number}')
-  Future<Object> listSurahRecitation({
+  Future<dynamic> listSurahRecitation({
     @Path('recitation_id') required int recitationId,
     @Path('chapter_number') required int chapterNumber,
   });
@@ -56,7 +56,7 @@ abstract class AudioClient {
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
 
   @GET('/recitations/{recitation_id}/by_juz/{juz_number}')
-  Future<Object> listJuzRecitation({
+  Future<dynamic> listJuzRecitation({
     @Path('recitation_id') required int recitationId,
     @Path('juz_number') required int juzNumber,
   });
@@ -65,7 +65,7 @@ abstract class AudioClient {
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
 
   @GET('/recitations/{recitation_id}/by_page/{page_number}')
-  Future<Object> listPageRecitation({
+  Future<dynamic> listPageRecitation({
     @Path('recitation_id') required int recitationId,
     @Path('page_number') required int pageNumber,
   });
@@ -74,7 +74,7 @@ abstract class AudioClient {
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
 
   @GET('/recitations/{recitation_id}/by_rub/{rub_el_hizb_number}')
-  Future<Object> listRubElHizbRecitation({
+  Future<dynamic> listRubElHizbRecitation({
     @Path('recitation_id') required int recitationId,
     @Path('rub_el_hizb_number') required int rubElHizbNumber,
   });
@@ -83,7 +83,7 @@ abstract class AudioClient {
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
 
   @GET('/recitations/{recitation_id}/by_hizb/{hizb_number}')
-  Future<Object> listHizbRecitation({
+  Future<dynamic> listHizbRecitation({
     @Path('recitation_id') required int recitationId,
     @Path('hizb_number') required int hizbNumber,
   });
@@ -92,7 +92,7 @@ abstract class AudioClient {
   /// [recitationId] Recitation Id, you can get list of all ayah by ayah recitations using this endpoint
   /// [ayahKey] Ayah key is combination of surah number and  ayah number. e.g 1:1 will be first Ayah of first Surah
   @GET('/recitations/{recitation_id}/by_ayah/{ayah_key}')
-  Future<Object> listAyahRecitation({
+  Future<dynamic> listAyahRecitation({
     @Path('recitation_id') required int recitationId,
     @Path('ayah_key') required int ayahKey,
   });

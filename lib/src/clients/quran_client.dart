@@ -13,49 +13,49 @@ abstract class QuranClient {
   /// Get Indopak Script of ayah
 
   @GET('/quran/verses/indopak')
-  Future<Object> quranVersesIndopak();
+  Future<dynamic> quranVersesIndopak();
 
   /// Get Uthmani Tajweed Script of ayah
 
   @GET('/quran/verses/uthmani_tajweed')
-  Future<Object> quranVersesUthmaniTajweed();
+  Future<dynamic> quranVersesUthmaniTajweed();
 
   /// Get Uthmani Script of ayah
 
   @GET('/quran/verses/uthmani')
-  Future<Object> quranVersesUthmani();
+  Future<dynamic> quranVersesUthmani();
 
   /// Get Uthmani simple script of ayah
 
   @GET('/quran/verses/uthmani_simple')
-  Future<Object> quranVersesUthmaniSimple();
+  Future<dynamic> quranVersesUthmaniSimple();
 
   /// Get Imlaei Simple text of ayah
 
   @GET('/quran/verses/imlaei')
-  Future<Object> quranVersesImlaei();
+  Future<dynamic> quranVersesImlaei();
 
   /// Get a single translation
   /// [translationId] Recitation id
   @GET('/quran/translations/{translation_id}')
-  Future<Object> translation({
+  Future<dynamic> translation({
     @Path('translation_id') required int translationId,
   });
 
   /// Get a single tafsir
   /// [tafsirId] tafsir id
   @GET('/quran/tafsirs/{tafsir_id}')
-  Future<Object> tafsir({
+  Future<dynamic> tafsir({
     @Path('tafsir_id') required int tafsirId,
   });
 
   /// Get V1 Glyph codes of ayah
 
   @GET('/quran/verses/code_v1')
-  Future<Object> quranVersesCodeV1();
+  Future<dynamic> quranVersesCodeV1();
 
   /// Get V2 Glyph codes of ayah
 
   @GET('/quran/verses/code_v2')
-  Future<Object> quranVersesCodeV2();
+  Future<dynamic> quranVersesCodeV2();
 }

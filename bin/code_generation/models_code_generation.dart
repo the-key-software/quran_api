@@ -154,10 +154,8 @@ class ModelsCodeGeneration {
     final example = definition.example;
     final className = Template.class_(definition.title);
 
-    if (example is Map<String, dynamic>) {
-      return """static $className get example => $className.fromJson(${jsonEncode(example)});""";
-    } else {
-      return "";
-    }
+    if (example is! Map<String, dynamic>) return "";
+
+    return """static $className get example => $className.fromJson(${jsonEncode(example)});""";
   }
 }

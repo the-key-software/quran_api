@@ -13,51 +13,51 @@ abstract class ResourcesClient {
   /// Recitation Info
 
   @GET('/resources/recitations/{recitation_id}/info')
-  Future<Object> recitationInfo({
+  Future<dynamic> recitationInfo({
     @Path('recitation_id') required int recitationId,
   });
 
   /// Translation Info
 
   @GET('/resources/translations/{translation_id}/info')
-  Future<Object> translationInfo({
+  Future<dynamic> translationInfo({
     @Path('translation_id') required int translationId,
   });
 
   /// Translations
 
   @GET('/resources/translations')
-  Future<Object> translations();
+  Future<dynamic> translations();
 
   /// Tafsirs
 
   @GET('/resources/tafsirs')
-  Future<Object> tafsirs();
+  Future<dynamic> tafsirs();
 
   /// Tafsir Info
 
   @GET('/resources/tafsirs/{tafsir_id}/info')
-  Future<Object> tafsirInfo({
+  Future<dynamic> tafsirInfo({
     @Path('tafsir_id') required int tafsirId,
   });
 
   /// Recitation Styles
 
   @GET('/resources/recitation_styles')
-  Future<Object> recitationStyles();
+  Future<dynamic> recitationStyles();
 
   /// Languages
 
   @GET('/resources/languages')
-  Future<Object> languages();
+  Future<dynamic> languages();
 
   /// Chapter Infos
 
   @GET('/resources/chapter_infos')
-  Future<Object> chapterInfo();
+  Future<dynamic> chapterInfo();
 
   /// Verse Media
 
   @GET('/resources/verse_media')
-  Future<Object> verseMedia();
+  Future<dynamic> verseMedia();
 }

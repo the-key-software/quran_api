@@ -82,7 +82,7 @@ class ClientsCodeGeneration {
           .replaceAll("#endpoint:HLbauN2sdGitPQPPL", ""),
     );
 
-    final type = "Object";
+    final type = "dynamic";
 
     final methodName = object.get.operationId
         .toCamelCase()
@@ -114,3 +114,7 @@ Future<$type> ${methodName}""";
     return code;
   }
 }
+
+final overridesResponses = <String, dynamic>{
+  "/search": "",
+};

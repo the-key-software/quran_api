@@ -11,5 +11,5 @@ abstract class SearchClient {
   factory SearchClient(Dio dio, {String baseUrl}) = _SearchClient;
 
   @GET('/search')
-  Future<Object> search();
+  Future<dynamic> search();
 }

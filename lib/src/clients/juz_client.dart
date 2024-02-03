@@ -13,5 +13,5 @@ abstract class JuzClient {
   /// Get All Juzs
 
   @GET('/juzs')
-  Future<Object> juzs();
+  Future<dynamic> juzs();
 }

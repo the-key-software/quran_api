@@ -16,6 +16,17 @@ class QuranApi {
       ),
     );
 
+    dio.interceptors.addAll([
+      LogInterceptor(
+        request: true,
+        requestBody: true,
+        responseBody: true,
+        responseHeader: true,
+        error: true,
+        requestHeader: true,
+      ),
+    ]);
+
     return dio;
   }
 
