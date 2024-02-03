@@ -19,237 +19,394 @@ class _QuranClient implements QuranClient {
   String? baseUrl;
 
   @override
-  Future<dynamic> quranVersesIndopak() async {
+  Future<HttpResponse<dynamic>> quranVersesIndopak({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/indopak',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/indopak',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> quranVersesUthmaniTajweed() async {
+  Future<HttpResponse<dynamic>> quranVersesUthmaniTajweed({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/uthmani_tajweed',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/uthmani_tajweed',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> quranVersesUthmani() async {
+  Future<HttpResponse<dynamic>> quranVersesUthmani({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/uthmani',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/uthmani',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> quranVersesUthmaniSimple() async {
+  Future<HttpResponse<dynamic>> quranVersesUthmaniSimple({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/uthmani_simple',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/uthmani_simple',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> quranVersesImlaei() async {
+  Future<HttpResponse<dynamic>> quranVersesImlaei({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/imlaei',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/imlaei',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> translation({required int translationId}) async {
+  Future<HttpResponse<dynamic>> translation({
+    String? fields,
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'fields': fields,
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/translations/${translationId}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/translations/{translation_id}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> tafsir({required int tafsirId}) async {
+  Future<HttpResponse<dynamic>> tafsir({
+    String? fields,
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'fields': fields,
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/tafsirs/${tafsirId}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/tafsirs/{tafsir_id}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> quranVersesCodeV1() async {
+  Future<HttpResponse<dynamic>> quranVersesCodeV1({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/code_v1',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/code_v1',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> quranVersesCodeV2() async {
+  Future<HttpResponse<dynamic>> quranVersesCodeV2({
+    int? chapterNumber,
+    int? juzNumber,
+    int? pageNumber,
+    int? hizbNumber,
+    int? rubElHizbNumber,
+    String? verseKey,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'chapter_number': chapterNumber,
+      r'juz_number': juzNumber,
+      r'page_number': pageNumber,
+      r'hizb_number': hizbNumber,
+      r'rub_el_hizb_number': rubElHizbNumber,
+      r'verse_key': verseKey,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/quran/verses/code_v2',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/quran/verses/code_v2',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

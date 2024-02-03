@@ -13,19 +13,21 @@ abstract class ChaptersClient {
   /// List Chapters
 
   @GET('/chapters')
-  Future<dynamic> listChapters();
+  Future<HttpResponse<dynamic>> listChapters({
+    @Query('language') String? language,
+  });
 
   /// Get Chapter
-  /// [id] Chapter ID ( 1-114)
+
   @GET('/chapters/{id}')
-  Future<dynamic> getChapter({
-    @Path('id') required int id,
+  Future<HttpResponse<dynamic>> getChapter({
+    @Query('language') String? language,
   });
 
   /// Get Chapter Info
-  /// [chapterId] Chapter number ( 1-114 )
+
   @GET('/chapters/{chapter_id}/info')
-  Future<dynamic> info({
-    @Path('chapter_id') required int chapterId,
+  Future<HttpResponse<dynamic>> info({
+    @Query('language') String? language,
   });
 }

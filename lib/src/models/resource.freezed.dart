@@ -27,7 +27,7 @@ mixin _$Resource {
   @JsonKey(name: 'author_name')
   String get authorName => throw _privateConstructorUsedError;
   @JsonKey(name: 'slug')
-  String get slug => throw _privateConstructorUsedError;
+  String? get slug => throw _privateConstructorUsedError;
   @JsonKey(name: 'language_name')
   String get languageName => throw _privateConstructorUsedError;
   @JsonKey(name: 'translated_name')
@@ -49,7 +49,7 @@ abstract class $ResourceCopyWith<$Res> {
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'name') String name,
       @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'slug') String slug,
+      @JsonKey(name: 'slug') String? slug,
       @JsonKey(name: 'language_name') String languageName,
       @JsonKey(name: 'translated_name') ResourceTranslatedName translatedName});
 
@@ -72,7 +72,7 @@ class _$ResourceCopyWithImpl<$Res, $Val extends Resource>
     Object? id = null,
     Object? name = null,
     Object? authorName = null,
-    Object? slug = null,
+    Object? slug = freezed,
     Object? languageName = null,
     Object? translatedName = null,
   }) {
@@ -89,10 +89,10 @@ class _$ResourceCopyWithImpl<$Res, $Val extends Resource>
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
               as String,
-      slug: null == slug
+      slug: freezed == slug
           ? _value.slug
           : slug // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       languageName: null == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
@@ -126,7 +126,7 @@ abstract class _$$ResourceImplCopyWith<$Res>
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'name') String name,
       @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'slug') String slug,
+      @JsonKey(name: 'slug') String? slug,
       @JsonKey(name: 'language_name') String languageName,
       @JsonKey(name: 'translated_name') ResourceTranslatedName translatedName});
 
@@ -148,7 +148,7 @@ class __$$ResourceImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? authorName = null,
-    Object? slug = null,
+    Object? slug = freezed,
     Object? languageName = null,
     Object? translatedName = null,
   }) {
@@ -165,10 +165,10 @@ class __$$ResourceImplCopyWithImpl<$Res>
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
               as String,
-      slug: null == slug
+      slug: freezed == slug
           ? _value.slug
           : slug // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       languageName: null == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
@@ -207,7 +207,7 @@ class _$ResourceImpl extends _Resource {
   final String authorName;
   @override
   @JsonKey(name: 'slug')
-  final String slug;
+  final String? slug;
   @override
   @JsonKey(name: 'language_name')
   final String languageName;
@@ -260,7 +260,7 @@ abstract class _Resource extends Resource {
       {@JsonKey(name: 'id') required final int id,
       @JsonKey(name: 'name') required final String name,
       @JsonKey(name: 'author_name') required final String authorName,
-      @JsonKey(name: 'slug') required final String slug,
+      @JsonKey(name: 'slug') required final String? slug,
       @JsonKey(name: 'language_name') required final String languageName,
       @JsonKey(name: 'translated_name')
       required final ResourceTranslatedName translatedName}) = _$ResourceImpl;
@@ -280,7 +280,7 @@ abstract class _Resource extends Resource {
   String get authorName;
   @override
   @JsonKey(name: 'slug')
-  String get slug;
+  String? get slug;
   @override
   @JsonKey(name: 'language_name')
   String get languageName;

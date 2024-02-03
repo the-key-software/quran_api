@@ -19,186 +19,348 @@ class _VersesClient implements VersesClient {
   String? baseUrl;
 
   @override
-  Future<dynamic> versesByChapterNumber({required int chapterNumber}) async {
+  Future<HttpResponse<dynamic>> versesByChapterNumber({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+    int? page,
+    int? perPage,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+      r'page': page,
+      r'per_page': perPage,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/by_chapter/${chapterNumber}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/by_chapter/{chapter_number}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> versesByPageNumber({required int pageNumber}) async {
+  Future<HttpResponse<dynamic>> versesByPageNumber({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+    int? page,
+    int? perPage,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+      r'page': page,
+      r'per_page': perPage,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/by_page/${pageNumber}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/by_page/{page_number}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> versesByJuzNumber({required int juzNumber}) async {
+  Future<HttpResponse<dynamic>> versesByJuzNumber({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+    int? page,
+    int? perPage,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+      r'page': page,
+      r'per_page': perPage,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/by_juz/${juzNumber}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/by_juz/{juz_number}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> versesByHizbNumber({required int hizbNumber}) async {
+  Future<HttpResponse<dynamic>> versesByHizbNumber({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+    int? page,
+    int? perPage,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+      r'page': page,
+      r'per_page': perPage,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/by_hizb/${hizbNumber}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/by_hizb/{hizb_number}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> versesByRubElHizbNumber(
-      {required int rubElHizbNumber}) async {
+  Future<HttpResponse<dynamic>> versesByRubElHizbNumber({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/by_rub/${rubElHizbNumber}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/by_rub/{rub_el_hizb_number}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> versesByVerseKey({required int verseKey}) async {
+  Future<HttpResponse<dynamic>> versesByVerseKey({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/by_key/${verseKey}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/by_key/{verse_key}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   @override
-  Future<dynamic> randomVerse() async {
+  Future<HttpResponse<dynamic>> randomVerse({
+    String? language,
+    String? words,
+    String? translations,
+    int? audio,
+    String? tafsirs,
+    String? wordFields,
+    String? translationFields,
+    String? fields,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'language': language,
+      r'words': words,
+      r'translations': translations,
+      r'audio': audio,
+      r'tafsirs': tafsirs,
+      r'word_fields': wordFields,
+      r'translation_fields': translationFields,
+      r'fields': fields,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result =
+        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/verses/random',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              '/verses/random',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data;
-    return value;
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

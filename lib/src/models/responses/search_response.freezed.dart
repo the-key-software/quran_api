@@ -401,7 +401,7 @@ mixin _$SearchResult {
   int get verseId => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
   Object? get highlighted => throw _privateConstructorUsedError;
-  List<Word> get words => throw _privateConstructorUsedError;
+  List<SearchResultWord> get words => throw _privateConstructorUsedError;
   List<dynamic> get translations => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -421,7 +421,7 @@ abstract class $SearchResultCopyWith<$Res> {
       int verseId,
       String text,
       Object? highlighted,
-      List<Word> words,
+      List<SearchResultWord> words,
       List<dynamic> translations});
 }
 
@@ -462,7 +462,7 @@ class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
       words: null == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Word>,
+              as List<SearchResultWord>,
       translations: null == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
@@ -484,7 +484,7 @@ abstract class _$$SearchResultImplCopyWith<$Res>
       int verseId,
       String text,
       Object? highlighted,
-      List<Word> words,
+      List<SearchResultWord> words,
       List<dynamic> translations});
 }
 
@@ -523,7 +523,7 @@ class __$$SearchResultImplCopyWithImpl<$Res>
       words: null == words
           ? _value._words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Word>,
+              as List<SearchResultWord>,
       translations: null == translations
           ? _value._translations
           : translations // ignore: cast_nullable_to_non_nullable
@@ -540,7 +540,7 @@ class _$SearchResultImpl implements _SearchResult {
       required this.verseId,
       required this.text,
       required this.highlighted,
-      required final List<Word> words,
+      required final List<SearchResultWord> words,
       required final List<dynamic> translations})
       : _words = words,
         _translations = translations;
@@ -556,9 +556,9 @@ class _$SearchResultImpl implements _SearchResult {
   final String text;
   @override
   final Object? highlighted;
-  final List<Word> _words;
+  final List<SearchResultWord> _words;
   @override
-  List<Word> get words {
+  List<SearchResultWord> get words {
     if (_words is EqualUnmodifiableListView) return _words;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_words);
@@ -624,7 +624,7 @@ abstract class _SearchResult implements SearchResult {
       required final int verseId,
       required final String text,
       required final Object? highlighted,
-      required final List<Word> words,
+      required final List<SearchResultWord> words,
       required final List<dynamic> translations}) = _$SearchResultImpl;
 
   factory _SearchResult.fromJson(Map<String, dynamic> json) =
@@ -639,7 +639,7 @@ abstract class _SearchResult implements SearchResult {
   @override
   Object? get highlighted;
   @override
-  List<Word> get words;
+  List<SearchResultWord> get words;
   @override
   List<dynamic> get translations;
   @override
@@ -648,21 +648,21 @@ abstract class _SearchResult implements SearchResult {
       throw _privateConstructorUsedError;
 }
 
-Word _$WordFromJson(Map<String, dynamic> json) {
+SearchResultWord _$SearchResultWordFromJson(Map<String, dynamic> json) {
   switch (json['char_type']) {
     case 'word':
-      return _WordWord.fromJson(json);
+      return _SearchResultWordSearchResultWord.fromJson(json);
     case 'end':
-      return _WordEnd.fromJson(json);
+      return _SearchResultWordEnd.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'char_type', 'Word',
+      throw CheckedFromJsonException(json, 'char_type', 'SearchResultWord',
           'Invalid union type "${json['char_type']}"!');
   }
 }
 
 /// @nodoc
-mixin _$Word {
+mixin _$SearchResultWord {
   String get text => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -685,40 +685,42 @@ mixin _$Word {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_WordWord value) word,
-    required TResult Function(_WordEnd value) end,
+    required TResult Function(_SearchResultWordSearchResultWord value) word,
+    required TResult Function(_SearchResultWordEnd value) end,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_WordWord value)? word,
-    TResult? Function(_WordEnd value)? end,
+    TResult? Function(_SearchResultWordSearchResultWord value)? word,
+    TResult? Function(_SearchResultWordEnd value)? end,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_WordWord value)? word,
-    TResult Function(_WordEnd value)? end,
+    TResult Function(_SearchResultWordSearchResultWord value)? word,
+    TResult Function(_SearchResultWordEnd value)? end,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WordCopyWith<Word> get copyWith => throw _privateConstructorUsedError;
+  $SearchResultWordCopyWith<SearchResultWord> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WordCopyWith<$Res> {
-  factory $WordCopyWith(Word value, $Res Function(Word) then) =
-      _$WordCopyWithImpl<$Res, Word>;
+abstract class $SearchResultWordCopyWith<$Res> {
+  factory $SearchResultWordCopyWith(
+          SearchResultWord value, $Res Function(SearchResultWord) then) =
+      _$SearchResultWordCopyWithImpl<$Res, SearchResultWord>;
   @useResult
   $Res call({String text});
 }
 
 /// @nodoc
-class _$WordCopyWithImpl<$Res, $Val extends Word>
-    implements $WordCopyWith<$Res> {
-  _$WordCopyWithImpl(this._value, this._then);
+class _$SearchResultWordCopyWithImpl<$Res, $Val extends SearchResultWord>
+    implements $SearchResultWordCopyWith<$Res> {
+  _$SearchResultWordCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -740,21 +742,25 @@ class _$WordCopyWithImpl<$Res, $Val extends Word>
 }
 
 /// @nodoc
-abstract class _$$WordWordImplCopyWith<$Res> implements $WordCopyWith<$Res> {
-  factory _$$WordWordImplCopyWith(
-          _$WordWordImpl value, $Res Function(_$WordWordImpl) then) =
-      __$$WordWordImplCopyWithImpl<$Res>;
+abstract class _$$SearchResultWordSearchResultWordImplCopyWith<$Res>
+    implements $SearchResultWordCopyWith<$Res> {
+  factory _$$SearchResultWordSearchResultWordImplCopyWith(
+          _$SearchResultWordSearchResultWordImpl value,
+          $Res Function(_$SearchResultWordSearchResultWordImpl) then) =
+      __$$SearchResultWordSearchResultWordImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String text, bool highlight});
 }
 
 /// @nodoc
-class __$$WordWordImplCopyWithImpl<$Res>
-    extends _$WordCopyWithImpl<$Res, _$WordWordImpl>
-    implements _$$WordWordImplCopyWith<$Res> {
-  __$$WordWordImplCopyWithImpl(
-      _$WordWordImpl _value, $Res Function(_$WordWordImpl) _then)
+class __$$SearchResultWordSearchResultWordImplCopyWithImpl<$Res>
+    extends _$SearchResultWordCopyWithImpl<$Res,
+        _$SearchResultWordSearchResultWordImpl>
+    implements _$$SearchResultWordSearchResultWordImplCopyWith<$Res> {
+  __$$SearchResultWordSearchResultWordImplCopyWithImpl(
+      _$SearchResultWordSearchResultWordImpl _value,
+      $Res Function(_$SearchResultWordSearchResultWordImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -763,7 +769,7 @@ class __$$WordWordImplCopyWithImpl<$Res>
     Object? text = null,
     Object? highlight = null,
   }) {
-    return _then(_$WordWordImpl(
+    return _then(_$SearchResultWordSearchResultWordImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -778,15 +784,15 @@ class __$$WordWordImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WordWordImpl implements _WordWord {
-  const _$WordWordImpl(
-      {required this.text,
-      required this.highlight = false,
-      final String? $type})
+class _$SearchResultWordSearchResultWordImpl
+    implements _SearchResultWordSearchResultWord {
+  const _$SearchResultWordSearchResultWordImpl(
+      {required this.text, this.highlight = false, final String? $type})
       : $type = $type ?? 'word';
 
-  factory _$WordWordImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WordWordImplFromJson(json);
+  factory _$SearchResultWordSearchResultWordImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SearchResultWordSearchResultWordImplFromJson(json);
 
   @override
   final String text;
@@ -799,14 +805,14 @@ class _$WordWordImpl implements _WordWord {
 
   @override
   String toString() {
-    return 'Word.word(text: $text, highlight: $highlight)';
+    return 'SearchResultWord.word(text: $text, highlight: $highlight)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WordWordImpl &&
+            other is _$SearchResultWordSearchResultWordImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.highlight, highlight) ||
                 other.highlight == highlight));
@@ -819,8 +825,10 @@ class _$WordWordImpl implements _WordWord {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WordWordImplCopyWith<_$WordWordImpl> get copyWith =>
-      __$$WordWordImplCopyWithImpl<_$WordWordImpl>(this, _$identity);
+  _$$SearchResultWordSearchResultWordImplCopyWith<
+          _$SearchResultWordSearchResultWordImpl>
+      get copyWith => __$$SearchResultWordSearchResultWordImplCopyWithImpl<
+          _$SearchResultWordSearchResultWordImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -856,8 +864,8 @@ class _$WordWordImpl implements _WordWord {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_WordWord value) word,
-    required TResult Function(_WordEnd value) end,
+    required TResult Function(_SearchResultWordSearchResultWord value) word,
+    required TResult Function(_SearchResultWordEnd value) end,
   }) {
     return word(this);
   }
@@ -865,8 +873,8 @@ class _$WordWordImpl implements _WordWord {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_WordWord value)? word,
-    TResult? Function(_WordEnd value)? end,
+    TResult? Function(_SearchResultWordSearchResultWord value)? word,
+    TResult? Function(_SearchResultWordEnd value)? end,
   }) {
     return word?.call(this);
   }
@@ -874,8 +882,8 @@ class _$WordWordImpl implements _WordWord {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_WordWord value)? word,
-    TResult Function(_WordEnd value)? end,
+    TResult Function(_SearchResultWordSearchResultWord value)? word,
+    TResult Function(_SearchResultWordEnd value)? end,
     required TResult orElse(),
   }) {
     if (word != null) {
@@ -886,45 +894,48 @@ class _$WordWordImpl implements _WordWord {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WordWordImplToJson(
+    return _$$SearchResultWordSearchResultWordImplToJson(
       this,
     );
   }
 }
 
-abstract class _WordWord implements Word {
-  const factory _WordWord(
+abstract class _SearchResultWordSearchResultWord implements SearchResultWord {
+  const factory _SearchResultWordSearchResultWord(
       {required final String text,
-      required final bool highlight}) = _$WordWordImpl;
+      final bool highlight}) = _$SearchResultWordSearchResultWordImpl;
 
-  factory _WordWord.fromJson(Map<String, dynamic> json) =
-      _$WordWordImpl.fromJson;
+  factory _SearchResultWordSearchResultWord.fromJson(
+          Map<String, dynamic> json) =
+      _$SearchResultWordSearchResultWordImpl.fromJson;
 
   @override
   String get text;
   bool get highlight;
   @override
   @JsonKey(ignore: true)
-  _$$WordWordImplCopyWith<_$WordWordImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchResultWordSearchResultWordImplCopyWith<
+          _$SearchResultWordSearchResultWordImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$WordEndImplCopyWith<$Res> implements $WordCopyWith<$Res> {
-  factory _$$WordEndImplCopyWith(
-          _$WordEndImpl value, $Res Function(_$WordEndImpl) then) =
-      __$$WordEndImplCopyWithImpl<$Res>;
+abstract class _$$SearchResultWordEndImplCopyWith<$Res>
+    implements $SearchResultWordCopyWith<$Res> {
+  factory _$$SearchResultWordEndImplCopyWith(_$SearchResultWordEndImpl value,
+          $Res Function(_$SearchResultWordEndImpl) then) =
+      __$$SearchResultWordEndImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String text});
 }
 
 /// @nodoc
-class __$$WordEndImplCopyWithImpl<$Res>
-    extends _$WordCopyWithImpl<$Res, _$WordEndImpl>
-    implements _$$WordEndImplCopyWith<$Res> {
-  __$$WordEndImplCopyWithImpl(
-      _$WordEndImpl _value, $Res Function(_$WordEndImpl) _then)
+class __$$SearchResultWordEndImplCopyWithImpl<$Res>
+    extends _$SearchResultWordCopyWithImpl<$Res, _$SearchResultWordEndImpl>
+    implements _$$SearchResultWordEndImplCopyWith<$Res> {
+  __$$SearchResultWordEndImplCopyWithImpl(_$SearchResultWordEndImpl _value,
+      $Res Function(_$SearchResultWordEndImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -932,7 +943,7 @@ class __$$WordEndImplCopyWithImpl<$Res>
   $Res call({
     Object? text = null,
   }) {
-    return _then(_$WordEndImpl(
+    return _then(_$SearchResultWordEndImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -943,12 +954,12 @@ class __$$WordEndImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WordEndImpl implements _WordEnd {
-  const _$WordEndImpl({required this.text, final String? $type})
+class _$SearchResultWordEndImpl implements _SearchResultWordEnd {
+  const _$SearchResultWordEndImpl({required this.text, final String? $type})
       : $type = $type ?? 'end';
 
-  factory _$WordEndImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WordEndImplFromJson(json);
+  factory _$SearchResultWordEndImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchResultWordEndImplFromJson(json);
 
   @override
   final String text;
@@ -958,14 +969,14 @@ class _$WordEndImpl implements _WordEnd {
 
   @override
   String toString() {
-    return 'Word.end(text: $text)';
+    return 'SearchResultWord.end(text: $text)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WordEndImpl &&
+            other is _$SearchResultWordEndImpl &&
             (identical(other.text, text) || other.text == text));
   }
 
@@ -976,8 +987,9 @@ class _$WordEndImpl implements _WordEnd {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WordEndImplCopyWith<_$WordEndImpl> get copyWith =>
-      __$$WordEndImplCopyWithImpl<_$WordEndImpl>(this, _$identity);
+  _$$SearchResultWordEndImplCopyWith<_$SearchResultWordEndImpl> get copyWith =>
+      __$$SearchResultWordEndImplCopyWithImpl<_$SearchResultWordEndImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1013,8 +1025,8 @@ class _$WordEndImpl implements _WordEnd {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_WordWord value) word,
-    required TResult Function(_WordEnd value) end,
+    required TResult Function(_SearchResultWordSearchResultWord value) word,
+    required TResult Function(_SearchResultWordEnd value) end,
   }) {
     return end(this);
   }
@@ -1022,8 +1034,8 @@ class _$WordEndImpl implements _WordEnd {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_WordWord value)? word,
-    TResult? Function(_WordEnd value)? end,
+    TResult? Function(_SearchResultWordSearchResultWord value)? word,
+    TResult? Function(_SearchResultWordEnd value)? end,
   }) {
     return end?.call(this);
   }
@@ -1031,8 +1043,8 @@ class _$WordEndImpl implements _WordEnd {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_WordWord value)? word,
-    TResult Function(_WordEnd value)? end,
+    TResult Function(_SearchResultWordSearchResultWord value)? word,
+    TResult Function(_SearchResultWordEnd value)? end,
     required TResult orElse(),
   }) {
     if (end != null) {
@@ -1043,21 +1055,23 @@ class _$WordEndImpl implements _WordEnd {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WordEndImplToJson(
+    return _$$SearchResultWordEndImplToJson(
       this,
     );
   }
 }
 
-abstract class _WordEnd implements Word {
-  const factory _WordEnd({required final String text}) = _$WordEndImpl;
+abstract class _SearchResultWordEnd implements SearchResultWord {
+  const factory _SearchResultWordEnd({required final String text}) =
+      _$SearchResultWordEndImpl;
 
-  factory _WordEnd.fromJson(Map<String, dynamic> json) = _$WordEndImpl.fromJson;
+  factory _SearchResultWordEnd.fromJson(Map<String, dynamic> json) =
+      _$SearchResultWordEndImpl.fromJson;
 
   @override
   String get text;
   @override
   @JsonKey(ignore: true)
-  _$$WordEndImplCopyWith<_$WordEndImpl> get copyWith =>
+  _$$SearchResultWordEndImplCopyWith<_$SearchResultWordEndImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

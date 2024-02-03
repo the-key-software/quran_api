@@ -11,51 +11,159 @@ abstract class QuranClient {
   factory QuranClient(Dio dio, {String baseUrl}) = _QuranClient;
 
   /// Get Indopak Script of ayah
-
+  /// [chapterNumber] If you want to get indopak script of a specific surah.
+  /// [juzNumber] If you want to get indopak script of a specific juz.
+  /// [pageNumber] If you want to get indopak script of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get indopak script of a specific hizb.
+  /// [rubElHizbNumber] If you want to get indopak script of a specific Rub el Hizb.
+  /// [verseKey] If you want to get indopak script of a specific ayah.
   @GET('/quran/verses/indopak')
-  Future<dynamic> quranVersesIndopak();
+  Future<HttpResponse<dynamic>> quranVersesIndopak({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 
   /// Get Uthmani Tajweed Script of ayah
-
+  /// [chapterNumber] If you want to get text of a specific surah.
+  /// [juzNumber] If you want to get text of a specific juz.
+  /// [pageNumber] If you want to get text of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get text of a specific hizb.
+  /// [rubElHizbNumber] If you want to get text of a specific Rub el Hizb.
+  /// [verseKey] If you want to get text of a specific ayah.
   @GET('/quran/verses/uthmani_tajweed')
-  Future<dynamic> quranVersesUthmaniTajweed();
+  Future<HttpResponse<dynamic>> quranVersesUthmaniTajweed({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 
   /// Get Uthmani Script of ayah
-
+  /// [chapterNumber] If you want to get Uthmani script of a specific surah.
+  /// [juzNumber] If you want to get Uthmani script of a specific juz.
+  /// [pageNumber] If you want to get Uthmani script of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get Uthmani script of a specific hizb.
+  /// [rubElHizbNumber] If you want to get Uthmani script of a specific Rub el Hizb.
+  /// [verseKey] If you want to get Uthmani script of a specific ayah.
   @GET('/quran/verses/uthmani')
-  Future<dynamic> quranVersesUthmani();
+  Future<HttpResponse<dynamic>> quranVersesUthmani({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 
   /// Get Uthmani simple script of ayah
-
+  /// [chapterNumber] If you want to get Uthmani script of a specific surah.
+  /// [juzNumber] If you want to get Uthmani script of a specific juz.
+  /// [pageNumber] If you want to get Uthmani script of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get Uthmani script of a specific hizb.
+  /// [rubElHizbNumber] If you want to get Uthmani script of a specific Rub el Hizb.
+  /// [verseKey] If you want to get Uthmani script of a specific ayah.
   @GET('/quran/verses/uthmani_simple')
-  Future<dynamic> quranVersesUthmaniSimple();
+  Future<HttpResponse<dynamic>> quranVersesUthmaniSimple({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 
   /// Get Imlaei Simple text of ayah
-
+  /// [chapterNumber] If you want to get text of a specific surah.
+  /// [juzNumber] If you want to get text of a specific juz.
+  /// [pageNumber] If you want to get text of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get text of a specific hizb.
+  /// [rubElHizbNumber] If you want to get text of a specific Rub el Hizb.
+  /// [verseKey] If you want to get text of a specific ayah.
   @GET('/quran/verses/imlaei')
-  Future<dynamic> quranVersesImlaei();
+  Future<HttpResponse<dynamic>> quranVersesImlaei({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 
   /// Get a single translation
-  /// [translationId] Recitation id
+  /// [fields] comma seperated fields of translation.
+  /// [chapterNumber] If you want to get translation of a specific surah.
+  /// [juzNumber] If you want to get translation of a specific juz.
+  /// [pageNumber] If you want to get translation of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get translation of a specific hizb.
+  /// [rubElHizbNumber] If you want to get translation of a specific Rub el Hizb.
+  /// [verseKey] If you want to get translation of a specific ayah.
   @GET('/quran/translations/{translation_id}')
-  Future<dynamic> translation({
-    @Path('translation_id') required int translationId,
+  Future<HttpResponse<dynamic>> translation({
+    @Query('fields') String? fields,
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
   });
 
   /// Get a single tafsir
-  /// [tafsirId] tafsir id
+  /// [fields] comma seperated fields of tafsir.
+  /// [chapterNumber] If you want to get tafsir of a specific surah.
+  /// [juzNumber] If you want to get tafsir of a specific juz.
+  /// [pageNumber] If you want to get tafsir of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get tafsir of a specific hizb.
+  /// [rubElHizbNumber] If you want to get tafsir of a specific Rub el Hizb.
+  /// [verseKey] If you want to get tafsir of a specific ayah.
   @GET('/quran/tafsirs/{tafsir_id}')
-  Future<dynamic> tafsir({
-    @Path('tafsir_id') required int tafsirId,
+  Future<HttpResponse<dynamic>> tafsir({
+    @Query('fields') String? fields,
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
   });
 
   /// Get V1 Glyph codes of ayah
-
+  /// [chapterNumber] If you want to get text of a specific surah.
+  /// [juzNumber] If you want to get text of a specific juz.
+  /// [pageNumber] If you want to get text of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get text of a specific hizb.
+  /// [rubElHizbNumber] If you want to get text of a specific Rub el Hizb.
+  /// [verseKey] If you want to get text of a specific ayah.
   @GET('/quran/verses/code_v1')
-  Future<dynamic> quranVersesCodeV1();
+  Future<HttpResponse<dynamic>> quranVersesCodeV1({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 
   /// Get V2 Glyph codes of ayah
-
+  /// [chapterNumber] If you want to get text of a specific surah.
+  /// [juzNumber] If you want to get text of a specific juz.
+  /// [pageNumber] If you want to get text of a Madani Muhsaf page
+  /// [hizbNumber] If you want to get text of a specific hizb.
+  /// [rubElHizbNumber] If you want to get text of a specific Rub el Hizb.
+  /// [verseKey] If you want to get text of a specific ayah.
   @GET('/quran/verses/code_v2')
-  Future<dynamic> quranVersesCodeV2();
+  Future<HttpResponse<dynamic>> quranVersesCodeV2({
+    @Query('chapter_number') int? chapterNumber,
+    @Query('juz_number') int? juzNumber,
+    @Query('page_number') int? pageNumber,
+    @Query('hizb_number') int? hizbNumber,
+    @Query('rub_el_hizb_number') int? rubElHizbNumber,
+    @Query('verse_key') String? verseKey,
+  });
 }

@@ -19,9 +19,9 @@ Map<String, dynamic> _$$SearchResponseImplToJson(
 
 _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
       query: json['query'] as String,
-      totalResults: json['totalResults'] as int,
-      currentPage: json['currentPage'] as int,
-      totalPages: json['totalPages'] as int,
+      totalResults: json['total_results'] as int,
+      currentPage: json['current_page'] as int,
+      totalPages: json['total_pages'] as int,
       results: (json['results'] as List<dynamic>)
           .map((e) => SearchResult.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -30,55 +30,60 @@ _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
 Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) =>
     <String, dynamic>{
       'query': instance.query,
-      'totalResults': instance.totalResults,
-      'currentPage': instance.currentPage,
-      'totalPages': instance.totalPages,
+      'total_results': instance.totalResults,
+      'current_page': instance.currentPage,
+      'total_pages': instance.totalPages,
       'results': instance.results.map((e) => e.toJson()).toList(),
     };
 
 _$SearchResultImpl _$$SearchResultImplFromJson(Map<String, dynamic> json) =>
     _$SearchResultImpl(
-      verseKey: json['verseKey'] as String,
-      verseId: json['verseId'] as int,
+      verseKey: json['verse_key'] as String,
+      verseId: json['verse_id'] as int,
       text: json['text'] as String,
       highlighted: json['highlighted'],
       words: (json['words'] as List<dynamic>)
-          .map((e) => Word.fromJson(e as Map<String, dynamic>))
+          .map((e) => SearchResultWord.fromJson(e as Map<String, dynamic>))
           .toList(),
       translations: json['translations'] as List<dynamic>,
     );
 
 Map<String, dynamic> _$$SearchResultImplToJson(_$SearchResultImpl instance) =>
     <String, dynamic>{
-      'verseKey': instance.verseKey,
-      'verseId': instance.verseId,
+      'verse_key': instance.verseKey,
+      'verse_id': instance.verseId,
       'text': instance.text,
       'highlighted': instance.highlighted,
       'words': instance.words.map((e) => e.toJson()).toList(),
       'translations': instance.translations,
     };
 
-_$WordWordImpl _$$WordWordImplFromJson(Map<String, dynamic> json) =>
-    _$WordWordImpl(
-      text: json['text'] as String,
-      highlight: json['highlight'] as bool? ?? false,
-      $type: json['char_type'] as String?,
-    );
+_$SearchResultWordSearchResultWordImpl
+    _$$SearchResultWordSearchResultWordImplFromJson(
+            Map<String, dynamic> json) =>
+        _$SearchResultWordSearchResultWordImpl(
+          text: json['text'] as String,
+          highlight: json['highlight'] as bool? ?? false,
+          $type: json['char_type'] as String?,
+        );
 
-Map<String, dynamic> _$$WordWordImplToJson(_$WordWordImpl instance) =>
+Map<String, dynamic> _$$SearchResultWordSearchResultWordImplToJson(
+        _$SearchResultWordSearchResultWordImpl instance) =>
     <String, dynamic>{
       'text': instance.text,
       'highlight': instance.highlight,
       'char_type': instance.$type,
     };
 
-_$WordEndImpl _$$WordEndImplFromJson(Map<String, dynamic> json) =>
-    _$WordEndImpl(
+_$SearchResultWordEndImpl _$$SearchResultWordEndImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SearchResultWordEndImpl(
       text: json['text'] as String,
       $type: json['char_type'] as String?,
     );
 
-Map<String, dynamic> _$$WordEndImplToJson(_$WordEndImpl instance) =>
+Map<String, dynamic> _$$SearchResultWordEndImplToJson(
+        _$SearchResultWordEndImpl instance) =>
     <String, dynamic>{
       'text': instance.text,
       'char_type': instance.$type,

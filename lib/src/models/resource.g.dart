@@ -11,7 +11,7 @@ _$ResourceImpl _$$ResourceImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as int,
       name: json['name'] as String,
       authorName: json['author_name'] as String,
-      slug: json['slug'] as String,
+      slug: json['slug'] as String?,
       languageName: json['language_name'] as String,
       translatedName: ResourceTranslatedName.fromJson(
           json['translated_name'] as Map<String, dynamic>),

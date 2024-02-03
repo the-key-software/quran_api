@@ -33,7 +33,7 @@ class SearchResult with _$SearchResult {
     required int verseId,
     required String text,
     required Object? highlighted,
-    required List<Word> words,
+    required List<SearchResultWord> words,
     required List<dynamic> translations,
   }) = _SearchResult;
 
@@ -42,15 +42,16 @@ class SearchResult with _$SearchResult {
 }
 
 @Freezed(unionKey: 'char_type')
-class Word with _$Word {
-  const factory Word.word({
+class SearchResultWord with _$SearchResultWord {
+  const factory SearchResultWord.word({
     required String text,
-    @Default(false) required bool highlight,
-  }) = _WordWord;
+    @Default(false) bool highlight,
+  }) = _SearchResultWordSearchResultWord;
 
-  const factory Word.end({
+  const factory SearchResultWord.end({
     required String text,
-  }) = _WordEnd;
+  }) = _SearchResultWordEnd;
 
-  factory Word.fromJson(Map<String, dynamic> json) => _$WordFromJson(json);
+  factory SearchResultWord.fromJson(Map<String, dynamic> json) =>
+      _$SearchResultWordFromJson(json);
 }

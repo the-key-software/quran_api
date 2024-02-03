@@ -15,7 +15,7 @@ class Resource with _$Resource {
     @JsonKey(name: 'id') required int id,
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'author_name') required String authorName,
-    @JsonKey(name: 'slug') required String slug,
+    @JsonKey(name: 'slug') required String? slug,
     @JsonKey(name: 'language_name') required String languageName,
     @JsonKey(name: 'translated_name')
     required ResourceTranslatedName translatedName,

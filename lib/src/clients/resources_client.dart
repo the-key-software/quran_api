@@ -13,51 +13,51 @@ abstract class ResourcesClient {
   /// Recitation Info
 
   @GET('/resources/recitations/{recitation_id}/info')
-  Future<dynamic> recitationInfo({
-    @Path('recitation_id') required int recitationId,
-  });
+  Future<HttpResponse<dynamic>> recitationInfo();
 
   /// Translation Info
 
   @GET('/resources/translations/{translation_id}/info')
-  Future<dynamic> translationInfo({
-    @Path('translation_id') required int translationId,
-  });
+  Future<HttpResponse<dynamic>> translationInfo();
 
   /// Translations
 
   @GET('/resources/translations')
-  Future<dynamic> translations();
+  Future<HttpResponse<dynamic>> translations({
+    @Query('language') String? language,
+  });
 
   /// Tafsirs
 
   @GET('/resources/tafsirs')
-  Future<dynamic> tafsirs();
+  Future<HttpResponse<dynamic>> tafsirs({
+    @Query('language') String? language,
+  });
 
   /// Tafsir Info
 
   @GET('/resources/tafsirs/{tafsir_id}/info')
-  Future<dynamic> tafsirInfo({
-    @Path('tafsir_id') required int tafsirId,
-  });
+  Future<HttpResponse<dynamic>> tafsirInfo();
 
   /// Recitation Styles
 
   @GET('/resources/recitation_styles')
-  Future<dynamic> recitationStyles();
+  Future<HttpResponse<dynamic>> recitationStyles();
 
   /// Languages
 
   @GET('/resources/languages')
-  Future<dynamic> languages();
+  Future<HttpResponse<dynamic>> languages({
+    @Query('language') String? language,
+  });
 
   /// Chapter Infos
 
   @GET('/resources/chapter_infos')
-  Future<dynamic> chapterInfo();
+  Future<HttpResponse<ChapterInfosResponse>> chapterInfo();
 
   /// Verse Media
 
   @GET('/resources/verse_media')
-  Future<dynamic> verseMedia();
+  Future<HttpResponse<VerseMediaResponse>> verseMedia();
 }

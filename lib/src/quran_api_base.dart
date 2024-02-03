@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'clients/clients.dart';
 
+/// Base api service implements quran.com api
 class QuranApi {
   static final Uri uri = Uri(
     scheme: "https",

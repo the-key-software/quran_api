@@ -13,5 +13,5 @@ abstract class JuzClient {
   /// Get All Juzs
 
   @GET('/juzs')
-  Future<dynamic> juzs();
+  Future<HttpResponse<dynamic>> juzs();
 }
