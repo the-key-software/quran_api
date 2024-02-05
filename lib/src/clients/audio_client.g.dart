@@ -3,6 +3,34 @@
 part of 'audio_client.dart';
 
 // **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$RecitationAudioFilesQueriesImpl _$$RecitationAudioFilesQueriesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RecitationAudioFilesQueriesImpl(
+      fields: json['fields'] as String?,
+      chapterNumber: json['chapter_number'] as int?,
+      juzNumber: json['juz_number'] as int?,
+      pageNumber: json['page_number'] as int?,
+      hizbNumber: json['hizb_number'] as int?,
+      rubElHizbNumber: json['rub_el_hizb_number'] as int?,
+      verseKey: json['verse_key'] as String?,
+    );
+
+Map<String, dynamic> _$$RecitationAudioFilesQueriesImplToJson(
+        _$RecitationAudioFilesQueriesImpl instance) =>
+    <String, dynamic>{
+      'fields': instance.fields,
+      'chapter_number': instance.chapterNumber,
+      'juz_number': instance.juzNumber,
+      'page_number': instance.pageNumber,
+      'hizb_number': instance.hizbNumber,
+      'rub_el_hizb_number': instance.rubElHizbNumber,
+      'verse_key': instance.verseKey,
+    };
+
+// **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
@@ -19,20 +47,24 @@ class _AudioClient implements AudioClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<dynamic>> chapterReciterAudioFile() async {
+  Future<HttpResponse<ChapterReciterAudioFileResponse>>
+      chapterReciterAudioFile({
+    required int id,
+    required int chapterNumber,
+  }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<ChapterReciterAudioFileResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/chapter_recitations/{id}/{chapter_number}',
+              '/chapter_recitations/${id}/${chapterNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -41,50 +73,54 @@ class _AudioClient implements AudioClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = ChapterReciterAudioFileResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> chapterReciterAudioFiles(
+  Future<HttpResponse<ChapterReciterAudioFilesResponse>>
+      chapterReciterAudioFiles({
+    required int id,
+    String? language,
+  }) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'language': language};
+    queryParameters.removeWhere((k, v) => v == null);
+    final _headers = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<ChapterReciterAudioFilesResponse>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/chapter_recitations/${id}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ChapterReciterAudioFilesResponse.fromJson(_result.data!);
+    final httpResponse = HttpResponse(value, _result);
+    return httpResponse;
+  }
+
+  @override
+  Future<HttpResponse<RecitationsResponse>> recitations(
       {String? language}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'language': language};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/chapter_recitations/{id}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = _result.data;
-    final httpResponse = HttpResponse(value, _result);
-    return httpResponse;
-  }
-
-  @override
-  Future<HttpResponse<dynamic>> recitations({String? language}) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'language': language};
-    queryParameters.removeWhere((k, v) => v == null);
-    final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<RecitationsResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -100,43 +136,31 @@ class _AudioClient implements AudioClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = RecitationsResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> recitationAutioFiles({
-    String? fields,
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    String? verseKey,
+  Future<HttpResponse<RecitationAudioFilesResponse>> recitationAudioFiles({
+    required int recitationId,
+    RecitationAudioFilesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'fields': fields,
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<RecitationAudioFilesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/quran/recitations/{recitation_id}',
+              '/quran/recitations/${recitationId}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -145,20 +169,21 @@ class _AudioClient implements AudioClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = RecitationAudioFilesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> chapterReciters({String? language}) async {
+  Future<HttpResponse<ChapterRecitersResponse>> chapterReciters(
+      {String? language}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'language': language};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<ChapterRecitersResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -174,7 +199,7 @@ class _AudioClient implements AudioClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = ChapterRecitersResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

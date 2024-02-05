@@ -10,7 +10,7 @@ _$RecitationImpl _$$RecitationImplFromJson(Map<String, dynamic> json) =>
     _$RecitationImpl(
       id: json['id'] as int,
       reciterName: json['reciter_name'] as String,
-      style: json['style'] as String,
+      style: json['style'] as String?,
       translatedName: RecitationTranslatedName.fromJson(
           json['translated_name'] as Map<String, dynamic>),
     );

@@ -3,6 +3,26 @@
 part of 'search_client.dart';
 
 // **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$SearchQueriesImpl _$$SearchQueriesImplFromJson(Map<String, dynamic> json) =>
+    _$SearchQueriesImpl(
+      q: json['q'] as String?,
+      size: json['size'] as int?,
+      page: json['page'] as int?,
+      language: json['language'] as String?,
+    );
+
+Map<String, dynamic> _$$SearchQueriesImplToJson(_$SearchQueriesImpl instance) =>
+    <String, dynamic>{
+      'q': instance.q,
+      'size': instance.size,
+      'page': instance.page,
+      'language': instance.language,
+    };
+
+// **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
@@ -19,19 +39,10 @@ class _SearchClient implements SearchClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<SearchResponse>> search({
-    String? q,
-    int? size,
-    int? page,
-    String? language,
-  }) async {
+  Future<HttpResponse<SearchResponse>> search({SearchQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'q': q,
-      r'size': size,
-      r'page': page,
-      r'language': language,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;

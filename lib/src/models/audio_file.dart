@@ -13,9 +13,10 @@ class AudioFile with _$AudioFile {
 
   const factory AudioFile({
     @JsonKey(name: 'url') required String url,
-    @JsonKey(name: 'duration') required int duration,
-    @JsonKey(name: 'format') required String format,
-    @JsonKey(name: 'segments') required List<List<List<int>>> segments,
+    @JsonKey(name: 'duration') required int? duration,
+    @JsonKey(name: 'format') required String? format,
+    @JsonKey(name: 'segments') required List<List<List<int>>>? segments,
+    @JsonKey(name: 'verse_key') required String verseKey,
   }) = _AudioFile;
 
   static AudioFile get example => AudioFile.fromJson({

@@ -25,7 +25,7 @@ mixin _$Recitation {
   @JsonKey(name: 'reciter_name')
   String get reciterName => throw _privateConstructorUsedError;
   @JsonKey(name: 'style')
-  String get style => throw _privateConstructorUsedError;
+  String? get style => throw _privateConstructorUsedError;
   @JsonKey(name: 'translated_name')
   RecitationTranslatedName get translatedName =>
       throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $RecitationCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'reciter_name') String reciterName,
-      @JsonKey(name: 'style') String style,
+      @JsonKey(name: 'style') String? style,
       @JsonKey(name: 'translated_name')
       RecitationTranslatedName translatedName});
 
@@ -67,7 +67,7 @@ class _$RecitationCopyWithImpl<$Res, $Val extends Recitation>
   $Res call({
     Object? id = null,
     Object? reciterName = null,
-    Object? style = null,
+    Object? style = freezed,
     Object? translatedName = null,
   }) {
     return _then(_value.copyWith(
@@ -79,10 +79,10 @@ class _$RecitationCopyWithImpl<$Res, $Val extends Recitation>
           ? _value.reciterName
           : reciterName // ignore: cast_nullable_to_non_nullable
               as String,
-      style: null == style
+      style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       translatedName: null == translatedName
           ? _value.translatedName
           : translatedName // ignore: cast_nullable_to_non_nullable
@@ -111,7 +111,7 @@ abstract class _$$RecitationImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'reciter_name') String reciterName,
-      @JsonKey(name: 'style') String style,
+      @JsonKey(name: 'style') String? style,
       @JsonKey(name: 'translated_name')
       RecitationTranslatedName translatedName});
 
@@ -132,7 +132,7 @@ class __$$RecitationImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? reciterName = null,
-    Object? style = null,
+    Object? style = freezed,
     Object? translatedName = null,
   }) {
     return _then(_$RecitationImpl(
@@ -144,10 +144,10 @@ class __$$RecitationImplCopyWithImpl<$Res>
           ? _value.reciterName
           : reciterName // ignore: cast_nullable_to_non_nullable
               as String,
-      style: null == style
+      style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       translatedName: null == translatedName
           ? _value.translatedName
           : translatedName // ignore: cast_nullable_to_non_nullable
@@ -177,7 +177,7 @@ class _$RecitationImpl extends _Recitation {
   final String reciterName;
   @override
   @JsonKey(name: 'style')
-  final String style;
+  final String? style;
   @override
   @JsonKey(name: 'translated_name')
   final RecitationTranslatedName translatedName;
@@ -223,7 +223,7 @@ abstract class _Recitation extends Recitation {
   const factory _Recitation(
           {@JsonKey(name: 'id') required final int id,
           @JsonKey(name: 'reciter_name') required final String reciterName,
-          @JsonKey(name: 'style') required final String style,
+          @JsonKey(name: 'style') required final String? style,
           @JsonKey(name: 'translated_name')
           required final RecitationTranslatedName translatedName}) =
       _$RecitationImpl;
@@ -240,7 +240,7 @@ abstract class _Recitation extends Recitation {
   String get reciterName;
   @override
   @JsonKey(name: 'style')
-  String get style;
+  String? get style;
   @override
   @JsonKey(name: 'translated_name')
   RecitationTranslatedName get translatedName;

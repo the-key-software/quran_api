@@ -14,6 +14,7 @@ export "transliteration.dart";
 export "chapter.dart";
 export "chapter_reciters.dart";
 export "audio_file.dart";
+export "errors/errors.dart";
 export "translated_name.dart";
 export "chapter_recitation.dart";
 export "language.dart";

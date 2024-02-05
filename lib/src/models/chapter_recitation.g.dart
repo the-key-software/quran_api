@@ -11,9 +11,9 @@ _$ChapterRecitationImpl _$$ChapterRecitationImplFromJson(
     _$ChapterRecitationImpl(
       id: json['id'] as int,
       chapterId: json['chapter_id'] as int,
-      fileSize: json['file_size'] as int,
+      fileSize: (json['file_size'] as num).toDouble(),
       format: json['format'] as String,
-      totalFiles: json['total_files'] as int,
+      totalFiles: json['total_files'] as int?,
       audioUrl: json['audio_url'] as String,
     );
 

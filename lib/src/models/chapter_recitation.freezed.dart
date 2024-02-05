@@ -30,7 +30,7 @@ mixin _$ChapterRecitation {
 
   /// The file size in bytes
   @JsonKey(name: 'file_size')
-  int get fileSize => throw _privateConstructorUsedError;
+  double get fileSize => throw _privateConstructorUsedError;
 
   /// The format of the file
   @JsonKey(name: 'format')
@@ -38,7 +38,7 @@ mixin _$ChapterRecitation {
 
   /// The total number of files
   @JsonKey(name: 'total_files')
-  int get totalFiles => throw _privateConstructorUsedError;
+  int? get totalFiles => throw _privateConstructorUsedError;
 
   /// The audio file's url
   @JsonKey(name: 'audio_url')
@@ -59,9 +59,9 @@ abstract class $ChapterRecitationCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'file_size') int fileSize,
+      @JsonKey(name: 'file_size') double fileSize,
       @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'total_files') int totalFiles,
+      @JsonKey(name: 'total_files') int? totalFiles,
       @JsonKey(name: 'audio_url') String audioUrl});
 }
 
@@ -82,7 +82,7 @@ class _$ChapterRecitationCopyWithImpl<$Res, $Val extends ChapterRecitation>
     Object? chapterId = null,
     Object? fileSize = null,
     Object? format = null,
-    Object? totalFiles = null,
+    Object? totalFiles = freezed,
     Object? audioUrl = null,
   }) {
     return _then(_value.copyWith(
@@ -97,15 +97,15 @@ class _$ChapterRecitationCopyWithImpl<$Res, $Val extends ChapterRecitation>
       fileSize: null == fileSize
           ? _value.fileSize
           : fileSize // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      totalFiles: null == totalFiles
+      totalFiles: freezed == totalFiles
           ? _value.totalFiles
           : totalFiles // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       audioUrl: null == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
@@ -125,9 +125,9 @@ abstract class _$$ChapterRecitationImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'file_size') int fileSize,
+      @JsonKey(name: 'file_size') double fileSize,
       @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'total_files') int totalFiles,
+      @JsonKey(name: 'total_files') int? totalFiles,
       @JsonKey(name: 'audio_url') String audioUrl});
 }
 
@@ -146,7 +146,7 @@ class __$$ChapterRecitationImplCopyWithImpl<$Res>
     Object? chapterId = null,
     Object? fileSize = null,
     Object? format = null,
-    Object? totalFiles = null,
+    Object? totalFiles = freezed,
     Object? audioUrl = null,
   }) {
     return _then(_$ChapterRecitationImpl(
@@ -161,15 +161,15 @@ class __$$ChapterRecitationImplCopyWithImpl<$Res>
       fileSize: null == fileSize
           ? _value.fileSize
           : fileSize // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      totalFiles: null == totalFiles
+      totalFiles: freezed == totalFiles
           ? _value.totalFiles
           : totalFiles // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       audioUrl: null == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
@@ -206,7 +206,7 @@ class _$ChapterRecitationImpl extends _ChapterRecitation {
   /// The file size in bytes
   @override
   @JsonKey(name: 'file_size')
-  final int fileSize;
+  final double fileSize;
 
   /// The format of the file
   @override
@@ -216,7 +216,7 @@ class _$ChapterRecitationImpl extends _ChapterRecitation {
   /// The total number of files
   @override
   @JsonKey(name: 'total_files')
-  final int totalFiles;
+  final int? totalFiles;
 
   /// The audio file's url
   @override
@@ -269,9 +269,9 @@ abstract class _ChapterRecitation extends ChapterRecitation {
   const factory _ChapterRecitation(
           {@JsonKey(name: 'id') required final int id,
           @JsonKey(name: 'chapter_id') required final int chapterId,
-          @JsonKey(name: 'file_size') required final int fileSize,
+          @JsonKey(name: 'file_size') required final double fileSize,
           @JsonKey(name: 'format') required final String format,
-          @JsonKey(name: 'total_files') required final int totalFiles,
+          @JsonKey(name: 'total_files') required final int? totalFiles,
           @JsonKey(name: 'audio_url') required final String audioUrl}) =
       _$ChapterRecitationImpl;
   const _ChapterRecitation._() : super._();
@@ -293,7 +293,7 @@ abstract class _ChapterRecitation extends ChapterRecitation {
 
   /// The file size in bytes
   @JsonKey(name: 'file_size')
-  int get fileSize;
+  double get fileSize;
   @override
 
   /// The format of the file
@@ -303,7 +303,7 @@ abstract class _ChapterRecitation extends ChapterRecitation {
 
   /// The total number of files
   @JsonKey(name: 'total_files')
-  int get totalFiles;
+  int? get totalFiles;
   @override
 
   /// The audio file's url

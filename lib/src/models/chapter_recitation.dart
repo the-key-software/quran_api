@@ -19,13 +19,13 @@ class ChapterRecitation with _$ChapterRecitation {
     @JsonKey(name: 'chapter_id') required int chapterId,
 
     /// The file size in bytes
-    @JsonKey(name: 'file_size') required int fileSize,
+    @JsonKey(name: 'file_size') required double fileSize,
 
     /// The format of the file
     @JsonKey(name: 'format') required String format,
 
     /// The total number of files
-    @JsonKey(name: 'total_files') required int totalFiles,
+    @JsonKey(name: 'total_files') required int? totalFiles,
 
     /// The audio file's url
     @JsonKey(name: 'audio_url') required String audioUrl,

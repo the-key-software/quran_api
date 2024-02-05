@@ -23,11 +23,13 @@ mixin _$AudioFile {
   @JsonKey(name: 'url')
   String get url => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration')
-  int get duration => throw _privateConstructorUsedError;
+  int? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'format')
-  String get format => throw _privateConstructorUsedError;
+  String? get format => throw _privateConstructorUsedError;
   @JsonKey(name: 'segments')
-  List<List<List<int>>> get segments => throw _privateConstructorUsedError;
+  List<List<List<int>>>? get segments => throw _privateConstructorUsedError;
+  @JsonKey(name: 'verse_key')
+  String get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,9 +44,10 @@ abstract class $AudioFileCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'duration') int duration,
-      @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'segments') List<List<List<int>>> segments});
+      @JsonKey(name: 'duration') int? duration,
+      @JsonKey(name: 'format') String? format,
+      @JsonKey(name: 'segments') List<List<List<int>>>? segments,
+      @JsonKey(name: 'verse_key') String verseKey});
 }
 
 /// @nodoc
@@ -61,27 +64,32 @@ class _$AudioFileCopyWithImpl<$Res, $Val extends AudioFile>
   @override
   $Res call({
     Object? url = null,
-    Object? duration = null,
-    Object? format = null,
-    Object? segments = null,
+    Object? duration = freezed,
+    Object? format = freezed,
+    Object? segments = freezed,
+    Object? verseKey = null,
   }) {
     return _then(_value.copyWith(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: null == duration
+      duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int,
-      format: null == format
+              as int?,
+      format: freezed == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
-              as String,
-      segments: null == segments
+              as String?,
+      segments: freezed == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
-              as List<List<List<int>>>,
+              as List<List<List<int>>>?,
+      verseKey: null == verseKey
+          ? _value.verseKey
+          : verseKey // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -96,9 +104,10 @@ abstract class _$$AudioFileImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'duration') int duration,
-      @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'segments') List<List<List<int>>> segments});
+      @JsonKey(name: 'duration') int? duration,
+      @JsonKey(name: 'format') String? format,
+      @JsonKey(name: 'segments') List<List<List<int>>>? segments,
+      @JsonKey(name: 'verse_key') String verseKey});
 }
 
 /// @nodoc
@@ -113,27 +122,32 @@ class __$$AudioFileImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? url = null,
-    Object? duration = null,
-    Object? format = null,
-    Object? segments = null,
+    Object? duration = freezed,
+    Object? format = freezed,
+    Object? segments = freezed,
+    Object? verseKey = null,
   }) {
     return _then(_$AudioFileImpl(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: null == duration
+      duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int,
-      format: null == format
+              as int?,
+      format: freezed == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
-              as String,
-      segments: null == segments
+              as String?,
+      segments: freezed == segments
           ? _value._segments
           : segments // ignore: cast_nullable_to_non_nullable
-              as List<List<List<int>>>,
+              as List<List<List<int>>>?,
+      verseKey: null == verseKey
+          ? _value.verseKey
+          : verseKey // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -145,7 +159,8 @@ class _$AudioFileImpl extends _AudioFile {
       {@JsonKey(name: 'url') required this.url,
       @JsonKey(name: 'duration') required this.duration,
       @JsonKey(name: 'format') required this.format,
-      @JsonKey(name: 'segments') required final List<List<List<int>>> segments})
+      @JsonKey(name: 'segments') required final List<List<List<int>>>? segments,
+      @JsonKey(name: 'verse_key') required this.verseKey})
       : _segments = segments,
         super._();
 
@@ -157,22 +172,28 @@ class _$AudioFileImpl extends _AudioFile {
   final String url;
   @override
   @JsonKey(name: 'duration')
-  final int duration;
+  final int? duration;
   @override
   @JsonKey(name: 'format')
-  final String format;
-  final List<List<List<int>>> _segments;
+  final String? format;
+  final List<List<List<int>>>? _segments;
   @override
   @JsonKey(name: 'segments')
-  List<List<List<int>>> get segments {
+  List<List<List<int>>>? get segments {
+    final value = _segments;
+    if (value == null) return null;
     if (_segments is EqualUnmodifiableListView) return _segments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_segments);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
+  @JsonKey(name: 'verse_key')
+  final String verseKey;
+
+  @override
   String toString() {
-    return 'AudioFile(url: $url, duration: $duration, format: $format, segments: $segments)';
+    return 'AudioFile(url: $url, duration: $duration, format: $format, segments: $segments, verseKey: $verseKey)';
   }
 
   @override
@@ -184,13 +205,15 @@ class _$AudioFileImpl extends _AudioFile {
             (identical(other.duration, duration) ||
                 other.duration == duration) &&
             (identical(other.format, format) || other.format == format) &&
-            const DeepCollectionEquality().equals(other._segments, _segments));
+            const DeepCollectionEquality().equals(other._segments, _segments) &&
+            (identical(other.verseKey, verseKey) ||
+                other.verseKey == verseKey));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, url, duration, format,
-      const DeepCollectionEquality().hash(_segments));
+      const DeepCollectionEquality().hash(_segments), verseKey);
 
   @JsonKey(ignore: true)
   @override
@@ -209,10 +232,11 @@ class _$AudioFileImpl extends _AudioFile {
 abstract class _AudioFile extends AudioFile {
   const factory _AudioFile(
       {@JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'duration') required final int duration,
-      @JsonKey(name: 'format') required final String format,
-      @JsonKey(name: 'segments')
-      required final List<List<List<int>>> segments}) = _$AudioFileImpl;
+      @JsonKey(name: 'duration') required final int? duration,
+      @JsonKey(name: 'format') required final String? format,
+      @JsonKey(name: 'segments') required final List<List<List<int>>>? segments,
+      @JsonKey(name: 'verse_key')
+      required final String verseKey}) = _$AudioFileImpl;
   const _AudioFile._() : super._();
 
   factory _AudioFile.fromJson(Map<String, dynamic> json) =
@@ -223,13 +247,16 @@ abstract class _AudioFile extends AudioFile {
   String get url;
   @override
   @JsonKey(name: 'duration')
-  int get duration;
+  int? get duration;
   @override
   @JsonKey(name: 'format')
-  String get format;
+  String? get format;
   @override
   @JsonKey(name: 'segments')
-  List<List<List<int>>> get segments;
+  List<List<List<int>>>? get segments;
+  @override
+  @JsonKey(name: 'verse_key')
+  String get verseKey;
   @override
   @JsonKey(ignore: true)
   _$$AudioFileImplCopyWith<_$AudioFileImpl> get copyWith =>

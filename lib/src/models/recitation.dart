@@ -14,7 +14,7 @@ class Recitation with _$Recitation {
   const factory Recitation({
     @JsonKey(name: 'id') required int id,
     @JsonKey(name: 'reciter_name') required String reciterName,
-    @JsonKey(name: 'style') required String style,
+    @JsonKey(name: 'style') required String? style,
     @JsonKey(name: 'translated_name')
     required RecitationTranslatedName translatedName,
   }) = _Recitation;

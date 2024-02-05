@@ -2529,7 +2529,7 @@ final openApiMap = {
           "type": "number",
           "minimum": 1,
           "maximum": 114,
-        }
+        },
       ],
       "get": {
         "operationId": "list-surah-recitation",
