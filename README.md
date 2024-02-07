@@ -3,7 +3,6 @@
 This package provides a Dart and Flutter implementation of the Quran API based on the [official documentation](https://api-docs.quran.com/docs/category/quran.com-api).
 
 
-
 ## Features
 **it's a work in progress, but here's what's supported so far:**
 - Implemented Using freezed, json_serializable, dio and retrofit.
