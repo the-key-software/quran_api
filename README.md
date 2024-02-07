@@ -5,10 +5,11 @@ This package provides a Dart and Flutter implementation of the Quran API based o
 
 ## Features
 **it's a work in progress, but here's what's supported so far:**
-- Implemented Using freezed, json_serializable, dio and retrofit.
-- Tested with 100% coverage.
-- All models support ```.toJson()``` and ```.fromJson()``` and ```.copyWith``` methods.
 - Type-safe API calls and model.
+- Tested with 100% coverage.
+- Fully documented.
+- Implemented Using freezed, json_serializable, dio and retrofit.
+- All models support ```.toJson()``` and ```.fromJson()``` and ```.copyWith``` methods.
 - Clients
     - [x] Audio
     - [ ] Chapters
