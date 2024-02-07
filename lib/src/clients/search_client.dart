@@ -9,6 +9,7 @@ import '../models/models.dart';
 part 'search_client.freezed.dart';
 part 'search_client.g.dart';
 
+/// Search client
 @RestApi()
 abstract class SearchClient {
   factory SearchClient(Dio dio, {String baseUrl}) = _SearchClient;

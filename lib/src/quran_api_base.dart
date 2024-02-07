@@ -57,7 +57,7 @@ class QuranApi {
 
   AudioClient get audio => AudioClient(dio);
 
-  ChaptersClient get chapters => ChaptersClient(dio);
+  // ChaptersClient get chapters => ChaptersClient(dio);
 
   // JuzClient get juz => JuzClient(dio);
 
@@ -67,7 +67,7 @@ class QuranApi {
 
   // ResourcesClient get resources => ResourcesClient(dio);
 
-  // SearchClient get search => SearchClient(dio);
+  SearchClient get search => SearchClient(dio);
 
   // Print debug logs only in development mode
   void _debugPrint(Object object) {

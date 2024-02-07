@@ -1,6 +1,7 @@
 name: quran_api
 description: A starting point for Dart libraries or applications.
 version: 0.0.1
+homepage: https://github.com/the-key-software/quran_api
 
 environment:
   sdk: ^3.2.3

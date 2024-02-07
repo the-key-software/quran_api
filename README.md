@@ -1,39 +1,54 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Quran API 
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+This package provides a Dart and Flutter implementation of the Quran API based on the [official documentation](https://api-docs.quran.com/docs/category/quran.com-api).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
 ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+**it's a work in progress, but here's what's supported so far:**
+- Implemented Using freezed, json_serializable, dio and retrofit.
+- Tested with 100% coverage.
+- All models support ```.toJson()``` and ```.fromJson()``` and ```.copyWith``` methods.
+- Type-safe API calls and model.
+- Clients
+    - [x] Audio
+    - [ ] Chapters
+    - [ ] Juz
+    - [ ] Quran
+    - [ ] Verses
+    - [ ] Resources
+    - [x] Search
 
 ## Getting started
+In your `pubspec.yaml` file, add the following dependency:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+  quran_api: 
+```
+
+Then, run `flutter pub get` in your terminal.
+
+or run this command:
+    
+```shell
+flutter pub add quran_api
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:quran_api/quran_api.dart';
+
+Future<void> main() async {
+  final api = QuranApi();
+
+  final value = await api.search.search(queries: SearchQueries(q: "مدهامتان"));
+  print(value.data.search.query);
+}
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+This package is still in development, and the API is subject to change.
+feel free to contribute to this package.
