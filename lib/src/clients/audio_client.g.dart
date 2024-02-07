@@ -205,20 +205,23 @@ class _AudioClient implements AudioClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> listSurahRecitation() async {
+  Future<HttpResponse<ListSurahRecitationResponse>> listSurahRecitation({
+    required int recitationId,
+    required int chapterNumber,
+  }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<ListSurahRecitationResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/recitations/{recitation_id}/by_chapter/{chapter_number}',
+              '/recitations/${recitationId}/by_chapter/${chapterNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -227,7 +230,7 @@ class _AudioClient implements AudioClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = ListSurahRecitationResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

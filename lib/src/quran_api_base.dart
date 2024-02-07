@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
+
 import 'clients/clients.dart';
 
-/// Base api service implements quran.com api
+/// Quran.com api client implementation
+/// https://api-docs.quran.com/docs/category/quran.com-api
 class QuranApi {
   static final Uri uri = Uri(
     scheme: "https",
@@ -25,6 +27,7 @@ class QuranApi {
         responseHeader: true,
         error: true,
         requestHeader: true,
+        logPrint: _debugPrint,
       ),
     ]);
 
@@ -56,13 +59,22 @@ class QuranApi {
 
   ChaptersClient get chapters => ChaptersClient(dio);
 
-  JuzClient get juz => JuzClient(dio);
+  // JuzClient get juz => JuzClient(dio);
 
-  QuranClient get quran => QuranClient(dio);
+  // QuranClient get quran => QuranClient(dio);
 
-  VersesClient get verses => VersesClient(dio);
+  // VersesClient get verses => VersesClient(dio);
 
-  ResourcesClient get resources => ResourcesClient(dio);
+  // ResourcesClient get resources => ResourcesClient(dio);
 
-  SearchClient get search => SearchClient(dio);
+  // SearchClient get search => SearchClient(dio);
+
+  // Print debug logs only in development mode
+  void _debugPrint(Object object) {
+    assert(() {
+      print(object);
+
+      return true;
+    }());
+  }
 }

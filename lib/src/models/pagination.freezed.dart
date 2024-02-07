@@ -28,13 +28,13 @@ mixin _$Pagination {
 
   /// Next page in paginated result
   @JsonKey(name: 'next_page')
-  int get nextPage => throw _privateConstructorUsedError;
+  int? get nextPage => throw _privateConstructorUsedError;
 
   /// Total number of pages
   @JsonKey(name: 'total_pages=')
-  int get totalPages => throw _privateConstructorUsedError;
+  int? get totalPages => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_records=')
-  int get totalRecords => throw _privateConstructorUsedError;
+  int? get totalRecords => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,9 +51,9 @@ abstract class $PaginationCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'per_page') int perPage,
       @JsonKey(name: 'current_page') int currentPage,
-      @JsonKey(name: 'next_page') int nextPage,
-      @JsonKey(name: 'total_pages=') int totalPages,
-      @JsonKey(name: 'total_records=') int totalRecords});
+      @JsonKey(name: 'next_page') int? nextPage,
+      @JsonKey(name: 'total_pages=') int? totalPages,
+      @JsonKey(name: 'total_records=') int? totalRecords});
 }
 
 /// @nodoc
@@ -71,9 +71,9 @@ class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
   $Res call({
     Object? perPage = null,
     Object? currentPage = null,
-    Object? nextPage = null,
-    Object? totalPages = null,
-    Object? totalRecords = null,
+    Object? nextPage = freezed,
+    Object? totalPages = freezed,
+    Object? totalRecords = freezed,
   }) {
     return _then(_value.copyWith(
       perPage: null == perPage
@@ -84,18 +84,18 @@ class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
               as int,
-      nextPage: null == nextPage
+      nextPage: freezed == nextPage
           ? _value.nextPage
           : nextPage // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalPages: null == totalPages
+              as int?,
+      totalPages: freezed == totalPages
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalRecords: null == totalRecords
+              as int?,
+      totalRecords: freezed == totalRecords
           ? _value.totalRecords
           : totalRecords // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -111,9 +111,9 @@ abstract class _$$PaginationImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'per_page') int perPage,
       @JsonKey(name: 'current_page') int currentPage,
-      @JsonKey(name: 'next_page') int nextPage,
-      @JsonKey(name: 'total_pages=') int totalPages,
-      @JsonKey(name: 'total_records=') int totalRecords});
+      @JsonKey(name: 'next_page') int? nextPage,
+      @JsonKey(name: 'total_pages=') int? totalPages,
+      @JsonKey(name: 'total_records=') int? totalRecords});
 }
 
 /// @nodoc
@@ -129,9 +129,9 @@ class __$$PaginationImplCopyWithImpl<$Res>
   $Res call({
     Object? perPage = null,
     Object? currentPage = null,
-    Object? nextPage = null,
-    Object? totalPages = null,
-    Object? totalRecords = null,
+    Object? nextPage = freezed,
+    Object? totalPages = freezed,
+    Object? totalRecords = freezed,
   }) {
     return _then(_$PaginationImpl(
       perPage: null == perPage
@@ -142,18 +142,18 @@ class __$$PaginationImplCopyWithImpl<$Res>
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
               as int,
-      nextPage: null == nextPage
+      nextPage: freezed == nextPage
           ? _value.nextPage
           : nextPage // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalPages: null == totalPages
+              as int?,
+      totalPages: freezed == totalPages
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalRecords: null == totalRecords
+              as int?,
+      totalRecords: freezed == totalRecords
           ? _value.totalRecords
           : totalRecords // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -183,15 +183,15 @@ class _$PaginationImpl extends _Pagination {
   /// Next page in paginated result
   @override
   @JsonKey(name: 'next_page')
-  final int nextPage;
+  final int? nextPage;
 
   /// Total number of pages
   @override
   @JsonKey(name: 'total_pages=')
-  final int totalPages;
+  final int? totalPages;
   @override
   @JsonKey(name: 'total_records=')
-  final int totalRecords;
+  final int? totalRecords;
 
   @override
   String toString() {
@@ -237,9 +237,9 @@ abstract class _Pagination extends Pagination {
   const factory _Pagination(
           {@JsonKey(name: 'per_page') final int perPage,
           @JsonKey(name: 'current_page') final int currentPage,
-          @JsonKey(name: 'next_page') required final int nextPage,
-          @JsonKey(name: 'total_pages=') required final int totalPages,
-          @JsonKey(name: 'total_records=') required final int totalRecords}) =
+          @JsonKey(name: 'next_page') required final int? nextPage,
+          @JsonKey(name: 'total_pages=') required final int? totalPages,
+          @JsonKey(name: 'total_records=') required final int? totalRecords}) =
       _$PaginationImpl;
   const _Pagination._() : super._();
 
@@ -258,15 +258,15 @@ abstract class _Pagination extends Pagination {
 
   /// Next page in paginated result
   @JsonKey(name: 'next_page')
-  int get nextPage;
+  int? get nextPage;
   @override
 
   /// Total number of pages
   @JsonKey(name: 'total_pages=')
-  int get totalPages;
+  int? get totalPages;
   @override
   @JsonKey(name: 'total_records=')
-  int get totalRecords;
+  int? get totalRecords;
   @override
   @JsonKey(ignore: true)
   _$$PaginationImplCopyWith<_$PaginationImpl> get copyWith =>

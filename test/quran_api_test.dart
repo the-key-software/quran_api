@@ -32,12 +32,29 @@ void main() async {
         final value = await client.recitationAudioFiles(
           recitationId: 1,
           queries: RecitationAudioFilesQueries(
-            // fields: "audio",
-            // chapterNumber: 1,
-          ),
+              // fields: "audio",
+              // chapterNumber: 1,
+              ),
         );
 
         expect(value.response.statusCode, 200);
+      });
+
+      // test("chapterReciters", () async {
+      //   final value = await client.chapterReciters();
+
+      //   if (value.response.statusCode != 200) {
+      //     fail(value.response.data);
+      //   } else {
+      //     expect(value.response.statusCode, 200);
+      //   }
+      // });
+
+      test("listSurahRecitation", () async {
+        await client.listSurahRecitation(
+          recitationId: 1,
+          chapterNumber: 1,
+        );
       });
     });
   });

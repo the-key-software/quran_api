@@ -22,7 +22,7 @@ RecitationAudioFilesResponse _$RecitationAudioFilesResponseFromJson(
 /// @nodoc
 mixin _$RecitationAudioFilesResponse {
   List<AudioFile> get audioFiles => throw _privateConstructorUsedError;
-  RecitationAudioFilesResponseMeta get meta =>
+  RecitationAudioFilesResponseMeta? get meta =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,9 +40,9 @@ abstract class $RecitationAudioFilesResponseCopyWith<$Res> {
           RecitationAudioFilesResponse>;
   @useResult
   $Res call(
-      {List<AudioFile> audioFiles, RecitationAudioFilesResponseMeta meta});
+      {List<AudioFile> audioFiles, RecitationAudioFilesResponseMeta? meta});
 
-  $RecitationAudioFilesResponseMetaCopyWith<$Res> get meta;
+  $RecitationAudioFilesResponseMetaCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -60,24 +60,28 @@ class _$RecitationAudioFilesResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? audioFiles = null,
-    Object? meta = null,
+    Object? meta = freezed,
   }) {
     return _then(_value.copyWith(
       audioFiles: null == audioFiles
           ? _value.audioFiles
           : audioFiles // ignore: cast_nullable_to_non_nullable
               as List<AudioFile>,
-      meta: null == meta
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as RecitationAudioFilesResponseMeta,
+              as RecitationAudioFilesResponseMeta?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $RecitationAudioFilesResponseMetaCopyWith<$Res> get meta {
-    return $RecitationAudioFilesResponseMetaCopyWith<$Res>(_value.meta,
+  $RecitationAudioFilesResponseMetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $RecitationAudioFilesResponseMetaCopyWith<$Res>(_value.meta!,
         (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
@@ -94,10 +98,10 @@ abstract class _$$RecitationAudioFilesResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<AudioFile> audioFiles, RecitationAudioFilesResponseMeta meta});
+      {List<AudioFile> audioFiles, RecitationAudioFilesResponseMeta? meta});
 
   @override
-  $RecitationAudioFilesResponseMetaCopyWith<$Res> get meta;
+  $RecitationAudioFilesResponseMetaCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -114,17 +118,17 @@ class __$$RecitationAudioFilesResponseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? audioFiles = null,
-    Object? meta = null,
+    Object? meta = freezed,
   }) {
     return _then(_$RecitationAudioFilesResponseImpl(
       audioFiles: null == audioFiles
           ? _value._audioFiles
           : audioFiles // ignore: cast_nullable_to_non_nullable
               as List<AudioFile>,
-      meta: null == meta
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as RecitationAudioFilesResponseMeta,
+              as RecitationAudioFilesResponseMeta?,
     ));
   }
 }
@@ -150,7 +154,7 @@ class _$RecitationAudioFilesResponseImpl
   }
 
   @override
-  final RecitationAudioFilesResponseMeta meta;
+  final RecitationAudioFilesResponseMeta? meta;
 
   @override
   String toString() {
@@ -192,7 +196,7 @@ abstract class _RecitationAudioFilesResponse
     implements RecitationAudioFilesResponse {
   const factory _RecitationAudioFilesResponse(
           {required final List<AudioFile> audioFiles,
-          required final RecitationAudioFilesResponseMeta meta}) =
+          required final RecitationAudioFilesResponseMeta? meta}) =
       _$RecitationAudioFilesResponseImpl;
 
   factory _RecitationAudioFilesResponse.fromJson(Map<String, dynamic> json) =
@@ -201,7 +205,7 @@ abstract class _RecitationAudioFilesResponse
   @override
   List<AudioFile> get audioFiles;
   @override
-  RecitationAudioFilesResponseMeta get meta;
+  RecitationAudioFilesResponseMeta? get meta;
   @override
   @JsonKey(ignore: true)
   _$$RecitationAudioFilesResponseImplCopyWith<
@@ -217,9 +221,7 @@ RecitationAudioFilesResponseMeta _$RecitationAudioFilesResponseMetaFromJson(
 /// @nodoc
 mixin _$RecitationAudioFilesResponseMeta {
   String get reciterName => throw _privateConstructorUsedError;
-  String get recitationStyle => throw _privateConstructorUsedError;
-  RecitationAudioFilesResponseFilters get filters =>
-      throw _privateConstructorUsedError;
+  String? get recitationStyle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -235,12 +237,7 @@ abstract class $RecitationAudioFilesResponseMetaCopyWith<$Res> {
       _$RecitationAudioFilesResponseMetaCopyWithImpl<$Res,
           RecitationAudioFilesResponseMeta>;
   @useResult
-  $Res call(
-      {String reciterName,
-      String recitationStyle,
-      RecitationAudioFilesResponseFilters filters});
-
-  $RecitationAudioFilesResponseFiltersCopyWith<$Res> get filters;
+  $Res call({String reciterName, String? recitationStyle});
 }
 
 /// @nodoc
@@ -258,32 +255,18 @@ class _$RecitationAudioFilesResponseMetaCopyWithImpl<$Res,
   @override
   $Res call({
     Object? reciterName = null,
-    Object? recitationStyle = null,
-    Object? filters = null,
+    Object? recitationStyle = freezed,
   }) {
     return _then(_value.copyWith(
       reciterName: null == reciterName
           ? _value.reciterName
           : reciterName // ignore: cast_nullable_to_non_nullable
               as String,
-      recitationStyle: null == recitationStyle
+      recitationStyle: freezed == recitationStyle
           ? _value.recitationStyle
           : recitationStyle // ignore: cast_nullable_to_non_nullable
-              as String,
-      filters: null == filters
-          ? _value.filters
-          : filters // ignore: cast_nullable_to_non_nullable
-              as RecitationAudioFilesResponseFilters,
+              as String?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RecitationAudioFilesResponseFiltersCopyWith<$Res> get filters {
-    return $RecitationAudioFilesResponseFiltersCopyWith<$Res>(_value.filters,
-        (value) {
-      return _then(_value.copyWith(filters: value) as $Val);
-    });
   }
 }
 
@@ -296,13 +279,7 @@ abstract class _$$RecitationAudioFilesResponseMetaImplCopyWith<$Res>
       __$$RecitationAudioFilesResponseMetaImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String reciterName,
-      String recitationStyle,
-      RecitationAudioFilesResponseFilters filters});
-
-  @override
-  $RecitationAudioFilesResponseFiltersCopyWith<$Res> get filters;
+  $Res call({String reciterName, String? recitationStyle});
 }
 
 /// @nodoc
@@ -319,22 +296,17 @@ class __$$RecitationAudioFilesResponseMetaImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? reciterName = null,
-    Object? recitationStyle = null,
-    Object? filters = null,
+    Object? recitationStyle = freezed,
   }) {
     return _then(_$RecitationAudioFilesResponseMetaImpl(
       reciterName: null == reciterName
           ? _value.reciterName
           : reciterName // ignore: cast_nullable_to_non_nullable
               as String,
-      recitationStyle: null == recitationStyle
+      recitationStyle: freezed == recitationStyle
           ? _value.recitationStyle
           : recitationStyle // ignore: cast_nullable_to_non_nullable
-              as String,
-      filters: null == filters
-          ? _value.filters
-          : filters // ignore: cast_nullable_to_non_nullable
-              as RecitationAudioFilesResponseFilters,
+              as String?,
     ));
   }
 }
@@ -344,9 +316,7 @@ class __$$RecitationAudioFilesResponseMetaImplCopyWithImpl<$Res>
 class _$RecitationAudioFilesResponseMetaImpl
     implements _RecitationAudioFilesResponseMeta {
   const _$RecitationAudioFilesResponseMetaImpl(
-      {required this.reciterName,
-      required this.recitationStyle,
-      required this.filters});
+      {required this.reciterName, required this.recitationStyle});
 
   factory _$RecitationAudioFilesResponseMetaImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -355,13 +325,11 @@ class _$RecitationAudioFilesResponseMetaImpl
   @override
   final String reciterName;
   @override
-  final String recitationStyle;
-  @override
-  final RecitationAudioFilesResponseFilters filters;
+  final String? recitationStyle;
 
   @override
   String toString() {
-    return 'RecitationAudioFilesResponseMeta(reciterName: $reciterName, recitationStyle: $recitationStyle, filters: $filters)';
+    return 'RecitationAudioFilesResponseMeta(reciterName: $reciterName, recitationStyle: $recitationStyle)';
   }
 
   @override
@@ -372,14 +340,12 @@ class _$RecitationAudioFilesResponseMetaImpl
             (identical(other.reciterName, reciterName) ||
                 other.reciterName == reciterName) &&
             (identical(other.recitationStyle, recitationStyle) ||
-                other.recitationStyle == recitationStyle) &&
-            (identical(other.filters, filters) || other.filters == filters));
+                other.recitationStyle == recitationStyle));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, reciterName, recitationStyle, filters);
+  int get hashCode => Object.hash(runtimeType, reciterName, recitationStyle);
 
   @JsonKey(ignore: true)
   @override
@@ -401,8 +367,7 @@ abstract class _RecitationAudioFilesResponseMeta
     implements RecitationAudioFilesResponseMeta {
   const factory _RecitationAudioFilesResponseMeta(
           {required final String reciterName,
-          required final String recitationStyle,
-          required final RecitationAudioFilesResponseFilters filters}) =
+          required final String? recitationStyle}) =
       _$RecitationAudioFilesResponseMetaImpl;
 
   factory _RecitationAudioFilesResponseMeta.fromJson(
@@ -412,167 +377,10 @@ abstract class _RecitationAudioFilesResponseMeta
   @override
   String get reciterName;
   @override
-  String get recitationStyle;
-  @override
-  RecitationAudioFilesResponseFilters get filters;
+  String? get recitationStyle;
   @override
   @JsonKey(ignore: true)
   _$$RecitationAudioFilesResponseMetaImplCopyWith<
           _$RecitationAudioFilesResponseMetaImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-RecitationAudioFilesResponseFilters
-    _$RecitationAudioFilesResponseFiltersFromJson(Map<String, dynamic> json) {
-  return _RecitationAudioFilesResponseFilters.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RecitationAudioFilesResponseFilters {
-  String get chapterNumber => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RecitationAudioFilesResponseFiltersCopyWith<
-          RecitationAudioFilesResponseFilters>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RecitationAudioFilesResponseFiltersCopyWith<$Res> {
-  factory $RecitationAudioFilesResponseFiltersCopyWith(
-          RecitationAudioFilesResponseFilters value,
-          $Res Function(RecitationAudioFilesResponseFilters) then) =
-      _$RecitationAudioFilesResponseFiltersCopyWithImpl<$Res,
-          RecitationAudioFilesResponseFilters>;
-  @useResult
-  $Res call({String chapterNumber});
-}
-
-/// @nodoc
-class _$RecitationAudioFilesResponseFiltersCopyWithImpl<$Res,
-        $Val extends RecitationAudioFilesResponseFilters>
-    implements $RecitationAudioFilesResponseFiltersCopyWith<$Res> {
-  _$RecitationAudioFilesResponseFiltersCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? chapterNumber = null,
-  }) {
-    return _then(_value.copyWith(
-      chapterNumber: null == chapterNumber
-          ? _value.chapterNumber
-          : chapterNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$RecitationAudioFilesResponseFiltersImplCopyWith<$Res>
-    implements $RecitationAudioFilesResponseFiltersCopyWith<$Res> {
-  factory _$$RecitationAudioFilesResponseFiltersImplCopyWith(
-          _$RecitationAudioFilesResponseFiltersImpl value,
-          $Res Function(_$RecitationAudioFilesResponseFiltersImpl) then) =
-      __$$RecitationAudioFilesResponseFiltersImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String chapterNumber});
-}
-
-/// @nodoc
-class __$$RecitationAudioFilesResponseFiltersImplCopyWithImpl<$Res>
-    extends _$RecitationAudioFilesResponseFiltersCopyWithImpl<$Res,
-        _$RecitationAudioFilesResponseFiltersImpl>
-    implements _$$RecitationAudioFilesResponseFiltersImplCopyWith<$Res> {
-  __$$RecitationAudioFilesResponseFiltersImplCopyWithImpl(
-      _$RecitationAudioFilesResponseFiltersImpl _value,
-      $Res Function(_$RecitationAudioFilesResponseFiltersImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? chapterNumber = null,
-  }) {
-    return _then(_$RecitationAudioFilesResponseFiltersImpl(
-      chapterNumber: null == chapterNumber
-          ? _value.chapterNumber
-          : chapterNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$RecitationAudioFilesResponseFiltersImpl
-    implements _RecitationAudioFilesResponseFilters {
-  const _$RecitationAudioFilesResponseFiltersImpl(
-      {required this.chapterNumber});
-
-  factory _$RecitationAudioFilesResponseFiltersImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$RecitationAudioFilesResponseFiltersImplFromJson(json);
-
-  @override
-  final String chapterNumber;
-
-  @override
-  String toString() {
-    return 'RecitationAudioFilesResponseFilters(chapterNumber: $chapterNumber)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RecitationAudioFilesResponseFiltersImpl &&
-            (identical(other.chapterNumber, chapterNumber) ||
-                other.chapterNumber == chapterNumber));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, chapterNumber);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RecitationAudioFilesResponseFiltersImplCopyWith<
-          _$RecitationAudioFilesResponseFiltersImpl>
-      get copyWith => __$$RecitationAudioFilesResponseFiltersImplCopyWithImpl<
-          _$RecitationAudioFilesResponseFiltersImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RecitationAudioFilesResponseFiltersImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _RecitationAudioFilesResponseFilters
-    implements RecitationAudioFilesResponseFilters {
-  const factory _RecitationAudioFilesResponseFilters(
-          {required final String chapterNumber}) =
-      _$RecitationAudioFilesResponseFiltersImpl;
-
-  factory _RecitationAudioFilesResponseFilters.fromJson(
-          Map<String, dynamic> json) =
-      _$RecitationAudioFilesResponseFiltersImpl.fromJson;
-
-  @override
-  String get chapterNumber;
-  @override
-  @JsonKey(ignore: true)
-  _$$RecitationAudioFilesResponseFiltersImplCopyWith<
-          _$RecitationAudioFilesResponseFiltersImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

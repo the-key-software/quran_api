@@ -50,7 +50,10 @@ abstract class AudioClient {
   /// Get Ayah recitations for specific Surah
 
   @GET('/recitations/{recitation_id}/by_chapter/{chapter_number}')
-  Future<HttpResponse<dynamic>> listSurahRecitation();
+  Future<HttpResponse<ListSurahRecitationResponse>> listSurahRecitation({
+    @Path('recitation_id') required int recitationId,
+    @Path('chapter_number') required int chapterNumber,
+  });
 
   /// Get Ayah recitations for specific Juz
 

@@ -1,3 +1,4 @@
+export "list_surah_recitation_response.dart";
 export "search_response.dart";
 export "chapter_infos_response.dart";
 export "chapter_reciter_audio_file_response.dart";

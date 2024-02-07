@@ -8,7 +8,7 @@ part 'recitation_audio_files_response.g.dart';
 class RecitationAudioFilesResponse with _$RecitationAudioFilesResponse {
   const factory RecitationAudioFilesResponse({
     required List<AudioFile> audioFiles,
-    required RecitationAudioFilesResponseMeta meta,
+    required RecitationAudioFilesResponseMeta? meta,
   }) = _RecitationAudioFilesResponse;
 
   factory RecitationAudioFilesResponse.fromJson(Map<String, dynamic> json) =>
@@ -19,23 +19,10 @@ class RecitationAudioFilesResponse with _$RecitationAudioFilesResponse {
 class RecitationAudioFilesResponseMeta with _$RecitationAudioFilesResponseMeta {
   const factory RecitationAudioFilesResponseMeta({
     required String reciterName,
-    required String recitationStyle,
-    required RecitationAudioFilesResponseFilters filters,
+    required String? recitationStyle,
   }) = _RecitationAudioFilesResponseMeta;
 
   factory RecitationAudioFilesResponseMeta.fromJson(
           Map<String, dynamic> json) =>
       _$RecitationAudioFilesResponseMetaFromJson(json);
-}
-
-@freezed
-class RecitationAudioFilesResponseFilters
-    with _$RecitationAudioFilesResponseFilters {
-  const factory RecitationAudioFilesResponseFilters({
-    required String chapterNumber,
-  }) = _RecitationAudioFilesResponseFilters;
-
-  factory RecitationAudioFilesResponseFilters.fromJson(
-          Map<String, dynamic> json) =>
-      _$RecitationAudioFilesResponseFiltersFromJson(json);
 }

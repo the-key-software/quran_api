@@ -17,11 +17,11 @@ class Pagination with _$Pagination {
     @JsonKey(name: 'current_page') @Default(1) int currentPage,
 
     /// Next page in paginated result
-    @JsonKey(name: 'next_page') required int nextPage,
+    @JsonKey(name: 'next_page') required int? nextPage,
 
     /// Total number of pages
-    @JsonKey(name: 'total_pages=') required int totalPages,
-    @JsonKey(name: 'total_records=') required int totalRecords,
+    @JsonKey(name: 'total_pages=') required int? totalPages,
+    @JsonKey(name: 'total_records=') required int? totalRecords,
   }) = _Pagination;
 
   static Pagination get example => Pagination.fromJson({

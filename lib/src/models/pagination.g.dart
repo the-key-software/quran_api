@@ -10,9 +10,9 @@ _$PaginationImpl _$$PaginationImplFromJson(Map<String, dynamic> json) =>
     _$PaginationImpl(
       perPage: json['per_page'] as int? ?? 10,
       currentPage: json['current_page'] as int? ?? 1,
-      nextPage: json['next_page'] as int,
-      totalPages: json['total_pages='] as int,
-      totalRecords: json['total_records='] as int,
+      nextPage: json['next_page'] as int?,
+      totalPages: json['total_pages='] as int?,
+      totalRecords: json['total_records='] as int?,
     );
 
 Map<String, dynamic> _$$PaginationImplToJson(_$PaginationImpl instance) =>
