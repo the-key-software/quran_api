@@ -1,8 +1,8 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:quran_api/src/models/models.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
+import "package:quran_api/src/models/models.dart";
 
-part 'recitation_audio_files_response.freezed.dart';
-part 'recitation_audio_files_response.g.dart';
+part "recitation_audio_files_response.freezed.dart";
+part "recitation_audio_files_response.g.dart";
 
 @freezed
 class RecitationAudioFilesResponse with _$RecitationAudioFilesResponse {

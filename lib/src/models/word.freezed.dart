@@ -37,7 +37,7 @@ mixin _$Word {
   @JsonKey(name: 'text_imlaei')
   String get textImlaei => throw _privateConstructorUsedError;
   @JsonKey(name: 'verse_key')
-  String get verseKey => throw _privateConstructorUsedError;
+  VerseKey get verseKey => throw _privateConstructorUsedError;
 
   /// page_number is deperacted, please use `v1_page` instead.
   @JsonKey(name: 'page_number')
@@ -89,7 +89,7 @@ abstract class $WordCopyWith<$Res> {
       @JsonKey(name: 'text_uthmani') String textUthmani,
       @JsonKey(name: 'text_indopak') String textIndopak,
       @JsonKey(name: 'text_imlaei') String textImlaei,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'page_number') int pageNumber,
       @JsonKey(name: 'line_number') int lineNumber,
       @JsonKey(name: 'audio_url') String audioUrl,
@@ -161,7 +161,7 @@ class _$WordCopyWithImpl<$Res, $Val extends Word>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       pageNumber: null == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
@@ -239,7 +239,7 @@ abstract class _$$WordImplCopyWith<$Res> implements $WordCopyWith<$Res> {
       @JsonKey(name: 'text_uthmani') String textUthmani,
       @JsonKey(name: 'text_indopak') String textIndopak,
       @JsonKey(name: 'text_imlaei') String textImlaei,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'page_number') int pageNumber,
       @JsonKey(name: 'line_number') int lineNumber,
       @JsonKey(name: 'audio_url') String audioUrl,
@@ -310,7 +310,7 @@ class __$$WordImplCopyWithImpl<$Res>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       pageNumber: null == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
@@ -408,7 +408,7 @@ class _$WordImpl extends _Word {
   final String textImlaei;
   @override
   @JsonKey(name: 'verse_key')
-  final String verseKey;
+  final VerseKey verseKey;
 
   /// page_number is deperacted, please use `v1_page` instead.
   @override
@@ -539,7 +539,7 @@ abstract class _Word extends Word {
       @JsonKey(name: 'text_uthmani') required final String textUthmani,
       @JsonKey(name: 'text_indopak') required final String textIndopak,
       @JsonKey(name: 'text_imlaei') required final String textImlaei,
-      @JsonKey(name: 'verse_key') required final String verseKey,
+      @JsonKey(name: 'verse_key') required final VerseKey verseKey,
       @JsonKey(name: 'page_number') required final int pageNumber,
       @JsonKey(name: 'line_number') required final int lineNumber,
       @JsonKey(name: 'audio_url') required final String audioUrl,
@@ -579,7 +579,7 @@ abstract class _Word extends Word {
   String get textImlaei;
   @override
   @JsonKey(name: 'verse_key')
-  String get verseKey;
+  VerseKey get verseKey;
   @override
 
   /// page_number is deperacted, please use `v1_page` instead.

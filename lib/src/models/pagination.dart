@@ -1,9 +1,9 @@
 // ignore_for_file: unused_import
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'models.dart';
-part 'pagination.freezed.dart';
-part 'pagination.g.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
+import "models.dart";
+part "pagination.freezed.dart";
+part "pagination.g.dart";
 
 @freezed
 
@@ -13,15 +13,15 @@ class Pagination with _$Pagination {
 
   const factory Pagination({
     /// Entries per api call
-    @JsonKey(name: 'per_page') @Default(10) int perPage,
-    @JsonKey(name: 'current_page') @Default(1) int currentPage,
+    @JsonKey(name: "per_page") @Default(10) int perPage,
+    @JsonKey(name: "current_page") @Default(1) int currentPage,
 
     /// Next page in paginated result
-    @JsonKey(name: 'next_page') required int? nextPage,
+    @JsonKey(name: "next_page") required int? nextPage,
 
     /// Total number of pages
-    @JsonKey(name: 'total_pages=') required int? totalPages,
-    @JsonKey(name: 'total_records=') required int? totalRecords,
+    @JsonKey(name: "total_pages=") required int? totalPages,
+    @JsonKey(name: "total_records=") required int? totalRecords,
   }) = _Pagination;
 
   static Pagination get example => Pagination.fromJson({

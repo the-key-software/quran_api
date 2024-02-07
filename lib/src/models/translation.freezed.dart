@@ -37,7 +37,7 @@ mixin _$Translation {
   @JsonKey(name: 'language_name')
   String get languageName => throw _privateConstructorUsedError;
   @JsonKey(name: 'verse_key')
-  String get verseKey => throw _privateConstructorUsedError;
+  VerseKey get verseKey => throw _privateConstructorUsedError;
   @JsonKey(name: 'chapter_id')
   int get chapterId => throw _privateConstructorUsedError;
   @JsonKey(name: 'verse_number')
@@ -71,7 +71,7 @@ abstract class $TranslationCopyWith<$Res> {
       @JsonKey(name: 'verse_id') int verseId,
       @JsonKey(name: 'language_id') int languageId,
       @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'chapter_id') int chapterId,
       @JsonKey(name: 'verse_number') int verseNumber,
       @JsonKey(name: 'juz_number') int juzNumber,
@@ -140,7 +140,7 @@ class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       chapterId: null == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
@@ -185,7 +185,7 @@ abstract class _$$TranslationImplCopyWith<$Res>
       @JsonKey(name: 'verse_id') int verseId,
       @JsonKey(name: 'language_id') int languageId,
       @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'chapter_id') int chapterId,
       @JsonKey(name: 'verse_number') int verseNumber,
       @JsonKey(name: 'juz_number') int juzNumber,
@@ -252,7 +252,7 @@ class __$$TranslationImplCopyWithImpl<$Res>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       chapterId: null == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
@@ -329,7 +329,7 @@ class _$TranslationImpl extends _Translation {
   final String languageName;
   @override
   @JsonKey(name: 'verse_key')
-  final String verseKey;
+  final VerseKey verseKey;
   @override
   @JsonKey(name: 'chapter_id')
   final int chapterId;
@@ -428,7 +428,7 @@ abstract class _Translation extends Translation {
           @JsonKey(name: 'verse_id') required final int verseId,
           @JsonKey(name: 'language_id') required final int languageId,
           @JsonKey(name: 'language_name') required final String languageName,
-          @JsonKey(name: 'verse_key') required final String verseKey,
+          @JsonKey(name: 'verse_key') required final VerseKey verseKey,
           @JsonKey(name: 'chapter_id') required final int chapterId,
           @JsonKey(name: 'verse_number') required final int verseNumber,
           @JsonKey(name: 'juz_number') required final int juzNumber,
@@ -466,7 +466,7 @@ abstract class _Translation extends Translation {
   String get languageName;
   @override
   @JsonKey(name: 'verse_key')
-  String get verseKey;
+  VerseKey get verseKey;
   @override
   @JsonKey(name: 'chapter_id')
   int get chapterId;

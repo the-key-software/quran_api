@@ -1,9 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
 
-import '../models.dart';
+import "../models.dart";
 
-part 'recitations_response.freezed.dart';
-part 'recitations_response.g.dart';
+part "recitations_response.freezed.dart";
+part "recitations_response.g.dart";
 
 @freezed
 class RecitationsResponse with _$RecitationsResponse {

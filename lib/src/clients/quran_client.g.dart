@@ -3,6 +3,34 @@
 part of 'quran_client.dart';
 
 // **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$QuranVersesIndopakQueriesImpl(
+      chapterNumber: json['chapter_number'] as int?,
+      juzNumber: json['juz_number'] as int?,
+      pageNumber: json['page_number'] as int?,
+      hizbNumber: json['hizb_number'] as int?,
+      rubElHizbNumber: json['rub_el_hizb_number'] as int?,
+      verseKey: json['verse_key'] == null
+          ? null
+          : VerseKey.fromJson(json['verse_key'] as String),
+    );
+
+Map<String, dynamic> _$$QuranVersesIndopakQueriesImplToJson(
+        _$QuranVersesIndopakQueriesImpl instance) =>
+    <String, dynamic>{
+      'chapter_number': instance.chapterNumber,
+      'juz_number': instance.juzNumber,
+      'page_number': instance.pageNumber,
+      'hizb_number': instance.hizbNumber,
+      'rub_el_hizb_number': instance.rubElHizbNumber,
+      'verse_key': instance.verseKey?.toJson(),
+    };
+
+// **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
@@ -19,23 +47,11 @@ class _QuranClient implements QuranClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesIndopak({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    String? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesIndopak(
+      {QuranVersesIndopakQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -68,7 +84,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -77,7 +93,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -111,7 +127,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -120,7 +136,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -154,7 +170,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -163,7 +179,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -197,7 +213,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -206,7 +222,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -241,7 +257,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -251,7 +267,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -286,7 +302,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -296,7 +312,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -330,7 +346,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -339,7 +355,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
@@ -373,7 +389,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    String? verseKey,
+    VerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -382,7 +398,7 @@ class _QuranClient implements QuranClient {
       r'page_number': pageNumber,
       r'hizb_number': hizbNumber,
       r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey,
+      r'verse_key': verseKey?.toJson(),
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};

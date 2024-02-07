@@ -1,7 +1,7 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
 
-part 'error.freezed.dart';
-part 'error.g.dart';
+part "error.freezed.dart";
+part "error.g.dart";
 
 @freezed
 class ErrorResponse with _$ErrorResponse {

@@ -1,9 +1,9 @@
 // ignore_for_file: unused_import
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'models.dart';
-part 'chapter_reciters.freezed.dart';
-part 'chapter_reciters.g.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
+import "models.dart";
+part "chapter_reciters.freezed.dart";
+part "chapter_reciters.g.dart";
 
 @freezed
 
@@ -13,20 +13,20 @@ class ChapterReciters with _$ChapterReciters {
 
   const factory ChapterReciters({
     /// Reciter ID
-    @JsonKey(name: 'id') required int id,
+    @JsonKey(name: "id") required int id,
 
     /// Name of reciter in English
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: "name") required String name,
 
     /// Reciter name in Arabic
-    @JsonKey(name: 'arabic_name') required String arabicName,
-    @JsonKey(name: 'relative_path') required String relativePath,
+    @JsonKey(name: "arabic_name") required String arabicName,
+    @JsonKey(name: "relative_path") required String relativePath,
 
     /// Audio files format
-    @JsonKey(name: 'format') @Default("mp3") String format,
+    @JsonKey(name: "format") @Default("mp3") String format,
 
     /// Total size of all audio files in KBs
-    @JsonKey(name: 'files_size') required int filesSize,
+    @JsonKey(name: "files_size") required int filesSize,
   }) = _ChapterReciters;
 
   static ChapterReciters get example => ChapterReciters.fromJson({

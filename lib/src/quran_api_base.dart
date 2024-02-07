@@ -1,6 +1,6 @@
-import 'package:dio/dio.dart';
+import "package:dio/dio.dart";
 
-import 'clients/clients.dart';
+import "clients/clients.dart";
 
 /// Quran.com api client implementation
 /// https://api-docs.quran.com/docs/category/quran.com-api

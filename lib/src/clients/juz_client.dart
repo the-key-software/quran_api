@@ -1,10 +1,10 @@
 // ignore_for_file: unused_import
 
-import 'package:dio/dio.dart';
-import '../models/models.dart';
-import 'package:retrofit/retrofit.dart';
+import "package:dio/dio.dart";
+import "../models/models.dart";
+import "package:retrofit/retrofit.dart";
 
-part 'juz_client.g.dart';
+part "juz_client.g.dart";
 
 @RestApi()
 abstract class JuzClient {
@@ -12,6 +12,6 @@ abstract class JuzClient {
 
   /// Get All Juzs
 
-  @GET('/juzs')
+  @GET("/juzs")
   Future<HttpResponse<dynamic>> juzs();
 }

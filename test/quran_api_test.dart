@@ -1,11 +1,15 @@
-import 'package:quran_api/quran_api.dart';
-import 'package:test/test.dart';
+import "package:quran_api/quran_api.dart";
+import "package:test/test.dart";
 
 void main() async {
   final api = QuranApi();
 
   group("quran api", () {
-    group('audio client', () {
+    group("search client", () {
+      test("search", () {});
+    });
+
+    group("audio client", () {
       final client = api.audio;
       test("chapterReciterAudioFile", () async {
         final value = await client.chapterReciterAudioFile(

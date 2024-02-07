@@ -1,4 +1,4 @@
-import 'package:quran_api/quran_api.dart';
+import "package:quran_api/quran_api.dart";
 
 Future<void> main() async {
   final api = QuranApi();

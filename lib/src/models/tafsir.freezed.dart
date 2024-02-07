@@ -33,7 +33,7 @@ mixin _$Tafsir {
   @JsonKey(name: 'resource_name')
   String get resourceName => throw _privateConstructorUsedError;
   @JsonKey(name: 'verse_key')
-  String get verseKey => throw _privateConstructorUsedError;
+  VerseKey get verseKey => throw _privateConstructorUsedError;
   @JsonKey(name: 'chapter_id')
   int get chapterId => throw _privateConstructorUsedError;
   @JsonKey(name: 'verse_number')
@@ -64,7 +64,7 @@ abstract class $TafsirCopyWith<$Res> {
       @JsonKey(name: 'text') String text,
       @JsonKey(name: 'language_name') String languageName,
       @JsonKey(name: 'resource_name') String resourceName,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'chapter_id') int chapterId,
       @JsonKey(name: 'verse_number') int verseNumber,
       @JsonKey(name: 'juz_number') int juzNumber,
@@ -128,7 +128,7 @@ class _$TafsirCopyWithImpl<$Res, $Val extends Tafsir>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       chapterId: null == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
@@ -171,7 +171,7 @@ abstract class _$$TafsirImplCopyWith<$Res> implements $TafsirCopyWith<$Res> {
       @JsonKey(name: 'text') String text,
       @JsonKey(name: 'language_name') String languageName,
       @JsonKey(name: 'resource_name') String resourceName,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'chapter_id') int chapterId,
       @JsonKey(name: 'verse_number') int verseNumber,
       @JsonKey(name: 'juz_number') int juzNumber,
@@ -233,7 +233,7 @@ class __$$TafsirImplCopyWithImpl<$Res>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       chapterId: null == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
@@ -304,7 +304,7 @@ class _$TafsirImpl extends _Tafsir {
   final String resourceName;
   @override
   @JsonKey(name: 'verse_key')
-  final String verseKey;
+  final VerseKey verseKey;
   @override
   @JsonKey(name: 'chapter_id')
   final int chapterId;
@@ -399,7 +399,7 @@ abstract class _Tafsir extends Tafsir {
       @JsonKey(name: 'text') required final String text,
       @JsonKey(name: 'language_name') required final String languageName,
       @JsonKey(name: 'resource_name') required final String resourceName,
-      @JsonKey(name: 'verse_key') required final String verseKey,
+      @JsonKey(name: 'verse_key') required final VerseKey verseKey,
       @JsonKey(name: 'chapter_id') required final int chapterId,
       @JsonKey(name: 'verse_number') required final int verseNumber,
       @JsonKey(name: 'juz_number') required final int juzNumber,
@@ -431,7 +431,7 @@ abstract class _Tafsir extends Tafsir {
   String get resourceName;
   @override
   @JsonKey(name: 'verse_key')
-  String get verseKey;
+  VerseKey get verseKey;
   @override
   @JsonKey(name: 'chapter_id')
   int get chapterId;

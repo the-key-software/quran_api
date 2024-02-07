@@ -1,9 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
 
-import '../models.dart';
+import "../models.dart";
 
-part 'chapter_reciter_audio_file_response.freezed.dart';
-part 'chapter_reciter_audio_file_response.g.dart';
+part "chapter_reciter_audio_file_response.freezed.dart";
+part "chapter_reciter_audio_file_response.g.dart";
 
 // {
 //   "audio_file": {

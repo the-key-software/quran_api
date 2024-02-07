@@ -1,9 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
 
-import '../models.dart';
+import "../models.dart";
 
-part 'verse_media_response.freezed.dart';
-part 'verse_media_response.g.dart';
+part "verse_media_response.freezed.dart";
+part "verse_media_response.g.dart";
 
 @freezed
 class VerseMediaResponse with _$VerseMediaResponse {

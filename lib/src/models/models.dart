@@ -11,6 +11,7 @@ export "translation.dart";
 export "resource.dart";
 export "media_content.dart";
 export "transliteration.dart";
+export "verse_key.dart";
 export "chapter.dart";
 export "chapter_reciters.dart";
 export "audio_file.dart";

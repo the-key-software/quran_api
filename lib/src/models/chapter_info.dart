@@ -1,9 +1,9 @@
 // ignore_for_file: unused_import
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'models.dart';
-part 'chapter_info.freezed.dart';
-part 'chapter_info.g.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
+import "models.dart";
+part "chapter_info.freezed.dart";
+part "chapter_info.g.dart";
 
 @freezed
 
@@ -12,15 +12,15 @@ class ChapterInfo with _$ChapterInfo {
   const ChapterInfo._();
 
   const factory ChapterInfo({
-    @JsonKey(name: 'chapter_id') required int chapterId,
+    @JsonKey(name: "chapter_id") required int chapterId,
 
     /// Long text of chapter info, this could include html tags for formatting and styling.
-    @JsonKey(name: 'text') required String text,
-    @JsonKey(name: 'short_text') required String shortText,
-    @JsonKey(name: 'language_name') required String languageName,
+    @JsonKey(name: "text") required String text,
+    @JsonKey(name: "short_text") required String shortText,
+    @JsonKey(name: "language_name") required String languageName,
 
     /// Name of the source, could be a book name or site name.
-    @JsonKey(name: 'source') required String source,
+    @JsonKey(name: "source") required String source,
   }) = _ChapterInfo;
 
   static ChapterInfo get example => ChapterInfo.fromJson({

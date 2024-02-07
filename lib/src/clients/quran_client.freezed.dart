@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'audio_client.dart';
+part of 'quran_client.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,57 +14,52 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-RecitationAudioFilesQueries _$RecitationAudioFilesQueriesFromJson(
+QuranVersesIndopakQueries _$QuranVersesIndopakQueriesFromJson(
     Map<String, dynamic> json) {
-  return _RecitationAudioFilesQueries.fromJson(json);
+  return _QuranVersesIndopakQueries.fromJson(json);
 }
 
 /// @nodoc
-mixin _$RecitationAudioFilesQueries {
-  @Query('fields')
-  String? get fields => throw _privateConstructorUsedError;
-  @Query('chapter_number')
+mixin _$QuranVersesIndopakQueries {
+  @JsonKey(name: 'chapter_number')
   int? get chapterNumber => throw _privateConstructorUsedError;
-  @Query('juz_number')
+  @JsonKey(name: 'juz_number')
   int? get juzNumber => throw _privateConstructorUsedError;
-  @Query('page_number')
+  @JsonKey(name: 'page_number')
   int? get pageNumber => throw _privateConstructorUsedError;
-  @Query('hizb_number')
+  @JsonKey(name: 'hizb_number')
   int? get hizbNumber => throw _privateConstructorUsedError;
-  @Query('rub_el_hizb_number')
+  @JsonKey(name: 'rub_el_hizb_number')
   int? get rubElHizbNumber => throw _privateConstructorUsedError;
-  @Query('verse_key')
+  @JsonKey(name: 'verse_key')
   VerseKey? get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecitationAudioFilesQueriesCopyWith<RecitationAudioFilesQueries>
-      get copyWith => throw _privateConstructorUsedError;
+  $QuranVersesIndopakQueriesCopyWith<QuranVersesIndopakQueries> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RecitationAudioFilesQueriesCopyWith<$Res> {
-  factory $RecitationAudioFilesQueriesCopyWith(
-          RecitationAudioFilesQueries value,
-          $Res Function(RecitationAudioFilesQueries) then) =
-      _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
-          RecitationAudioFilesQueries>;
+abstract class $QuranVersesIndopakQueriesCopyWith<$Res> {
+  factory $QuranVersesIndopakQueriesCopyWith(QuranVersesIndopakQueries value,
+          $Res Function(QuranVersesIndopakQueries) then) =
+      _$QuranVersesIndopakQueriesCopyWithImpl<$Res, QuranVersesIndopakQueries>;
   @useResult
   $Res call(
-      {@Query('fields') String? fields,
-      @Query('chapter_number') int? chapterNumber,
-      @Query('juz_number') int? juzNumber,
-      @Query('page_number') int? pageNumber,
-      @Query('hizb_number') int? hizbNumber,
-      @Query('rub_el_hizb_number') int? rubElHizbNumber,
-      @Query('verse_key') VerseKey? verseKey});
+      {@JsonKey(name: 'chapter_number') int? chapterNumber,
+      @JsonKey(name: 'juz_number') int? juzNumber,
+      @JsonKey(name: 'page_number') int? pageNumber,
+      @JsonKey(name: 'hizb_number') int? hizbNumber,
+      @JsonKey(name: 'rub_el_hizb_number') int? rubElHizbNumber,
+      @JsonKey(name: 'verse_key') VerseKey? verseKey});
 }
 
 /// @nodoc
-class _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
-        $Val extends RecitationAudioFilesQueries>
-    implements $RecitationAudioFilesQueriesCopyWith<$Res> {
-  _$RecitationAudioFilesQueriesCopyWithImpl(this._value, this._then);
+class _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
+        $Val extends QuranVersesIndopakQueries>
+    implements $QuranVersesIndopakQueriesCopyWith<$Res> {
+  _$QuranVersesIndopakQueriesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -74,7 +69,6 @@ class _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fields = freezed,
     Object? chapterNumber = freezed,
     Object? juzNumber = freezed,
     Object? pageNumber = freezed,
@@ -83,10 +77,6 @@ class _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
     Object? verseKey = freezed,
   }) {
     return _then(_value.copyWith(
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as String?,
       chapterNumber: freezed == chapterNumber
           ? _value.chapterNumber
           : chapterNumber // ignore: cast_nullable_to_non_nullable
@@ -116,38 +106,36 @@ class _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$RecitationAudioFilesQueriesImplCopyWith<$Res>
-    implements $RecitationAudioFilesQueriesCopyWith<$Res> {
-  factory _$$RecitationAudioFilesQueriesImplCopyWith(
-          _$RecitationAudioFilesQueriesImpl value,
-          $Res Function(_$RecitationAudioFilesQueriesImpl) then) =
-      __$$RecitationAudioFilesQueriesImplCopyWithImpl<$Res>;
+abstract class _$$QuranVersesIndopakQueriesImplCopyWith<$Res>
+    implements $QuranVersesIndopakQueriesCopyWith<$Res> {
+  factory _$$QuranVersesIndopakQueriesImplCopyWith(
+          _$QuranVersesIndopakQueriesImpl value,
+          $Res Function(_$QuranVersesIndopakQueriesImpl) then) =
+      __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@Query('fields') String? fields,
-      @Query('chapter_number') int? chapterNumber,
-      @Query('juz_number') int? juzNumber,
-      @Query('page_number') int? pageNumber,
-      @Query('hizb_number') int? hizbNumber,
-      @Query('rub_el_hizb_number') int? rubElHizbNumber,
-      @Query('verse_key') VerseKey? verseKey});
+      {@JsonKey(name: 'chapter_number') int? chapterNumber,
+      @JsonKey(name: 'juz_number') int? juzNumber,
+      @JsonKey(name: 'page_number') int? pageNumber,
+      @JsonKey(name: 'hizb_number') int? hizbNumber,
+      @JsonKey(name: 'rub_el_hizb_number') int? rubElHizbNumber,
+      @JsonKey(name: 'verse_key') VerseKey? verseKey});
 }
 
 /// @nodoc
-class __$$RecitationAudioFilesQueriesImplCopyWithImpl<$Res>
-    extends _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
-        _$RecitationAudioFilesQueriesImpl>
-    implements _$$RecitationAudioFilesQueriesImplCopyWith<$Res> {
-  __$$RecitationAudioFilesQueriesImplCopyWithImpl(
-      _$RecitationAudioFilesQueriesImpl _value,
-      $Res Function(_$RecitationAudioFilesQueriesImpl) _then)
+class __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>
+    extends _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
+        _$QuranVersesIndopakQueriesImpl>
+    implements _$$QuranVersesIndopakQueriesImplCopyWith<$Res> {
+  __$$QuranVersesIndopakQueriesImplCopyWithImpl(
+      _$QuranVersesIndopakQueriesImpl _value,
+      $Res Function(_$QuranVersesIndopakQueriesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fields = freezed,
     Object? chapterNumber = freezed,
     Object? juzNumber = freezed,
     Object? pageNumber = freezed,
@@ -155,11 +143,7 @@ class __$$RecitationAudioFilesQueriesImplCopyWithImpl<$Res>
     Object? rubElHizbNumber = freezed,
     Object? verseKey = freezed,
   }) {
-    return _then(_$RecitationAudioFilesQueriesImpl(
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_$QuranVersesIndopakQueriesImpl(
       chapterNumber: freezed == chapterNumber
           ? _value.chapterNumber
           : chapterNumber // ignore: cast_nullable_to_non_nullable
@@ -190,54 +174,48 @@ class __$$RecitationAudioFilesQueriesImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$RecitationAudioFilesQueriesImpl
-    implements _RecitationAudioFilesQueries {
-  const _$RecitationAudioFilesQueriesImpl(
-      {@Query('fields') this.fields,
-      @Query('chapter_number') this.chapterNumber,
-      @Query('juz_number') this.juzNumber,
-      @Query('page_number') this.pageNumber,
-      @Query('hizb_number') this.hizbNumber,
-      @Query('rub_el_hizb_number') this.rubElHizbNumber,
-      @Query('verse_key') this.verseKey});
+class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
+  const _$QuranVersesIndopakQueriesImpl(
+      {@JsonKey(name: 'chapter_number') this.chapterNumber,
+      @JsonKey(name: 'juz_number') this.juzNumber,
+      @JsonKey(name: 'page_number') this.pageNumber,
+      @JsonKey(name: 'hizb_number') this.hizbNumber,
+      @JsonKey(name: 'rub_el_hizb_number') this.rubElHizbNumber,
+      @JsonKey(name: 'verse_key') this.verseKey})
+      : super._();
 
-  factory _$RecitationAudioFilesQueriesImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$RecitationAudioFilesQueriesImplFromJson(json);
+  factory _$QuranVersesIndopakQueriesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuranVersesIndopakQueriesImplFromJson(json);
 
   @override
-  @Query('fields')
-  final String? fields;
-  @override
-  @Query('chapter_number')
+  @JsonKey(name: 'chapter_number')
   final int? chapterNumber;
   @override
-  @Query('juz_number')
+  @JsonKey(name: 'juz_number')
   final int? juzNumber;
   @override
-  @Query('page_number')
+  @JsonKey(name: 'page_number')
   final int? pageNumber;
   @override
-  @Query('hizb_number')
+  @JsonKey(name: 'hizb_number')
   final int? hizbNumber;
   @override
-  @Query('rub_el_hizb_number')
+  @JsonKey(name: 'rub_el_hizb_number')
   final int? rubElHizbNumber;
   @override
-  @Query('verse_key')
+  @JsonKey(name: 'verse_key')
   final VerseKey? verseKey;
 
   @override
   String toString() {
-    return 'RecitationAudioFilesQueries(fields: $fields, chapterNumber: $chapterNumber, juzNumber: $juzNumber, pageNumber: $pageNumber, hizbNumber: $hizbNumber, rubElHizbNumber: $rubElHizbNumber, verseKey: $verseKey)';
+    return 'QuranVersesIndopakQueries(chapterNumber: $chapterNumber, juzNumber: $juzNumber, pageNumber: $pageNumber, hizbNumber: $hizbNumber, rubElHizbNumber: $rubElHizbNumber, verseKey: $verseKey)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RecitationAudioFilesQueriesImpl &&
-            (identical(other.fields, fields) || other.fields == fields) &&
+            other is _$QuranVersesIndopakQueriesImpl &&
             (identical(other.chapterNumber, chapterNumber) ||
                 other.chapterNumber == chapterNumber) &&
             (identical(other.juzNumber, juzNumber) ||
@@ -254,62 +232,58 @@ class _$RecitationAudioFilesQueriesImpl
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, fields, chapterNumber, juzNumber,
+  int get hashCode => Object.hash(runtimeType, chapterNumber, juzNumber,
       pageNumber, hizbNumber, rubElHizbNumber, verseKey);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecitationAudioFilesQueriesImplCopyWith<_$RecitationAudioFilesQueriesImpl>
-      get copyWith => __$$RecitationAudioFilesQueriesImplCopyWithImpl<
-          _$RecitationAudioFilesQueriesImpl>(this, _$identity);
+  _$$QuranVersesIndopakQueriesImplCopyWith<_$QuranVersesIndopakQueriesImpl>
+      get copyWith => __$$QuranVersesIndopakQueriesImplCopyWithImpl<
+          _$QuranVersesIndopakQueriesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecitationAudioFilesQueriesImplToJson(
+    return _$$QuranVersesIndopakQueriesImplToJson(
       this,
     );
   }
 }
 
-abstract class _RecitationAudioFilesQueries
-    implements RecitationAudioFilesQueries {
-  const factory _RecitationAudioFilesQueries(
-          {@Query('fields') final String? fields,
-          @Query('chapter_number') final int? chapterNumber,
-          @Query('juz_number') final int? juzNumber,
-          @Query('page_number') final int? pageNumber,
-          @Query('hizb_number') final int? hizbNumber,
-          @Query('rub_el_hizb_number') final int? rubElHizbNumber,
-          @Query('verse_key') final VerseKey? verseKey}) =
-      _$RecitationAudioFilesQueriesImpl;
+abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
+  const factory _QuranVersesIndopakQueries(
+          {@JsonKey(name: 'chapter_number') final int? chapterNumber,
+          @JsonKey(name: 'juz_number') final int? juzNumber,
+          @JsonKey(name: 'page_number') final int? pageNumber,
+          @JsonKey(name: 'hizb_number') final int? hizbNumber,
+          @JsonKey(name: 'rub_el_hizb_number') final int? rubElHizbNumber,
+          @JsonKey(name: 'verse_key') final VerseKey? verseKey}) =
+      _$QuranVersesIndopakQueriesImpl;
+  const _QuranVersesIndopakQueries._() : super._();
 
-  factory _RecitationAudioFilesQueries.fromJson(Map<String, dynamic> json) =
-      _$RecitationAudioFilesQueriesImpl.fromJson;
+  factory _QuranVersesIndopakQueries.fromJson(Map<String, dynamic> json) =
+      _$QuranVersesIndopakQueriesImpl.fromJson;
 
   @override
-  @Query('fields')
-  String? get fields;
-  @override
-  @Query('chapter_number')
+  @JsonKey(name: 'chapter_number')
   int? get chapterNumber;
   @override
-  @Query('juz_number')
+  @JsonKey(name: 'juz_number')
   int? get juzNumber;
   @override
-  @Query('page_number')
+  @JsonKey(name: 'page_number')
   int? get pageNumber;
   @override
-  @Query('hizb_number')
+  @JsonKey(name: 'hizb_number')
   int? get hizbNumber;
   @override
-  @Query('rub_el_hizb_number')
+  @JsonKey(name: 'rub_el_hizb_number')
   int? get rubElHizbNumber;
   @override
-  @Query('verse_key')
+  @JsonKey(name: 'verse_key')
   VerseKey? get verseKey;
   @override
   @JsonKey(ignore: true)
-  _$$RecitationAudioFilesQueriesImplCopyWith<_$RecitationAudioFilesQueriesImpl>
+  _$$QuranVersesIndopakQueriesImplCopyWith<_$QuranVersesIndopakQueriesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

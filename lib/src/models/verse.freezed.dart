@@ -31,7 +31,7 @@ mixin _$Verse {
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @JsonKey(name: 'verse_key')
-  String get verseKey => throw _privateConstructorUsedError;
+  VerseKey get verseKey => throw _privateConstructorUsedError;
   @JsonKey(name: 'verse_index')
   int get verseIndex => throw _privateConstructorUsedError;
 
@@ -111,7 +111,7 @@ abstract class $VerseCopyWith<$Res> {
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'chapter_id') int chapterId,
       @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'verse_index') int verseIndex,
       @JsonKey(name: 'text_uthmani') String textUthmani,
       @JsonKey(name: 'text_uthmani_simple') String textUthmaniSimple,
@@ -192,7 +192,7 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       verseIndex: null == verseIndex
           ? _value.verseIndex
           : verseIndex // ignore: cast_nullable_to_non_nullable
@@ -288,7 +288,7 @@ abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
       {@JsonKey(name: 'id') int id,
       @JsonKey(name: 'chapter_id') int chapterId,
       @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'verse_key') String verseKey,
+      @JsonKey(name: 'verse_key') VerseKey verseKey,
       @JsonKey(name: 'verse_index') int verseIndex,
       @JsonKey(name: 'text_uthmani') String textUthmani,
       @JsonKey(name: 'text_uthmani_simple') String textUthmaniSimple,
@@ -367,7 +367,7 @@ class __$$VerseImplCopyWithImpl<$Res>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as VerseKey,
       verseIndex: null == verseIndex
           ? _value.verseIndex
           : verseIndex // ignore: cast_nullable_to_non_nullable
@@ -505,7 +505,7 @@ class _$VerseImpl extends _Verse {
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @override
   @JsonKey(name: 'verse_key')
-  final String verseKey;
+  final VerseKey verseKey;
   @override
   @JsonKey(name: 'verse_index')
   final int verseIndex;
@@ -712,7 +712,7 @@ abstract class _Verse extends Verse {
       {@JsonKey(name: 'id') required final int id,
       @JsonKey(name: 'chapter_id') required final int chapterId,
       @JsonKey(name: 'verse_number') required final int verseNumber,
-      @JsonKey(name: 'verse_key') required final String verseKey,
+      @JsonKey(name: 'verse_key') required final VerseKey verseKey,
       @JsonKey(name: 'verse_index') required final int verseIndex,
       @JsonKey(name: 'text_uthmani') required final String textUthmani,
       @JsonKey(name: 'text_uthmani_simple')
@@ -758,7 +758,7 @@ abstract class _Verse extends Verse {
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @JsonKey(name: 'verse_key')
-  String get verseKey;
+  VerseKey get verseKey;
   @override
   @JsonKey(name: 'verse_index')
   int get verseIndex;

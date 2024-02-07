@@ -1,7 +1,7 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
 
-part 'search_response.freezed.dart';
-part 'search_response.g.dart';
+part "search_response.freezed.dart";
+part "search_response.g.dart";
 
 @freezed
 class SearchResponse with _$SearchResponse {
@@ -41,7 +41,7 @@ class SearchResult with _$SearchResult {
       _$SearchResultFromJson(json);
 }
 
-@Freezed(unionKey: 'char_type')
+@Freezed(unionKey: "char_type")
 class SearchResultWord with _$SearchResultWord {
   const factory SearchResultWord.word({
     required String text,

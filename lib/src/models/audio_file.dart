@@ -1,9 +1,9 @@
 // ignore_for_file: unused_import
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'models.dart';
-part 'audio_file.freezed.dart';
-part 'audio_file.g.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
+import "models.dart";
+part "audio_file.freezed.dart";
+part "audio_file.g.dart";
 
 @freezed
 
@@ -12,11 +12,11 @@ class AudioFile with _$AudioFile {
   const AudioFile._();
 
   const factory AudioFile({
-    @JsonKey(name: 'url') required String url,
-    @JsonKey(name: 'duration') required int? duration,
-    @JsonKey(name: 'format') required String? format,
-    @JsonKey(name: 'segments') required List<List<List<int>>>? segments,
-    @JsonKey(name: 'verse_key') required String verseKey,
+    @JsonKey(name: "url") required String url,
+    @JsonKey(name: "duration") required int? duration,
+    @JsonKey(name: "format") required String? format,
+    @JsonKey(name: "segments") required List<List<List<int>>>? segments,
+    @JsonKey(name: "verse_key") required String verseKey,
   }) = _AudioFile;
 
   static AudioFile get example => AudioFile.fromJson({

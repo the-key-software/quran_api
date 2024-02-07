@@ -1,9 +1,9 @@
 // ignore_for_file: unused_import
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'models.dart';
-part 'author.freezed.dart';
-part 'author.g.dart';
+import "package:freezed_annotation/freezed_annotation.dart";
+import "models.dart";
+part "author.freezed.dart";
+part "author.g.dart";
 
 @freezed
 
@@ -12,9 +12,9 @@ class Author with _$Author {
   const Author._();
 
   const factory Author({
-    @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'url') required String? url,
-    @JsonKey(name: 'id') required int id,
+    @JsonKey(name: "name") required String name,
+    @JsonKey(name: "url") required String? url,
+    @JsonKey(name: "id") required int id,
   }) = _Author;
 
   static Author get example =>
