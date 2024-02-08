@@ -17,7 +17,6 @@ abstract class QuranClient {
   @GET("/quran/verses/indopak")
   Future<HttpResponse<QuranVersesIndopakResponse>> quranVersesIndopak({
     @Queries() QuranVersesIndopakQueries? queries,
-    @ReceiveProgress() ProgressCallback? onReceiveProgress,
   });
 
   /// Get Uthmani Tajweed Script of ayah

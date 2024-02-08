@@ -1,3 +1,7 @@
 ## 0.0.1
 
 - Implement the basic functionality of the package and endpoints for the API.
+
+## 0.0.2
+
+- Implement full quran client.
