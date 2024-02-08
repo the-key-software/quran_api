@@ -36,8 +36,10 @@ mixin _$Juz {
   /// total verses in this juz
   @JsonKey(name: "verses_count")
   int get versesCount => throw _privateConstructorUsedError;
+
+  /// Mapping of surah and range of ayah each juz has. \n\nverse_mapping: {\"1: \"1-7\", \"2\": \"1-141\"}\n\nmeans this juz has 1-7 ayah of first surah, then 1-141 ayah of second surah.
   @JsonKey(name: "verse_mapping")
-  Object? get verseMapping => throw _privateConstructorUsedError;
+  Map<String, String> get verseMapping => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -55,7 +57,7 @@ abstract class $JuzCopyWith<$Res> {
       @JsonKey(name: "first_verse_id") int firstVerseId,
       @JsonKey(name: "last_verse_id") int lastVerseId,
       @JsonKey(name: "verses_count") int versesCount,
-      @JsonKey(name: "verse_mapping") Object? verseMapping});
+      @JsonKey(name: "verse_mapping") Map<String, String> verseMapping});
 }
 
 /// @nodoc
@@ -75,7 +77,7 @@ class _$JuzCopyWithImpl<$Res, $Val extends Juz> implements $JuzCopyWith<$Res> {
     Object? firstVerseId = null,
     Object? lastVerseId = null,
     Object? versesCount = null,
-    Object? verseMapping = freezed,
+    Object? verseMapping = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -98,8 +100,10 @@ class _$JuzCopyWithImpl<$Res, $Val extends Juz> implements $JuzCopyWith<$Res> {
           ? _value.versesCount
           : versesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      verseMapping:
-          freezed == verseMapping ? _value.verseMapping : verseMapping,
+      verseMapping: null == verseMapping
+          ? _value.verseMapping
+          : verseMapping // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>,
     ) as $Val);
   }
 }
@@ -116,7 +120,7 @@ abstract class _$$JuzImplCopyWith<$Res> implements $JuzCopyWith<$Res> {
       @JsonKey(name: "first_verse_id") int firstVerseId,
       @JsonKey(name: "last_verse_id") int lastVerseId,
       @JsonKey(name: "verses_count") int versesCount,
-      @JsonKey(name: "verse_mapping") Object? verseMapping});
+      @JsonKey(name: "verse_mapping") Map<String, String> verseMapping});
 }
 
 /// @nodoc
@@ -133,7 +137,7 @@ class __$$JuzImplCopyWithImpl<$Res> extends _$JuzCopyWithImpl<$Res, _$JuzImpl>
     Object? firstVerseId = null,
     Object? lastVerseId = null,
     Object? versesCount = null,
-    Object? verseMapping = freezed,
+    Object? verseMapping = null,
   }) {
     return _then(_$JuzImpl(
       id: null == id
@@ -156,8 +160,10 @@ class __$$JuzImplCopyWithImpl<$Res> extends _$JuzCopyWithImpl<$Res, _$JuzImpl>
           ? _value.versesCount
           : versesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      verseMapping:
-          freezed == verseMapping ? _value.verseMapping : verseMapping,
+      verseMapping: null == verseMapping
+          ? _value._verseMapping
+          : verseMapping // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>,
     ));
   }
 }
@@ -171,8 +177,10 @@ class _$JuzImpl extends _Juz {
       @JsonKey(name: "first_verse_id") required this.firstVerseId,
       @JsonKey(name: "last_verse_id") required this.lastVerseId,
       @JsonKey(name: "verses_count") required this.versesCount,
-      @JsonKey(name: "verse_mapping") required this.verseMapping})
-      : super._();
+      @JsonKey(name: "verse_mapping")
+      required final Map<String, String> verseMapping})
+      : _verseMapping = verseMapping,
+        super._();
 
   factory _$JuzImpl.fromJson(Map<String, dynamic> json) =>
       _$$JuzImplFromJson(json);
@@ -198,9 +206,18 @@ class _$JuzImpl extends _Juz {
   @override
   @JsonKey(name: "verses_count")
   final int versesCount;
+
+  /// Mapping of surah and range of ayah each juz has. \n\nverse_mapping: {\"1: \"1-7\", \"2\": \"1-141\"}\n\nmeans this juz has 1-7 ayah of first surah, then 1-141 ayah of second surah.
+  final Map<String, String> _verseMapping;
+
+  /// Mapping of surah and range of ayah each juz has. \n\nverse_mapping: {\"1: \"1-7\", \"2\": \"1-141\"}\n\nmeans this juz has 1-7 ayah of first surah, then 1-141 ayah of second surah.
   @override
   @JsonKey(name: "verse_mapping")
-  final Object? verseMapping;
+  Map<String, String> get verseMapping {
+    if (_verseMapping is EqualUnmodifiableMapView) return _verseMapping;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_verseMapping);
+  }
 
   @override
   String toString() {
@@ -222,7 +239,7 @@ class _$JuzImpl extends _Juz {
             (identical(other.versesCount, versesCount) ||
                 other.versesCount == versesCount) &&
             const DeepCollectionEquality()
-                .equals(other.verseMapping, verseMapping));
+                .equals(other._verseMapping, _verseMapping));
   }
 
   @JsonKey(ignore: true)
@@ -234,7 +251,7 @@ class _$JuzImpl extends _Juz {
       firstVerseId,
       lastVerseId,
       versesCount,
-      const DeepCollectionEquality().hash(verseMapping));
+      const DeepCollectionEquality().hash(_verseMapping));
 
   @JsonKey(ignore: true)
   @override
@@ -258,7 +275,7 @@ abstract class _Juz extends Juz {
       @JsonKey(name: "last_verse_id") required final int lastVerseId,
       @JsonKey(name: "verses_count") required final int versesCount,
       @JsonKey(name: "verse_mapping")
-      required final Object? verseMapping}) = _$JuzImpl;
+      required final Map<String, String> verseMapping}) = _$JuzImpl;
   const _Juz._() : super._();
 
   factory _Juz.fromJson(Map<String, dynamic> json) = _$JuzImpl.fromJson;
@@ -285,8 +302,10 @@ abstract class _Juz extends Juz {
   @JsonKey(name: "verses_count")
   int get versesCount;
   @override
+
+  /// Mapping of surah and range of ayah each juz has. \n\nverse_mapping: {\"1: \"1-7\", \"2\": \"1-141\"}\n\nmeans this juz has 1-7 ayah of first surah, then 1-141 ayah of second surah.
   @JsonKey(name: "verse_mapping")
-  Object? get verseMapping;
+  Map<String, String> get verseMapping;
   @override
   @JsonKey(ignore: true)
   _$$JuzImplCopyWith<_$JuzImpl> get copyWith =>

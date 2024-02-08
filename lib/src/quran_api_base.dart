@@ -65,7 +65,7 @@ class QuranApi {
 
   // ChaptersClient get chapters => ChaptersClient(dio);
 
-  // JuzClient get juz => JuzClient(dio);
+  JuzClient get juz => JuzClient(dio);
 
   QuranClient get quran => QuranClient(dio);
 

@@ -23,7 +23,9 @@ class Juz with _$Juz {
 
     /// total verses in this juz
     @JsonKey(name: "verses_count") required int versesCount,
-    @JsonKey(name: "verse_mapping") required Object? verseMapping,
+
+    /// Mapping of surah and range of ayah each juz has. \n\nverse_mapping: {\"1: \"1-7\", \"2\": \"1-141\"}\n\nmeans this juz has 1-7 ayah of first surah, then 1-141 ayah of second surah.
+    @JsonKey(name: "verse_mapping") required Map<String, String> verseMapping,
   }) = _Juz;
 
   static Juz get example => Juz.fromJson({

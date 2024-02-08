@@ -2,6 +2,7 @@ export "list_surah_recitation_response.dart";
 export "search_response.dart";
 export "chapter_infos_response.dart";
 export "chapter_reciter_audio_file_response.dart";
+export "juzs_response.dart";
 export "quran_verses_indopak_response.dart";
 export "recitations_response.dart";
 export "chapter_reciter_audio_files_response.dart";

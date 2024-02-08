@@ -5,3 +5,7 @@
 ## 0.0.2
 
 - Implement full quran client.
+
+## 0.0.3
+
+- Implement full juzs client.

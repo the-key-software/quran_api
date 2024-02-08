@@ -69,10 +69,8 @@ class _QuranClient implements QuranClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<QuranVersesIndopakResponse>> quranVersesIndopak({
-    QuranVersesIndopakQueries? queries,
-    void Function(int, int)? onReceiveProgress,
-  }) async {
+  Future<HttpResponse<QuranVersesIndopakResponse>> quranVersesIndopak(
+      {QuranVersesIndopakQueries? queries}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
@@ -90,7 +88,6 @@ class _QuranClient implements QuranClient {
               '/quran/verses/indopak',
               queryParameters: queryParameters,
               data: _data,
-              onReceiveProgress: onReceiveProgress,
             )
             .copyWith(
                 baseUrl: _combineBaseUrls(

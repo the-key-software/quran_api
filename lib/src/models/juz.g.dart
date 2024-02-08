@@ -12,7 +12,7 @@ _$JuzImpl _$$JuzImplFromJson(Map<String, dynamic> json) => _$JuzImpl(
       firstVerseId: json['first_verse_id'] as int,
       lastVerseId: json['last_verse_id'] as int,
       versesCount: json['verses_count'] as int,
-      verseMapping: json['verse_mapping'],
+      verseMapping: Map<String, String>.from(json['verse_mapping'] as Map),
     );
 
 Map<String, dynamic> _$$JuzImplToJson(_$JuzImpl instance) => <String, dynamic>{
