@@ -14,7 +14,7 @@ This package provides a Dart and Flutter implementation of the Quran API based o
     - [x] Audio
     - [ ] Chapters
     - [ ] Juz
-    - [ ] Quran
+    - [x] Quran
     - [ ] Verses
     - [ ] Resources
     - [x] Search
@@ -53,3 +53,6 @@ Future<void> main() async {
 
 This package is still in development, and the API is subject to change.
 feel free to contribute to this package.
+
+## License
+Read more about the license [here](./LICENSE)
