@@ -21,25 +21,25 @@ ChapterReciters _$ChapterRecitersFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ChapterReciters {
   /// Reciter ID
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
   /// Name of reciter in English
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
 
   /// Reciter name in Arabic
-  @JsonKey(name: 'arabic_name')
+  @JsonKey(name: "arabic_name")
   String get arabicName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'relative_path')
+  @JsonKey(name: "relative_path")
   String get relativePath => throw _privateConstructorUsedError;
 
   /// Audio files format
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   String get format => throw _privateConstructorUsedError;
 
   /// Total size of all audio files in KBs
-  @JsonKey(name: 'files_size')
+  @JsonKey(name: "files_size")
   int get filesSize => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,12 +55,12 @@ abstract class $ChapterRecitersCopyWith<$Res> {
       _$ChapterRecitersCopyWithImpl<$Res, ChapterReciters>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'arabic_name') String arabicName,
-      @JsonKey(name: 'relative_path') String relativePath,
-      @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'files_size') int filesSize});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "name") String name,
+      @JsonKey(name: "arabic_name") String arabicName,
+      @JsonKey(name: "relative_path") String relativePath,
+      @JsonKey(name: "format") String format,
+      @JsonKey(name: "files_size") int filesSize});
 }
 
 /// @nodoc
@@ -121,12 +121,12 @@ abstract class _$$ChapterRecitersImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'arabic_name') String arabicName,
-      @JsonKey(name: 'relative_path') String relativePath,
-      @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'files_size') int filesSize});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "name") String name,
+      @JsonKey(name: "arabic_name") String arabicName,
+      @JsonKey(name: "relative_path") String relativePath,
+      @JsonKey(name: "format") String format,
+      @JsonKey(name: "files_size") int filesSize});
 }
 
 /// @nodoc
@@ -180,12 +180,12 @@ class __$$ChapterRecitersImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ChapterRecitersImpl extends _ChapterReciters {
   const _$ChapterRecitersImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'arabic_name') required this.arabicName,
-      @JsonKey(name: 'relative_path') required this.relativePath,
-      @JsonKey(name: 'format') this.format = "mp3",
-      @JsonKey(name: 'files_size') required this.filesSize})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "name") required this.name,
+      @JsonKey(name: "arabic_name") required this.arabicName,
+      @JsonKey(name: "relative_path") required this.relativePath,
+      @JsonKey(name: "format") this.format = "mp3",
+      @JsonKey(name: "files_size") required this.filesSize})
       : super._();
 
   factory _$ChapterRecitersImpl.fromJson(Map<String, dynamic> json) =>
@@ -193,30 +193,30 @@ class _$ChapterRecitersImpl extends _ChapterReciters {
 
   /// Reciter ID
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
 
   /// Name of reciter in English
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
 
   /// Reciter name in Arabic
   @override
-  @JsonKey(name: 'arabic_name')
+  @JsonKey(name: "arabic_name")
   final String arabicName;
   @override
-  @JsonKey(name: 'relative_path')
+  @JsonKey(name: "relative_path")
   final String relativePath;
 
   /// Audio files format
   @override
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   final String format;
 
   /// Total size of all audio files in KBs
   @override
-  @JsonKey(name: 'files_size')
+  @JsonKey(name: "files_size")
   final int filesSize;
 
   @override
@@ -262,12 +262,12 @@ class _$ChapterRecitersImpl extends _ChapterReciters {
 
 abstract class _ChapterReciters extends ChapterReciters {
   const factory _ChapterReciters(
-          {@JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'arabic_name') required final String arabicName,
-          @JsonKey(name: 'relative_path') required final String relativePath,
-          @JsonKey(name: 'format') final String format,
-          @JsonKey(name: 'files_size') required final int filesSize}) =
+          {@JsonKey(name: "id") required final int id,
+          @JsonKey(name: "name") required final String name,
+          @JsonKey(name: "arabic_name") required final String arabicName,
+          @JsonKey(name: "relative_path") required final String relativePath,
+          @JsonKey(name: "format") final String format,
+          @JsonKey(name: "files_size") required final int filesSize}) =
       _$ChapterRecitersImpl;
   const _ChapterReciters._() : super._();
 
@@ -277,30 +277,30 @@ abstract class _ChapterReciters extends ChapterReciters {
   @override
 
   /// Reciter ID
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
 
   /// Name of reciter in English
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
 
   /// Reciter name in Arabic
-  @JsonKey(name: 'arabic_name')
+  @JsonKey(name: "arabic_name")
   String get arabicName;
   @override
-  @JsonKey(name: 'relative_path')
+  @JsonKey(name: "relative_path")
   String get relativePath;
   @override
 
   /// Audio files format
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   String get format;
   @override
 
   /// Total size of all audio files in KBs
-  @JsonKey(name: 'files_size')
+  @JsonKey(name: "files_size")
   int get filesSize;
   @override
   @JsonKey(ignore: true)

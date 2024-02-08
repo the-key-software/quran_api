@@ -20,11 +20,11 @@ Author _$AuthorFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Author {
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   String? get url => throw _privateConstructorUsedError;
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,9 +38,9 @@ abstract class $AuthorCopyWith<$Res> {
       _$AuthorCopyWithImpl<$Res, Author>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String? url,
-      @JsonKey(name: 'id') int id});
+      {@JsonKey(name: "name") String name,
+      @JsonKey(name: "url") String? url,
+      @JsonKey(name: "id") int id});
 }
 
 /// @nodoc
@@ -85,9 +85,9 @@ abstract class _$$AuthorImplCopyWith<$Res> implements $AuthorCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String? url,
-      @JsonKey(name: 'id') int id});
+      {@JsonKey(name: "name") String name,
+      @JsonKey(name: "url") String? url,
+      @JsonKey(name: "id") int id});
 }
 
 /// @nodoc
@@ -126,22 +126,22 @@ class __$$AuthorImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AuthorImpl extends _Author {
   const _$AuthorImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'id') required this.id})
+      {@JsonKey(name: "name") required this.name,
+      @JsonKey(name: "url") required this.url,
+      @JsonKey(name: "id") required this.id})
       : super._();
 
   factory _$AuthorImpl.fromJson(Map<String, dynamic> json) =>
       _$$AuthorImplFromJson(json);
 
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
   @override
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   final String? url;
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
 
   @override
@@ -179,21 +179,21 @@ class _$AuthorImpl extends _Author {
 
 abstract class _Author extends Author {
   const factory _Author(
-      {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'url') required final String? url,
-      @JsonKey(name: 'id') required final int id}) = _$AuthorImpl;
+      {@JsonKey(name: "name") required final String name,
+      @JsonKey(name: "url") required final String? url,
+      @JsonKey(name: "id") required final int id}) = _$AuthorImpl;
   const _Author._() : super._();
 
   factory _Author.fromJson(Map<String, dynamic> json) = _$AuthorImpl.fromJson;
 
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   String? get url;
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
   @JsonKey(ignore: true)

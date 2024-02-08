@@ -20,35 +20,35 @@ Translation _$TranslationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Translation {
-  @JsonKey(name: 'resource_id')
+  @JsonKey(name: "resource_id")
   int get resourceId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'resource_name')
+  @JsonKey(name: "resource_name")
   String get resourceName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
   /// Text of the translation, text could have HTML tags for formatting and footnotes.
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_id')
+  @JsonKey(name: "verse_id")
   int get verseId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_id')
+  @JsonKey(name: "language_id")
   int get languageId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey => throw _privateConstructorUsedError;
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   int get verseNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int get hizbNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'rub_number')
+  @JsonKey(name: "rub_number")
   int get rubNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -64,20 +64,22 @@ abstract class $TranslationCopyWith<$Res> {
       _$TranslationCopyWithImpl<$Res, Translation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'resource_id') int resourceId,
-      @JsonKey(name: 'resource_name') String resourceName,
-      @JsonKey(name: 'id') int id,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'verse_id') int verseId,
-      @JsonKey(name: 'language_id') int languageId,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'hizb_number') int hizbNumber,
-      @JsonKey(name: 'rub_number') int rubNumber,
-      @JsonKey(name: 'page_number') int pageNumber});
+      {@JsonKey(name: "resource_id") int resourceId,
+      @JsonKey(name: "resource_name") String resourceName,
+      @JsonKey(name: "id") int id,
+      @JsonKey(name: "text") String text,
+      @JsonKey(name: "verse_id") int verseId,
+      @JsonKey(name: "language_id") int languageId,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "verse_number") int verseNumber,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "hizb_number") int hizbNumber,
+      @JsonKey(name: "rub_number") int rubNumber,
+      @JsonKey(name: "page_number") int pageNumber});
+
+  $VerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -167,6 +169,14 @@ class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
               as int,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VerseKeyCopyWith<$Res> get verseKey {
+    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+      return _then(_value.copyWith(verseKey: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -178,20 +188,23 @@ abstract class _$$TranslationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'resource_id') int resourceId,
-      @JsonKey(name: 'resource_name') String resourceName,
-      @JsonKey(name: 'id') int id,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'verse_id') int verseId,
-      @JsonKey(name: 'language_id') int languageId,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'hizb_number') int hizbNumber,
-      @JsonKey(name: 'rub_number') int rubNumber,
-      @JsonKey(name: 'page_number') int pageNumber});
+      {@JsonKey(name: "resource_id") int resourceId,
+      @JsonKey(name: "resource_name") String resourceName,
+      @JsonKey(name: "id") int id,
+      @JsonKey(name: "text") String text,
+      @JsonKey(name: "verse_id") int verseId,
+      @JsonKey(name: "language_id") int languageId,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "verse_number") int verseNumber,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "hizb_number") int hizbNumber,
+      @JsonKey(name: "rub_number") int rubNumber,
+      @JsonKey(name: "page_number") int pageNumber});
+
+  @override
+  $VerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -285,68 +298,68 @@ class __$$TranslationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TranslationImpl extends _Translation {
   const _$TranslationImpl(
-      {@JsonKey(name: 'resource_id') required this.resourceId,
-      @JsonKey(name: 'resource_name') required this.resourceName,
-      @JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'text') required this.text,
-      @JsonKey(name: 'verse_id') required this.verseId,
-      @JsonKey(name: 'language_id') required this.languageId,
-      @JsonKey(name: 'language_name') required this.languageName,
-      @JsonKey(name: 'verse_key') required this.verseKey,
-      @JsonKey(name: 'chapter_id') required this.chapterId,
-      @JsonKey(name: 'verse_number') required this.verseNumber,
-      @JsonKey(name: 'juz_number') required this.juzNumber,
-      @JsonKey(name: 'hizb_number') required this.hizbNumber,
-      @JsonKey(name: 'rub_number') required this.rubNumber,
-      @JsonKey(name: 'page_number') required this.pageNumber})
+      {@JsonKey(name: "resource_id") required this.resourceId,
+      @JsonKey(name: "resource_name") required this.resourceName,
+      @JsonKey(name: "id") required this.id,
+      @JsonKey(name: "text") required this.text,
+      @JsonKey(name: "verse_id") required this.verseId,
+      @JsonKey(name: "language_id") required this.languageId,
+      @JsonKey(name: "language_name") required this.languageName,
+      @JsonKey(name: "verse_key") required this.verseKey,
+      @JsonKey(name: "chapter_id") required this.chapterId,
+      @JsonKey(name: "verse_number") required this.verseNumber,
+      @JsonKey(name: "juz_number") required this.juzNumber,
+      @JsonKey(name: "hizb_number") required this.hizbNumber,
+      @JsonKey(name: "rub_number") required this.rubNumber,
+      @JsonKey(name: "page_number") required this.pageNumber})
       : super._();
 
   factory _$TranslationImpl.fromJson(Map<String, dynamic> json) =>
       _$$TranslationImplFromJson(json);
 
   @override
-  @JsonKey(name: 'resource_id')
+  @JsonKey(name: "resource_id")
   final int resourceId;
   @override
-  @JsonKey(name: 'resource_name')
+  @JsonKey(name: "resource_name")
   final String resourceName;
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
 
   /// Text of the translation, text could have HTML tags for formatting and footnotes.
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   final String text;
   @override
-  @JsonKey(name: 'verse_id')
+  @JsonKey(name: "verse_id")
   final int verseId;
   @override
-  @JsonKey(name: 'language_id')
+  @JsonKey(name: "language_id")
   final int languageId;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   final VerseKey verseKey;
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   final int chapterId;
   @override
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   final int verseNumber;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   final int juzNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   final int hizbNumber;
   @override
-  @JsonKey(name: 'rub_number')
+  @JsonKey(name: "rub_number")
   final int rubNumber;
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   final int pageNumber;
 
   @override
@@ -421,20 +434,20 @@ class _$TranslationImpl extends _Translation {
 
 abstract class _Translation extends Translation {
   const factory _Translation(
-          {@JsonKey(name: 'resource_id') required final int resourceId,
-          @JsonKey(name: 'resource_name') required final String resourceName,
-          @JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'text') required final String text,
-          @JsonKey(name: 'verse_id') required final int verseId,
-          @JsonKey(name: 'language_id') required final int languageId,
-          @JsonKey(name: 'language_name') required final String languageName,
-          @JsonKey(name: 'verse_key') required final VerseKey verseKey,
-          @JsonKey(name: 'chapter_id') required final int chapterId,
-          @JsonKey(name: 'verse_number') required final int verseNumber,
-          @JsonKey(name: 'juz_number') required final int juzNumber,
-          @JsonKey(name: 'hizb_number') required final int hizbNumber,
-          @JsonKey(name: 'rub_number') required final int rubNumber,
-          @JsonKey(name: 'page_number') required final int pageNumber}) =
+          {@JsonKey(name: "resource_id") required final int resourceId,
+          @JsonKey(name: "resource_name") required final String resourceName,
+          @JsonKey(name: "id") required final int id,
+          @JsonKey(name: "text") required final String text,
+          @JsonKey(name: "verse_id") required final int verseId,
+          @JsonKey(name: "language_id") required final int languageId,
+          @JsonKey(name: "language_name") required final String languageName,
+          @JsonKey(name: "verse_key") required final VerseKey verseKey,
+          @JsonKey(name: "chapter_id") required final int chapterId,
+          @JsonKey(name: "verse_number") required final int verseNumber,
+          @JsonKey(name: "juz_number") required final int juzNumber,
+          @JsonKey(name: "hizb_number") required final int hizbNumber,
+          @JsonKey(name: "rub_number") required final int rubNumber,
+          @JsonKey(name: "page_number") required final int pageNumber}) =
       _$TranslationImpl;
   const _Translation._() : super._();
 
@@ -442,48 +455,48 @@ abstract class _Translation extends Translation {
       _$TranslationImpl.fromJson;
 
   @override
-  @JsonKey(name: 'resource_id')
+  @JsonKey(name: "resource_id")
   int get resourceId;
   @override
-  @JsonKey(name: 'resource_name')
+  @JsonKey(name: "resource_name")
   String get resourceName;
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
 
   /// Text of the translation, text could have HTML tags for formatting and footnotes.
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text;
   @override
-  @JsonKey(name: 'verse_id')
+  @JsonKey(name: "verse_id")
   int get verseId;
   @override
-  @JsonKey(name: 'language_id')
+  @JsonKey(name: "language_id")
   int get languageId;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey;
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId;
   @override
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   int get verseNumber;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int get hizbNumber;
   @override
-  @JsonKey(name: 'rub_number')
+  @JsonKey(name: "rub_number")
   int get rubNumber;
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber;
   @override
   @JsonKey(ignore: true)

@@ -20,13 +20,13 @@ SearchQueries _$SearchQueriesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SearchQueries {
-  @Query('q')
+  @Query("q")
   String? get q => throw _privateConstructorUsedError;
-  @Query('size')
+  @Query("size")
   int? get size => throw _privateConstructorUsedError;
-  @Query('page')
+  @Query("page")
   int? get page => throw _privateConstructorUsedError;
-  @Query('language')
+  @Query("language")
   String? get language => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,10 +42,10 @@ abstract class $SearchQueriesCopyWith<$Res> {
       _$SearchQueriesCopyWithImpl<$Res, SearchQueries>;
   @useResult
   $Res call(
-      {@Query('q') String? q,
-      @Query('size') int? size,
-      @Query('page') int? page,
-      @Query('language') String? language});
+      {@Query("q") String? q,
+      @Query("size") int? size,
+      @Query("page") int? page,
+      @Query("language") String? language});
 }
 
 /// @nodoc
@@ -96,10 +96,10 @@ abstract class _$$SearchQueriesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@Query('q') String? q,
-      @Query('size') int? size,
-      @Query('page') int? page,
-      @Query('language') String? language});
+      {@Query("q") String? q,
+      @Query("size") int? size,
+      @Query("page") int? page,
+      @Query("language") String? language});
 }
 
 /// @nodoc
@@ -143,25 +143,25 @@ class __$$SearchQueriesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SearchQueriesImpl implements _SearchQueries {
   _$SearchQueriesImpl(
-      {@Query('q') this.q,
-      @Query('size') this.size,
-      @Query('page') this.page,
-      @Query('language') this.language});
+      {@Query("q") this.q,
+      @Query("size") this.size,
+      @Query("page") this.page,
+      @Query("language") this.language});
 
   factory _$SearchQueriesImpl.fromJson(Map<String, dynamic> json) =>
       _$$SearchQueriesImplFromJson(json);
 
   @override
-  @Query('q')
+  @Query("q")
   final String? q;
   @override
-  @Query('size')
+  @Query("size")
   final int? size;
   @override
-  @Query('page')
+  @Query("page")
   final int? page;
   @override
-  @Query('language')
+  @Query("language")
   final String? language;
 
   @override
@@ -201,25 +201,25 @@ class _$SearchQueriesImpl implements _SearchQueries {
 
 abstract class _SearchQueries implements SearchQueries {
   factory _SearchQueries(
-      {@Query('q') final String? q,
-      @Query('size') final int? size,
-      @Query('page') final int? page,
-      @Query('language') final String? language}) = _$SearchQueriesImpl;
+      {@Query("q") final String? q,
+      @Query("size") final int? size,
+      @Query("page") final int? page,
+      @Query("language") final String? language}) = _$SearchQueriesImpl;
 
   factory _SearchQueries.fromJson(Map<String, dynamic> json) =
       _$SearchQueriesImpl.fromJson;
 
   @override
-  @Query('q')
+  @Query("q")
   String? get q;
   @override
-  @Query('size')
+  @Query("size")
   int? get size;
   @override
-  @Query('page')
+  @Query("page")
   int? get page;
   @override
-  @Query('language')
+  @Query("language")
   String? get language;
   @override
   @JsonKey(ignore: true)

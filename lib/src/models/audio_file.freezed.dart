@@ -20,15 +20,15 @@ AudioFile _$AudioFileFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AudioFile {
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   String get url => throw _privateConstructorUsedError;
-  @JsonKey(name: 'duration')
+  @JsonKey(name: "duration")
   int? get duration => throw _privateConstructorUsedError;
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   String? get format => throw _privateConstructorUsedError;
-  @JsonKey(name: 'segments')
+  @JsonKey(name: "segments")
   List<List<List<int>>>? get segments => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   String get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,11 +43,11 @@ abstract class $AudioFileCopyWith<$Res> {
       _$AudioFileCopyWithImpl<$Res, AudioFile>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'duration') int? duration,
-      @JsonKey(name: 'format') String? format,
-      @JsonKey(name: 'segments') List<List<List<int>>>? segments,
-      @JsonKey(name: 'verse_key') String verseKey});
+      {@JsonKey(name: "url") String url,
+      @JsonKey(name: "duration") int? duration,
+      @JsonKey(name: "format") String? format,
+      @JsonKey(name: "segments") List<List<List<int>>>? segments,
+      @JsonKey(name: "verse_key") String verseKey});
 }
 
 /// @nodoc
@@ -103,11 +103,11 @@ abstract class _$$AudioFileImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'duration') int? duration,
-      @JsonKey(name: 'format') String? format,
-      @JsonKey(name: 'segments') List<List<List<int>>>? segments,
-      @JsonKey(name: 'verse_key') String verseKey});
+      {@JsonKey(name: "url") String url,
+      @JsonKey(name: "duration") int? duration,
+      @JsonKey(name: "format") String? format,
+      @JsonKey(name: "segments") List<List<List<int>>>? segments,
+      @JsonKey(name: "verse_key") String verseKey});
 }
 
 /// @nodoc
@@ -156,11 +156,11 @@ class __$$AudioFileImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AudioFileImpl extends _AudioFile {
   const _$AudioFileImpl(
-      {@JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'duration') required this.duration,
-      @JsonKey(name: 'format') required this.format,
-      @JsonKey(name: 'segments') required final List<List<List<int>>>? segments,
-      @JsonKey(name: 'verse_key') required this.verseKey})
+      {@JsonKey(name: "url") required this.url,
+      @JsonKey(name: "duration") required this.duration,
+      @JsonKey(name: "format") required this.format,
+      @JsonKey(name: "segments") required final List<List<List<int>>>? segments,
+      @JsonKey(name: "verse_key") required this.verseKey})
       : _segments = segments,
         super._();
 
@@ -168,17 +168,17 @@ class _$AudioFileImpl extends _AudioFile {
       _$$AudioFileImplFromJson(json);
 
   @override
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   final String url;
   @override
-  @JsonKey(name: 'duration')
+  @JsonKey(name: "duration")
   final int? duration;
   @override
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   final String? format;
   final List<List<List<int>>>? _segments;
   @override
-  @JsonKey(name: 'segments')
+  @JsonKey(name: "segments")
   List<List<List<int>>>? get segments {
     final value = _segments;
     if (value == null) return null;
@@ -188,7 +188,7 @@ class _$AudioFileImpl extends _AudioFile {
   }
 
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   final String verseKey;
 
   @override
@@ -231,11 +231,11 @@ class _$AudioFileImpl extends _AudioFile {
 
 abstract class _AudioFile extends AudioFile {
   const factory _AudioFile(
-      {@JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'duration') required final int? duration,
-      @JsonKey(name: 'format') required final String? format,
-      @JsonKey(name: 'segments') required final List<List<List<int>>>? segments,
-      @JsonKey(name: 'verse_key')
+      {@JsonKey(name: "url") required final String url,
+      @JsonKey(name: "duration") required final int? duration,
+      @JsonKey(name: "format") required final String? format,
+      @JsonKey(name: "segments") required final List<List<List<int>>>? segments,
+      @JsonKey(name: "verse_key")
       required final String verseKey}) = _$AudioFileImpl;
   const _AudioFile._() : super._();
 
@@ -243,19 +243,19 @@ abstract class _AudioFile extends AudioFile {
       _$AudioFileImpl.fromJson;
 
   @override
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   String get url;
   @override
-  @JsonKey(name: 'duration')
+  @JsonKey(name: "duration")
   int? get duration;
   @override
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   String? get format;
   @override
-  @JsonKey(name: 'segments')
+  @JsonKey(name: "segments")
   List<List<List<int>>>? get segments;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   String get verseKey;
   @override
   @JsonKey(ignore: true)

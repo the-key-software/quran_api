@@ -20,31 +20,31 @@ Tafsir _$TafsirFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Tafsir {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_id')
+  @JsonKey(name: "verse_id")
   int get verseId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_id')
+  @JsonKey(name: "language_id")
   int get languageId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'resource_name')
+  @JsonKey(name: "resource_name")
   String get resourceName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey => throw _privateConstructorUsedError;
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   int get verseNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int get hizbNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'rub_el_hizb_number')
+  @JsonKey(name: "rub_el_hizb_number")
   int get rubElHizbNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,19 +58,21 @@ abstract class $TafsirCopyWith<$Res> {
       _$TafsirCopyWithImpl<$Res, Tafsir>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'verse_id') int verseId,
-      @JsonKey(name: 'language_id') int languageId,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'resource_name') String resourceName,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'hizb_number') int hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') int rubElHizbNumber,
-      @JsonKey(name: 'page_number') int pageNumber});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "verse_id") int verseId,
+      @JsonKey(name: "language_id") int languageId,
+      @JsonKey(name: "text") String text,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "resource_name") String resourceName,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "verse_number") int verseNumber,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "hizb_number") int hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") int rubElHizbNumber,
+      @JsonKey(name: "page_number") int pageNumber});
+
+  $VerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -155,6 +157,14 @@ class _$TafsirCopyWithImpl<$Res, $Val extends Tafsir>
               as int,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VerseKeyCopyWith<$Res> get verseKey {
+    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+      return _then(_value.copyWith(verseKey: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -165,19 +175,22 @@ abstract class _$$TafsirImplCopyWith<$Res> implements $TafsirCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'verse_id') int verseId,
-      @JsonKey(name: 'language_id') int languageId,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'resource_name') String resourceName,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'hizb_number') int hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') int rubElHizbNumber,
-      @JsonKey(name: 'page_number') int pageNumber});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "verse_id") int verseId,
+      @JsonKey(name: "language_id") int languageId,
+      @JsonKey(name: "text") String text,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "resource_name") String resourceName,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "verse_number") int verseNumber,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "hizb_number") int hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") int rubElHizbNumber,
+      @JsonKey(name: "page_number") int pageNumber});
+
+  @override
+  $VerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -266,62 +279,62 @@ class __$$TafsirImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TafsirImpl extends _Tafsir {
   const _$TafsirImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'verse_id') required this.verseId,
-      @JsonKey(name: 'language_id') required this.languageId,
-      @JsonKey(name: 'text') required this.text,
-      @JsonKey(name: 'language_name') required this.languageName,
-      @JsonKey(name: 'resource_name') required this.resourceName,
-      @JsonKey(name: 'verse_key') required this.verseKey,
-      @JsonKey(name: 'chapter_id') required this.chapterId,
-      @JsonKey(name: 'verse_number') required this.verseNumber,
-      @JsonKey(name: 'juz_number') required this.juzNumber,
-      @JsonKey(name: 'hizb_number') required this.hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') required this.rubElHizbNumber,
-      @JsonKey(name: 'page_number') required this.pageNumber})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "verse_id") required this.verseId,
+      @JsonKey(name: "language_id") required this.languageId,
+      @JsonKey(name: "text") required this.text,
+      @JsonKey(name: "language_name") required this.languageName,
+      @JsonKey(name: "resource_name") required this.resourceName,
+      @JsonKey(name: "verse_key") required this.verseKey,
+      @JsonKey(name: "chapter_id") required this.chapterId,
+      @JsonKey(name: "verse_number") required this.verseNumber,
+      @JsonKey(name: "juz_number") required this.juzNumber,
+      @JsonKey(name: "hizb_number") required this.hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") required this.rubElHizbNumber,
+      @JsonKey(name: "page_number") required this.pageNumber})
       : super._();
 
   factory _$TafsirImpl.fromJson(Map<String, dynamic> json) =>
       _$$TafsirImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
   @override
-  @JsonKey(name: 'verse_id')
+  @JsonKey(name: "verse_id")
   final int verseId;
   @override
-  @JsonKey(name: 'language_id')
+  @JsonKey(name: "language_id")
   final int languageId;
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   final String text;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
   @override
-  @JsonKey(name: 'resource_name')
+  @JsonKey(name: "resource_name")
   final String resourceName;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   final VerseKey verseKey;
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   final int chapterId;
   @override
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   final int verseNumber;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   final int juzNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   final int hizbNumber;
   @override
-  @JsonKey(name: 'rub_el_hizb_number')
+  @JsonKey(name: "rub_el_hizb_number")
   final int rubElHizbNumber;
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   final int pageNumber;
 
   @override
@@ -393,62 +406,62 @@ class _$TafsirImpl extends _Tafsir {
 
 abstract class _Tafsir extends Tafsir {
   const factory _Tafsir(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'verse_id') required final int verseId,
-      @JsonKey(name: 'language_id') required final int languageId,
-      @JsonKey(name: 'text') required final String text,
-      @JsonKey(name: 'language_name') required final String languageName,
-      @JsonKey(name: 'resource_name') required final String resourceName,
-      @JsonKey(name: 'verse_key') required final VerseKey verseKey,
-      @JsonKey(name: 'chapter_id') required final int chapterId,
-      @JsonKey(name: 'verse_number') required final int verseNumber,
-      @JsonKey(name: 'juz_number') required final int juzNumber,
-      @JsonKey(name: 'hizb_number') required final int hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') required final int rubElHizbNumber,
-      @JsonKey(name: 'page_number')
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "verse_id") required final int verseId,
+      @JsonKey(name: "language_id") required final int languageId,
+      @JsonKey(name: "text") required final String text,
+      @JsonKey(name: "language_name") required final String languageName,
+      @JsonKey(name: "resource_name") required final String resourceName,
+      @JsonKey(name: "verse_key") required final VerseKey verseKey,
+      @JsonKey(name: "chapter_id") required final int chapterId,
+      @JsonKey(name: "verse_number") required final int verseNumber,
+      @JsonKey(name: "juz_number") required final int juzNumber,
+      @JsonKey(name: "hizb_number") required final int hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") required final int rubElHizbNumber,
+      @JsonKey(name: "page_number")
       required final int pageNumber}) = _$TafsirImpl;
   const _Tafsir._() : super._();
 
   factory _Tafsir.fromJson(Map<String, dynamic> json) = _$TafsirImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
-  @JsonKey(name: 'verse_id')
+  @JsonKey(name: "verse_id")
   int get verseId;
   @override
-  @JsonKey(name: 'language_id')
+  @JsonKey(name: "language_id")
   int get languageId;
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
-  @JsonKey(name: 'resource_name')
+  @JsonKey(name: "resource_name")
   String get resourceName;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey;
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId;
   @override
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   int get verseNumber;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int get hizbNumber;
   @override
-  @JsonKey(name: 'rub_el_hizb_number')
+  @JsonKey(name: "rub_el_hizb_number")
   int get rubElHizbNumber;
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber;
   @override
   @JsonKey(ignore: true)

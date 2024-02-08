@@ -20,57 +20,57 @@ Word _$WordFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Word {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
   /// Word position within ayah
-  @JsonKey(name: 'position')
+  @JsonKey(name: "position")
   int get position => throw _privateConstructorUsedError;
 
   /// Word text in Uthmanic script
-  @JsonKey(name: 'text_uthmani')
+  @JsonKey(name: "text_uthmani")
   String get textUthmani => throw _privateConstructorUsedError;
-  @JsonKey(name: 'text_indopak')
+  @JsonKey(name: "text_indopak")
   String get textIndopak => throw _privateConstructorUsedError;
 
   /// Word text in simple/Imlaei script
-  @JsonKey(name: 'text_imlaei')
+  @JsonKey(name: "text_imlaei")
   String get textImlaei => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey => throw _privateConstructorUsedError;
 
   /// page_number is deperacted, please use `v1_page` instead.
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber => throw _privateConstructorUsedError;
 
   /// Line number in the Muhsaf for this word
-  @JsonKey(name: 'line_number')
+  @JsonKey(name: "line_number")
   int get lineNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'audio_url')
+  @JsonKey(name: "audio_url")
   String get audioUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'location')
+  @JsonKey(name: "location")
   String get location => throw _privateConstructorUsedError;
-  @JsonKey(name: 'char_type_name')
+  @JsonKey(name: "char_type_name")
   String get charTypeName => throw _privateConstructorUsedError;
 
   /// glyph code that you can use to render the word using QCF  v1 font.
-  @JsonKey(name: 'code_v1')
+  @JsonKey(name: "code_v1")
   String get codeV1 => throw _privateConstructorUsedError;
 
   /// glyph code that you can use to render the word using QCF  v2 font.
-  @JsonKey(name: 'code_v2')
+  @JsonKey(name: "code_v2")
   String get codeV2 => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translation')
+  @JsonKey(name: "translation")
   WordTranslation get translation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'transliteration')
+  @JsonKey(name: "transliteration")
   WordTransliteration get transliteration => throw _privateConstructorUsedError;
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this word using v1 glyph codes.
-  @JsonKey(name: 'v1_page')
+  @JsonKey(name: "v1_page")
   int get v1Page => throw _privateConstructorUsedError;
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
-  @JsonKey(name: 'v2_page')
+  @JsonKey(name: "v2_page")
   int get v2Page => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -84,24 +84,25 @@ abstract class $WordCopyWith<$Res> {
       _$WordCopyWithImpl<$Res, Word>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'position') int position,
-      @JsonKey(name: 'text_uthmani') String textUthmani,
-      @JsonKey(name: 'text_indopak') String textIndopak,
-      @JsonKey(name: 'text_imlaei') String textImlaei,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'page_number') int pageNumber,
-      @JsonKey(name: 'line_number') int lineNumber,
-      @JsonKey(name: 'audio_url') String audioUrl,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'char_type_name') String charTypeName,
-      @JsonKey(name: 'code_v1') String codeV1,
-      @JsonKey(name: 'code_v2') String codeV2,
-      @JsonKey(name: 'translation') WordTranslation translation,
-      @JsonKey(name: 'transliteration') WordTransliteration transliteration,
-      @JsonKey(name: 'v1_page') int v1Page,
-      @JsonKey(name: 'v2_page') int v2Page});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "position") int position,
+      @JsonKey(name: "text_uthmani") String textUthmani,
+      @JsonKey(name: "text_indopak") String textIndopak,
+      @JsonKey(name: "text_imlaei") String textImlaei,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "page_number") int pageNumber,
+      @JsonKey(name: "line_number") int lineNumber,
+      @JsonKey(name: "audio_url") String audioUrl,
+      @JsonKey(name: "location") String location,
+      @JsonKey(name: "char_type_name") String charTypeName,
+      @JsonKey(name: "code_v1") String codeV1,
+      @JsonKey(name: "code_v2") String codeV2,
+      @JsonKey(name: "translation") WordTranslation translation,
+      @JsonKey(name: "transliteration") WordTransliteration transliteration,
+      @JsonKey(name: "v1_page") int v1Page,
+      @JsonKey(name: "v2_page") int v2Page});
 
+  $VerseKeyCopyWith<$Res> get verseKey;
   $WordTranslationCopyWith<$Res> get translation;
   $WordTransliterationCopyWith<$Res> get transliteration;
 }
@@ -211,6 +212,14 @@ class _$WordCopyWithImpl<$Res, $Val extends Word>
 
   @override
   @pragma('vm:prefer-inline')
+  $VerseKeyCopyWith<$Res> get verseKey {
+    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+      return _then(_value.copyWith(verseKey: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $WordTranslationCopyWith<$Res> get translation {
     return $WordTranslationCopyWith<$Res>(_value.translation, (value) {
       return _then(_value.copyWith(translation: value) as $Val);
@@ -234,24 +243,26 @@ abstract class _$$WordImplCopyWith<$Res> implements $WordCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'position') int position,
-      @JsonKey(name: 'text_uthmani') String textUthmani,
-      @JsonKey(name: 'text_indopak') String textIndopak,
-      @JsonKey(name: 'text_imlaei') String textImlaei,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'page_number') int pageNumber,
-      @JsonKey(name: 'line_number') int lineNumber,
-      @JsonKey(name: 'audio_url') String audioUrl,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'char_type_name') String charTypeName,
-      @JsonKey(name: 'code_v1') String codeV1,
-      @JsonKey(name: 'code_v2') String codeV2,
-      @JsonKey(name: 'translation') WordTranslation translation,
-      @JsonKey(name: 'transliteration') WordTransliteration transliteration,
-      @JsonKey(name: 'v1_page') int v1Page,
-      @JsonKey(name: 'v2_page') int v2Page});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "position") int position,
+      @JsonKey(name: "text_uthmani") String textUthmani,
+      @JsonKey(name: "text_indopak") String textIndopak,
+      @JsonKey(name: "text_imlaei") String textImlaei,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "page_number") int pageNumber,
+      @JsonKey(name: "line_number") int lineNumber,
+      @JsonKey(name: "audio_url") String audioUrl,
+      @JsonKey(name: "location") String location,
+      @JsonKey(name: "char_type_name") String charTypeName,
+      @JsonKey(name: "code_v1") String codeV1,
+      @JsonKey(name: "code_v2") String codeV2,
+      @JsonKey(name: "translation") WordTranslation translation,
+      @JsonKey(name: "transliteration") WordTransliteration transliteration,
+      @JsonKey(name: "v1_page") int v1Page,
+      @JsonKey(name: "v2_page") int v2Page});
 
+  @override
+  $VerseKeyCopyWith<$Res> get verseKey;
   @override
   $WordTranslationCopyWith<$Res> get translation;
   @override
@@ -363,96 +374,96 @@ class __$$WordImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WordImpl extends _Word {
   const _$WordImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'position') required this.position,
-      @JsonKey(name: 'text_uthmani') required this.textUthmani,
-      @JsonKey(name: 'text_indopak') required this.textIndopak,
-      @JsonKey(name: 'text_imlaei') required this.textImlaei,
-      @JsonKey(name: 'verse_key') required this.verseKey,
-      @JsonKey(name: 'page_number') required this.pageNumber,
-      @JsonKey(name: 'line_number') required this.lineNumber,
-      @JsonKey(name: 'audio_url') required this.audioUrl,
-      @JsonKey(name: 'location') required this.location,
-      @JsonKey(name: 'char_type_name') required this.charTypeName,
-      @JsonKey(name: 'code_v1') required this.codeV1,
-      @JsonKey(name: 'code_v2') required this.codeV2,
-      @JsonKey(name: 'translation') required this.translation,
-      @JsonKey(name: 'transliteration') required this.transliteration,
-      @JsonKey(name: 'v1_page') required this.v1Page,
-      @JsonKey(name: 'v2_page') required this.v2Page})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "position") required this.position,
+      @JsonKey(name: "text_uthmani") required this.textUthmani,
+      @JsonKey(name: "text_indopak") required this.textIndopak,
+      @JsonKey(name: "text_imlaei") required this.textImlaei,
+      @JsonKey(name: "verse_key") required this.verseKey,
+      @JsonKey(name: "page_number") required this.pageNumber,
+      @JsonKey(name: "line_number") required this.lineNumber,
+      @JsonKey(name: "audio_url") required this.audioUrl,
+      @JsonKey(name: "location") required this.location,
+      @JsonKey(name: "char_type_name") required this.charTypeName,
+      @JsonKey(name: "code_v1") required this.codeV1,
+      @JsonKey(name: "code_v2") required this.codeV2,
+      @JsonKey(name: "translation") required this.translation,
+      @JsonKey(name: "transliteration") required this.transliteration,
+      @JsonKey(name: "v1_page") required this.v1Page,
+      @JsonKey(name: "v2_page") required this.v2Page})
       : super._();
 
   factory _$WordImpl.fromJson(Map<String, dynamic> json) =>
       _$$WordImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
 
   /// Word position within ayah
   @override
-  @JsonKey(name: 'position')
+  @JsonKey(name: "position")
   final int position;
 
   /// Word text in Uthmanic script
   @override
-  @JsonKey(name: 'text_uthmani')
+  @JsonKey(name: "text_uthmani")
   final String textUthmani;
   @override
-  @JsonKey(name: 'text_indopak')
+  @JsonKey(name: "text_indopak")
   final String textIndopak;
 
   /// Word text in simple/Imlaei script
   @override
-  @JsonKey(name: 'text_imlaei')
+  @JsonKey(name: "text_imlaei")
   final String textImlaei;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   final VerseKey verseKey;
 
   /// page_number is deperacted, please use `v1_page` instead.
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   final int pageNumber;
 
   /// Line number in the Muhsaf for this word
   @override
-  @JsonKey(name: 'line_number')
+  @JsonKey(name: "line_number")
   final int lineNumber;
   @override
-  @JsonKey(name: 'audio_url')
+  @JsonKey(name: "audio_url")
   final String audioUrl;
   @override
-  @JsonKey(name: 'location')
+  @JsonKey(name: "location")
   final String location;
   @override
-  @JsonKey(name: 'char_type_name')
+  @JsonKey(name: "char_type_name")
   final String charTypeName;
 
   /// glyph code that you can use to render the word using QCF  v1 font.
   @override
-  @JsonKey(name: 'code_v1')
+  @JsonKey(name: "code_v1")
   final String codeV1;
 
   /// glyph code that you can use to render the word using QCF  v2 font.
   @override
-  @JsonKey(name: 'code_v2')
+  @JsonKey(name: "code_v2")
   final String codeV2;
   @override
-  @JsonKey(name: 'translation')
+  @JsonKey(name: "translation")
   final WordTranslation translation;
   @override
-  @JsonKey(name: 'transliteration')
+  @JsonKey(name: "transliteration")
   final WordTransliteration transliteration;
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this word using v1 glyph codes.
   @override
-  @JsonKey(name: 'v1_page')
+  @JsonKey(name: "v1_page")
   final int v1Page;
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
   @override
-  @JsonKey(name: 'v2_page')
+  @JsonKey(name: "v2_page")
   final int v2Page;
 
   @override
@@ -534,96 +545,96 @@ class _$WordImpl extends _Word {
 
 abstract class _Word extends Word {
   const factory _Word(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'position') required final int position,
-      @JsonKey(name: 'text_uthmani') required final String textUthmani,
-      @JsonKey(name: 'text_indopak') required final String textIndopak,
-      @JsonKey(name: 'text_imlaei') required final String textImlaei,
-      @JsonKey(name: 'verse_key') required final VerseKey verseKey,
-      @JsonKey(name: 'page_number') required final int pageNumber,
-      @JsonKey(name: 'line_number') required final int lineNumber,
-      @JsonKey(name: 'audio_url') required final String audioUrl,
-      @JsonKey(name: 'location') required final String location,
-      @JsonKey(name: 'char_type_name') required final String charTypeName,
-      @JsonKey(name: 'code_v1') required final String codeV1,
-      @JsonKey(name: 'code_v2') required final String codeV2,
-      @JsonKey(name: 'translation') required final WordTranslation translation,
-      @JsonKey(name: 'transliteration')
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "position") required final int position,
+      @JsonKey(name: "text_uthmani") required final String textUthmani,
+      @JsonKey(name: "text_indopak") required final String textIndopak,
+      @JsonKey(name: "text_imlaei") required final String textImlaei,
+      @JsonKey(name: "verse_key") required final VerseKey verseKey,
+      @JsonKey(name: "page_number") required final int pageNumber,
+      @JsonKey(name: "line_number") required final int lineNumber,
+      @JsonKey(name: "audio_url") required final String audioUrl,
+      @JsonKey(name: "location") required final String location,
+      @JsonKey(name: "char_type_name") required final String charTypeName,
+      @JsonKey(name: "code_v1") required final String codeV1,
+      @JsonKey(name: "code_v2") required final String codeV2,
+      @JsonKey(name: "translation") required final WordTranslation translation,
+      @JsonKey(name: "transliteration")
       required final WordTransliteration transliteration,
-      @JsonKey(name: 'v1_page') required final int v1Page,
-      @JsonKey(name: 'v2_page') required final int v2Page}) = _$WordImpl;
+      @JsonKey(name: "v1_page") required final int v1Page,
+      @JsonKey(name: "v2_page") required final int v2Page}) = _$WordImpl;
   const _Word._() : super._();
 
   factory _Word.fromJson(Map<String, dynamic> json) = _$WordImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
 
   /// Word position within ayah
-  @JsonKey(name: 'position')
+  @JsonKey(name: "position")
   int get position;
   @override
 
   /// Word text in Uthmanic script
-  @JsonKey(name: 'text_uthmani')
+  @JsonKey(name: "text_uthmani")
   String get textUthmani;
   @override
-  @JsonKey(name: 'text_indopak')
+  @JsonKey(name: "text_indopak")
   String get textIndopak;
   @override
 
   /// Word text in simple/Imlaei script
-  @JsonKey(name: 'text_imlaei')
+  @JsonKey(name: "text_imlaei")
   String get textImlaei;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey;
   @override
 
   /// page_number is deperacted, please use `v1_page` instead.
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber;
   @override
 
   /// Line number in the Muhsaf for this word
-  @JsonKey(name: 'line_number')
+  @JsonKey(name: "line_number")
   int get lineNumber;
   @override
-  @JsonKey(name: 'audio_url')
+  @JsonKey(name: "audio_url")
   String get audioUrl;
   @override
-  @JsonKey(name: 'location')
+  @JsonKey(name: "location")
   String get location;
   @override
-  @JsonKey(name: 'char_type_name')
+  @JsonKey(name: "char_type_name")
   String get charTypeName;
   @override
 
   /// glyph code that you can use to render the word using QCF  v1 font.
-  @JsonKey(name: 'code_v1')
+  @JsonKey(name: "code_v1")
   String get codeV1;
   @override
 
   /// glyph code that you can use to render the word using QCF  v2 font.
-  @JsonKey(name: 'code_v2')
+  @JsonKey(name: "code_v2")
   String get codeV2;
   @override
-  @JsonKey(name: 'translation')
+  @JsonKey(name: "translation")
   WordTranslation get translation;
   @override
-  @JsonKey(name: 'transliteration')
+  @JsonKey(name: "transliteration")
   WordTransliteration get transliteration;
   @override
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this word using v1 glyph codes.
-  @JsonKey(name: 'v1_page')
+  @JsonKey(name: "v1_page")
   int get v1Page;
   @override
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
-  @JsonKey(name: 'v2_page')
+  @JsonKey(name: "v2_page")
   int get v2Page;
   @override
   @JsonKey(ignore: true)
@@ -637,9 +648,9 @@ WordTranslation _$WordTranslationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$WordTranslation {
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -655,8 +666,8 @@ abstract class $WordTranslationCopyWith<$Res> {
       _$WordTranslationCopyWithImpl<$Res, WordTranslation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'text') String text,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "text") String text,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -697,8 +708,8 @@ abstract class _$$WordTranslationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'text') String text,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "text") String text,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -732,18 +743,18 @@ class __$$WordTranslationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WordTranslationImpl extends _WordTranslation {
   const _$WordTranslationImpl(
-      {@JsonKey(name: 'text') required this.text,
-      @JsonKey(name: 'language_name') required this.languageName})
+      {@JsonKey(name: "text") required this.text,
+      @JsonKey(name: "language_name") required this.languageName})
       : super._();
 
   factory _$WordTranslationImpl.fromJson(Map<String, dynamic> json) =>
       _$$WordTranslationImplFromJson(json);
 
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   final String text;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
 
   @override
@@ -782,8 +793,8 @@ class _$WordTranslationImpl extends _WordTranslation {
 
 abstract class _WordTranslation extends WordTranslation {
   const factory _WordTranslation(
-          {@JsonKey(name: 'text') required final String text,
-          @JsonKey(name: 'language_name') required final String languageName}) =
+          {@JsonKey(name: "text") required final String text,
+          @JsonKey(name: "language_name") required final String languageName}) =
       _$WordTranslationImpl;
   const _WordTranslation._() : super._();
 
@@ -791,10 +802,10 @@ abstract class _WordTranslation extends WordTranslation {
       _$WordTranslationImpl.fromJson;
 
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
   @JsonKey(ignore: true)
@@ -808,9 +819,9 @@ WordTransliteration _$WordTransliterationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$WordTransliteration {
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -826,8 +837,8 @@ abstract class $WordTransliterationCopyWith<$Res> {
       _$WordTransliterationCopyWithImpl<$Res, WordTransliteration>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'text') String text,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "text") String text,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -868,8 +879,8 @@ abstract class _$$WordTransliterationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'text') String text,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "text") String text,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -903,18 +914,18 @@ class __$$WordTransliterationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WordTransliterationImpl extends _WordTransliteration {
   const _$WordTransliterationImpl(
-      {@JsonKey(name: 'text') required this.text,
-      @JsonKey(name: 'language_name') required this.languageName})
+      {@JsonKey(name: "text") required this.text,
+      @JsonKey(name: "language_name") required this.languageName})
       : super._();
 
   factory _$WordTransliterationImpl.fromJson(Map<String, dynamic> json) =>
       _$$WordTransliterationImplFromJson(json);
 
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   final String text;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
 
   @override
@@ -953,8 +964,8 @@ class _$WordTransliterationImpl extends _WordTransliteration {
 
 abstract class _WordTransliteration extends WordTransliteration {
   const factory _WordTransliteration(
-          {@JsonKey(name: 'text') required final String text,
-          @JsonKey(name: 'language_name') required final String languageName}) =
+          {@JsonKey(name: "text") required final String text,
+          @JsonKey(name: "language_name") required final String languageName}) =
       _$WordTransliterationImpl;
   const _WordTransliteration._() : super._();
 
@@ -962,10 +973,10 @@ abstract class _WordTransliteration extends WordTransliteration {
       _$WordTransliterationImpl.fromJson;
 
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
   @JsonKey(ignore: true)

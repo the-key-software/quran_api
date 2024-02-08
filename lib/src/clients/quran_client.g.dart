@@ -9,11 +9,16 @@ part of 'quran_client.dart';
 _$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
         Map<String, dynamic> json) =>
     _$QuranVersesIndopakQueriesImpl(
-      chapterNumber: json['chapter_number'] as int?,
-      juzNumber: json['juz_number'] as int?,
-      pageNumber: json['page_number'] as int?,
-      hizbNumber: json['hizb_number'] as int?,
-      rubElHizbNumber: json['rub_el_hizb_number'] as int?,
+      chapterNumber: _$JsonConverterFromJson<String, int>(
+          json['chapter_number'], const IntStringJsonConverter().fromJson),
+      juzNumber: _$JsonConverterFromJson<String, int>(
+          json['juz_number'], const IntStringJsonConverter().fromJson),
+      pageNumber: _$JsonConverterFromJson<String, int>(
+          json['page_number'], const IntStringJsonConverter().fromJson),
+      hizbNumber: _$JsonConverterFromJson<String, int>(
+          json['hizb_number'], const IntStringJsonConverter().fromJson),
+      rubElHizbNumber: _$JsonConverterFromJson<String, int>(
+          json['rub_el_hizb_number'], const IntStringJsonConverter().fromJson),
       verseKey: json['verse_key'] == null
           ? null
           : VerseKey.fromJson(json['verse_key'] as String),
@@ -22,13 +27,30 @@ _$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
 Map<String, dynamic> _$$QuranVersesIndopakQueriesImplToJson(
         _$QuranVersesIndopakQueriesImpl instance) =>
     <String, dynamic>{
-      'chapter_number': instance.chapterNumber,
-      'juz_number': instance.juzNumber,
-      'page_number': instance.pageNumber,
-      'hizb_number': instance.hizbNumber,
-      'rub_el_hizb_number': instance.rubElHizbNumber,
+      'chapter_number': _$JsonConverterToJson<String, int>(
+          instance.chapterNumber, const IntStringJsonConverter().toJson),
+      'juz_number': _$JsonConverterToJson<String, int>(
+          instance.juzNumber, const IntStringJsonConverter().toJson),
+      'page_number': _$JsonConverterToJson<String, int>(
+          instance.pageNumber, const IntStringJsonConverter().toJson),
+      'hizb_number': _$JsonConverterToJson<String, int>(
+          instance.hizbNumber, const IntStringJsonConverter().toJson),
+      'rub_el_hizb_number': _$JsonConverterToJson<String, int>(
+          instance.rubElHizbNumber, const IntStringJsonConverter().toJson),
       'verse_key': instance.verseKey?.toJson(),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 // **************************************************************************
 // RetrofitGenerator
@@ -47,16 +69,18 @@ class _QuranClient implements QuranClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesIndopak(
-      {QuranVersesIndopakQueries? queries}) async {
+  Future<HttpResponse<QuranVersesIndopakResponse>> quranVersesIndopak({
+    QuranVersesIndopakQueries? queries,
+    void Function(int, int)? onReceiveProgress,
+  }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<QuranVersesIndopakResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -66,13 +90,14 @@ class _QuranClient implements QuranClient {
               '/quran/verses/indopak',
               queryParameters: queryParameters,
               data: _data,
+              onReceiveProgress: onReceiveProgress,
             )
             .copyWith(
                 baseUrl: _combineBaseUrls(
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = QuranVersesIndopakResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

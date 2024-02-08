@@ -20,13 +20,13 @@ MediaContent _$MediaContentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MediaContent {
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   String get url => throw _privateConstructorUsedError;
-  @JsonKey(name: 'embed_text')
+  @JsonKey(name: "embed_text")
   String get embedText => throw _privateConstructorUsedError;
-  @JsonKey(name: 'provider')
+  @JsonKey(name: "provider")
   String get provider => throw _privateConstructorUsedError;
-  @JsonKey(name: 'author_name')
+  @JsonKey(name: "author_name")
   String get authorName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,10 +42,10 @@ abstract class $MediaContentCopyWith<$Res> {
       _$MediaContentCopyWithImpl<$Res, MediaContent>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'embed_text') String embedText,
-      @JsonKey(name: 'provider') String provider,
-      @JsonKey(name: 'author_name') String authorName});
+      {@JsonKey(name: "url") String url,
+      @JsonKey(name: "embed_text") String embedText,
+      @JsonKey(name: "provider") String provider,
+      @JsonKey(name: "author_name") String authorName});
 }
 
 /// @nodoc
@@ -96,10 +96,10 @@ abstract class _$$MediaContentImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'embed_text') String embedText,
-      @JsonKey(name: 'provider') String provider,
-      @JsonKey(name: 'author_name') String authorName});
+      {@JsonKey(name: "url") String url,
+      @JsonKey(name: "embed_text") String embedText,
+      @JsonKey(name: "provider") String provider,
+      @JsonKey(name: "author_name") String authorName});
 }
 
 /// @nodoc
@@ -143,26 +143,26 @@ class __$$MediaContentImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MediaContentImpl extends _MediaContent {
   const _$MediaContentImpl(
-      {@JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'embed_text') required this.embedText,
-      @JsonKey(name: 'provider') required this.provider,
-      @JsonKey(name: 'author_name') required this.authorName})
+      {@JsonKey(name: "url") required this.url,
+      @JsonKey(name: "embed_text") required this.embedText,
+      @JsonKey(name: "provider") required this.provider,
+      @JsonKey(name: "author_name") required this.authorName})
       : super._();
 
   factory _$MediaContentImpl.fromJson(Map<String, dynamic> json) =>
       _$$MediaContentImplFromJson(json);
 
   @override
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   final String url;
   @override
-  @JsonKey(name: 'embed_text')
+  @JsonKey(name: "embed_text")
   final String embedText;
   @override
-  @JsonKey(name: 'provider')
+  @JsonKey(name: "provider")
   final String provider;
   @override
-  @JsonKey(name: 'author_name')
+  @JsonKey(name: "author_name")
   final String authorName;
 
   @override
@@ -205,10 +205,10 @@ class _$MediaContentImpl extends _MediaContent {
 
 abstract class _MediaContent extends MediaContent {
   const factory _MediaContent(
-          {@JsonKey(name: 'url') required final String url,
-          @JsonKey(name: 'embed_text') required final String embedText,
-          @JsonKey(name: 'provider') required final String provider,
-          @JsonKey(name: 'author_name') required final String authorName}) =
+          {@JsonKey(name: "url") required final String url,
+          @JsonKey(name: "embed_text") required final String embedText,
+          @JsonKey(name: "provider") required final String provider,
+          @JsonKey(name: "author_name") required final String authorName}) =
       _$MediaContentImpl;
   const _MediaContent._() : super._();
 
@@ -216,16 +216,16 @@ abstract class _MediaContent extends MediaContent {
       _$MediaContentImpl.fromJson;
 
   @override
-  @JsonKey(name: 'url')
+  @JsonKey(name: "url")
   String get url;
   @override
-  @JsonKey(name: 'embed_text')
+  @JsonKey(name: "embed_text")
   String get embedText;
   @override
-  @JsonKey(name: 'provider')
+  @JsonKey(name: "provider")
   String get provider;
   @override
-  @JsonKey(name: 'author_name')
+  @JsonKey(name: "author_name")
   String get authorName;
   @override
   @JsonKey(ignore: true)

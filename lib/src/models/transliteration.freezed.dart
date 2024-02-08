@@ -20,9 +20,9 @@ Transliteration _$TransliterationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Transliteration {
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,8 +38,8 @@ abstract class $TransliterationCopyWith<$Res> {
       _$TransliterationCopyWithImpl<$Res, Transliteration>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'text') String text});
+      {@JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "text") String text});
 }
 
 /// @nodoc
@@ -80,8 +80,8 @@ abstract class _$$TransliterationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'text') String text});
+      {@JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "text") String text});
 }
 
 /// @nodoc
@@ -115,18 +115,18 @@ class __$$TransliterationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TransliterationImpl extends _Transliteration {
   const _$TransliterationImpl(
-      {@JsonKey(name: 'language_name') required this.languageName,
-      @JsonKey(name: 'text') required this.text})
+      {@JsonKey(name: "language_name") required this.languageName,
+      @JsonKey(name: "text") required this.text})
       : super._();
 
   factory _$TransliterationImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransliterationImplFromJson(json);
 
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   final String text;
 
   @override
@@ -165,8 +165,8 @@ class _$TransliterationImpl extends _Transliteration {
 
 abstract class _Transliteration extends Transliteration {
   const factory _Transliteration(
-          {@JsonKey(name: 'language_name') required final String languageName,
-          @JsonKey(name: 'text') required final String text}) =
+          {@JsonKey(name: "language_name") required final String languageName,
+          @JsonKey(name: "text") required final String text}) =
       _$TransliterationImpl;
   const _Transliteration._() : super._();
 
@@ -174,10 +174,10 @@ abstract class _Transliteration extends Transliteration {
       _$TransliterationImpl.fromJson;
 
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text;
   @override
   @JsonKey(ignore: true)

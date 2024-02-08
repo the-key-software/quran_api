@@ -20,11 +20,11 @@ TranslatedName _$TranslatedNameFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TranslatedName {
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
 
   /// Name of the resource in specific language.
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,8 +40,8 @@ abstract class $TranslatedNameCopyWith<$Res> {
       _$TranslatedNameCopyWithImpl<$Res, TranslatedName>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'name') String name});
+      {@JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "name") String name});
 }
 
 /// @nodoc
@@ -82,8 +82,8 @@ abstract class _$$TranslatedNameImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'name') String name});
+      {@JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "name") String name});
 }
 
 /// @nodoc
@@ -117,20 +117,20 @@ class __$$TranslatedNameImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TranslatedNameImpl extends _TranslatedName {
   const _$TranslatedNameImpl(
-      {@JsonKey(name: 'language_name') this.languageName = "english",
-      @JsonKey(name: 'name') required this.name})
+      {@JsonKey(name: "language_name") this.languageName = "english",
+      @JsonKey(name: "name") required this.name})
       : super._();
 
   factory _$TranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
       _$$TranslatedNameImplFromJson(json);
 
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
 
   /// Name of the resource in specific language.
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
 
   @override
@@ -169,8 +169,8 @@ class _$TranslatedNameImpl extends _TranslatedName {
 
 abstract class _TranslatedName extends TranslatedName {
   const factory _TranslatedName(
-          {@JsonKey(name: 'language_name') final String languageName,
-          @JsonKey(name: 'name') required final String name}) =
+          {@JsonKey(name: "language_name") final String languageName,
+          @JsonKey(name: "name") required final String name}) =
       _$TranslatedNameImpl;
   const _TranslatedName._() : super._();
 
@@ -178,12 +178,12 @@ abstract class _TranslatedName extends TranslatedName {
       _$TranslatedNameImpl.fromJson;
 
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
 
   /// Name of the resource in specific language.
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
   @JsonKey(ignore: true)

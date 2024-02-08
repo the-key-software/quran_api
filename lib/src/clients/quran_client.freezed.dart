@@ -21,17 +21,17 @@ QuranVersesIndopakQueries _$QuranVersesIndopakQueriesFromJson(
 
 /// @nodoc
 mixin _$QuranVersesIndopakQueries {
-  @JsonKey(name: 'chapter_number')
+  @JsonKey(name: "chapter_number")
   int? get chapterNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int? get juzNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int? get pageNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int? get hizbNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'rub_el_hizb_number')
+  @JsonKey(name: "rub_el_hizb_number")
   int? get rubElHizbNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey? get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,12 +47,14 @@ abstract class $QuranVersesIndopakQueriesCopyWith<$Res> {
       _$QuranVersesIndopakQueriesCopyWithImpl<$Res, QuranVersesIndopakQueries>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'chapter_number') int? chapterNumber,
-      @JsonKey(name: 'juz_number') int? juzNumber,
-      @JsonKey(name: 'page_number') int? pageNumber,
-      @JsonKey(name: 'hizb_number') int? hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') int? rubElHizbNumber,
-      @JsonKey(name: 'verse_key') VerseKey? verseKey});
+      {@JsonKey(name: "chapter_number") int? chapterNumber,
+      @JsonKey(name: "juz_number") int? juzNumber,
+      @JsonKey(name: "page_number") int? pageNumber,
+      @JsonKey(name: "hizb_number") int? hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") int? rubElHizbNumber,
+      @JsonKey(name: "verse_key") VerseKey? verseKey});
+
+  $VerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -103,6 +105,18 @@ class _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
               as VerseKey?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VerseKeyCopyWith<$Res>? get verseKey {
+    if (_value.verseKey == null) {
+      return null;
+    }
+
+    return $VerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
+      return _then(_value.copyWith(verseKey: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -115,12 +129,15 @@ abstract class _$$QuranVersesIndopakQueriesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'chapter_number') int? chapterNumber,
-      @JsonKey(name: 'juz_number') int? juzNumber,
-      @JsonKey(name: 'page_number') int? pageNumber,
-      @JsonKey(name: 'hizb_number') int? hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') int? rubElHizbNumber,
-      @JsonKey(name: 'verse_key') VerseKey? verseKey});
+      {@JsonKey(name: "chapter_number") int? chapterNumber,
+      @JsonKey(name: "juz_number") int? juzNumber,
+      @JsonKey(name: "page_number") int? pageNumber,
+      @JsonKey(name: "hizb_number") int? hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") int? rubElHizbNumber,
+      @JsonKey(name: "verse_key") VerseKey? verseKey});
+
+  @override
+  $VerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -173,37 +190,38 @@ class __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(converters: [IntStringJsonConverter()])
 class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
   const _$QuranVersesIndopakQueriesImpl(
-      {@JsonKey(name: 'chapter_number') this.chapterNumber,
-      @JsonKey(name: 'juz_number') this.juzNumber,
-      @JsonKey(name: 'page_number') this.pageNumber,
-      @JsonKey(name: 'hizb_number') this.hizbNumber,
-      @JsonKey(name: 'rub_el_hizb_number') this.rubElHizbNumber,
-      @JsonKey(name: 'verse_key') this.verseKey})
+      {@JsonKey(name: "chapter_number") this.chapterNumber,
+      @JsonKey(name: "juz_number") this.juzNumber,
+      @JsonKey(name: "page_number") this.pageNumber,
+      @JsonKey(name: "hizb_number") this.hizbNumber,
+      @JsonKey(name: "rub_el_hizb_number") this.rubElHizbNumber,
+      @JsonKey(name: "verse_key") this.verseKey})
       : super._();
 
   factory _$QuranVersesIndopakQueriesImpl.fromJson(Map<String, dynamic> json) =>
       _$$QuranVersesIndopakQueriesImplFromJson(json);
 
   @override
-  @JsonKey(name: 'chapter_number')
+  @JsonKey(name: "chapter_number")
   final int? chapterNumber;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   final int? juzNumber;
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   final int? pageNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   final int? hizbNumber;
   @override
-  @JsonKey(name: 'rub_el_hizb_number')
+  @JsonKey(name: "rub_el_hizb_number")
   final int? rubElHizbNumber;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   final VerseKey? verseKey;
 
   @override
@@ -252,12 +270,12 @@ class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
 
 abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
   const factory _QuranVersesIndopakQueries(
-          {@JsonKey(name: 'chapter_number') final int? chapterNumber,
-          @JsonKey(name: 'juz_number') final int? juzNumber,
-          @JsonKey(name: 'page_number') final int? pageNumber,
-          @JsonKey(name: 'hizb_number') final int? hizbNumber,
-          @JsonKey(name: 'rub_el_hizb_number') final int? rubElHizbNumber,
-          @JsonKey(name: 'verse_key') final VerseKey? verseKey}) =
+          {@JsonKey(name: "chapter_number") final int? chapterNumber,
+          @JsonKey(name: "juz_number") final int? juzNumber,
+          @JsonKey(name: "page_number") final int? pageNumber,
+          @JsonKey(name: "hizb_number") final int? hizbNumber,
+          @JsonKey(name: "rub_el_hizb_number") final int? rubElHizbNumber,
+          @JsonKey(name: "verse_key") final VerseKey? verseKey}) =
       _$QuranVersesIndopakQueriesImpl;
   const _QuranVersesIndopakQueries._() : super._();
 
@@ -265,22 +283,22 @@ abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
       _$QuranVersesIndopakQueriesImpl.fromJson;
 
   @override
-  @JsonKey(name: 'chapter_number')
+  @JsonKey(name: "chapter_number")
   int? get chapterNumber;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int? get juzNumber;
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int? get pageNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int? get hizbNumber;
   @override
-  @JsonKey(name: 'rub_el_hizb_number')
+  @JsonKey(name: "rub_el_hizb_number")
   int? get rubElHizbNumber;
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey? get verseKey;
   @override
   @JsonKey(ignore: true)

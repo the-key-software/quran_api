@@ -20,17 +20,17 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Resource {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'author_name')
+  @JsonKey(name: "author_name")
   String get authorName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'slug')
+  @JsonKey(name: "slug")
   String? get slug => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   ResourceTranslatedName get translatedName =>
       throw _privateConstructorUsedError;
 
@@ -46,12 +46,12 @@ abstract class $ResourceCopyWith<$Res> {
       _$ResourceCopyWithImpl<$Res, Resource>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'slug') String? slug,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'translated_name') ResourceTranslatedName translatedName});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "name") String name,
+      @JsonKey(name: "author_name") String authorName,
+      @JsonKey(name: "slug") String? slug,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "translated_name") ResourceTranslatedName translatedName});
 
   $ResourceTranslatedNameCopyWith<$Res> get translatedName;
 }
@@ -123,12 +123,12 @@ abstract class _$$ResourceImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'slug') String? slug,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'translated_name') ResourceTranslatedName translatedName});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "name") String name,
+      @JsonKey(name: "author_name") String authorName,
+      @JsonKey(name: "slug") String? slug,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "translated_name") ResourceTranslatedName translatedName});
 
   @override
   $ResourceTranslatedNameCopyWith<$Res> get translatedName;
@@ -185,34 +185,34 @@ class __$$ResourceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResourceImpl extends _Resource {
   const _$ResourceImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'author_name') required this.authorName,
-      @JsonKey(name: 'slug') required this.slug,
-      @JsonKey(name: 'language_name') required this.languageName,
-      @JsonKey(name: 'translated_name') required this.translatedName})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "name") required this.name,
+      @JsonKey(name: "author_name") required this.authorName,
+      @JsonKey(name: "slug") required this.slug,
+      @JsonKey(name: "language_name") required this.languageName,
+      @JsonKey(name: "translated_name") required this.translatedName})
       : super._();
 
   factory _$ResourceImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResourceImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
   @override
-  @JsonKey(name: 'author_name')
+  @JsonKey(name: "author_name")
   final String authorName;
   @override
-  @JsonKey(name: 'slug')
+  @JsonKey(name: "slug")
   final String? slug;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
   @override
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   final ResourceTranslatedName translatedName;
 
   @override
@@ -257,12 +257,12 @@ class _$ResourceImpl extends _Resource {
 
 abstract class _Resource extends Resource {
   const factory _Resource(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'author_name') required final String authorName,
-      @JsonKey(name: 'slug') required final String? slug,
-      @JsonKey(name: 'language_name') required final String languageName,
-      @JsonKey(name: 'translated_name')
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "name") required final String name,
+      @JsonKey(name: "author_name") required final String authorName,
+      @JsonKey(name: "slug") required final String? slug,
+      @JsonKey(name: "language_name") required final String languageName,
+      @JsonKey(name: "translated_name")
       required final ResourceTranslatedName translatedName}) = _$ResourceImpl;
   const _Resource._() : super._();
 
@@ -270,22 +270,22 @@ abstract class _Resource extends Resource {
       _$ResourceImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
-  @JsonKey(name: 'author_name')
+  @JsonKey(name: "author_name")
   String get authorName;
   @override
-  @JsonKey(name: 'slug')
+  @JsonKey(name: "slug")
   String? get slug;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   ResourceTranslatedName get translatedName;
   @override
   @JsonKey(ignore: true)
@@ -300,9 +300,9 @@ ResourceTranslatedName _$ResourceTranslatedNameFromJson(
 
 /// @nodoc
 mixin _$ResourceTranslatedName {
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -318,8 +318,8 @@ abstract class $ResourceTranslatedNameCopyWith<$Res> {
       _$ResourceTranslatedNameCopyWithImpl<$Res, ResourceTranslatedName>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "name") String name,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -362,8 +362,8 @@ abstract class _$$ResourceTranslatedNameImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "name") String name,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -399,18 +399,18 @@ class __$$ResourceTranslatedNameImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResourceTranslatedNameImpl extends _ResourceTranslatedName {
   const _$ResourceTranslatedNameImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'language_name') required this.languageName})
+      {@JsonKey(name: "name") required this.name,
+      @JsonKey(name: "language_name") required this.languageName})
       : super._();
 
   factory _$ResourceTranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResourceTranslatedNameImplFromJson(json);
 
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
 
   @override
@@ -449,8 +449,8 @@ class _$ResourceTranslatedNameImpl extends _ResourceTranslatedName {
 
 abstract class _ResourceTranslatedName extends ResourceTranslatedName {
   const factory _ResourceTranslatedName(
-          {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'language_name') required final String languageName}) =
+          {@JsonKey(name: "name") required final String name,
+          @JsonKey(name: "language_name") required final String languageName}) =
       _$ResourceTranslatedNameImpl;
   const _ResourceTranslatedName._() : super._();
 
@@ -458,10 +458,10 @@ abstract class _ResourceTranslatedName extends ResourceTranslatedName {
       _$ResourceTranslatedNameImpl.fromJson;
 
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
   @JsonKey(ignore: true)

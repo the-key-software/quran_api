@@ -20,19 +20,19 @@ Language _$LanguageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Language {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'native_name')
+  @JsonKey(name: "native_name")
   String get nativeName => throw _privateConstructorUsedError;
 
   /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
-  @JsonKey(name: 'iso_code')
+  @JsonKey(name: "iso_code")
   String get isoCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'direction')
+  @JsonKey(name: "direction")
   String get direction => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translated_names')
+  @JsonKey(name: "translated_names")
   List<TranslatedName> get translatedNames =>
       throw _privateConstructorUsedError;
 
@@ -48,12 +48,12 @@ abstract class $LanguageCopyWith<$Res> {
       _$LanguageCopyWithImpl<$Res, Language>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'native_name') String nativeName,
-      @JsonKey(name: 'iso_code') String isoCode,
-      @JsonKey(name: 'direction') String direction,
-      @JsonKey(name: 'translated_names') List<TranslatedName> translatedNames});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "name") String name,
+      @JsonKey(name: "native_name") String nativeName,
+      @JsonKey(name: "iso_code") String isoCode,
+      @JsonKey(name: "direction") String direction,
+      @JsonKey(name: "translated_names") List<TranslatedName> translatedNames});
 }
 
 /// @nodoc
@@ -114,12 +114,12 @@ abstract class _$$LanguageImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'native_name') String nativeName,
-      @JsonKey(name: 'iso_code') String isoCode,
-      @JsonKey(name: 'direction') String direction,
-      @JsonKey(name: 'translated_names') List<TranslatedName> translatedNames});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "name") String name,
+      @JsonKey(name: "native_name") String nativeName,
+      @JsonKey(name: "iso_code") String isoCode,
+      @JsonKey(name: "direction") String direction,
+      @JsonKey(name: "translated_names") List<TranslatedName> translatedNames});
 }
 
 /// @nodoc
@@ -173,12 +173,12 @@ class __$$LanguageImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$LanguageImpl extends _Language {
   const _$LanguageImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'native_name') required this.nativeName,
-      @JsonKey(name: 'iso_code') required this.isoCode,
-      @JsonKey(name: 'direction') required this.direction,
-      @JsonKey(name: 'translated_names')
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "name") required this.name,
+      @JsonKey(name: "native_name") required this.nativeName,
+      @JsonKey(name: "iso_code") required this.isoCode,
+      @JsonKey(name: "direction") required this.direction,
+      @JsonKey(name: "translated_names")
       required final List<TranslatedName> translatedNames})
       : _translatedNames = translatedNames,
         super._();
@@ -187,25 +187,25 @@ class _$LanguageImpl extends _Language {
       _$$LanguageImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
   @override
-  @JsonKey(name: 'native_name')
+  @JsonKey(name: "native_name")
   final String nativeName;
 
   /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
   @override
-  @JsonKey(name: 'iso_code')
+  @JsonKey(name: "iso_code")
   final String isoCode;
   @override
-  @JsonKey(name: 'direction')
+  @JsonKey(name: "direction")
   final String direction;
   final List<TranslatedName> _translatedNames;
   @override
-  @JsonKey(name: 'translated_names')
+  @JsonKey(name: "translated_names")
   List<TranslatedName> get translatedNames {
     if (_translatedNames is EqualUnmodifiableListView) return _translatedNames;
     // ignore: implicit_dynamic_type
@@ -254,12 +254,12 @@ class _$LanguageImpl extends _Language {
 
 abstract class _Language extends Language {
   const factory _Language(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'native_name') required final String nativeName,
-      @JsonKey(name: 'iso_code') required final String isoCode,
-      @JsonKey(name: 'direction') required final String direction,
-      @JsonKey(name: 'translated_names')
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "name") required final String name,
+      @JsonKey(name: "native_name") required final String nativeName,
+      @JsonKey(name: "iso_code") required final String isoCode,
+      @JsonKey(name: "direction") required final String direction,
+      @JsonKey(name: "translated_names")
       required final List<TranslatedName> translatedNames}) = _$LanguageImpl;
   const _Language._() : super._();
 
@@ -267,24 +267,24 @@ abstract class _Language extends Language {
       _$LanguageImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
-  @JsonKey(name: 'native_name')
+  @JsonKey(name: "native_name")
   String get nativeName;
   @override
 
   /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
-  @JsonKey(name: 'iso_code')
+  @JsonKey(name: "iso_code")
   String get isoCode;
   @override
-  @JsonKey(name: 'direction')
+  @JsonKey(name: "direction")
   String get direction;
   @override
-  @JsonKey(name: 'translated_names')
+  @JsonKey(name: "translated_names")
   List<TranslatedName> get translatedNames;
   @override
   @JsonKey(ignore: true)

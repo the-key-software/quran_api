@@ -21,19 +21,19 @@ Pagination _$PaginationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Pagination {
   /// Entries per api call
-  @JsonKey(name: 'per_page')
+  @JsonKey(name: "per_page")
   int get perPage => throw _privateConstructorUsedError;
-  @JsonKey(name: 'current_page')
+  @JsonKey(name: "current_page")
   int get currentPage => throw _privateConstructorUsedError;
 
   /// Next page in paginated result
-  @JsonKey(name: 'next_page')
+  @JsonKey(name: "next_page")
   int? get nextPage => throw _privateConstructorUsedError;
 
   /// Total number of pages
-  @JsonKey(name: 'total_pages=')
+  @JsonKey(name: "total_pages=")
   int? get totalPages => throw _privateConstructorUsedError;
-  @JsonKey(name: 'total_records=')
+  @JsonKey(name: "total_records=")
   int? get totalRecords => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,11 +49,11 @@ abstract class $PaginationCopyWith<$Res> {
       _$PaginationCopyWithImpl<$Res, Pagination>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'per_page') int perPage,
-      @JsonKey(name: 'current_page') int currentPage,
-      @JsonKey(name: 'next_page') int? nextPage,
-      @JsonKey(name: 'total_pages=') int? totalPages,
-      @JsonKey(name: 'total_records=') int? totalRecords});
+      {@JsonKey(name: "per_page") int perPage,
+      @JsonKey(name: "current_page") int currentPage,
+      @JsonKey(name: "next_page") int? nextPage,
+      @JsonKey(name: "total_pages=") int? totalPages,
+      @JsonKey(name: "total_records=") int? totalRecords});
 }
 
 /// @nodoc
@@ -109,11 +109,11 @@ abstract class _$$PaginationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'per_page') int perPage,
-      @JsonKey(name: 'current_page') int currentPage,
-      @JsonKey(name: 'next_page') int? nextPage,
-      @JsonKey(name: 'total_pages=') int? totalPages,
-      @JsonKey(name: 'total_records=') int? totalRecords});
+      {@JsonKey(name: "per_page") int perPage,
+      @JsonKey(name: "current_page") int currentPage,
+      @JsonKey(name: "next_page") int? nextPage,
+      @JsonKey(name: "total_pages=") int? totalPages,
+      @JsonKey(name: "total_records=") int? totalRecords});
 }
 
 /// @nodoc
@@ -162,11 +162,11 @@ class __$$PaginationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PaginationImpl extends _Pagination {
   const _$PaginationImpl(
-      {@JsonKey(name: 'per_page') this.perPage = 10,
-      @JsonKey(name: 'current_page') this.currentPage = 1,
-      @JsonKey(name: 'next_page') required this.nextPage,
-      @JsonKey(name: 'total_pages=') required this.totalPages,
-      @JsonKey(name: 'total_records=') required this.totalRecords})
+      {@JsonKey(name: "per_page") this.perPage = 10,
+      @JsonKey(name: "current_page") this.currentPage = 1,
+      @JsonKey(name: "next_page") required this.nextPage,
+      @JsonKey(name: "total_pages=") required this.totalPages,
+      @JsonKey(name: "total_records=") required this.totalRecords})
       : super._();
 
   factory _$PaginationImpl.fromJson(Map<String, dynamic> json) =>
@@ -174,23 +174,23 @@ class _$PaginationImpl extends _Pagination {
 
   /// Entries per api call
   @override
-  @JsonKey(name: 'per_page')
+  @JsonKey(name: "per_page")
   final int perPage;
   @override
-  @JsonKey(name: 'current_page')
+  @JsonKey(name: "current_page")
   final int currentPage;
 
   /// Next page in paginated result
   @override
-  @JsonKey(name: 'next_page')
+  @JsonKey(name: "next_page")
   final int? nextPage;
 
   /// Total number of pages
   @override
-  @JsonKey(name: 'total_pages=')
+  @JsonKey(name: "total_pages=")
   final int? totalPages;
   @override
-  @JsonKey(name: 'total_records=')
+  @JsonKey(name: "total_records=")
   final int? totalRecords;
 
   @override
@@ -235,11 +235,11 @@ class _$PaginationImpl extends _Pagination {
 
 abstract class _Pagination extends Pagination {
   const factory _Pagination(
-          {@JsonKey(name: 'per_page') final int perPage,
-          @JsonKey(name: 'current_page') final int currentPage,
-          @JsonKey(name: 'next_page') required final int? nextPage,
-          @JsonKey(name: 'total_pages=') required final int? totalPages,
-          @JsonKey(name: 'total_records=') required final int? totalRecords}) =
+          {@JsonKey(name: "per_page") final int perPage,
+          @JsonKey(name: "current_page") final int currentPage,
+          @JsonKey(name: "next_page") required final int? nextPage,
+          @JsonKey(name: "total_pages=") required final int? totalPages,
+          @JsonKey(name: "total_records=") required final int? totalRecords}) =
       _$PaginationImpl;
   const _Pagination._() : super._();
 
@@ -249,23 +249,23 @@ abstract class _Pagination extends Pagination {
   @override
 
   /// Entries per api call
-  @JsonKey(name: 'per_page')
+  @JsonKey(name: "per_page")
   int get perPage;
   @override
-  @JsonKey(name: 'current_page')
+  @JsonKey(name: "current_page")
   int get currentPage;
   @override
 
   /// Next page in paginated result
-  @JsonKey(name: 'next_page')
+  @JsonKey(name: "next_page")
   int? get nextPage;
   @override
 
   /// Total number of pages
-  @JsonKey(name: 'total_pages=')
+  @JsonKey(name: "total_pages=")
   int? get totalPages;
   @override
-  @JsonKey(name: 'total_records=')
+  @JsonKey(name: "total_records=")
   int? get totalRecords;
   @override
   @JsonKey(ignore: true)

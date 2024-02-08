@@ -20,82 +20,82 @@ Verse _$VerseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Verse {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
   /// Chapter number of this verse
-  @JsonKey(name: 'chapter_id')
-  int get chapterId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "chapter_id")
+  int? get chapterId => throw _privateConstructorUsedError;
+  @JsonKey(name: "verse_number")
   int get verseNumber => throw _privateConstructorUsedError;
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_index')
-  int get verseIndex => throw _privateConstructorUsedError;
+  @JsonKey(name: "verse_index")
+  int? get verseIndex => throw _privateConstructorUsedError;
 
   /// Ayah text in Uthmani Script.
   ///
   /// Uthmani script is an old-fashion script used by the third Caliph, Uthman, to produce the first standard quran manuscript.
-  @JsonKey(name: 'text_uthmani')
-  String get textUthmani => throw _privateConstructorUsedError;
+  @JsonKey(name: "text_uthmani")
+  String? get textUthmani => throw _privateConstructorUsedError;
 
   /// Uthmani script diacritic marks
-  @JsonKey(name: 'text_uthmani_simple')
-  String get textUthmaniSimple => throw _privateConstructorUsedError;
+  @JsonKey(name: "text_uthmani_simple")
+  String? get textUthmaniSimple => throw _privateConstructorUsedError;
 
   /// Ayah text in Imla'ei script.
   ///
   /// Imla'ei script, is the modern Arabic writing style which is currently in use.
-  @JsonKey(name: 'text_imlaei')
-  String get textImlaei => throw _privateConstructorUsedError;
-  @JsonKey(name: 'text_imlaei_simple')
-  String get textImlaeiSimple => throw _privateConstructorUsedError;
-  @JsonKey(name: 'text_indopak')
-  String get textIndopak => throw _privateConstructorUsedError;
-  @JsonKey(name: 'text_uthmani_tajweed')
-  String get textUthmaniTajweed => throw _privateConstructorUsedError;
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "text_imlaei")
+  String? get textImlaei => throw _privateConstructorUsedError;
+  @JsonKey(name: "text_imlaei_simple")
+  String? get textImlaeiSimple => throw _privateConstructorUsedError;
+  @JsonKey(name: "text_indopak")
+  String? get textIndopak => throw _privateConstructorUsedError;
+  @JsonKey(name: "text_uthmani_tajweed")
+  String? get textUthmaniTajweed => throw _privateConstructorUsedError;
+  @JsonKey(name: "juz_number")
   int get juzNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int get hizbNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'rub_number')
+  @JsonKey(name: "rub_number")
   int get rubNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sajdah_type')
+  @JsonKey(name: "sajdah_type")
   Object? get sajdahType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sajdah_number')
+  @JsonKey(name: "sajdah_number")
   Object? get sajdahNumber => throw _privateConstructorUsedError;
 
   /// page_number is deperacted, please use `v1_page` instead.
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  String get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_width')
-  int get imageWidth => throw _privateConstructorUsedError;
-  @JsonKey(name: 'words')
-  List<Word> get words => throw _privateConstructorUsedError;
-  @JsonKey(name: 'audio')
+  @JsonKey(name: "image_url")
+  String? get imageUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: "image_width")
+  int? get imageWidth => throw _privateConstructorUsedError;
+  @JsonKey(name: "words")
+  List<Word>? get words => throw _privateConstructorUsedError;
+  @JsonKey(name: "audio")
   Object? get audio => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translations')
-  List<Translation> get translations => throw _privateConstructorUsedError;
+  @JsonKey(name: "translations")
+  List<Translation>? get translations => throw _privateConstructorUsedError;
 
   /// Glyphs codes for QCF v1 fonts
-  @JsonKey(name: 'code_v1')
-  String get codeV1 => throw _privateConstructorUsedError;
+  @JsonKey(name: "code_v1")
+  String? get codeV1 => throw _privateConstructorUsedError;
 
   /// Glyphs codes for QCF v2 fonts
-  @JsonKey(name: 'code_v2')
-  String get codeV2 => throw _privateConstructorUsedError;
+  @JsonKey(name: "code_v2")
+  String? get codeV2 => throw _privateConstructorUsedError;
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this ayah using v1 glyph codes.
-  @JsonKey(name: 'v1_page')
-  int get v1Page => throw _privateConstructorUsedError;
+  @JsonKey(name: "v1_page")
+  int? get v1Page => throw _privateConstructorUsedError;
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
-  @JsonKey(name: 'v2_page')
-  int get v2Page => throw _privateConstructorUsedError;
+  @JsonKey(name: "v2_page")
+  int? get v2Page => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -108,32 +108,34 @@ abstract class $VerseCopyWith<$Res> {
       _$VerseCopyWithImpl<$Res, Verse>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'verse_index') int verseIndex,
-      @JsonKey(name: 'text_uthmani') String textUthmani,
-      @JsonKey(name: 'text_uthmani_simple') String textUthmaniSimple,
-      @JsonKey(name: 'text_imlaei') String textImlaei,
-      @JsonKey(name: 'text_imlaei_simple') String textImlaeiSimple,
-      @JsonKey(name: 'text_indopak') String textIndopak,
-      @JsonKey(name: 'text_uthmani_tajweed') String textUthmaniTajweed,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'hizb_number') int hizbNumber,
-      @JsonKey(name: 'rub_number') int rubNumber,
-      @JsonKey(name: 'sajdah_type') Object? sajdahType,
-      @JsonKey(name: 'sajdah_number') Object? sajdahNumber,
-      @JsonKey(name: 'page_number') int pageNumber,
-      @JsonKey(name: 'image_url') String imageUrl,
-      @JsonKey(name: 'image_width') int imageWidth,
-      @JsonKey(name: 'words') List<Word> words,
-      @JsonKey(name: 'audio') Object? audio,
-      @JsonKey(name: 'translations') List<Translation> translations,
-      @JsonKey(name: 'code_v1') String codeV1,
-      @JsonKey(name: 'code_v2') String codeV2,
-      @JsonKey(name: 'v1_page') int v1Page,
-      @JsonKey(name: 'v2_page') int v2Page});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "chapter_id") int? chapterId,
+      @JsonKey(name: "verse_number") int verseNumber,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "verse_index") int? verseIndex,
+      @JsonKey(name: "text_uthmani") String? textUthmani,
+      @JsonKey(name: "text_uthmani_simple") String? textUthmaniSimple,
+      @JsonKey(name: "text_imlaei") String? textImlaei,
+      @JsonKey(name: "text_imlaei_simple") String? textImlaeiSimple,
+      @JsonKey(name: "text_indopak") String? textIndopak,
+      @JsonKey(name: "text_uthmani_tajweed") String? textUthmaniTajweed,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "hizb_number") int hizbNumber,
+      @JsonKey(name: "rub_number") int rubNumber,
+      @JsonKey(name: "sajdah_type") Object? sajdahType,
+      @JsonKey(name: "sajdah_number") Object? sajdahNumber,
+      @JsonKey(name: "page_number") int pageNumber,
+      @JsonKey(name: "image_url") String? imageUrl,
+      @JsonKey(name: "image_width") int? imageWidth,
+      @JsonKey(name: "words") List<Word>? words,
+      @JsonKey(name: "audio") Object? audio,
+      @JsonKey(name: "translations") List<Translation>? translations,
+      @JsonKey(name: "code_v1") String? codeV1,
+      @JsonKey(name: "code_v2") String? codeV2,
+      @JsonKey(name: "v1_page") int? v1Page,
+      @JsonKey(name: "v2_page") int? v2Page});
+
+  $VerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -150,41 +152,41 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
   @override
   $Res call({
     Object? id = null,
-    Object? chapterId = null,
+    Object? chapterId = freezed,
     Object? verseNumber = null,
     Object? verseKey = null,
-    Object? verseIndex = null,
-    Object? textUthmani = null,
-    Object? textUthmaniSimple = null,
-    Object? textImlaei = null,
-    Object? textImlaeiSimple = null,
-    Object? textIndopak = null,
-    Object? textUthmaniTajweed = null,
+    Object? verseIndex = freezed,
+    Object? textUthmani = freezed,
+    Object? textUthmaniSimple = freezed,
+    Object? textImlaei = freezed,
+    Object? textImlaeiSimple = freezed,
+    Object? textIndopak = freezed,
+    Object? textUthmaniTajweed = freezed,
     Object? juzNumber = null,
     Object? hizbNumber = null,
     Object? rubNumber = null,
     Object? sajdahType = freezed,
     Object? sajdahNumber = freezed,
     Object? pageNumber = null,
-    Object? imageUrl = null,
-    Object? imageWidth = null,
-    Object? words = null,
+    Object? imageUrl = freezed,
+    Object? imageWidth = freezed,
+    Object? words = freezed,
     Object? audio = freezed,
-    Object? translations = null,
-    Object? codeV1 = null,
-    Object? codeV2 = null,
-    Object? v1Page = null,
-    Object? v2Page = null,
+    Object? translations = freezed,
+    Object? codeV1 = freezed,
+    Object? codeV2 = freezed,
+    Object? v1Page = freezed,
+    Object? v2Page = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      chapterId: null == chapterId
+      chapterId: freezed == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       verseNumber: null == verseNumber
           ? _value.verseNumber
           : verseNumber // ignore: cast_nullable_to_non_nullable
@@ -193,34 +195,34 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
               as VerseKey,
-      verseIndex: null == verseIndex
+      verseIndex: freezed == verseIndex
           ? _value.verseIndex
           : verseIndex // ignore: cast_nullable_to_non_nullable
-              as int,
-      textUthmani: null == textUthmani
+              as int?,
+      textUthmani: freezed == textUthmani
           ? _value.textUthmani
           : textUthmani // ignore: cast_nullable_to_non_nullable
-              as String,
-      textUthmaniSimple: null == textUthmaniSimple
+              as String?,
+      textUthmaniSimple: freezed == textUthmaniSimple
           ? _value.textUthmaniSimple
           : textUthmaniSimple // ignore: cast_nullable_to_non_nullable
-              as String,
-      textImlaei: null == textImlaei
+              as String?,
+      textImlaei: freezed == textImlaei
           ? _value.textImlaei
           : textImlaei // ignore: cast_nullable_to_non_nullable
-              as String,
-      textImlaeiSimple: null == textImlaeiSimple
+              as String?,
+      textImlaeiSimple: freezed == textImlaeiSimple
           ? _value.textImlaeiSimple
           : textImlaeiSimple // ignore: cast_nullable_to_non_nullable
-              as String,
-      textIndopak: null == textIndopak
+              as String?,
+      textIndopak: freezed == textIndopak
           ? _value.textIndopak
           : textIndopak // ignore: cast_nullable_to_non_nullable
-              as String,
-      textUthmaniTajweed: null == textUthmaniTajweed
+              as String?,
+      textUthmaniTajweed: freezed == textUthmaniTajweed
           ? _value.textUthmaniTajweed
           : textUthmaniTajweed // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       juzNumber: null == juzNumber
           ? _value.juzNumber
           : juzNumber // ignore: cast_nullable_to_non_nullable
@@ -240,40 +242,48 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageWidth: null == imageWidth
+              as String?,
+      imageWidth: freezed == imageWidth
           ? _value.imageWidth
           : imageWidth // ignore: cast_nullable_to_non_nullable
-              as int,
-      words: null == words
+              as int?,
+      words: freezed == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Word>,
+              as List<Word>?,
       audio: freezed == audio ? _value.audio : audio,
-      translations: null == translations
+      translations: freezed == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
-              as List<Translation>,
-      codeV1: null == codeV1
+              as List<Translation>?,
+      codeV1: freezed == codeV1
           ? _value.codeV1
           : codeV1 // ignore: cast_nullable_to_non_nullable
-              as String,
-      codeV2: null == codeV2
+              as String?,
+      codeV2: freezed == codeV2
           ? _value.codeV2
           : codeV2 // ignore: cast_nullable_to_non_nullable
-              as String,
-      v1Page: null == v1Page
+              as String?,
+      v1Page: freezed == v1Page
           ? _value.v1Page
           : v1Page // ignore: cast_nullable_to_non_nullable
-              as int,
-      v2Page: null == v2Page
+              as int?,
+      v2Page: freezed == v2Page
           ? _value.v2Page
           : v2Page // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VerseKeyCopyWith<$Res> get verseKey {
+    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+      return _then(_value.copyWith(verseKey: value) as $Val);
+    });
   }
 }
 
@@ -285,32 +295,35 @@ abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'verse_number') int verseNumber,
-      @JsonKey(name: 'verse_key') VerseKey verseKey,
-      @JsonKey(name: 'verse_index') int verseIndex,
-      @JsonKey(name: 'text_uthmani') String textUthmani,
-      @JsonKey(name: 'text_uthmani_simple') String textUthmaniSimple,
-      @JsonKey(name: 'text_imlaei') String textImlaei,
-      @JsonKey(name: 'text_imlaei_simple') String textImlaeiSimple,
-      @JsonKey(name: 'text_indopak') String textIndopak,
-      @JsonKey(name: 'text_uthmani_tajweed') String textUthmaniTajweed,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'hizb_number') int hizbNumber,
-      @JsonKey(name: 'rub_number') int rubNumber,
-      @JsonKey(name: 'sajdah_type') Object? sajdahType,
-      @JsonKey(name: 'sajdah_number') Object? sajdahNumber,
-      @JsonKey(name: 'page_number') int pageNumber,
-      @JsonKey(name: 'image_url') String imageUrl,
-      @JsonKey(name: 'image_width') int imageWidth,
-      @JsonKey(name: 'words') List<Word> words,
-      @JsonKey(name: 'audio') Object? audio,
-      @JsonKey(name: 'translations') List<Translation> translations,
-      @JsonKey(name: 'code_v1') String codeV1,
-      @JsonKey(name: 'code_v2') String codeV2,
-      @JsonKey(name: 'v1_page') int v1Page,
-      @JsonKey(name: 'v2_page') int v2Page});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "chapter_id") int? chapterId,
+      @JsonKey(name: "verse_number") int verseNumber,
+      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "verse_index") int? verseIndex,
+      @JsonKey(name: "text_uthmani") String? textUthmani,
+      @JsonKey(name: "text_uthmani_simple") String? textUthmaniSimple,
+      @JsonKey(name: "text_imlaei") String? textImlaei,
+      @JsonKey(name: "text_imlaei_simple") String? textImlaeiSimple,
+      @JsonKey(name: "text_indopak") String? textIndopak,
+      @JsonKey(name: "text_uthmani_tajweed") String? textUthmaniTajweed,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "hizb_number") int hizbNumber,
+      @JsonKey(name: "rub_number") int rubNumber,
+      @JsonKey(name: "sajdah_type") Object? sajdahType,
+      @JsonKey(name: "sajdah_number") Object? sajdahNumber,
+      @JsonKey(name: "page_number") int pageNumber,
+      @JsonKey(name: "image_url") String? imageUrl,
+      @JsonKey(name: "image_width") int? imageWidth,
+      @JsonKey(name: "words") List<Word>? words,
+      @JsonKey(name: "audio") Object? audio,
+      @JsonKey(name: "translations") List<Translation>? translations,
+      @JsonKey(name: "code_v1") String? codeV1,
+      @JsonKey(name: "code_v2") String? codeV2,
+      @JsonKey(name: "v1_page") int? v1Page,
+      @JsonKey(name: "v2_page") int? v2Page});
+
+  @override
+  $VerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -325,41 +338,41 @@ class __$$VerseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? chapterId = null,
+    Object? chapterId = freezed,
     Object? verseNumber = null,
     Object? verseKey = null,
-    Object? verseIndex = null,
-    Object? textUthmani = null,
-    Object? textUthmaniSimple = null,
-    Object? textImlaei = null,
-    Object? textImlaeiSimple = null,
-    Object? textIndopak = null,
-    Object? textUthmaniTajweed = null,
+    Object? verseIndex = freezed,
+    Object? textUthmani = freezed,
+    Object? textUthmaniSimple = freezed,
+    Object? textImlaei = freezed,
+    Object? textImlaeiSimple = freezed,
+    Object? textIndopak = freezed,
+    Object? textUthmaniTajweed = freezed,
     Object? juzNumber = null,
     Object? hizbNumber = null,
     Object? rubNumber = null,
     Object? sajdahType = freezed,
     Object? sajdahNumber = freezed,
     Object? pageNumber = null,
-    Object? imageUrl = null,
-    Object? imageWidth = null,
-    Object? words = null,
+    Object? imageUrl = freezed,
+    Object? imageWidth = freezed,
+    Object? words = freezed,
     Object? audio = freezed,
-    Object? translations = null,
-    Object? codeV1 = null,
-    Object? codeV2 = null,
-    Object? v1Page = null,
-    Object? v2Page = null,
+    Object? translations = freezed,
+    Object? codeV1 = freezed,
+    Object? codeV2 = freezed,
+    Object? v1Page = freezed,
+    Object? v2Page = freezed,
   }) {
     return _then(_$VerseImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      chapterId: null == chapterId
+      chapterId: freezed == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       verseNumber: null == verseNumber
           ? _value.verseNumber
           : verseNumber // ignore: cast_nullable_to_non_nullable
@@ -368,34 +381,34 @@ class __$$VerseImplCopyWithImpl<$Res>
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
               as VerseKey,
-      verseIndex: null == verseIndex
+      verseIndex: freezed == verseIndex
           ? _value.verseIndex
           : verseIndex // ignore: cast_nullable_to_non_nullable
-              as int,
-      textUthmani: null == textUthmani
+              as int?,
+      textUthmani: freezed == textUthmani
           ? _value.textUthmani
           : textUthmani // ignore: cast_nullable_to_non_nullable
-              as String,
-      textUthmaniSimple: null == textUthmaniSimple
+              as String?,
+      textUthmaniSimple: freezed == textUthmaniSimple
           ? _value.textUthmaniSimple
           : textUthmaniSimple // ignore: cast_nullable_to_non_nullable
-              as String,
-      textImlaei: null == textImlaei
+              as String?,
+      textImlaei: freezed == textImlaei
           ? _value.textImlaei
           : textImlaei // ignore: cast_nullable_to_non_nullable
-              as String,
-      textImlaeiSimple: null == textImlaeiSimple
+              as String?,
+      textImlaeiSimple: freezed == textImlaeiSimple
           ? _value.textImlaeiSimple
           : textImlaeiSimple // ignore: cast_nullable_to_non_nullable
-              as String,
-      textIndopak: null == textIndopak
+              as String?,
+      textIndopak: freezed == textIndopak
           ? _value.textIndopak
           : textIndopak // ignore: cast_nullable_to_non_nullable
-              as String,
-      textUthmaniTajweed: null == textUthmaniTajweed
+              as String?,
+      textUthmaniTajweed: freezed == textUthmaniTajweed
           ? _value.textUthmaniTajweed
           : textUthmaniTajweed // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       juzNumber: null == juzNumber
           ? _value.juzNumber
           : juzNumber // ignore: cast_nullable_to_non_nullable
@@ -415,39 +428,39 @@ class __$$VerseImplCopyWithImpl<$Res>
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageWidth: null == imageWidth
+              as String?,
+      imageWidth: freezed == imageWidth
           ? _value.imageWidth
           : imageWidth // ignore: cast_nullable_to_non_nullable
-              as int,
-      words: null == words
+              as int?,
+      words: freezed == words
           ? _value._words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Word>,
+              as List<Word>?,
       audio: freezed == audio ? _value.audio : audio,
-      translations: null == translations
+      translations: freezed == translations
           ? _value._translations
           : translations // ignore: cast_nullable_to_non_nullable
-              as List<Translation>,
-      codeV1: null == codeV1
+              as List<Translation>?,
+      codeV1: freezed == codeV1
           ? _value.codeV1
           : codeV1 // ignore: cast_nullable_to_non_nullable
-              as String,
-      codeV2: null == codeV2
+              as String?,
+      codeV2: freezed == codeV2
           ? _value.codeV2
           : codeV2 // ignore: cast_nullable_to_non_nullable
-              as String,
-      v1Page: null == v1Page
+              as String?,
+      v1Page: freezed == v1Page
           ? _value.v1Page
           : v1Page // ignore: cast_nullable_to_non_nullable
-              as int,
-      v2Page: null == v2Page
+              as int?,
+      v2Page: freezed == v2Page
           ? _value.v2Page
           : v2Page // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -456,33 +469,33 @@ class __$$VerseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$VerseImpl extends _Verse {
   const _$VerseImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'chapter_id') required this.chapterId,
-      @JsonKey(name: 'verse_number') required this.verseNumber,
-      @JsonKey(name: 'verse_key') required this.verseKey,
-      @JsonKey(name: 'verse_index') required this.verseIndex,
-      @JsonKey(name: 'text_uthmani') required this.textUthmani,
-      @JsonKey(name: 'text_uthmani_simple') required this.textUthmaniSimple,
-      @JsonKey(name: 'text_imlaei') required this.textImlaei,
-      @JsonKey(name: 'text_imlaei_simple') required this.textImlaeiSimple,
-      @JsonKey(name: 'text_indopak') required this.textIndopak,
-      @JsonKey(name: 'text_uthmani_tajweed') required this.textUthmaniTajweed,
-      @JsonKey(name: 'juz_number') required this.juzNumber,
-      @JsonKey(name: 'hizb_number') required this.hizbNumber,
-      @JsonKey(name: 'rub_number') required this.rubNumber,
-      @JsonKey(name: 'sajdah_type') required this.sajdahType,
-      @JsonKey(name: 'sajdah_number') required this.sajdahNumber,
-      @JsonKey(name: 'page_number') required this.pageNumber,
-      @JsonKey(name: 'image_url') required this.imageUrl,
-      @JsonKey(name: 'image_width') required this.imageWidth,
-      @JsonKey(name: 'words') required final List<Word> words,
-      @JsonKey(name: 'audio') required this.audio,
-      @JsonKey(name: 'translations')
-      required final List<Translation> translations,
-      @JsonKey(name: 'code_v1') required this.codeV1,
-      @JsonKey(name: 'code_v2') required this.codeV2,
-      @JsonKey(name: 'v1_page') required this.v1Page,
-      @JsonKey(name: 'v2_page') required this.v2Page})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "chapter_id") required this.chapterId,
+      @JsonKey(name: "verse_number") required this.verseNumber,
+      @JsonKey(name: "verse_key") required this.verseKey,
+      @JsonKey(name: "verse_index") required this.verseIndex,
+      @JsonKey(name: "text_uthmani") required this.textUthmani,
+      @JsonKey(name: "text_uthmani_simple") required this.textUthmaniSimple,
+      @JsonKey(name: "text_imlaei") required this.textImlaei,
+      @JsonKey(name: "text_imlaei_simple") required this.textImlaeiSimple,
+      @JsonKey(name: "text_indopak") required this.textIndopak,
+      @JsonKey(name: "text_uthmani_tajweed") required this.textUthmaniTajweed,
+      @JsonKey(name: "juz_number") required this.juzNumber,
+      @JsonKey(name: "hizb_number") required this.hizbNumber,
+      @JsonKey(name: "rub_number") required this.rubNumber,
+      @JsonKey(name: "sajdah_type") required this.sajdahType,
+      @JsonKey(name: "sajdah_number") required this.sajdahNumber,
+      @JsonKey(name: "page_number") required this.pageNumber,
+      @JsonKey(name: "image_url") required this.imageUrl,
+      @JsonKey(name: "image_width") required this.imageWidth,
+      @JsonKey(name: "words") required final List<Word>? words,
+      @JsonKey(name: "audio") required this.audio,
+      @JsonKey(name: "translations")
+      required final List<Translation>? translations,
+      @JsonKey(name: "code_v1") required this.codeV1,
+      @JsonKey(name: "code_v2") required this.codeV2,
+      @JsonKey(name: "v1_page") required this.v1Page,
+      @JsonKey(name: "v2_page") required this.v2Page})
       : _words = words,
         _translations = translations,
         super._();
@@ -491,118 +504,122 @@ class _$VerseImpl extends _Verse {
       _$$VerseImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
 
   /// Chapter number of this verse
   @override
-  @JsonKey(name: 'chapter_id')
-  final int chapterId;
+  @JsonKey(name: "chapter_id")
+  final int? chapterId;
   @override
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   final int verseNumber;
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @override
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   final VerseKey verseKey;
   @override
-  @JsonKey(name: 'verse_index')
-  final int verseIndex;
+  @JsonKey(name: "verse_index")
+  final int? verseIndex;
 
   /// Ayah text in Uthmani Script.
   ///
   /// Uthmani script is an old-fashion script used by the third Caliph, Uthman, to produce the first standard quran manuscript.
   @override
-  @JsonKey(name: 'text_uthmani')
-  final String textUthmani;
+  @JsonKey(name: "text_uthmani")
+  final String? textUthmani;
 
   /// Uthmani script diacritic marks
   @override
-  @JsonKey(name: 'text_uthmani_simple')
-  final String textUthmaniSimple;
+  @JsonKey(name: "text_uthmani_simple")
+  final String? textUthmaniSimple;
 
   /// Ayah text in Imla'ei script.
   ///
   /// Imla'ei script, is the modern Arabic writing style which is currently in use.
   @override
-  @JsonKey(name: 'text_imlaei')
-  final String textImlaei;
+  @JsonKey(name: "text_imlaei")
+  final String? textImlaei;
   @override
-  @JsonKey(name: 'text_imlaei_simple')
-  final String textImlaeiSimple;
+  @JsonKey(name: "text_imlaei_simple")
+  final String? textImlaeiSimple;
   @override
-  @JsonKey(name: 'text_indopak')
-  final String textIndopak;
+  @JsonKey(name: "text_indopak")
+  final String? textIndopak;
   @override
-  @JsonKey(name: 'text_uthmani_tajweed')
-  final String textUthmaniTajweed;
+  @JsonKey(name: "text_uthmani_tajweed")
+  final String? textUthmaniTajweed;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   final int juzNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   final int hizbNumber;
   @override
-  @JsonKey(name: 'rub_number')
+  @JsonKey(name: "rub_number")
   final int rubNumber;
   @override
-  @JsonKey(name: 'sajdah_type')
+  @JsonKey(name: "sajdah_type")
   final Object? sajdahType;
   @override
-  @JsonKey(name: 'sajdah_number')
+  @JsonKey(name: "sajdah_number")
   final Object? sajdahNumber;
 
   /// page_number is deperacted, please use `v1_page` instead.
   @override
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   final int pageNumber;
   @override
-  @JsonKey(name: 'image_url')
-  final String imageUrl;
+  @JsonKey(name: "image_url")
+  final String? imageUrl;
   @override
-  @JsonKey(name: 'image_width')
-  final int imageWidth;
-  final List<Word> _words;
+  @JsonKey(name: "image_width")
+  final int? imageWidth;
+  final List<Word>? _words;
   @override
-  @JsonKey(name: 'words')
-  List<Word> get words {
+  @JsonKey(name: "words")
+  List<Word>? get words {
+    final value = _words;
+    if (value == null) return null;
     if (_words is EqualUnmodifiableListView) return _words;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_words);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  @JsonKey(name: 'audio')
+  @JsonKey(name: "audio")
   final Object? audio;
-  final List<Translation> _translations;
+  final List<Translation>? _translations;
   @override
-  @JsonKey(name: 'translations')
-  List<Translation> get translations {
+  @JsonKey(name: "translations")
+  List<Translation>? get translations {
+    final value = _translations;
+    if (value == null) return null;
     if (_translations is EqualUnmodifiableListView) return _translations;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_translations);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Glyphs codes for QCF v1 fonts
   @override
-  @JsonKey(name: 'code_v1')
-  final String codeV1;
+  @JsonKey(name: "code_v1")
+  final String? codeV1;
 
   /// Glyphs codes for QCF v2 fonts
   @override
-  @JsonKey(name: 'code_v2')
-  final String codeV2;
+  @JsonKey(name: "code_v2")
+  final String? codeV2;
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this ayah using v1 glyph codes.
   @override
-  @JsonKey(name: 'v1_page')
-  final int v1Page;
+  @JsonKey(name: "v1_page")
+  final int? v1Page;
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
   @override
-  @JsonKey(name: 'v2_page')
-  final int v2Page;
+  @JsonKey(name: "v2_page")
+  final int? v2Page;
 
   @override
   String toString() {
@@ -709,142 +726,142 @@ class _$VerseImpl extends _Verse {
 
 abstract class _Verse extends Verse {
   const factory _Verse(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'chapter_id') required final int chapterId,
-      @JsonKey(name: 'verse_number') required final int verseNumber,
-      @JsonKey(name: 'verse_key') required final VerseKey verseKey,
-      @JsonKey(name: 'verse_index') required final int verseIndex,
-      @JsonKey(name: 'text_uthmani') required final String textUthmani,
-      @JsonKey(name: 'text_uthmani_simple')
-      required final String textUthmaniSimple,
-      @JsonKey(name: 'text_imlaei') required final String textImlaei,
-      @JsonKey(name: 'text_imlaei_simple')
-      required final String textImlaeiSimple,
-      @JsonKey(name: 'text_indopak') required final String textIndopak,
-      @JsonKey(name: 'text_uthmani_tajweed')
-      required final String textUthmaniTajweed,
-      @JsonKey(name: 'juz_number') required final int juzNumber,
-      @JsonKey(name: 'hizb_number') required final int hizbNumber,
-      @JsonKey(name: 'rub_number') required final int rubNumber,
-      @JsonKey(name: 'sajdah_type') required final Object? sajdahType,
-      @JsonKey(name: 'sajdah_number') required final Object? sajdahNumber,
-      @JsonKey(name: 'page_number') required final int pageNumber,
-      @JsonKey(name: 'image_url') required final String imageUrl,
-      @JsonKey(name: 'image_width') required final int imageWidth,
-      @JsonKey(name: 'words') required final List<Word> words,
-      @JsonKey(name: 'audio') required final Object? audio,
-      @JsonKey(name: 'translations')
-      required final List<Translation> translations,
-      @JsonKey(name: 'code_v1') required final String codeV1,
-      @JsonKey(name: 'code_v2') required final String codeV2,
-      @JsonKey(name: 'v1_page') required final int v1Page,
-      @JsonKey(name: 'v2_page') required final int v2Page}) = _$VerseImpl;
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "chapter_id") required final int? chapterId,
+      @JsonKey(name: "verse_number") required final int verseNumber,
+      @JsonKey(name: "verse_key") required final VerseKey verseKey,
+      @JsonKey(name: "verse_index") required final int? verseIndex,
+      @JsonKey(name: "text_uthmani") required final String? textUthmani,
+      @JsonKey(name: "text_uthmani_simple")
+      required final String? textUthmaniSimple,
+      @JsonKey(name: "text_imlaei") required final String? textImlaei,
+      @JsonKey(name: "text_imlaei_simple")
+      required final String? textImlaeiSimple,
+      @JsonKey(name: "text_indopak") required final String? textIndopak,
+      @JsonKey(name: "text_uthmani_tajweed")
+      required final String? textUthmaniTajweed,
+      @JsonKey(name: "juz_number") required final int juzNumber,
+      @JsonKey(name: "hizb_number") required final int hizbNumber,
+      @JsonKey(name: "rub_number") required final int rubNumber,
+      @JsonKey(name: "sajdah_type") required final Object? sajdahType,
+      @JsonKey(name: "sajdah_number") required final Object? sajdahNumber,
+      @JsonKey(name: "page_number") required final int pageNumber,
+      @JsonKey(name: "image_url") required final String? imageUrl,
+      @JsonKey(name: "image_width") required final int? imageWidth,
+      @JsonKey(name: "words") required final List<Word>? words,
+      @JsonKey(name: "audio") required final Object? audio,
+      @JsonKey(name: "translations")
+      required final List<Translation>? translations,
+      @JsonKey(name: "code_v1") required final String? codeV1,
+      @JsonKey(name: "code_v2") required final String? codeV2,
+      @JsonKey(name: "v1_page") required final int? v1Page,
+      @JsonKey(name: "v2_page") required final int? v2Page}) = _$VerseImpl;
   const _Verse._() : super._();
 
   factory _Verse.fromJson(Map<String, dynamic> json) = _$VerseImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
 
   /// Chapter number of this verse
-  @JsonKey(name: 'chapter_id')
-  int get chapterId;
+  @JsonKey(name: "chapter_id")
+  int? get chapterId;
   @override
-  @JsonKey(name: 'verse_number')
+  @JsonKey(name: "verse_number")
   int get verseNumber;
   @override
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
-  @JsonKey(name: 'verse_key')
+  @JsonKey(name: "verse_key")
   VerseKey get verseKey;
   @override
-  @JsonKey(name: 'verse_index')
-  int get verseIndex;
+  @JsonKey(name: "verse_index")
+  int? get verseIndex;
   @override
 
   /// Ayah text in Uthmani Script.
   ///
   /// Uthmani script is an old-fashion script used by the third Caliph, Uthman, to produce the first standard quran manuscript.
-  @JsonKey(name: 'text_uthmani')
-  String get textUthmani;
+  @JsonKey(name: "text_uthmani")
+  String? get textUthmani;
   @override
 
   /// Uthmani script diacritic marks
-  @JsonKey(name: 'text_uthmani_simple')
-  String get textUthmaniSimple;
+  @JsonKey(name: "text_uthmani_simple")
+  String? get textUthmaniSimple;
   @override
 
   /// Ayah text in Imla'ei script.
   ///
   /// Imla'ei script, is the modern Arabic writing style which is currently in use.
-  @JsonKey(name: 'text_imlaei')
-  String get textImlaei;
+  @JsonKey(name: "text_imlaei")
+  String? get textImlaei;
   @override
-  @JsonKey(name: 'text_imlaei_simple')
-  String get textImlaeiSimple;
+  @JsonKey(name: "text_imlaei_simple")
+  String? get textImlaeiSimple;
   @override
-  @JsonKey(name: 'text_indopak')
-  String get textIndopak;
+  @JsonKey(name: "text_indopak")
+  String? get textIndopak;
   @override
-  @JsonKey(name: 'text_uthmani_tajweed')
-  String get textUthmaniTajweed;
+  @JsonKey(name: "text_uthmani_tajweed")
+  String? get textUthmaniTajweed;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber;
   @override
-  @JsonKey(name: 'hizb_number')
+  @JsonKey(name: "hizb_number")
   int get hizbNumber;
   @override
-  @JsonKey(name: 'rub_number')
+  @JsonKey(name: "rub_number")
   int get rubNumber;
   @override
-  @JsonKey(name: 'sajdah_type')
+  @JsonKey(name: "sajdah_type")
   Object? get sajdahType;
   @override
-  @JsonKey(name: 'sajdah_number')
+  @JsonKey(name: "sajdah_number")
   Object? get sajdahNumber;
   @override
 
   /// page_number is deperacted, please use `v1_page` instead.
-  @JsonKey(name: 'page_number')
+  @JsonKey(name: "page_number")
   int get pageNumber;
   @override
-  @JsonKey(name: 'image_url')
-  String get imageUrl;
+  @JsonKey(name: "image_url")
+  String? get imageUrl;
   @override
-  @JsonKey(name: 'image_width')
-  int get imageWidth;
+  @JsonKey(name: "image_width")
+  int? get imageWidth;
   @override
-  @JsonKey(name: 'words')
-  List<Word> get words;
+  @JsonKey(name: "words")
+  List<Word>? get words;
   @override
-  @JsonKey(name: 'audio')
+  @JsonKey(name: "audio")
   Object? get audio;
   @override
-  @JsonKey(name: 'translations')
-  List<Translation> get translations;
+  @JsonKey(name: "translations")
+  List<Translation>? get translations;
   @override
 
   /// Glyphs codes for QCF v1 fonts
-  @JsonKey(name: 'code_v1')
-  String get codeV1;
+  @JsonKey(name: "code_v1")
+  String? get codeV1;
   @override
 
   /// Glyphs codes for QCF v2 fonts
-  @JsonKey(name: 'code_v2')
-  String get codeV2;
+  @JsonKey(name: "code_v2")
+  String? get codeV2;
   @override
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this ayah using v1 glyph codes.
-  @JsonKey(name: 'v1_page')
-  int get v1Page;
+  @JsonKey(name: "v1_page")
+  int? get v1Page;
   @override
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
-  @JsonKey(name: 'v2_page')
-  int get v2Page;
+  @JsonKey(name: "v2_page")
+  int? get v2Page;
   @override
   @JsonKey(ignore: true)
   _$$VerseImplCopyWith<_$VerseImpl> get copyWith =>

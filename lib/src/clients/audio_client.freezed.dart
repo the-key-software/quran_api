@@ -21,19 +21,19 @@ RecitationAudioFilesQueries _$RecitationAudioFilesQueriesFromJson(
 
 /// @nodoc
 mixin _$RecitationAudioFilesQueries {
-  @Query('fields')
+  @Query("fields")
   String? get fields => throw _privateConstructorUsedError;
-  @Query('chapter_number')
+  @Query("chapter_number")
   int? get chapterNumber => throw _privateConstructorUsedError;
-  @Query('juz_number')
+  @Query("juz_number")
   int? get juzNumber => throw _privateConstructorUsedError;
-  @Query('page_number')
+  @Query("page_number")
   int? get pageNumber => throw _privateConstructorUsedError;
-  @Query('hizb_number')
+  @Query("hizb_number")
   int? get hizbNumber => throw _privateConstructorUsedError;
-  @Query('rub_el_hizb_number')
+  @Query("rub_el_hizb_number")
   int? get rubElHizbNumber => throw _privateConstructorUsedError;
-  @Query('verse_key')
+  @Query("verse_key")
   VerseKey? get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,13 +51,15 @@ abstract class $RecitationAudioFilesQueriesCopyWith<$Res> {
           RecitationAudioFilesQueries>;
   @useResult
   $Res call(
-      {@Query('fields') String? fields,
-      @Query('chapter_number') int? chapterNumber,
-      @Query('juz_number') int? juzNumber,
-      @Query('page_number') int? pageNumber,
-      @Query('hizb_number') int? hizbNumber,
-      @Query('rub_el_hizb_number') int? rubElHizbNumber,
-      @Query('verse_key') VerseKey? verseKey});
+      {@Query("fields") String? fields,
+      @Query("chapter_number") int? chapterNumber,
+      @Query("juz_number") int? juzNumber,
+      @Query("page_number") int? pageNumber,
+      @Query("hizb_number") int? hizbNumber,
+      @Query("rub_el_hizb_number") int? rubElHizbNumber,
+      @Query("verse_key") VerseKey? verseKey});
+
+  $VerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -113,6 +115,18 @@ class _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
               as VerseKey?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VerseKeyCopyWith<$Res>? get verseKey {
+    if (_value.verseKey == null) {
+      return null;
+    }
+
+    return $VerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
+      return _then(_value.copyWith(verseKey: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -125,13 +139,16 @@ abstract class _$$RecitationAudioFilesQueriesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@Query('fields') String? fields,
-      @Query('chapter_number') int? chapterNumber,
-      @Query('juz_number') int? juzNumber,
-      @Query('page_number') int? pageNumber,
-      @Query('hizb_number') int? hizbNumber,
-      @Query('rub_el_hizb_number') int? rubElHizbNumber,
-      @Query('verse_key') VerseKey? verseKey});
+      {@Query("fields") String? fields,
+      @Query("chapter_number") int? chapterNumber,
+      @Query("juz_number") int? juzNumber,
+      @Query("page_number") int? pageNumber,
+      @Query("hizb_number") int? hizbNumber,
+      @Query("rub_el_hizb_number") int? rubElHizbNumber,
+      @Query("verse_key") VerseKey? verseKey});
+
+  @override
+  $VerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -193,38 +210,38 @@ class __$$RecitationAudioFilesQueriesImplCopyWithImpl<$Res>
 class _$RecitationAudioFilesQueriesImpl
     implements _RecitationAudioFilesQueries {
   const _$RecitationAudioFilesQueriesImpl(
-      {@Query('fields') this.fields,
-      @Query('chapter_number') this.chapterNumber,
-      @Query('juz_number') this.juzNumber,
-      @Query('page_number') this.pageNumber,
-      @Query('hizb_number') this.hizbNumber,
-      @Query('rub_el_hizb_number') this.rubElHizbNumber,
-      @Query('verse_key') this.verseKey});
+      {@Query("fields") this.fields,
+      @Query("chapter_number") this.chapterNumber,
+      @Query("juz_number") this.juzNumber,
+      @Query("page_number") this.pageNumber,
+      @Query("hizb_number") this.hizbNumber,
+      @Query("rub_el_hizb_number") this.rubElHizbNumber,
+      @Query("verse_key") this.verseKey});
 
   factory _$RecitationAudioFilesQueriesImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$RecitationAudioFilesQueriesImplFromJson(json);
 
   @override
-  @Query('fields')
+  @Query("fields")
   final String? fields;
   @override
-  @Query('chapter_number')
+  @Query("chapter_number")
   final int? chapterNumber;
   @override
-  @Query('juz_number')
+  @Query("juz_number")
   final int? juzNumber;
   @override
-  @Query('page_number')
+  @Query("page_number")
   final int? pageNumber;
   @override
-  @Query('hizb_number')
+  @Query("hizb_number")
   final int? hizbNumber;
   @override
-  @Query('rub_el_hizb_number')
+  @Query("rub_el_hizb_number")
   final int? rubElHizbNumber;
   @override
-  @Query('verse_key')
+  @Query("verse_key")
   final VerseKey? verseKey;
 
   @override
@@ -275,38 +292,38 @@ class _$RecitationAudioFilesQueriesImpl
 abstract class _RecitationAudioFilesQueries
     implements RecitationAudioFilesQueries {
   const factory _RecitationAudioFilesQueries(
-          {@Query('fields') final String? fields,
-          @Query('chapter_number') final int? chapterNumber,
-          @Query('juz_number') final int? juzNumber,
-          @Query('page_number') final int? pageNumber,
-          @Query('hizb_number') final int? hizbNumber,
-          @Query('rub_el_hizb_number') final int? rubElHizbNumber,
-          @Query('verse_key') final VerseKey? verseKey}) =
+          {@Query("fields") final String? fields,
+          @Query("chapter_number") final int? chapterNumber,
+          @Query("juz_number") final int? juzNumber,
+          @Query("page_number") final int? pageNumber,
+          @Query("hizb_number") final int? hizbNumber,
+          @Query("rub_el_hizb_number") final int? rubElHizbNumber,
+          @Query("verse_key") final VerseKey? verseKey}) =
       _$RecitationAudioFilesQueriesImpl;
 
   factory _RecitationAudioFilesQueries.fromJson(Map<String, dynamic> json) =
       _$RecitationAudioFilesQueriesImpl.fromJson;
 
   @override
-  @Query('fields')
+  @Query("fields")
   String? get fields;
   @override
-  @Query('chapter_number')
+  @Query("chapter_number")
   int? get chapterNumber;
   @override
-  @Query('juz_number')
+  @Query("juz_number")
   int? get juzNumber;
   @override
-  @Query('page_number')
+  @Query("page_number")
   int? get pageNumber;
   @override
-  @Query('hizb_number')
+  @Query("hizb_number")
   int? get hizbNumber;
   @override
-  @Query('rub_el_hizb_number')
+  @Query("rub_el_hizb_number")
   int? get rubElHizbNumber;
   @override
-  @Query('verse_key')
+  @Query("verse_key")
   VerseKey? get verseKey;
   @override
   @JsonKey(ignore: true)

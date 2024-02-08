@@ -1,40 +1,28 @@
+import "package:freezed_annotation/freezed_annotation.dart";
+
+part "verse_key.freezed.dart";
+
+@freezed
+
 /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
-class VerseKey {
-  final int chapter;
-  final int verse;
+class VerseKey with _$VerseKey {
+  const VerseKey._();
 
-  const VerseKey({
-    required this.chapter,
-    required this.verse,
-  });
-
-  @override
-  String toString() {
-    return "$chapter:$verse";
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VerseKey &&
-        other.chapter == chapter &&
-        other.verse == verse;
-  }
-
-  @override
-  int get hashCode => chapter.hashCode ^ verse.hashCode;
+  const factory VerseKey({
+    required int ayah,
+    required int surah,
+  }) = _VerseKey;
 
   factory VerseKey.fromJson(String json) {
     final parts = json.split(":");
 
     return VerseKey(
-      chapter: int.parse(parts.first),
-      verse: int.parse(parts.last),
+      ayah: int.parse(parts.first),
+      surah: int.parse(parts.last),
     );
   }
 
   String toJson() {
-    return "$chapter:$verse";
+    return "$ayah:$surah";
   }
 }

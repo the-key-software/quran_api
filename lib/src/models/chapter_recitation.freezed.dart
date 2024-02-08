@@ -21,27 +21,27 @@ ChapterRecitation _$ChapterRecitationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ChapterRecitation {
   /// The Id of the audio file
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
   /// The chapter id
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId => throw _privateConstructorUsedError;
 
   /// The file size in bytes
-  @JsonKey(name: 'file_size')
+  @JsonKey(name: "file_size")
   double get fileSize => throw _privateConstructorUsedError;
 
   /// The format of the file
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   String get format => throw _privateConstructorUsedError;
 
   /// The total number of files
-  @JsonKey(name: 'total_files')
+  @JsonKey(name: "total_files")
   int? get totalFiles => throw _privateConstructorUsedError;
 
   /// The audio file's url
-  @JsonKey(name: 'audio_url')
+  @JsonKey(name: "audio_url")
   String get audioUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,12 +57,12 @@ abstract class $ChapterRecitationCopyWith<$Res> {
       _$ChapterRecitationCopyWithImpl<$Res, ChapterRecitation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'file_size') double fileSize,
-      @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'total_files') int? totalFiles,
-      @JsonKey(name: 'audio_url') String audioUrl});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "file_size") double fileSize,
+      @JsonKey(name: "format") String format,
+      @JsonKey(name: "total_files") int? totalFiles,
+      @JsonKey(name: "audio_url") String audioUrl});
 }
 
 /// @nodoc
@@ -123,12 +123,12 @@ abstract class _$$ChapterRecitationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'file_size') double fileSize,
-      @JsonKey(name: 'format') String format,
-      @JsonKey(name: 'total_files') int? totalFiles,
-      @JsonKey(name: 'audio_url') String audioUrl});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "file_size") double fileSize,
+      @JsonKey(name: "format") String format,
+      @JsonKey(name: "total_files") int? totalFiles,
+      @JsonKey(name: "audio_url") String audioUrl});
 }
 
 /// @nodoc
@@ -182,12 +182,12 @@ class __$$ChapterRecitationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ChapterRecitationImpl extends _ChapterRecitation {
   const _$ChapterRecitationImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'chapter_id') required this.chapterId,
-      @JsonKey(name: 'file_size') required this.fileSize,
-      @JsonKey(name: 'format') required this.format,
-      @JsonKey(name: 'total_files') required this.totalFiles,
-      @JsonKey(name: 'audio_url') required this.audioUrl})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "chapter_id") required this.chapterId,
+      @JsonKey(name: "file_size") required this.fileSize,
+      @JsonKey(name: "format") required this.format,
+      @JsonKey(name: "total_files") required this.totalFiles,
+      @JsonKey(name: "audio_url") required this.audioUrl})
       : super._();
 
   factory _$ChapterRecitationImpl.fromJson(Map<String, dynamic> json) =>
@@ -195,32 +195,32 @@ class _$ChapterRecitationImpl extends _ChapterRecitation {
 
   /// The Id of the audio file
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
 
   /// The chapter id
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   final int chapterId;
 
   /// The file size in bytes
   @override
-  @JsonKey(name: 'file_size')
+  @JsonKey(name: "file_size")
   final double fileSize;
 
   /// The format of the file
   @override
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   final String format;
 
   /// The total number of files
   @override
-  @JsonKey(name: 'total_files')
+  @JsonKey(name: "total_files")
   final int? totalFiles;
 
   /// The audio file's url
   @override
-  @JsonKey(name: 'audio_url')
+  @JsonKey(name: "audio_url")
   final String audioUrl;
 
   @override
@@ -267,12 +267,12 @@ class _$ChapterRecitationImpl extends _ChapterRecitation {
 
 abstract class _ChapterRecitation extends ChapterRecitation {
   const factory _ChapterRecitation(
-          {@JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'chapter_id') required final int chapterId,
-          @JsonKey(name: 'file_size') required final double fileSize,
-          @JsonKey(name: 'format') required final String format,
-          @JsonKey(name: 'total_files') required final int? totalFiles,
-          @JsonKey(name: 'audio_url') required final String audioUrl}) =
+          {@JsonKey(name: "id") required final int id,
+          @JsonKey(name: "chapter_id") required final int chapterId,
+          @JsonKey(name: "file_size") required final double fileSize,
+          @JsonKey(name: "format") required final String format,
+          @JsonKey(name: "total_files") required final int? totalFiles,
+          @JsonKey(name: "audio_url") required final String audioUrl}) =
       _$ChapterRecitationImpl;
   const _ChapterRecitation._() : super._();
 
@@ -282,32 +282,32 @@ abstract class _ChapterRecitation extends ChapterRecitation {
   @override
 
   /// The Id of the audio file
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
 
   /// The chapter id
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId;
   @override
 
   /// The file size in bytes
-  @JsonKey(name: 'file_size')
+  @JsonKey(name: "file_size")
   double get fileSize;
   @override
 
   /// The format of the file
-  @JsonKey(name: 'format')
+  @JsonKey(name: "format")
   String get format;
   @override
 
   /// The total number of files
-  @JsonKey(name: 'total_files')
+  @JsonKey(name: "total_files")
   int? get totalFiles;
   @override
 
   /// The audio file's url
-  @JsonKey(name: 'audio_url')
+  @JsonKey(name: "audio_url")
   String get audioUrl;
   @override
   @JsonKey(ignore: true)

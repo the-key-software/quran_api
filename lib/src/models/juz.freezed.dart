@@ -20,23 +20,23 @@ Juz _$JuzFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Juz {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber => throw _privateConstructorUsedError;
 
   /// Id of the first ayah in this juz.
-  @JsonKey(name: 'first_verse_id')
+  @JsonKey(name: "first_verse_id")
   int get firstVerseId => throw _privateConstructorUsedError;
 
   /// Id of the last ayah in this juz.
-  @JsonKey(name: 'last_verse_id')
+  @JsonKey(name: "last_verse_id")
   int get lastVerseId => throw _privateConstructorUsedError;
 
   /// total verses in this juz
-  @JsonKey(name: 'verses_count')
+  @JsonKey(name: "verses_count")
   int get versesCount => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verse_mapping')
+  @JsonKey(name: "verse_mapping")
   Object? get verseMapping => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,12 +50,12 @@ abstract class $JuzCopyWith<$Res> {
       _$JuzCopyWithImpl<$Res, Juz>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'first_verse_id') int firstVerseId,
-      @JsonKey(name: 'last_verse_id') int lastVerseId,
-      @JsonKey(name: 'verses_count') int versesCount,
-      @JsonKey(name: 'verse_mapping') Object? verseMapping});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "first_verse_id") int firstVerseId,
+      @JsonKey(name: "last_verse_id") int lastVerseId,
+      @JsonKey(name: "verses_count") int versesCount,
+      @JsonKey(name: "verse_mapping") Object? verseMapping});
 }
 
 /// @nodoc
@@ -111,12 +111,12 @@ abstract class _$$JuzImplCopyWith<$Res> implements $JuzCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'juz_number') int juzNumber,
-      @JsonKey(name: 'first_verse_id') int firstVerseId,
-      @JsonKey(name: 'last_verse_id') int lastVerseId,
-      @JsonKey(name: 'verses_count') int versesCount,
-      @JsonKey(name: 'verse_mapping') Object? verseMapping});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "juz_number") int juzNumber,
+      @JsonKey(name: "first_verse_id") int firstVerseId,
+      @JsonKey(name: "last_verse_id") int lastVerseId,
+      @JsonKey(name: "verses_count") int versesCount,
+      @JsonKey(name: "verse_mapping") Object? verseMapping});
 }
 
 /// @nodoc
@@ -166,40 +166,40 @@ class __$$JuzImplCopyWithImpl<$Res> extends _$JuzCopyWithImpl<$Res, _$JuzImpl>
 @JsonSerializable()
 class _$JuzImpl extends _Juz {
   const _$JuzImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'juz_number') required this.juzNumber,
-      @JsonKey(name: 'first_verse_id') required this.firstVerseId,
-      @JsonKey(name: 'last_verse_id') required this.lastVerseId,
-      @JsonKey(name: 'verses_count') required this.versesCount,
-      @JsonKey(name: 'verse_mapping') required this.verseMapping})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "juz_number") required this.juzNumber,
+      @JsonKey(name: "first_verse_id") required this.firstVerseId,
+      @JsonKey(name: "last_verse_id") required this.lastVerseId,
+      @JsonKey(name: "verses_count") required this.versesCount,
+      @JsonKey(name: "verse_mapping") required this.verseMapping})
       : super._();
 
   factory _$JuzImpl.fromJson(Map<String, dynamic> json) =>
       _$$JuzImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   final int juzNumber;
 
   /// Id of the first ayah in this juz.
   @override
-  @JsonKey(name: 'first_verse_id')
+  @JsonKey(name: "first_verse_id")
   final int firstVerseId;
 
   /// Id of the last ayah in this juz.
   @override
-  @JsonKey(name: 'last_verse_id')
+  @JsonKey(name: "last_verse_id")
   final int lastVerseId;
 
   /// total verses in this juz
   @override
-  @JsonKey(name: 'verses_count')
+  @JsonKey(name: "verses_count")
   final int versesCount;
   @override
-  @JsonKey(name: 'verse_mapping')
+  @JsonKey(name: "verse_mapping")
   final Object? verseMapping;
 
   @override
@@ -252,40 +252,40 @@ class _$JuzImpl extends _Juz {
 
 abstract class _Juz extends Juz {
   const factory _Juz(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'juz_number') required final int juzNumber,
-      @JsonKey(name: 'first_verse_id') required final int firstVerseId,
-      @JsonKey(name: 'last_verse_id') required final int lastVerseId,
-      @JsonKey(name: 'verses_count') required final int versesCount,
-      @JsonKey(name: 'verse_mapping')
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "juz_number") required final int juzNumber,
+      @JsonKey(name: "first_verse_id") required final int firstVerseId,
+      @JsonKey(name: "last_verse_id") required final int lastVerseId,
+      @JsonKey(name: "verses_count") required final int versesCount,
+      @JsonKey(name: "verse_mapping")
       required final Object? verseMapping}) = _$JuzImpl;
   const _Juz._() : super._();
 
   factory _Juz.fromJson(Map<String, dynamic> json) = _$JuzImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
-  @JsonKey(name: 'juz_number')
+  @JsonKey(name: "juz_number")
   int get juzNumber;
   @override
 
   /// Id of the first ayah in this juz.
-  @JsonKey(name: 'first_verse_id')
+  @JsonKey(name: "first_verse_id")
   int get firstVerseId;
   @override
 
   /// Id of the last ayah in this juz.
-  @JsonKey(name: 'last_verse_id')
+  @JsonKey(name: "last_verse_id")
   int get lastVerseId;
   @override
 
   /// total verses in this juz
-  @JsonKey(name: 'verses_count')
+  @JsonKey(name: "verses_count")
   int get versesCount;
   @override
-  @JsonKey(name: 'verse_mapping')
+  @JsonKey(name: "verse_mapping")
   Object? get verseMapping;
   @override
   @JsonKey(ignore: true)
@@ -299,9 +299,9 @@ JuzVerseMapping _$JuzVerseMappingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$JuzVerseMapping {
-  @JsonKey(name: '1')
+  @JsonKey(name: "1")
   String get key1 => throw _privateConstructorUsedError;
-  @JsonKey(name: '2')
+  @JsonKey(name: "2")
   String get key2 => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -316,7 +316,7 @@ abstract class $JuzVerseMappingCopyWith<$Res> {
           JuzVerseMapping value, $Res Function(JuzVerseMapping) then) =
       _$JuzVerseMappingCopyWithImpl<$Res, JuzVerseMapping>;
   @useResult
-  $Res call({@JsonKey(name: '1') String key1, @JsonKey(name: '2') String key2});
+  $Res call({@JsonKey(name: "1") String key1, @JsonKey(name: "2") String key2});
 }
 
 /// @nodoc
@@ -356,7 +356,7 @@ abstract class _$$JuzVerseMappingImplCopyWith<$Res>
       __$$JuzVerseMappingImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: '1') String key1, @JsonKey(name: '2') String key2});
+  $Res call({@JsonKey(name: "1") String key1, @JsonKey(name: "2") String key2});
 }
 
 /// @nodoc
@@ -390,18 +390,18 @@ class __$$JuzVerseMappingImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$JuzVerseMappingImpl extends _JuzVerseMapping {
   const _$JuzVerseMappingImpl(
-      {@JsonKey(name: '1') required this.key1,
-      @JsonKey(name: '2') required this.key2})
+      {@JsonKey(name: "1") required this.key1,
+      @JsonKey(name: "2") required this.key2})
       : super._();
 
   factory _$JuzVerseMappingImpl.fromJson(Map<String, dynamic> json) =>
       _$$JuzVerseMappingImplFromJson(json);
 
   @override
-  @JsonKey(name: '1')
+  @JsonKey(name: "1")
   final String key1;
   @override
-  @JsonKey(name: '2')
+  @JsonKey(name: "2")
   final String key2;
 
   @override
@@ -439,18 +439,18 @@ class _$JuzVerseMappingImpl extends _JuzVerseMapping {
 
 abstract class _JuzVerseMapping extends JuzVerseMapping {
   const factory _JuzVerseMapping(
-      {@JsonKey(name: '1') required final String key1,
-      @JsonKey(name: '2') required final String key2}) = _$JuzVerseMappingImpl;
+      {@JsonKey(name: "1") required final String key1,
+      @JsonKey(name: "2") required final String key2}) = _$JuzVerseMappingImpl;
   const _JuzVerseMapping._() : super._();
 
   factory _JuzVerseMapping.fromJson(Map<String, dynamic> json) =
       _$JuzVerseMappingImpl.fromJson;
 
   @override
-  @JsonKey(name: '1')
+  @JsonKey(name: "1")
   String get key1;
   @override
-  @JsonKey(name: '2')
+  @JsonKey(name: "2")
   String get key2;
   @override
   @JsonKey(ignore: true)

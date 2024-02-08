@@ -20,23 +20,23 @@ Chapter _$ChapterFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Chapter {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'revelation_place')
+  @JsonKey(name: "revelation_place")
   String get revelationPlace => throw _privateConstructorUsedError;
-  @JsonKey(name: 'revelation_order')
+  @JsonKey(name: "revelation_order")
   int get revelationOrder => throw _privateConstructorUsedError;
-  @JsonKey(name: 'bismillah_pre')
+  @JsonKey(name: "bismillah_pre")
   bool get bismillahPre => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name_complex')
+  @JsonKey(name: "name_complex")
   String get nameComplex => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name_arabic')
+  @JsonKey(name: "name_arabic")
   String get nameArabic => throw _privateConstructorUsedError;
-  @JsonKey(name: 'verses_count')
+  @JsonKey(name: "verses_count")
   int get versesCount => throw _privateConstructorUsedError;
-  @JsonKey(name: 'pages')
+  @JsonKey(name: "pages")
   List<int> get pages => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   Object? get translatedName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,15 +50,15 @@ abstract class $ChapterCopyWith<$Res> {
       _$ChapterCopyWithImpl<$Res, Chapter>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'revelation_place') String revelationPlace,
-      @JsonKey(name: 'revelation_order') int revelationOrder,
-      @JsonKey(name: 'bismillah_pre') bool bismillahPre,
-      @JsonKey(name: 'name_complex') String nameComplex,
-      @JsonKey(name: 'name_arabic') String nameArabic,
-      @JsonKey(name: 'verses_count') int versesCount,
-      @JsonKey(name: 'pages') List<int> pages,
-      @JsonKey(name: 'translated_name') Object? translatedName});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "revelation_place") String revelationPlace,
+      @JsonKey(name: "revelation_order") int revelationOrder,
+      @JsonKey(name: "bismillah_pre") bool bismillahPre,
+      @JsonKey(name: "name_complex") String nameComplex,
+      @JsonKey(name: "name_arabic") String nameArabic,
+      @JsonKey(name: "verses_count") int versesCount,
+      @JsonKey(name: "pages") List<int> pages,
+      @JsonKey(name: "translated_name") Object? translatedName});
 }
 
 /// @nodoc
@@ -131,15 +131,15 @@ abstract class _$$ChapterImplCopyWith<$Res> implements $ChapterCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'revelation_place') String revelationPlace,
-      @JsonKey(name: 'revelation_order') int revelationOrder,
-      @JsonKey(name: 'bismillah_pre') bool bismillahPre,
-      @JsonKey(name: 'name_complex') String nameComplex,
-      @JsonKey(name: 'name_arabic') String nameArabic,
-      @JsonKey(name: 'verses_count') int versesCount,
-      @JsonKey(name: 'pages') List<int> pages,
-      @JsonKey(name: 'translated_name') Object? translatedName});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "revelation_place") String revelationPlace,
+      @JsonKey(name: "revelation_order") int revelationOrder,
+      @JsonKey(name: "bismillah_pre") bool bismillahPre,
+      @JsonKey(name: "name_complex") String nameComplex,
+      @JsonKey(name: "name_arabic") String nameArabic,
+      @JsonKey(name: "verses_count") int versesCount,
+      @JsonKey(name: "pages") List<int> pages,
+      @JsonKey(name: "translated_name") Object? translatedName});
 }
 
 /// @nodoc
@@ -206,15 +206,15 @@ class __$$ChapterImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ChapterImpl extends _Chapter {
   const _$ChapterImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'revelation_place') required this.revelationPlace,
-      @JsonKey(name: 'revelation_order') required this.revelationOrder,
-      @JsonKey(name: 'bismillah_pre') required this.bismillahPre,
-      @JsonKey(name: 'name_complex') required this.nameComplex,
-      @JsonKey(name: 'name_arabic') required this.nameArabic,
-      @JsonKey(name: 'verses_count') required this.versesCount,
-      @JsonKey(name: 'pages') required final List<int> pages,
-      @JsonKey(name: 'translated_name') required this.translatedName})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "revelation_place") required this.revelationPlace,
+      @JsonKey(name: "revelation_order") required this.revelationOrder,
+      @JsonKey(name: "bismillah_pre") required this.bismillahPre,
+      @JsonKey(name: "name_complex") required this.nameComplex,
+      @JsonKey(name: "name_arabic") required this.nameArabic,
+      @JsonKey(name: "verses_count") required this.versesCount,
+      @JsonKey(name: "pages") required final List<int> pages,
+      @JsonKey(name: "translated_name") required this.translatedName})
       : _pages = pages,
         super._();
 
@@ -222,29 +222,29 @@ class _$ChapterImpl extends _Chapter {
       _$$ChapterImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
   @override
-  @JsonKey(name: 'revelation_place')
+  @JsonKey(name: "revelation_place")
   final String revelationPlace;
   @override
-  @JsonKey(name: 'revelation_order')
+  @JsonKey(name: "revelation_order")
   final int revelationOrder;
   @override
-  @JsonKey(name: 'bismillah_pre')
+  @JsonKey(name: "bismillah_pre")
   final bool bismillahPre;
   @override
-  @JsonKey(name: 'name_complex')
+  @JsonKey(name: "name_complex")
   final String nameComplex;
   @override
-  @JsonKey(name: 'name_arabic')
+  @JsonKey(name: "name_arabic")
   final String nameArabic;
   @override
-  @JsonKey(name: 'verses_count')
+  @JsonKey(name: "verses_count")
   final int versesCount;
   final List<int> _pages;
   @override
-  @JsonKey(name: 'pages')
+  @JsonKey(name: "pages")
   List<int> get pages {
     if (_pages is EqualUnmodifiableListView) return _pages;
     // ignore: implicit_dynamic_type
@@ -252,7 +252,7 @@ class _$ChapterImpl extends _Chapter {
   }
 
   @override
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   final Object? translatedName;
 
   @override
@@ -313,46 +313,46 @@ class _$ChapterImpl extends _Chapter {
 
 abstract class _Chapter extends Chapter {
   const factory _Chapter(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'revelation_place') required final String revelationPlace,
-      @JsonKey(name: 'revelation_order') required final int revelationOrder,
-      @JsonKey(name: 'bismillah_pre') required final bool bismillahPre,
-      @JsonKey(name: 'name_complex') required final String nameComplex,
-      @JsonKey(name: 'name_arabic') required final String nameArabic,
-      @JsonKey(name: 'verses_count') required final int versesCount,
-      @JsonKey(name: 'pages') required final List<int> pages,
-      @JsonKey(name: 'translated_name')
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "revelation_place") required final String revelationPlace,
+      @JsonKey(name: "revelation_order") required final int revelationOrder,
+      @JsonKey(name: "bismillah_pre") required final bool bismillahPre,
+      @JsonKey(name: "name_complex") required final String nameComplex,
+      @JsonKey(name: "name_arabic") required final String nameArabic,
+      @JsonKey(name: "verses_count") required final int versesCount,
+      @JsonKey(name: "pages") required final List<int> pages,
+      @JsonKey(name: "translated_name")
       required final Object? translatedName}) = _$ChapterImpl;
   const _Chapter._() : super._();
 
   factory _Chapter.fromJson(Map<String, dynamic> json) = _$ChapterImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
-  @JsonKey(name: 'revelation_place')
+  @JsonKey(name: "revelation_place")
   String get revelationPlace;
   @override
-  @JsonKey(name: 'revelation_order')
+  @JsonKey(name: "revelation_order")
   int get revelationOrder;
   @override
-  @JsonKey(name: 'bismillah_pre')
+  @JsonKey(name: "bismillah_pre")
   bool get bismillahPre;
   @override
-  @JsonKey(name: 'name_complex')
+  @JsonKey(name: "name_complex")
   String get nameComplex;
   @override
-  @JsonKey(name: 'name_arabic')
+  @JsonKey(name: "name_arabic")
   String get nameArabic;
   @override
-  @JsonKey(name: 'verses_count')
+  @JsonKey(name: "verses_count")
   int get versesCount;
   @override
-  @JsonKey(name: 'pages')
+  @JsonKey(name: "pages")
   List<int> get pages;
   @override
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   Object? get translatedName;
   @override
   @JsonKey(ignore: true)

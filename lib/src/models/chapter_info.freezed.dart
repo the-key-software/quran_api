@@ -20,19 +20,19 @@ ChapterInfo _$ChapterInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChapterInfo {
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId => throw _privateConstructorUsedError;
 
   /// Long text of chapter info, this could include html tags for formatting and styling.
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
-  @JsonKey(name: 'short_text')
+  @JsonKey(name: "short_text")
   String get shortText => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
 
   /// Name of the source, could be a book name or site name.
-  @JsonKey(name: 'source')
+  @JsonKey(name: "source")
   String get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,11 +48,11 @@ abstract class $ChapterInfoCopyWith<$Res> {
       _$ChapterInfoCopyWithImpl<$Res, ChapterInfo>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'short_text') String shortText,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'source') String source});
+      {@JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "text") String text,
+      @JsonKey(name: "short_text") String shortText,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "source") String source});
 }
 
 /// @nodoc
@@ -108,11 +108,11 @@ abstract class _$$ChapterInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'chapter_id') int chapterId,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'short_text') String shortText,
-      @JsonKey(name: 'language_name') String languageName,
-      @JsonKey(name: 'source') String source});
+      {@JsonKey(name: "chapter_id") int chapterId,
+      @JsonKey(name: "text") String text,
+      @JsonKey(name: "short_text") String shortText,
+      @JsonKey(name: "language_name") String languageName,
+      @JsonKey(name: "source") String source});
 }
 
 /// @nodoc
@@ -161,34 +161,34 @@ class __$$ChapterInfoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ChapterInfoImpl extends _ChapterInfo {
   const _$ChapterInfoImpl(
-      {@JsonKey(name: 'chapter_id') required this.chapterId,
-      @JsonKey(name: 'text') required this.text,
-      @JsonKey(name: 'short_text') required this.shortText,
-      @JsonKey(name: 'language_name') required this.languageName,
-      @JsonKey(name: 'source') required this.source})
+      {@JsonKey(name: "chapter_id") required this.chapterId,
+      @JsonKey(name: "text") required this.text,
+      @JsonKey(name: "short_text") required this.shortText,
+      @JsonKey(name: "language_name") required this.languageName,
+      @JsonKey(name: "source") required this.source})
       : super._();
 
   factory _$ChapterInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChapterInfoImplFromJson(json);
 
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   final int chapterId;
 
   /// Long text of chapter info, this could include html tags for formatting and styling.
   @override
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   final String text;
   @override
-  @JsonKey(name: 'short_text')
+  @JsonKey(name: "short_text")
   final String shortText;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
 
   /// Name of the source, could be a book name or site name.
   @override
-  @JsonKey(name: 'source')
+  @JsonKey(name: "source")
   final String source;
 
   @override
@@ -232,11 +232,11 @@ class _$ChapterInfoImpl extends _ChapterInfo {
 
 abstract class _ChapterInfo extends ChapterInfo {
   const factory _ChapterInfo(
-          {@JsonKey(name: 'chapter_id') required final int chapterId,
-          @JsonKey(name: 'text') required final String text,
-          @JsonKey(name: 'short_text') required final String shortText,
-          @JsonKey(name: 'language_name') required final String languageName,
-          @JsonKey(name: 'source') required final String source}) =
+          {@JsonKey(name: "chapter_id") required final int chapterId,
+          @JsonKey(name: "text") required final String text,
+          @JsonKey(name: "short_text") required final String shortText,
+          @JsonKey(name: "language_name") required final String languageName,
+          @JsonKey(name: "source") required final String source}) =
       _$ChapterInfoImpl;
   const _ChapterInfo._() : super._();
 
@@ -244,23 +244,23 @@ abstract class _ChapterInfo extends ChapterInfo {
       _$ChapterInfoImpl.fromJson;
 
   @override
-  @JsonKey(name: 'chapter_id')
+  @JsonKey(name: "chapter_id")
   int get chapterId;
   @override
 
   /// Long text of chapter info, this could include html tags for formatting and styling.
-  @JsonKey(name: 'text')
+  @JsonKey(name: "text")
   String get text;
   @override
-  @JsonKey(name: 'short_text')
+  @JsonKey(name: "short_text")
   String get shortText;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
 
   /// Name of the source, could be a book name or site name.
-  @JsonKey(name: 'source')
+  @JsonKey(name: "source")
   String get source;
   @override
   @JsonKey(ignore: true)

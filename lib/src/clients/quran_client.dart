@@ -15,8 +15,9 @@ abstract class QuranClient {
 
   /// Get Indopak Script of ayah
   @GET("/quran/verses/indopak")
-  Future<HttpResponse<dynamic>> quranVersesIndopak({
+  Future<HttpResponse<QuranVersesIndopakResponse>> quranVersesIndopak({
     @Queries() QuranVersesIndopakQueries? queries,
+    @ReceiveProgress() ProgressCallback? onReceiveProgress,
   });
 
   /// Get Uthmani Tajweed Script of ayah
@@ -170,6 +171,7 @@ class QuranVersesIndopakQueries with _$QuranVersesIndopakQueries {
   /// [hizbNumber] If you want to get indopak script of a specific hizb.
   /// [rubElHizbNumber] If you want to get indopak script of a specific Rub el Hizb.
   /// [verseKey] If you want to get indopak script of a specific ayah.
+  @JsonSerializable(converters: [IntStringJsonConverter()])
   const factory QuranVersesIndopakQueries({
     @JsonKey(name: "chapter_number") int? chapterNumber,
     @JsonKey(name: "juz_number") int? juzNumber,
@@ -181,4 +183,18 @@ class QuranVersesIndopakQueries with _$QuranVersesIndopakQueries {
 
   factory QuranVersesIndopakQueries.fromJson(Map<String, dynamic> json) =>
       _$QuranVersesIndopakQueriesFromJson(json);
+}
+
+class IntStringJsonConverter implements JsonConverter<int, String> {
+  const IntStringJsonConverter();
+
+  @override
+  int fromJson(String json) {
+    return int.parse(json);
+  }
+
+  @override
+  String toJson(int object) {
+    return object.toString();
+  }
 }

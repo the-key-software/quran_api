@@ -5,6 +5,12 @@ import "clients/clients.dart";
 /// Quran.com api client implementation
 /// https://api-docs.quran.com/docs/category/quran.com-api
 class QuranApi {
+  const QuranApi._internal();
+
+  static QuranApi get _instance => QuranApi._internal();
+
+  static QuranApi get instance => _instance;
+
   static final Uri uri = Uri(
     scheme: "https",
     host: "api.quran.com",
@@ -61,7 +67,7 @@ class QuranApi {
 
   // JuzClient get juz => JuzClient(dio);
 
-  // QuranClient get quran => QuranClient(dio);
+  QuranClient get quran => QuranClient(dio);
 
   // VersesClient get verses => VersesClient(dio);
 

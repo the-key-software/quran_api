@@ -20,13 +20,13 @@ Recitation _$RecitationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Recitation {
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'reciter_name')
+  @JsonKey(name: "reciter_name")
   String get reciterName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'style')
+  @JsonKey(name: "style")
   String? get style => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   RecitationTranslatedName get translatedName =>
       throw _privateConstructorUsedError;
 
@@ -43,10 +43,10 @@ abstract class $RecitationCopyWith<$Res> {
       _$RecitationCopyWithImpl<$Res, Recitation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'reciter_name') String reciterName,
-      @JsonKey(name: 'style') String? style,
-      @JsonKey(name: 'translated_name')
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "reciter_name") String reciterName,
+      @JsonKey(name: "style") String? style,
+      @JsonKey(name: "translated_name")
       RecitationTranslatedName translatedName});
 
   $RecitationTranslatedNameCopyWith<$Res> get translatedName;
@@ -109,10 +109,10 @@ abstract class _$$RecitationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'reciter_name') String reciterName,
-      @JsonKey(name: 'style') String? style,
-      @JsonKey(name: 'translated_name')
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "reciter_name") String reciterName,
+      @JsonKey(name: "style") String? style,
+      @JsonKey(name: "translated_name")
       RecitationTranslatedName translatedName});
 
   @override
@@ -160,26 +160,26 @@ class __$$RecitationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RecitationImpl extends _Recitation {
   const _$RecitationImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'reciter_name') required this.reciterName,
-      @JsonKey(name: 'style') required this.style,
-      @JsonKey(name: 'translated_name') required this.translatedName})
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "reciter_name") required this.reciterName,
+      @JsonKey(name: "style") required this.style,
+      @JsonKey(name: "translated_name") required this.translatedName})
       : super._();
 
   factory _$RecitationImpl.fromJson(Map<String, dynamic> json) =>
       _$$RecitationImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final int id;
   @override
-  @JsonKey(name: 'reciter_name')
+  @JsonKey(name: "reciter_name")
   final String reciterName;
   @override
-  @JsonKey(name: 'style')
+  @JsonKey(name: "style")
   final String? style;
   @override
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   final RecitationTranslatedName translatedName;
 
   @override
@@ -221,10 +221,10 @@ class _$RecitationImpl extends _Recitation {
 
 abstract class _Recitation extends Recitation {
   const factory _Recitation(
-          {@JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'reciter_name') required final String reciterName,
-          @JsonKey(name: 'style') required final String? style,
-          @JsonKey(name: 'translated_name')
+          {@JsonKey(name: "id") required final int id,
+          @JsonKey(name: "reciter_name") required final String reciterName,
+          @JsonKey(name: "style") required final String? style,
+          @JsonKey(name: "translated_name")
           required final RecitationTranslatedName translatedName}) =
       _$RecitationImpl;
   const _Recitation._() : super._();
@@ -233,16 +233,16 @@ abstract class _Recitation extends Recitation {
       _$RecitationImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   int get id;
   @override
-  @JsonKey(name: 'reciter_name')
+  @JsonKey(name: "reciter_name")
   String get reciterName;
   @override
-  @JsonKey(name: 'style')
+  @JsonKey(name: "style")
   String? get style;
   @override
-  @JsonKey(name: 'translated_name')
+  @JsonKey(name: "translated_name")
   RecitationTranslatedName get translatedName;
   @override
   @JsonKey(ignore: true)
@@ -257,9 +257,9 @@ RecitationTranslatedName _$RecitationTranslatedNameFromJson(
 
 /// @nodoc
 mixin _$RecitationTranslatedName {
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -275,8 +275,8 @@ abstract class $RecitationTranslatedNameCopyWith<$Res> {
       _$RecitationTranslatedNameCopyWithImpl<$Res, RecitationTranslatedName>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "name") String name,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -319,8 +319,8 @@ abstract class _$$RecitationTranslatedNameImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'language_name') String languageName});
+      {@JsonKey(name: "name") String name,
+      @JsonKey(name: "language_name") String languageName});
 }
 
 /// @nodoc
@@ -356,18 +356,18 @@ class __$$RecitationTranslatedNameImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RecitationTranslatedNameImpl extends _RecitationTranslatedName {
   const _$RecitationTranslatedNameImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'language_name') required this.languageName})
+      {@JsonKey(name: "name") required this.name,
+      @JsonKey(name: "language_name") required this.languageName})
       : super._();
 
   factory _$RecitationTranslatedNameImpl.fromJson(Map<String, dynamic> json) =>
       _$$RecitationTranslatedNameImplFromJson(json);
 
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   final String name;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   final String languageName;
 
   @override
@@ -406,8 +406,8 @@ class _$RecitationTranslatedNameImpl extends _RecitationTranslatedName {
 
 abstract class _RecitationTranslatedName extends RecitationTranslatedName {
   const factory _RecitationTranslatedName(
-          {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'language_name') required final String languageName}) =
+          {@JsonKey(name: "name") required final String name,
+          @JsonKey(name: "language_name") required final String languageName}) =
       _$RecitationTranslatedNameImpl;
   const _RecitationTranslatedName._() : super._();
 
@@ -415,10 +415,10 @@ abstract class _RecitationTranslatedName extends RecitationTranslatedName {
       _$RecitationTranslatedNameImpl.fromJson;
 
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name")
   String get name;
   @override
-  @JsonKey(name: 'language_name')
+  @JsonKey(name: "language_name")
   String get languageName;
   @override
   @JsonKey(ignore: true)
