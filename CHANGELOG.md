@@ -1,3 +1,3 @@
-## 1.0.0
+## 0.0.1
 
-- Initial version.
+- Implement the basic functionality of the package and endpoints for the API.
