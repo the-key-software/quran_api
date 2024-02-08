@@ -9,3 +9,7 @@
 ## 0.0.3
 
 - Implement full juzs client.
+
+## 0.0.4
+
+- fix juzs client implementation and add tests.

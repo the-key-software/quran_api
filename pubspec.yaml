@@ -1,6 +1,6 @@
 name: quran_api
 description: Implementation of the Quran API based on the official documentation
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/the-key-software/quran_api
 
 environment:
