@@ -48,15 +48,24 @@ _$SearchResultImpl _$$SearchResultImplFromJson(Map<String, dynamic> json) =>
       translations: json['translations'] as List<dynamic>,
     );
 
-Map<String, dynamic> _$$SearchResultImplToJson(_$SearchResultImpl instance) =>
-    <String, dynamic>{
-      'verse_key': instance.verseKey,
-      'verse_id': instance.verseId,
-      'text': instance.text,
-      'highlighted': instance.highlighted,
-      'words': instance.words.map((e) => e.toJson()).toList(),
-      'translations': instance.translations,
-    };
+Map<String, dynamic> _$$SearchResultImplToJson(_$SearchResultImpl instance) {
+  final val = <String, dynamic>{
+    'verse_key': instance.verseKey,
+    'verse_id': instance.verseId,
+    'text': instance.text,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('highlighted', instance.highlighted);
+  val['words'] = instance.words.map((e) => e.toJson()).toList();
+  val['translations'] = instance.translations;
+  return val;
+}
 
 _$SearchResultWordSearchResultWordImpl
     _$$SearchResultWordSearchResultWordImplFromJson(

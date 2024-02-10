@@ -17,15 +17,24 @@ _$ResourceImpl _$$ResourceImplFromJson(Map<String, dynamic> json) =>
           json['translated_name'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ResourceImplToJson(_$ResourceImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'author_name': instance.authorName,
-      'slug': instance.slug,
-      'language_name': instance.languageName,
-      'translated_name': instance.translatedName.toJson(),
-    };
+Map<String, dynamic> _$$ResourceImplToJson(_$ResourceImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+    'author_name': instance.authorName,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('slug', instance.slug);
+  val['language_name'] = instance.languageName;
+  val['translated_name'] = instance.translatedName.toJson();
+  return val;
+}
 
 _$ResourceTranslatedNameImpl _$$ResourceTranslatedNameImplFromJson(
         Map<String, dynamic> json) =>

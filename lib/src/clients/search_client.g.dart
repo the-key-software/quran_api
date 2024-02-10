@@ -14,13 +14,21 @@ _$SearchQueriesImpl _$$SearchQueriesImplFromJson(Map<String, dynamic> json) =>
       language: json['language'] as String?,
     );
 
-Map<String, dynamic> _$$SearchQueriesImplToJson(_$SearchQueriesImpl instance) =>
-    <String, dynamic>{
-      'q': instance.q,
-      'size': instance.size,
-      'page': instance.page,
-      'language': instance.language,
-    };
+Map<String, dynamic> _$$SearchQueriesImplToJson(_$SearchQueriesImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('q', instance.q);
+  writeNotNull('size', instance.size);
+  writeNotNull('page', instance.page);
+  writeNotNull('language', instance.language);
+  return val;
+}
 
 // **************************************************************************
 // RetrofitGenerator

@@ -21,16 +21,7 @@ _$VersesQueriesImpl _$$VersesQueriesImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$VersesQueriesImplToJson(_$VersesQueriesImpl instance) {
-  final val = <String, dynamic>{
-    'language': instance.language,
-    'words': instance.words,
-    'translations': instance.translations,
-    'audio': instance.audio,
-    'tafsirs': instance.tafsirs,
-    'word_fields': instance.wordFields,
-    'translation_fields': instance.translationFields,
-    'fields': instance.fields,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -38,6 +29,14 @@ Map<String, dynamic> _$$VersesQueriesImplToJson(_$VersesQueriesImpl instance) {
     }
   }
 
+  writeNotNull('language', instance.language);
+  writeNotNull('words', instance.words);
+  writeNotNull('translations', instance.translations);
+  writeNotNull('audio', instance.audio);
+  writeNotNull('tafsirs', instance.tafsirs);
+  writeNotNull('word_fields', instance.wordFields);
+  writeNotNull('translation_fields', instance.translationFields);
+  writeNotNull('fields', instance.fields);
   writeNotNull('page', instance.page);
   writeNotNull('per_page', instance.perPage);
   return val;

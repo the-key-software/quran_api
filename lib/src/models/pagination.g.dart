@@ -15,11 +15,20 @@ _$PaginationImpl _$$PaginationImplFromJson(Map<String, dynamic> json) =>
       totalRecords: json['total_records='] as int?,
     );
 
-Map<String, dynamic> _$$PaginationImplToJson(_$PaginationImpl instance) =>
-    <String, dynamic>{
-      'per_page': instance.perPage,
-      'current_page': instance.currentPage,
-      'next_page': instance.nextPage,
-      'total_pages=': instance.totalPages,
-      'total_records=': instance.totalRecords,
-    };
+Map<String, dynamic> _$$PaginationImplToJson(_$PaginationImpl instance) {
+  final val = <String, dynamic>{
+    'per_page': instance.perPage,
+    'current_page': instance.currentPage,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('next_page', instance.nextPage);
+  writeNotNull('total_pages=', instance.totalPages);
+  writeNotNull('total_records=', instance.totalRecords);
+  return val;
+}

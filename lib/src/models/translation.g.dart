@@ -26,20 +26,29 @@ _$TranslationImpl _$$TranslationImplFromJson(Map<String, dynamic> json) =>
       pageNumber: json['page_number'] as int?,
     );
 
-Map<String, dynamic> _$$TranslationImplToJson(_$TranslationImpl instance) =>
-    <String, dynamic>{
-      'resource_id': instance.resourceId,
-      'resource_name': instance.resourceName,
-      'id': instance.id,
-      'text': instance.text,
-      'verse_id': instance.verseId,
-      'language_id': instance.languageId,
-      'language_name': instance.languageName,
-      'verse_key': instance.verseKey?.toJson(),
-      'chapter_id': instance.chapterId,
-      'verse_number': instance.verseNumber,
-      'juz_number': instance.juzNumber,
-      'hizb_number': instance.hizbNumber,
-      'rub_number': instance.rubNumber,
-      'page_number': instance.pageNumber,
-    };
+Map<String, dynamic> _$$TranslationImplToJson(_$TranslationImpl instance) {
+  final val = <String, dynamic>{
+    'resource_id': instance.resourceId,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resource_name', instance.resourceName);
+  writeNotNull('id', instance.id);
+  val['text'] = instance.text;
+  writeNotNull('verse_id', instance.verseId);
+  writeNotNull('language_id', instance.languageId);
+  writeNotNull('language_name', instance.languageName);
+  writeNotNull('verse_key', instance.verseKey?.toJson());
+  writeNotNull('chapter_id', instance.chapterId);
+  writeNotNull('verse_number', instance.verseNumber);
+  writeNotNull('juz_number', instance.juzNumber);
+  writeNotNull('hizb_number', instance.hizbNumber);
+  writeNotNull('rub_number', instance.rubNumber);
+  writeNotNull('page_number', instance.pageNumber);
+  return val;
+}

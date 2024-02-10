@@ -19,11 +19,20 @@ _$AudioFileImpl _$$AudioFileImplFromJson(Map<String, dynamic> json) =>
       verseKey: json['verse_key'] as String,
     );
 
-Map<String, dynamic> _$$AudioFileImplToJson(_$AudioFileImpl instance) =>
-    <String, dynamic>{
-      'url': instance.url,
-      'duration': instance.duration,
-      'format': instance.format,
-      'segments': instance.segments,
-      'verse_key': instance.verseKey,
-    };
+Map<String, dynamic> _$$AudioFileImplToJson(_$AudioFileImpl instance) {
+  final val = <String, dynamic>{
+    'url': instance.url,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('duration', instance.duration);
+  writeNotNull('format', instance.format);
+  writeNotNull('segments', instance.segments);
+  val['verse_key'] = instance.verseKey;
+  return val;
+}

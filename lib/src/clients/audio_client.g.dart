@@ -21,16 +21,24 @@ _$RecitationAudioFilesQueriesImpl _$$RecitationAudioFilesQueriesImplFromJson(
     );
 
 Map<String, dynamic> _$$RecitationAudioFilesQueriesImplToJson(
-        _$RecitationAudioFilesQueriesImpl instance) =>
-    <String, dynamic>{
-      'fields': instance.fields,
-      'chapter_number': instance.chapterNumber,
-      'juz_number': instance.juzNumber,
-      'page_number': instance.pageNumber,
-      'hizb_number': instance.hizbNumber,
-      'rub_el_hizb_number': instance.rubElHizbNumber,
-      'verse_key': instance.verseKey?.toJson(),
-    };
+    _$RecitationAudioFilesQueriesImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('fields', instance.fields);
+  writeNotNull('chapter_number', instance.chapterNumber);
+  writeNotNull('juz_number', instance.juzNumber);
+  writeNotNull('page_number', instance.pageNumber);
+  writeNotNull('hizb_number', instance.hizbNumber);
+  writeNotNull('rub_el_hizb_number', instance.rubElHizbNumber);
+  writeNotNull('verse_key', instance.verseKey?.toJson());
+  return val;
+}
 
 // **************************************************************************
 // RetrofitGenerator

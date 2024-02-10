@@ -17,8 +17,17 @@ _$VersesResponseImpl _$$VersesResponseImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$VersesResponseImplToJson(
-        _$VersesResponseImpl instance) =>
-    <String, dynamic>{
-      'verses': instance.verses.map((e) => e.toJson()).toList(),
-      'pagination': instance.pagination?.toJson(),
-    };
+    _$VersesResponseImpl instance) {
+  final val = <String, dynamic>{
+    'verses': instance.verses.map((e) => e.toJson()).toList(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('pagination', instance.pagination?.toJson());
+  return val;
+}

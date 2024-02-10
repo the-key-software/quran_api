@@ -25,20 +25,38 @@ _$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
     );
 
 Map<String, dynamic> _$$QuranVersesIndopakQueriesImplToJson(
-        _$QuranVersesIndopakQueriesImpl instance) =>
-    <String, dynamic>{
-      'chapter_number': _$JsonConverterToJson<String, int>(
-          instance.chapterNumber, const IntStringJsonConverter().toJson),
-      'juz_number': _$JsonConverterToJson<String, int>(
-          instance.juzNumber, const IntStringJsonConverter().toJson),
-      'page_number': _$JsonConverterToJson<String, int>(
-          instance.pageNumber, const IntStringJsonConverter().toJson),
-      'hizb_number': _$JsonConverterToJson<String, int>(
-          instance.hizbNumber, const IntStringJsonConverter().toJson),
-      'rub_el_hizb_number': _$JsonConverterToJson<String, int>(
-          instance.rubElHizbNumber, const IntStringJsonConverter().toJson),
-      'verse_key': instance.verseKey?.toJson(),
-    };
+    _$QuranVersesIndopakQueriesImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'chapter_number',
+      _$JsonConverterToJson<String, int>(
+          instance.chapterNumber, const IntStringJsonConverter().toJson));
+  writeNotNull(
+      'juz_number',
+      _$JsonConverterToJson<String, int>(
+          instance.juzNumber, const IntStringJsonConverter().toJson));
+  writeNotNull(
+      'page_number',
+      _$JsonConverterToJson<String, int>(
+          instance.pageNumber, const IntStringJsonConverter().toJson));
+  writeNotNull(
+      'hizb_number',
+      _$JsonConverterToJson<String, int>(
+          instance.hizbNumber, const IntStringJsonConverter().toJson));
+  writeNotNull(
+      'rub_el_hizb_number',
+      _$JsonConverterToJson<String, int>(
+          instance.rubElHizbNumber, const IntStringJsonConverter().toJson));
+  writeNotNull('verse_key', instance.verseKey?.toJson());
+  return val;
+}
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

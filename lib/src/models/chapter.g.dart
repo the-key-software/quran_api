@@ -20,18 +20,27 @@ _$ChapterImpl _$$ChapterImplFromJson(Map<String, dynamic> json) =>
       translatedName: json['translated_name'],
     );
 
-Map<String, dynamic> _$$ChapterImplToJson(_$ChapterImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'revelation_place': _$RevelationPlaceEnumMap[instance.revelationPlace]!,
-      'revelation_order': instance.revelationOrder,
-      'bismillah_pre': instance.bismillahPre,
-      'name_complex': instance.nameComplex,
-      'name_arabic': instance.nameArabic,
-      'verses_count': instance.versesCount,
-      'pages': instance.pages,
-      'translated_name': instance.translatedName,
-    };
+Map<String, dynamic> _$$ChapterImplToJson(_$ChapterImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'revelation_place': _$RevelationPlaceEnumMap[instance.revelationPlace]!,
+    'revelation_order': instance.revelationOrder,
+    'bismillah_pre': instance.bismillahPre,
+    'name_complex': instance.nameComplex,
+    'name_arabic': instance.nameArabic,
+    'verses_count': instance.versesCount,
+    'pages': instance.pages,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('translated_name', instance.translatedName);
+  return val;
+}
 
 const _$RevelationPlaceEnumMap = {
   RevelationPlace.makkah: 'makkah',

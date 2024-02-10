@@ -18,12 +18,21 @@ _$ChapterRecitationImpl _$$ChapterRecitationImplFromJson(
     );
 
 Map<String, dynamic> _$$ChapterRecitationImplToJson(
-        _$ChapterRecitationImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'chapter_id': instance.chapterId,
-      'file_size': instance.fileSize,
-      'format': instance.format,
-      'total_files': instance.totalFiles,
-      'audio_url': instance.audioUrl,
-    };
+    _$ChapterRecitationImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'chapter_id': instance.chapterId,
+    'file_size': instance.fileSize,
+    'format': instance.format,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('total_files', instance.totalFiles);
+  val['audio_url'] = instance.audioUrl;
+  return val;
+}

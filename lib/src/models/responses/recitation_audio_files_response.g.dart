@@ -19,11 +19,20 @@ _$RecitationAudioFilesResponseImpl _$$RecitationAudioFilesResponseImplFromJson(
     );
 
 Map<String, dynamic> _$$RecitationAudioFilesResponseImplToJson(
-        _$RecitationAudioFilesResponseImpl instance) =>
-    <String, dynamic>{
-      'audio_files': instance.audioFiles.map((e) => e.toJson()).toList(),
-      'meta': instance.meta?.toJson(),
-    };
+    _$RecitationAudioFilesResponseImpl instance) {
+  final val = <String, dynamic>{
+    'audio_files': instance.audioFiles.map((e) => e.toJson()).toList(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('meta', instance.meta?.toJson());
+  return val;
+}
 
 _$RecitationAudioFilesResponseMetaImpl
     _$$RecitationAudioFilesResponseMetaImplFromJson(
@@ -34,8 +43,17 @@ _$RecitationAudioFilesResponseMetaImpl
         );
 
 Map<String, dynamic> _$$RecitationAudioFilesResponseMetaImplToJson(
-        _$RecitationAudioFilesResponseMetaImpl instance) =>
-    <String, dynamic>{
-      'reciter_name': instance.reciterName,
-      'recitation_style': instance.recitationStyle,
-    };
+    _$RecitationAudioFilesResponseMetaImpl instance) {
+  final val = <String, dynamic>{
+    'reciter_name': instance.reciterName,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('recitation_style', instance.recitationStyle);
+  return val;
+}

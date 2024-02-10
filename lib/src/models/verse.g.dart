@@ -39,32 +39,42 @@ _$VerseImpl _$$VerseImplFromJson(Map<String, dynamic> json) => _$VerseImpl(
       v2Page: json['v2_page'] as int?,
     );
 
-Map<String, dynamic> _$$VerseImplToJson(_$VerseImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'chapter_id': instance.chapterId,
-      'verse_number': instance.verseNumber,
-      'verse_key': instance.verseKey.toJson(),
-      'verse_index': instance.verseIndex,
-      'text_uthmani': instance.textUthmani,
-      'text_uthmani_simple': instance.textUthmaniSimple,
-      'text_imlaei': instance.textImlaei,
-      'text_imlaei_simple': instance.textImlaeiSimple,
-      'text_indopak': instance.textIndopak,
-      'text_uthmani_tajweed': instance.textUthmaniTajweed,
-      'juz_number': instance.juzNumber,
-      'hizb_number': instance.hizbNumber,
-      'rub_number': instance.rubNumber,
-      'sajdah_type': instance.sajdahType,
-      'sajdah_number': instance.sajdahNumber,
-      'page_number': instance.pageNumber,
-      'image_url': instance.imageUrl,
-      'image_width': instance.imageWidth,
-      'words': instance.words?.map((e) => e.toJson()).toList(),
-      'audio': instance.audio,
-      'translations': instance.translations?.map((e) => e.toJson()).toList(),
-      'code_v1': instance.codeV1,
-      'code_v2': instance.codeV2,
-      'v1_page': instance.v1Page,
-      'v2_page': instance.v2Page,
-    };
+Map<String, dynamic> _$$VerseImplToJson(_$VerseImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('chapter_id', instance.chapterId);
+  val['verse_number'] = instance.verseNumber;
+  val['verse_key'] = instance.verseKey.toJson();
+  writeNotNull('verse_index', instance.verseIndex);
+  writeNotNull('text_uthmani', instance.textUthmani);
+  writeNotNull('text_uthmani_simple', instance.textUthmaniSimple);
+  writeNotNull('text_imlaei', instance.textImlaei);
+  writeNotNull('text_imlaei_simple', instance.textImlaeiSimple);
+  writeNotNull('text_indopak', instance.textIndopak);
+  writeNotNull('text_uthmani_tajweed', instance.textUthmaniTajweed);
+  val['juz_number'] = instance.juzNumber;
+  val['hizb_number'] = instance.hizbNumber;
+  writeNotNull('rub_number', instance.rubNumber);
+  writeNotNull('sajdah_type', instance.sajdahType);
+  writeNotNull('sajdah_number', instance.sajdahNumber);
+  val['page_number'] = instance.pageNumber;
+  writeNotNull('image_url', instance.imageUrl);
+  writeNotNull('image_width', instance.imageWidth);
+  writeNotNull('words', instance.words?.map((e) => e.toJson()).toList());
+  writeNotNull('audio', instance.audio);
+  writeNotNull(
+      'translations', instance.translations?.map((e) => e.toJson()).toList());
+  writeNotNull('code_v1', instance.codeV1);
+  writeNotNull('code_v2', instance.codeV2);
+  writeNotNull('v1_page', instance.v1Page);
+  writeNotNull('v2_page', instance.v2Page);
+  return val;
+}

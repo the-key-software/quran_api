@@ -18,3 +18,6 @@
 
 ## 0.0.7
 - implement most of the endpoints and add tests.
+
+## 0.0.8
+- json_serializable: include_if_null: false

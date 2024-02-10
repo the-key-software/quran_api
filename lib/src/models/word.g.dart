@@ -30,26 +30,34 @@ _$WordImpl _$$WordImplFromJson(Map<String, dynamic> json) => _$WordImpl(
       v2Page: json['v2_page'] as int?,
     );
 
-Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'position': instance.position,
-      'text_uthmani': instance.textUthmani,
-      'text_indopak': instance.textIndopak,
-      'text_imlaei': instance.textImlaei,
-      'verse_key': instance.verseKey?.toJson(),
-      'page_number': instance.pageNumber,
-      'line_number': instance.lineNumber,
-      'audio_url': instance.audioUrl,
-      'location': instance.location,
-      'char_type_name': instance.charTypeName,
-      'code_v1': instance.codeV1,
-      'code_v2': instance.codeV2,
-      'translation': instance.translation.toJson(),
-      'transliteration': instance.transliteration.toJson(),
-      'v1_page': instance.v1Page,
-      'v2_page': instance.v2Page,
-    };
+Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['position'] = instance.position;
+  writeNotNull('text_uthmani', instance.textUthmani);
+  writeNotNull('text_indopak', instance.textIndopak);
+  writeNotNull('text_imlaei', instance.textImlaei);
+  writeNotNull('verse_key', instance.verseKey?.toJson());
+  writeNotNull('page_number', instance.pageNumber);
+  writeNotNull('line_number', instance.lineNumber);
+  writeNotNull('audio_url', instance.audioUrl);
+  writeNotNull('location', instance.location);
+  val['char_type_name'] = instance.charTypeName;
+  writeNotNull('code_v1', instance.codeV1);
+  writeNotNull('code_v2', instance.codeV2);
+  val['translation'] = instance.translation.toJson();
+  val['transliteration'] = instance.transliteration.toJson();
+  writeNotNull('v1_page', instance.v1Page);
+  writeNotNull('v2_page', instance.v2Page);
+  return val;
+}
 
 _$WordTranslationImpl _$$WordTranslationImplFromJson(
         Map<String, dynamic> json) =>
@@ -59,11 +67,19 @@ _$WordTranslationImpl _$$WordTranslationImplFromJson(
     );
 
 Map<String, dynamic> _$$WordTranslationImplToJson(
-        _$WordTranslationImpl instance) =>
-    <String, dynamic>{
-      'text': instance.text,
-      'language_name': instance.languageName,
-    };
+    _$WordTranslationImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('text', instance.text);
+  writeNotNull('language_name', instance.languageName);
+  return val;
+}
 
 _$WordTransliterationImpl _$$WordTransliterationImplFromJson(
         Map<String, dynamic> json) =>
@@ -73,8 +89,16 @@ _$WordTransliterationImpl _$$WordTransliterationImplFromJson(
     );
 
 Map<String, dynamic> _$$WordTransliterationImplToJson(
-        _$WordTransliterationImpl instance) =>
-    <String, dynamic>{
-      'text': instance.text,
-      'language_name': instance.languageName,
-    };
+    _$WordTransliterationImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('text', instance.text);
+  writeNotNull('language_name', instance.languageName);
+  return val;
+}

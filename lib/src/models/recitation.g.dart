@@ -15,13 +15,22 @@ _$RecitationImpl _$$RecitationImplFromJson(Map<String, dynamic> json) =>
           json['translated_name'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$RecitationImplToJson(_$RecitationImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'reciter_name': instance.reciterName,
-      'style': instance.style,
-      'translated_name': instance.translatedName.toJson(),
-    };
+Map<String, dynamic> _$$RecitationImplToJson(_$RecitationImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'reciter_name': instance.reciterName,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('style', instance.style);
+  val['translated_name'] = instance.translatedName.toJson();
+  return val;
+}
 
 _$RecitationTranslatedNameImpl _$$RecitationTranslatedNameImplFromJson(
         Map<String, dynamic> json) =>

@@ -11,8 +11,17 @@ _$InfoImpl _$$InfoImplFromJson(Map<String, dynamic> json) => _$InfoImpl(
       info: json['info'] as String?,
     );
 
-Map<String, dynamic> _$$InfoImplToJson(_$InfoImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'info': instance.info,
-    };
+Map<String, dynamic> _$$InfoImplToJson(_$InfoImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('info', instance.info);
+  return val;
+}

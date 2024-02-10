@@ -18,13 +18,21 @@ _$LanguageImpl _$$LanguageImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$LanguageImplToJson(_$LanguageImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'native_name': instance.nativeName,
-      'iso_code': instance.isoCode,
-      'direction': instance.direction,
-      'translated_names':
-          instance.translatedNames?.map((e) => e.toJson()).toList(),
-    };
+Map<String, dynamic> _$$LanguageImplToJson(_$LanguageImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('native_name', instance.nativeName);
+  writeNotNull('iso_code', instance.isoCode);
+  writeNotNull('direction', instance.direction);
+  writeNotNull('translated_names',
+      instance.translatedNames?.map((e) => e.toJson()).toList());
+  return val;
+}
