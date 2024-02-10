@@ -15,3 +15,6 @@
 
 ## 0.0.6
 - implement and test the full resources client.
+
+## 0.0.7
+- implement most of the endpoints and add tests.
