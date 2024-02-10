@@ -1,4 +1,5 @@
 export "list_surah_recitation_response.dart";
+export "list_chapters_response.dart";
 export "languages_response.dart";
 export "recitation_styles_response.dart";
 export "search_response.dart";
@@ -13,7 +14,9 @@ export "recitations_response.dart";
 export "chapter_reciter_audio_files_response.dart";
 export "translations_response.dart";
 export "recitation_info_response.dart";
+export "get_chapter_response.dart";
 export "verses_response.dart";
+export "chapter_info_response.dart";
 export "chapter_reciters_response.dart";
 export "verse_media_response.dart";
 export "recitation_audio_files_response.dart";

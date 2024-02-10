@@ -1,6 +1,8 @@
 import "package:dio/dio.dart";
 import "package:retrofit/retrofit.dart";
 
+import "../models/models.dart";
+
 part "chapters_client.g.dart";
 
 @RestApi()
@@ -9,19 +11,21 @@ abstract class ChaptersClient {
 
   /// List Chapters
   @GET("/chapters")
-  Future<HttpResponse<dynamic>> listChapters({
+  Future<HttpResponse<ListChaptersResponse>> listChapters({
     @Query("language") String? language,
   });
 
   /// Get Chapter
   @GET("/chapters/{id}")
-  Future<HttpResponse<dynamic>> getChapter({
+  Future<HttpResponse<GetChapterResponse>> getChapter({
+    @Path("id") required int id,
     @Query("language") String? language,
   });
 
   /// Get Chapter Info
   @GET("/chapters/{chapter_id}/info")
-  Future<HttpResponse<dynamic>> info({
+  Future<HttpResponse<ChapterInfoResponse>> info({
+    @Path("chapter_id") required int chapterId,
     @Query("language") String? language,
   });
 }

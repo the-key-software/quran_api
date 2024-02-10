@@ -23,7 +23,7 @@ mixin _$Chapter {
   @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: "revelation_place")
-  String get revelationPlace => throw _privateConstructorUsedError;
+  RevelationPlace get revelationPlace => throw _privateConstructorUsedError;
   @JsonKey(name: "revelation_order")
   int get revelationOrder => throw _privateConstructorUsedError;
   @JsonKey(name: "bismillah_pre")
@@ -51,7 +51,7 @@ abstract class $ChapterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "id") int id,
-      @JsonKey(name: "revelation_place") String revelationPlace,
+      @JsonKey(name: "revelation_place") RevelationPlace revelationPlace,
       @JsonKey(name: "revelation_order") int revelationOrder,
       @JsonKey(name: "bismillah_pre") bool bismillahPre,
       @JsonKey(name: "name_complex") String nameComplex,
@@ -92,7 +92,7 @@ class _$ChapterCopyWithImpl<$Res, $Val extends Chapter>
       revelationPlace: null == revelationPlace
           ? _value.revelationPlace
           : revelationPlace // ignore: cast_nullable_to_non_nullable
-              as String,
+              as RevelationPlace,
       revelationOrder: null == revelationOrder
           ? _value.revelationOrder
           : revelationOrder // ignore: cast_nullable_to_non_nullable
@@ -132,7 +132,7 @@ abstract class _$$ChapterImplCopyWith<$Res> implements $ChapterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "id") int id,
-      @JsonKey(name: "revelation_place") String revelationPlace,
+      @JsonKey(name: "revelation_place") RevelationPlace revelationPlace,
       @JsonKey(name: "revelation_order") int revelationOrder,
       @JsonKey(name: "bismillah_pre") bool bismillahPre,
       @JsonKey(name: "name_complex") String nameComplex,
@@ -171,7 +171,7 @@ class __$$ChapterImplCopyWithImpl<$Res>
       revelationPlace: null == revelationPlace
           ? _value.revelationPlace
           : revelationPlace // ignore: cast_nullable_to_non_nullable
-              as String,
+              as RevelationPlace,
       revelationOrder: null == revelationOrder
           ? _value.revelationOrder
           : revelationOrder // ignore: cast_nullable_to_non_nullable
@@ -226,7 +226,7 @@ class _$ChapterImpl extends _Chapter {
   final int id;
   @override
   @JsonKey(name: "revelation_place")
-  final String revelationPlace;
+  final RevelationPlace revelationPlace;
   @override
   @JsonKey(name: "revelation_order")
   final int revelationOrder;
@@ -314,7 +314,8 @@ class _$ChapterImpl extends _Chapter {
 abstract class _Chapter extends Chapter {
   const factory _Chapter(
       {@JsonKey(name: "id") required final int id,
-      @JsonKey(name: "revelation_place") required final String revelationPlace,
+      @JsonKey(name: "revelation_place")
+      required final RevelationPlace revelationPlace,
       @JsonKey(name: "revelation_order") required final int revelationOrder,
       @JsonKey(name: "bismillah_pre") required final bool bismillahPre,
       @JsonKey(name: "name_complex") required final String nameComplex,
@@ -332,7 +333,7 @@ abstract class _Chapter extends Chapter {
   int get id;
   @override
   @JsonKey(name: "revelation_place")
-  String get revelationPlace;
+  RevelationPlace get revelationPlace;
   @override
   @JsonKey(name: "revelation_order")
   int get revelationOrder;

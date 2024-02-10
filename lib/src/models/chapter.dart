@@ -1,4 +1,5 @@
 import "package:freezed_annotation/freezed_annotation.dart";
+
 part "chapter.freezed.dart";
 part "chapter.g.dart";
 
@@ -10,7 +11,7 @@ class Chapter with _$Chapter {
 
   const factory Chapter({
     @JsonKey(name: "id") required int id,
-    @JsonKey(name: "revelation_place") required String revelationPlace,
+    @JsonKey(name: "revelation_place") required RevelationPlace revelationPlace,
     @JsonKey(name: "revelation_order") required int revelationOrder,
     @JsonKey(name: "bismillah_pre") required bool bismillahPre,
     @JsonKey(name: "name_complex") required String nameComplex,
@@ -35,3 +36,5 @@ class Chapter with _$Chapter {
   factory Chapter.fromJson(Map<String, dynamic> json) =>
       _$ChapterFromJson(json);
 }
+
+enum RevelationPlace { makkah, madinah }

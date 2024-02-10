@@ -63,7 +63,7 @@ class QuranApi {
 
   AudioClient get audio => AudioClient(dio);
 
-  // ChaptersClient get chapters => ChaptersClient(dio);
+  ChaptersClient get chapters => ChaptersClient(dio);
 
   JuzClient get juz => JuzClient(dio);
 
