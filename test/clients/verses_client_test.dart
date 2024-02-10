@@ -2,7 +2,7 @@ import "package:quran_api/quran_api.dart";
 import "package:test/test.dart";
 
 void main() {
-  group("VersesClient", () {
+  group("$VersesClient", () {
     final client = QuranApi.instance.verses;
 
     test("versesByChapterNumber", () async {

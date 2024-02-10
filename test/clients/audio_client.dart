@@ -2,7 +2,7 @@ import "package:quran_api/quran_api.dart";
 import "package:test/test.dart";
 
 void main() {
-  group("AudioClient", () {
+  group("$AudioClient", () {
     final client = QuranApi.instance.audio;
     test("chapterReciterAudioFile", () async {
       final value = await client.chapterReciterAudioFile(

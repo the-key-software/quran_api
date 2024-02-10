@@ -2,7 +2,7 @@ import "package:quran_api/quran_api.dart";
 import "package:test/test.dart";
 
 void main() async {
-  group("ResourcesClient", () {
+  group("$ResourcesClient", () {
     final client = QuranApi.instance.resources;
 
     test("recitationInfo", () async {
