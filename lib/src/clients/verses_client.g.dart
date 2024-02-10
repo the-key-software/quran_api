@@ -6,9 +6,8 @@ part of 'verses_client.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$VersesByChapterNumberQueriesImpl _$$VersesByChapterNumberQueriesImplFromJson(
-        Map<String, dynamic> json) =>
-    _$VersesByChapterNumberQueriesImpl(
+_$VersesQueriesImpl _$$VersesQueriesImplFromJson(Map<String, dynamic> json) =>
+    _$VersesQueriesImpl(
       language: json['language'] as String?,
       words: json['words'] as String?,
       translations: json['translations'] as String?,
@@ -21,20 +20,28 @@ _$VersesByChapterNumberQueriesImpl _$$VersesByChapterNumberQueriesImplFromJson(
       perPage: json['per_page'] as int?,
     );
 
-Map<String, dynamic> _$$VersesByChapterNumberQueriesImplToJson(
-        _$VersesByChapterNumberQueriesImpl instance) =>
-    <String, dynamic>{
-      'language': instance.language,
-      'words': instance.words,
-      'translations': instance.translations,
-      'audio': instance.audio,
-      'tafsirs': instance.tafsirs,
-      'word_fields': instance.wordFields,
-      'translation_fields': instance.translationFields,
-      'fields': instance.fields,
-      'page': instance.page,
-      'per_page': instance.perPage,
-    };
+Map<String, dynamic> _$$VersesQueriesImplToJson(_$VersesQueriesImpl instance) {
+  final val = <String, dynamic>{
+    'language': instance.language,
+    'words': instance.words,
+    'translations': instance.translations,
+    'audio': instance.audio,
+    'tafsirs': instance.tafsirs,
+    'word_fields': instance.wordFields,
+    'translation_fields': instance.translationFields,
+    'fields': instance.fields,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('page', instance.page);
+  writeNotNull('per_page', instance.perPage);
+  return val;
+}
 
 // **************************************************************************
 // RetrofitGenerator
@@ -53,9 +60,9 @@ class _VersesClient implements VersesClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<VersesByChapterNumberResponse>> versesByChapterNumber({
+  Future<HttpResponse<VersesResponse>> versesByChapterNumber({
     required int chapterNumber,
-    VersesByChapterNumberQueries? queries,
+    VersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -64,7 +71,7 @@ class _VersesClient implements VersesClient {
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<HttpResponse<VersesByChapterNumberResponse>>(Options(
+        _setStreamType<HttpResponse<VersesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -80,49 +87,31 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = VersesByChapterNumberResponse.fromJson(_result.data!);
+    final value = VersesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> versesByPageNumber({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
-    int? page,
-    int? perPage,
+  Future<HttpResponse<VersesResponse>> versesByPageNumber({
+    required int pageNumber,
+    VersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-      r'page': page,
-      r'per_page': perPage,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VersesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/verses/by_page/{page_number}',
+              '/verses/by_page/${pageNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -131,49 +120,31 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VersesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> versesByJuzNumber({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
-    int? page,
-    int? perPage,
+  Future<HttpResponse<VersesResponse>> versesByJuzNumber({
+    required int juzNumber,
+    VersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-      r'page': page,
-      r'per_page': perPage,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VersesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/verses/by_juz/{juz_number}',
+              '/verses/by_juz/${juzNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -182,49 +153,31 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VersesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> versesByHizbNumber({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
-    int? page,
-    int? perPage,
+  Future<HttpResponse<VersesResponse>> versesByHizbNumber({
+    required int hizbNumber,
+    VersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-      r'page': page,
-      r'per_page': perPage,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VersesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/verses/by_hizb/{hizb_number}',
+              '/verses/by_hizb/${hizbNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -233,45 +186,31 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VersesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> versesByRubElHizbNumber({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
+  Future<HttpResponse<VersesResponse>> versesByRubElHizbNumber({
+    required int rubElHizbNumber,
+    VersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VersesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/verses/by_rub/{rub_el_hizb_number}',
+              '/verses/by_rub/${rubElHizbNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -280,45 +219,31 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VersesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> versesByVerseKey({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
+  Future<HttpResponse<VerseResponse>> versesByVerseKey({
+    required String verseKey,
+    VersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VerseResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/verses/by_key/{verse_key}',
+              '/verses/by_key/${verseKey}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -327,38 +252,22 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VerseResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> randomVerse({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
-  }) async {
+  Future<HttpResponse<VerseResponse>> randomVerse(
+      {VersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VerseResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -374,7 +283,7 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VerseResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

@@ -14,13 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-VersesByChapterNumberQueries _$VersesByChapterNumberQueriesFromJson(
-    Map<String, dynamic> json) {
-  return _VersesByChapterNumberQueries.fromJson(json);
+VersesQueries _$VersesQueriesFromJson(Map<String, dynamic> json) {
+  return _VersesQueries.fromJson(json);
 }
 
 /// @nodoc
-mixin _$VersesByChapterNumberQueries {
+mixin _$VersesQueries {
   @JsonKey(name: "language")
   String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: "words")
@@ -37,24 +36,22 @@ mixin _$VersesByChapterNumberQueries {
   String? get translationFields => throw _privateConstructorUsedError;
   @JsonKey(name: "fields")
   String? get fields => throw _privateConstructorUsedError;
-  @JsonKey(name: "page")
+  @JsonKey(name: "page", includeIfNull: false)
   int? get page => throw _privateConstructorUsedError;
-  @JsonKey(name: "per_page")
+  @JsonKey(name: "per_page", includeIfNull: false)
   int? get perPage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $VersesByChapterNumberQueriesCopyWith<VersesByChapterNumberQueries>
-      get copyWith => throw _privateConstructorUsedError;
+  $VersesQueriesCopyWith<VersesQueries> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VersesByChapterNumberQueriesCopyWith<$Res> {
-  factory $VersesByChapterNumberQueriesCopyWith(
-          VersesByChapterNumberQueries value,
-          $Res Function(VersesByChapterNumberQueries) then) =
-      _$VersesByChapterNumberQueriesCopyWithImpl<$Res,
-          VersesByChapterNumberQueries>;
+abstract class $VersesQueriesCopyWith<$Res> {
+  factory $VersesQueriesCopyWith(
+          VersesQueries value, $Res Function(VersesQueries) then) =
+      _$VersesQueriesCopyWithImpl<$Res, VersesQueries>;
   @useResult
   $Res call(
       {@JsonKey(name: "language") String? language,
@@ -65,15 +62,14 @@ abstract class $VersesByChapterNumberQueriesCopyWith<$Res> {
       @JsonKey(name: "word_fields") String? wordFields,
       @JsonKey(name: "translation_fields") String? translationFields,
       @JsonKey(name: "fields") String? fields,
-      @JsonKey(name: "page") int? page,
-      @JsonKey(name: "per_page") int? perPage});
+      @JsonKey(name: "page", includeIfNull: false) int? page,
+      @JsonKey(name: "per_page", includeIfNull: false) int? perPage});
 }
 
 /// @nodoc
-class _$VersesByChapterNumberQueriesCopyWithImpl<$Res,
-        $Val extends VersesByChapterNumberQueries>
-    implements $VersesByChapterNumberQueriesCopyWith<$Res> {
-  _$VersesByChapterNumberQueriesCopyWithImpl(this._value, this._then);
+class _$VersesQueriesCopyWithImpl<$Res, $Val extends VersesQueries>
+    implements $VersesQueriesCopyWith<$Res> {
+  _$VersesQueriesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -140,12 +136,11 @@ class _$VersesByChapterNumberQueriesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$VersesByChapterNumberQueriesImplCopyWith<$Res>
-    implements $VersesByChapterNumberQueriesCopyWith<$Res> {
-  factory _$$VersesByChapterNumberQueriesImplCopyWith(
-          _$VersesByChapterNumberQueriesImpl value,
-          $Res Function(_$VersesByChapterNumberQueriesImpl) then) =
-      __$$VersesByChapterNumberQueriesImplCopyWithImpl<$Res>;
+abstract class _$$VersesQueriesImplCopyWith<$Res>
+    implements $VersesQueriesCopyWith<$Res> {
+  factory _$$VersesQueriesImplCopyWith(
+          _$VersesQueriesImpl value, $Res Function(_$VersesQueriesImpl) then) =
+      __$$VersesQueriesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -157,18 +152,16 @@ abstract class _$$VersesByChapterNumberQueriesImplCopyWith<$Res>
       @JsonKey(name: "word_fields") String? wordFields,
       @JsonKey(name: "translation_fields") String? translationFields,
       @JsonKey(name: "fields") String? fields,
-      @JsonKey(name: "page") int? page,
-      @JsonKey(name: "per_page") int? perPage});
+      @JsonKey(name: "page", includeIfNull: false) int? page,
+      @JsonKey(name: "per_page", includeIfNull: false) int? perPage});
 }
 
 /// @nodoc
-class __$$VersesByChapterNumberQueriesImplCopyWithImpl<$Res>
-    extends _$VersesByChapterNumberQueriesCopyWithImpl<$Res,
-        _$VersesByChapterNumberQueriesImpl>
-    implements _$$VersesByChapterNumberQueriesImplCopyWith<$Res> {
-  __$$VersesByChapterNumberQueriesImplCopyWithImpl(
-      _$VersesByChapterNumberQueriesImpl _value,
-      $Res Function(_$VersesByChapterNumberQueriesImpl) _then)
+class __$$VersesQueriesImplCopyWithImpl<$Res>
+    extends _$VersesQueriesCopyWithImpl<$Res, _$VersesQueriesImpl>
+    implements _$$VersesQueriesImplCopyWith<$Res> {
+  __$$VersesQueriesImplCopyWithImpl(
+      _$VersesQueriesImpl _value, $Res Function(_$VersesQueriesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -185,7 +178,7 @@ class __$$VersesByChapterNumberQueriesImplCopyWithImpl<$Res>
     Object? page = freezed,
     Object? perPage = freezed,
   }) {
-    return _then(_$VersesByChapterNumberQueriesImpl(
+    return _then(_$VersesQueriesImpl(
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
@@ -232,8 +225,8 @@ class __$$VersesByChapterNumberQueriesImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$VersesByChapterNumberQueriesImpl extends _VersesByChapterNumberQueries {
-  const _$VersesByChapterNumberQueriesImpl(
+class _$VersesQueriesImpl extends _VersesQueries {
+  const _$VersesQueriesImpl(
       {@JsonKey(name: "language") this.language,
       @JsonKey(name: "words") this.words,
       @JsonKey(name: "translations") this.translations,
@@ -242,13 +235,12 @@ class _$VersesByChapterNumberQueriesImpl extends _VersesByChapterNumberQueries {
       @JsonKey(name: "word_fields") this.wordFields,
       @JsonKey(name: "translation_fields") this.translationFields,
       @JsonKey(name: "fields") this.fields,
-      @JsonKey(name: "page") this.page,
-      @JsonKey(name: "per_page") this.perPage})
+      @JsonKey(name: "page", includeIfNull: false) this.page,
+      @JsonKey(name: "per_page", includeIfNull: false) this.perPage})
       : super._();
 
-  factory _$VersesByChapterNumberQueriesImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$VersesByChapterNumberQueriesImplFromJson(json);
+  factory _$VersesQueriesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VersesQueriesImplFromJson(json);
 
   @override
   @JsonKey(name: "language")
@@ -275,22 +267,22 @@ class _$VersesByChapterNumberQueriesImpl extends _VersesByChapterNumberQueries {
   @JsonKey(name: "fields")
   final String? fields;
   @override
-  @JsonKey(name: "page")
+  @JsonKey(name: "page", includeIfNull: false)
   final int? page;
   @override
-  @JsonKey(name: "per_page")
+  @JsonKey(name: "per_page", includeIfNull: false)
   final int? perPage;
 
   @override
   String toString() {
-    return 'VersesByChapterNumberQueries(language: $language, words: $words, translations: $translations, audio: $audio, tafsirs: $tafsirs, wordFields: $wordFields, translationFields: $translationFields, fields: $fields, page: $page, perPage: $perPage)';
+    return 'VersesQueries(language: $language, words: $words, translations: $translations, audio: $audio, tafsirs: $tafsirs, wordFields: $wordFields, translationFields: $translationFields, fields: $fields, page: $page, perPage: $perPage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$VersesByChapterNumberQueriesImpl &&
+            other is _$VersesQueriesImpl &&
             (identical(other.language, language) ||
                 other.language == language) &&
             (identical(other.words, words) || other.words == words) &&
@@ -315,37 +307,34 @@ class _$VersesByChapterNumberQueriesImpl extends _VersesByChapterNumberQueries {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$VersesByChapterNumberQueriesImplCopyWith<
-          _$VersesByChapterNumberQueriesImpl>
-      get copyWith => __$$VersesByChapterNumberQueriesImplCopyWithImpl<
-          _$VersesByChapterNumberQueriesImpl>(this, _$identity);
+  _$$VersesQueriesImplCopyWith<_$VersesQueriesImpl> get copyWith =>
+      __$$VersesQueriesImplCopyWithImpl<_$VersesQueriesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VersesByChapterNumberQueriesImplToJson(
+    return _$$VersesQueriesImplToJson(
       this,
     );
   }
 }
 
-abstract class _VersesByChapterNumberQueries
-    extends VersesByChapterNumberQueries {
-  const factory _VersesByChapterNumberQueries(
-          {@JsonKey(name: "language") final String? language,
-          @JsonKey(name: "words") final String? words,
-          @JsonKey(name: "translations") final String? translations,
-          @JsonKey(name: "audio") final int? audio,
-          @JsonKey(name: "tafsirs") final String? tafsirs,
-          @JsonKey(name: "word_fields") final String? wordFields,
-          @JsonKey(name: "translation_fields") final String? translationFields,
-          @JsonKey(name: "fields") final String? fields,
-          @JsonKey(name: "page") final int? page,
-          @JsonKey(name: "per_page") final int? perPage}) =
-      _$VersesByChapterNumberQueriesImpl;
-  const _VersesByChapterNumberQueries._() : super._();
+abstract class _VersesQueries extends VersesQueries {
+  const factory _VersesQueries(
+      {@JsonKey(name: "language") final String? language,
+      @JsonKey(name: "words") final String? words,
+      @JsonKey(name: "translations") final String? translations,
+      @JsonKey(name: "audio") final int? audio,
+      @JsonKey(name: "tafsirs") final String? tafsirs,
+      @JsonKey(name: "word_fields") final String? wordFields,
+      @JsonKey(name: "translation_fields") final String? translationFields,
+      @JsonKey(name: "fields") final String? fields,
+      @JsonKey(name: "page", includeIfNull: false) final int? page,
+      @JsonKey(name: "per_page", includeIfNull: false)
+      final int? perPage}) = _$VersesQueriesImpl;
+  const _VersesQueries._() : super._();
 
-  factory _VersesByChapterNumberQueries.fromJson(Map<String, dynamic> json) =
-      _$VersesByChapterNumberQueriesImpl.fromJson;
+  factory _VersesQueries.fromJson(Map<String, dynamic> json) =
+      _$VersesQueriesImpl.fromJson;
 
   @override
   @JsonKey(name: "language")
@@ -372,14 +361,13 @@ abstract class _VersesByChapterNumberQueries
   @JsonKey(name: "fields")
   String? get fields;
   @override
-  @JsonKey(name: "page")
+  @JsonKey(name: "page", includeIfNull: false)
   int? get page;
   @override
-  @JsonKey(name: "per_page")
+  @JsonKey(name: "per_page", includeIfNull: false)
   int? get perPage;
   @override
   @JsonKey(ignore: true)
-  _$$VersesByChapterNumberQueriesImplCopyWith<
-          _$VersesByChapterNumberQueriesImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$VersesQueriesImplCopyWith<_$VersesQueriesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

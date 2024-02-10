@@ -15,8 +15,8 @@ This package provides a Dart and Flutter implementation of the Quran API based o
     - [ ] Chapters
     - [x] Juz
     - [x] Quran
-    - [ ] Verses
-    - [ ] Resources
+    - [x] Verses
+    - [x] Resources
     - [x] Search
 
 ## Getting started
