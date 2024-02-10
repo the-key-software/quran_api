@@ -1,7 +1,4 @@
-// ignore_for_file: unused_import
-
 import "package:freezed_annotation/freezed_annotation.dart";
-import "models.dart";
 part "resource.freezed.dart";
 part "resource.g.dart";
 

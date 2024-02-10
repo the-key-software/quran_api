@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import "package:dio/dio.dart";
 import "package:freezed_annotation/freezed_annotation.dart";
 import "package:retrofit/retrofit.dart";

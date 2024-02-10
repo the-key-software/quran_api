@@ -1,7 +1,4 @@
-// ignore_for_file: unused_import
-
 import "package:dio/dio.dart";
-import "../models/models.dart";
 import "package:retrofit/retrofit.dart";
 
 part "chapters_client.g.dart";

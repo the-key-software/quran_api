@@ -3,6 +3,20 @@
 This package provides a Dart and Flutter implementation of the Quran API based on the [official documentation](https://api-docs.quran.com/docs/category/quran.com-api).
 
 
+## Usage
+
+```dart
+import "package:quran_api/quran_api.dart";
+
+Future<void> main() async {
+  final value = await QuranApi.instance.search.search(
+    queries: SearchQueries(q: "مدهامتان"),
+  );
+
+  print(value.data.search.query);
+}
+```
+
 ## Features
 **it's a work in progress, but here's what's supported so far:**
 - Type-safe API calls and model.
@@ -33,20 +47,6 @@ or run this command:
     
 ```shell
 flutter pub add quran_api
-```
-
-## Usage
-
-```dart
-import "package:quran_api/quran_api.dart";
-
-Future<void> main() async {
-  final value = await QuranApi.instance.search.search(
-    queries: SearchQueries(q: "مدهامتان"),
-  );
-
-  print(value.data.search.query);
-}
 ```
 
 ## Additional information
