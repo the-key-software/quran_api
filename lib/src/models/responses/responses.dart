@@ -5,6 +5,7 @@ export "search_response.dart";
 export "chapter_infos_response.dart";
 export "chapter_reciter_audio_file_response.dart";
 export "juzs_response.dart";
+export "tafsir_info_response.dart";
 export "quran_verses_indopak_response.dart";
 export "tafsirs_response.dart";
 export "recitations_response.dart";

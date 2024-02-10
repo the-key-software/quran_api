@@ -37,7 +37,7 @@ abstract class ResourcesClient {
 
   /// Tafsir Info
   @GET("/resources/tafsirs/{tafsir_id}/info")
-  Future<HttpResponse<dynamic>> tafsirInfo({
+  Future<HttpResponse<TafsirInfoResponse>> tafsirInfo({
     @Path("tafsir_id") required int tafsirId,
   });
 
