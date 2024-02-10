@@ -7,6 +7,7 @@ export "verse.dart";
 export "author.dart";
 export "responses/responses.dart";
 export "tafsir.dart";
+export "info.dart";
 export "translation.dart";
 export "resource.dart";
 export "media_content.dart";

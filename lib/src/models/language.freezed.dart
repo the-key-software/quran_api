@@ -21,19 +21,19 @@ Language _$LanguageFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Language {
   @JsonKey(name: "id")
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: "name")
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: "native_name")
-  String get nativeName => throw _privateConstructorUsedError;
+  String? get nativeName => throw _privateConstructorUsedError;
 
   /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
   @JsonKey(name: "iso_code")
-  String get isoCode => throw _privateConstructorUsedError;
+  String? get isoCode => throw _privateConstructorUsedError;
   @JsonKey(name: "direction")
-  String get direction => throw _privateConstructorUsedError;
+  String? get direction => throw _privateConstructorUsedError;
   @JsonKey(name: "translated_names")
-  List<TranslatedName> get translatedNames =>
+  List<TranslatedName>? get translatedNames =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,12 +48,13 @@ abstract class $LanguageCopyWith<$Res> {
       _$LanguageCopyWithImpl<$Res, Language>;
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "native_name") String nativeName,
-      @JsonKey(name: "iso_code") String isoCode,
-      @JsonKey(name: "direction") String direction,
-      @JsonKey(name: "translated_names") List<TranslatedName> translatedNames});
+      {@JsonKey(name: "id") int? id,
+      @JsonKey(name: "name") String? name,
+      @JsonKey(name: "native_name") String? nativeName,
+      @JsonKey(name: "iso_code") String? isoCode,
+      @JsonKey(name: "direction") String? direction,
+      @JsonKey(name: "translated_names")
+      List<TranslatedName>? translatedNames});
 }
 
 /// @nodoc
@@ -69,38 +70,38 @@ class _$LanguageCopyWithImpl<$Res, $Val extends Language>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? nativeName = null,
-    Object? isoCode = null,
-    Object? direction = null,
-    Object? translatedNames = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? nativeName = freezed,
+    Object? isoCode = freezed,
+    Object? direction = freezed,
+    Object? translatedNames = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
+              as int?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      nativeName: null == nativeName
+              as String?,
+      nativeName: freezed == nativeName
           ? _value.nativeName
           : nativeName // ignore: cast_nullable_to_non_nullable
-              as String,
-      isoCode: null == isoCode
+              as String?,
+      isoCode: freezed == isoCode
           ? _value.isoCode
           : isoCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      direction: null == direction
+              as String?,
+      direction: freezed == direction
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as String,
-      translatedNames: null == translatedNames
+              as String?,
+      translatedNames: freezed == translatedNames
           ? _value.translatedNames
           : translatedNames // ignore: cast_nullable_to_non_nullable
-              as List<TranslatedName>,
+              as List<TranslatedName>?,
     ) as $Val);
   }
 }
@@ -114,12 +115,13 @@ abstract class _$$LanguageImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "native_name") String nativeName,
-      @JsonKey(name: "iso_code") String isoCode,
-      @JsonKey(name: "direction") String direction,
-      @JsonKey(name: "translated_names") List<TranslatedName> translatedNames});
+      {@JsonKey(name: "id") int? id,
+      @JsonKey(name: "name") String? name,
+      @JsonKey(name: "native_name") String? nativeName,
+      @JsonKey(name: "iso_code") String? isoCode,
+      @JsonKey(name: "direction") String? direction,
+      @JsonKey(name: "translated_names")
+      List<TranslatedName>? translatedNames});
 }
 
 /// @nodoc
@@ -133,38 +135,38 @@ class __$$LanguageImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? nativeName = null,
-    Object? isoCode = null,
-    Object? direction = null,
-    Object? translatedNames = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? nativeName = freezed,
+    Object? isoCode = freezed,
+    Object? direction = freezed,
+    Object? translatedNames = freezed,
   }) {
     return _then(_$LanguageImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
+              as int?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      nativeName: null == nativeName
+              as String?,
+      nativeName: freezed == nativeName
           ? _value.nativeName
           : nativeName // ignore: cast_nullable_to_non_nullable
-              as String,
-      isoCode: null == isoCode
+              as String?,
+      isoCode: freezed == isoCode
           ? _value.isoCode
           : isoCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      direction: null == direction
+              as String?,
+      direction: freezed == direction
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as String,
-      translatedNames: null == translatedNames
+              as String?,
+      translatedNames: freezed == translatedNames
           ? _value._translatedNames
           : translatedNames // ignore: cast_nullable_to_non_nullable
-              as List<TranslatedName>,
+              as List<TranslatedName>?,
     ));
   }
 }
@@ -179,7 +181,7 @@ class _$LanguageImpl extends _Language {
       @JsonKey(name: "iso_code") required this.isoCode,
       @JsonKey(name: "direction") required this.direction,
       @JsonKey(name: "translated_names")
-      required final List<TranslatedName> translatedNames})
+      required final List<TranslatedName>? translatedNames})
       : _translatedNames = translatedNames,
         super._();
 
@@ -188,28 +190,30 @@ class _$LanguageImpl extends _Language {
 
   @override
   @JsonKey(name: "id")
-  final int id;
+  final int? id;
   @override
   @JsonKey(name: "name")
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: "native_name")
-  final String nativeName;
+  final String? nativeName;
 
   /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
   @override
   @JsonKey(name: "iso_code")
-  final String isoCode;
+  final String? isoCode;
   @override
   @JsonKey(name: "direction")
-  final String direction;
-  final List<TranslatedName> _translatedNames;
+  final String? direction;
+  final List<TranslatedName>? _translatedNames;
   @override
   @JsonKey(name: "translated_names")
-  List<TranslatedName> get translatedNames {
+  List<TranslatedName>? get translatedNames {
+    final value = _translatedNames;
+    if (value == null) return null;
     if (_translatedNames is EqualUnmodifiableListView) return _translatedNames;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_translatedNames);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -254,13 +258,13 @@ class _$LanguageImpl extends _Language {
 
 abstract class _Language extends Language {
   const factory _Language(
-      {@JsonKey(name: "id") required final int id,
-      @JsonKey(name: "name") required final String name,
-      @JsonKey(name: "native_name") required final String nativeName,
-      @JsonKey(name: "iso_code") required final String isoCode,
-      @JsonKey(name: "direction") required final String direction,
+      {@JsonKey(name: "id") required final int? id,
+      @JsonKey(name: "name") required final String? name,
+      @JsonKey(name: "native_name") required final String? nativeName,
+      @JsonKey(name: "iso_code") required final String? isoCode,
+      @JsonKey(name: "direction") required final String? direction,
       @JsonKey(name: "translated_names")
-      required final List<TranslatedName> translatedNames}) = _$LanguageImpl;
+      required final List<TranslatedName>? translatedNames}) = _$LanguageImpl;
   const _Language._() : super._();
 
   factory _Language.fromJson(Map<String, dynamic> json) =
@@ -268,24 +272,24 @@ abstract class _Language extends Language {
 
   @override
   @JsonKey(name: "id")
-  int get id;
+  int? get id;
   @override
   @JsonKey(name: "name")
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: "native_name")
-  String get nativeName;
+  String? get nativeName;
   @override
 
   /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
   @JsonKey(name: "iso_code")
-  String get isoCode;
+  String? get isoCode;
   @override
   @JsonKey(name: "direction")
-  String get direction;
+  String? get direction;
   @override
   @JsonKey(name: "translated_names")
-  List<TranslatedName> get translatedNames;
+  List<TranslatedName>? get translatedNames;
   @override
   @JsonKey(ignore: true)
   _$$LanguageImplCopyWith<_$LanguageImpl> get copyWith =>

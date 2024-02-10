@@ -19,20 +19,21 @@ class _ResourcesClient implements ResourcesClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<dynamic>> recitationInfo() async {
+  Future<HttpResponse<RecitationInfoResponse>> recitationInfo(
+      {required int recitationId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<RecitationInfoResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/resources/recitations/{recitation_id}/info',
+              '/resources/recitations/${recitationId}/info',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -41,26 +42,27 @@ class _ResourcesClient implements ResourcesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = RecitationInfoResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> translationInfo() async {
+  Future<HttpResponse<TranslationInfoResponse>> translationInfo(
+      {required int translationId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<TranslationInfoResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/resources/translations/{translation_id}/info',
+              '/resources/translations/${translationId}/info',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -69,20 +71,21 @@ class _ResourcesClient implements ResourcesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = TranslationInfoResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> translations({String? language}) async {
+  Future<HttpResponse<TranslationsResponse>> translations(
+      {String? language}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'language': language};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<TranslationsResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -98,20 +101,20 @@ class _ResourcesClient implements ResourcesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = TranslationsResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> tafsirs({String? language}) async {
+  Future<HttpResponse<TafsirsResponse>> tafsirs({String? language}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'language': language};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<TafsirsResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -127,13 +130,13 @@ class _ResourcesClient implements ResourcesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = TafsirsResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> tafsirInfo() async {
+  Future<HttpResponse<dynamic>> tafsirInfo({required int tafsirId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -146,7 +149,7 @@ class _ResourcesClient implements ResourcesClient {
     )
             .compose(
               _dio.options,
-              '/resources/tafsirs/{tafsir_id}/info',
+              '/resources/tafsirs/${tafsirId}/info',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -161,13 +164,13 @@ class _ResourcesClient implements ResourcesClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> recitationStyles() async {
+  Future<HttpResponse<RecitationStylesResponse>> recitationStyles() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<RecitationStylesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -183,20 +186,20 @@ class _ResourcesClient implements ResourcesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = RecitationStylesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }
 
   @override
-  Future<HttpResponse<dynamic>> languages({String? language}) async {
+  Future<HttpResponse<LanguagesResponse>> languages({String? language}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'language': language};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<LanguagesResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -212,7 +215,7 @@ class _ResourcesClient implements ResourcesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = LanguagesResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

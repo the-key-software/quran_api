@@ -11,4 +11,4 @@
 - fix juzs client implementation and add tests.
 
 ## 0.0.5
-- update verses client implementation and add tests.
+- update verses client implementation and add tests. 

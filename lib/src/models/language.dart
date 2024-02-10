@@ -12,15 +12,15 @@ class Language with _$Language {
   const Language._();
 
   const factory Language({
-    @JsonKey(name: "id") required int id,
-    @JsonKey(name: "name") required String name,
-    @JsonKey(name: "native_name") required String nativeName,
+    @JsonKey(name: "id") required int? id,
+    @JsonKey(name: "name") required String? name,
+    @JsonKey(name: "native_name") required String? nativeName,
 
     /// iso code of the language, you'll pass this code in api calls for fetching content in specific language.
-    @JsonKey(name: "iso_code") required String isoCode,
-    @JsonKey(name: "direction") required String direction,
+    @JsonKey(name: "iso_code") required String? isoCode,
+    @JsonKey(name: "direction") required String? direction,
     @JsonKey(name: "translated_names")
-    required List<TranslatedName> translatedNames,
+    required List<TranslatedName>? translatedNames,
   }) = _Language;
 
   static Language get example => Language.fromJson({

@@ -1,8 +1,9 @@
 // ignore_for_file: unused_import
 
 import "package:dio/dio.dart";
-import "../models/models.dart";
 import "package:retrofit/retrofit.dart";
+
+import "../models/models.dart";
 
 part "resources_client.g.dart";
 
@@ -12,35 +13,41 @@ abstract class ResourcesClient {
 
   /// Recitation Info
   @GET("/resources/recitations/{recitation_id}/info")
-  Future<HttpResponse<dynamic>> recitationInfo();
+  Future<HttpResponse<RecitationInfoResponse>> recitationInfo({
+    @Path("recitation_id") required int recitationId,
+  });
 
   /// Translation Info
   @GET("/resources/translations/{translation_id}/info")
-  Future<HttpResponse<dynamic>> translationInfo();
+  Future<HttpResponse<TranslationInfoResponse>> translationInfo({
+    @Path("translation_id") required int translationId,
+  });
 
   /// Translations
   @GET("/resources/translations")
-  Future<HttpResponse<dynamic>> translations({
+  Future<HttpResponse<TranslationsResponse>> translations({
     @Query("language") String? language,
   });
 
   /// Tafsirs
   @GET("/resources/tafsirs")
-  Future<HttpResponse<dynamic>> tafsirs({
+  Future<HttpResponse<TafsirsResponse>> tafsirs({
     @Query("language") String? language,
   });
 
   /// Tafsir Info
   @GET("/resources/tafsirs/{tafsir_id}/info")
-  Future<HttpResponse<dynamic>> tafsirInfo();
+  Future<HttpResponse<dynamic>> tafsirInfo({
+    @Path("tafsir_id") required int tafsirId,
+  });
 
   /// Recitation Styles
   @GET("/resources/recitation_styles")
-  Future<HttpResponse<dynamic>> recitationStyles();
+  Future<HttpResponse<RecitationStylesResponse>> recitationStyles();
 
   /// Languages
   @GET("/resources/languages")
-  Future<HttpResponse<dynamic>> languages({
+  Future<HttpResponse<LanguagesResponse>> languages({
     @Query("language") String? language,
   });
 

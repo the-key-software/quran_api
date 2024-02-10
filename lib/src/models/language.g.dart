@@ -8,13 +8,13 @@ part of 'language.dart';
 
 _$LanguageImpl _$$LanguageImplFromJson(Map<String, dynamic> json) =>
     _$LanguageImpl(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      nativeName: json['native_name'] as String,
-      isoCode: json['iso_code'] as String,
-      direction: json['direction'] as String,
-      translatedNames: (json['translated_names'] as List<dynamic>)
-          .map((e) => TranslatedName.fromJson(e as Map<String, dynamic>))
+      id: json['id'] as int?,
+      name: json['name'] as String?,
+      nativeName: json['native_name'] as String?,
+      isoCode: json['iso_code'] as String?,
+      direction: json['direction'] as String?,
+      translatedNames: (json['translated_names'] as List<dynamic>?)
+          ?.map((e) => TranslatedName.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -26,5 +26,5 @@ Map<String, dynamic> _$$LanguageImplToJson(_$LanguageImpl instance) =>
       'iso_code': instance.isoCode,
       'direction': instance.direction,
       'translated_names':
-          instance.translatedNames.map((e) => e.toJson()).toList(),
+          instance.translatedNames?.map((e) => e.toJson()).toList(),
     };
