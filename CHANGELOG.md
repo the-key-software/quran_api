@@ -12,3 +12,6 @@
 
 ## 0.0.5
 - update verses client implementation and add tests. 
+
+## 0.0.6
+- implement and test the full resources client.
