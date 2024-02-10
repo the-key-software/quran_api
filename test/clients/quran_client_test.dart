@@ -2,7 +2,7 @@ import "package:quran_api/quran_api.dart";
 import "package:test/test.dart";
 
 void main() async {
-  group("quran client", () {
+  group("QuranClient", () {
     final client = QuranApi.instance.quran;
 
     group("quranVersesIndopak", () {
