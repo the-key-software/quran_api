@@ -39,7 +39,7 @@ class Verse with _$Verse {
     @JsonKey(name: "text_uthmani_tajweed") required String? textUthmaniTajweed,
     @JsonKey(name: "juz_number") required int juzNumber,
     @JsonKey(name: "hizb_number") required int hizbNumber,
-    @JsonKey(name: "rub_number") required int rubNumber,
+    @JsonKey(name: "rub_number") required int? rubNumber,
     @JsonKey(name: "sajdah_type") required Object? sajdahType,
     @JsonKey(name: "sajdah_number") required Object? sajdahNumber,
 

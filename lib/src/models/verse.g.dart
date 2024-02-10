@@ -20,7 +20,7 @@ _$VerseImpl _$$VerseImplFromJson(Map<String, dynamic> json) => _$VerseImpl(
       textUthmaniTajweed: json['text_uthmani_tajweed'] as String?,
       juzNumber: json['juz_number'] as int,
       hizbNumber: json['hizb_number'] as int,
-      rubNumber: json['rub_number'] as int,
+      rubNumber: json['rub_number'] as int?,
       sajdahType: json['sajdah_type'],
       sajdahNumber: json['sajdah_number'],
       pageNumber: json['page_number'] as int,

@@ -23,33 +23,33 @@ mixin _$Translation {
   @JsonKey(name: "resource_id")
   int get resourceId => throw _privateConstructorUsedError;
   @JsonKey(name: "resource_name")
-  String get resourceName => throw _privateConstructorUsedError;
+  String? get resourceName => throw _privateConstructorUsedError;
   @JsonKey(name: "id")
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
 
   /// Text of the translation, text could have HTML tags for formatting and footnotes.
   @JsonKey(name: "text")
   String get text => throw _privateConstructorUsedError;
   @JsonKey(name: "verse_id")
-  int get verseId => throw _privateConstructorUsedError;
+  int? get verseId => throw _privateConstructorUsedError;
   @JsonKey(name: "language_id")
-  int get languageId => throw _privateConstructorUsedError;
+  int? get languageId => throw _privateConstructorUsedError;
   @JsonKey(name: "language_name")
-  String get languageName => throw _privateConstructorUsedError;
+  String? get languageName => throw _privateConstructorUsedError;
   @JsonKey(name: "verse_key")
-  VerseKey get verseKey => throw _privateConstructorUsedError;
+  VerseKey? get verseKey => throw _privateConstructorUsedError;
   @JsonKey(name: "chapter_id")
-  int get chapterId => throw _privateConstructorUsedError;
+  int? get chapterId => throw _privateConstructorUsedError;
   @JsonKey(name: "verse_number")
-  int get verseNumber => throw _privateConstructorUsedError;
+  int? get verseNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "juz_number")
-  int get juzNumber => throw _privateConstructorUsedError;
+  int? get juzNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "hizb_number")
-  int get hizbNumber => throw _privateConstructorUsedError;
+  int? get hizbNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "rub_number")
-  int get rubNumber => throw _privateConstructorUsedError;
+  int? get rubNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "page_number")
-  int get pageNumber => throw _privateConstructorUsedError;
+  int? get pageNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -65,21 +65,21 @@ abstract class $TranslationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "resource_id") int resourceId,
-      @JsonKey(name: "resource_name") String resourceName,
-      @JsonKey(name: "id") int id,
+      @JsonKey(name: "resource_name") String? resourceName,
+      @JsonKey(name: "id") int? id,
       @JsonKey(name: "text") String text,
-      @JsonKey(name: "verse_id") int verseId,
-      @JsonKey(name: "language_id") int languageId,
-      @JsonKey(name: "language_name") String languageName,
-      @JsonKey(name: "verse_key") VerseKey verseKey,
-      @JsonKey(name: "chapter_id") int chapterId,
-      @JsonKey(name: "verse_number") int verseNumber,
-      @JsonKey(name: "juz_number") int juzNumber,
-      @JsonKey(name: "hizb_number") int hizbNumber,
-      @JsonKey(name: "rub_number") int rubNumber,
-      @JsonKey(name: "page_number") int pageNumber});
+      @JsonKey(name: "verse_id") int? verseId,
+      @JsonKey(name: "language_id") int? languageId,
+      @JsonKey(name: "language_name") String? languageName,
+      @JsonKey(name: "verse_key") VerseKey? verseKey,
+      @JsonKey(name: "chapter_id") int? chapterId,
+      @JsonKey(name: "verse_number") int? verseNumber,
+      @JsonKey(name: "juz_number") int? juzNumber,
+      @JsonKey(name: "hizb_number") int? hizbNumber,
+      @JsonKey(name: "rub_number") int? rubNumber,
+      @JsonKey(name: "page_number") int? pageNumber});
 
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $VerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -96,84 +96,88 @@ class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
   @override
   $Res call({
     Object? resourceId = null,
-    Object? resourceName = null,
-    Object? id = null,
+    Object? resourceName = freezed,
+    Object? id = freezed,
     Object? text = null,
-    Object? verseId = null,
-    Object? languageId = null,
-    Object? languageName = null,
-    Object? verseKey = null,
-    Object? chapterId = null,
-    Object? verseNumber = null,
-    Object? juzNumber = null,
-    Object? hizbNumber = null,
-    Object? rubNumber = null,
-    Object? pageNumber = null,
+    Object? verseId = freezed,
+    Object? languageId = freezed,
+    Object? languageName = freezed,
+    Object? verseKey = freezed,
+    Object? chapterId = freezed,
+    Object? verseNumber = freezed,
+    Object? juzNumber = freezed,
+    Object? hizbNumber = freezed,
+    Object? rubNumber = freezed,
+    Object? pageNumber = freezed,
   }) {
     return _then(_value.copyWith(
       resourceId: null == resourceId
           ? _value.resourceId
           : resourceId // ignore: cast_nullable_to_non_nullable
               as int,
-      resourceName: null == resourceName
+      resourceName: freezed == resourceName
           ? _value.resourceName
           : resourceName // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
+              as String?,
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      verseId: null == verseId
+      verseId: freezed == verseId
           ? _value.verseId
           : verseId // ignore: cast_nullable_to_non_nullable
-              as int,
-      languageId: null == languageId
+              as int?,
+      languageId: freezed == languageId
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      languageName: null == languageName
+              as int?,
+      languageName: freezed == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
-              as String,
-      verseKey: null == verseKey
+              as String?,
+      verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
-      chapterId: null == chapterId
+              as VerseKey?,
+      chapterId: freezed == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
-              as int,
-      verseNumber: null == verseNumber
+              as int?,
+      verseNumber: freezed == verseNumber
           ? _value.verseNumber
           : verseNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      juzNumber: null == juzNumber
+              as int?,
+      juzNumber: freezed == juzNumber
           ? _value.juzNumber
           : juzNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      hizbNumber: null == hizbNumber
+              as int?,
+      hizbNumber: freezed == hizbNumber
           ? _value.hizbNumber
           : hizbNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      rubNumber: null == rubNumber
+              as int?,
+      rubNumber: freezed == rubNumber
           ? _value.rubNumber
           : rubNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      pageNumber: null == pageNumber
+              as int?,
+      pageNumber: freezed == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseKeyCopyWith<$Res> get verseKey {
-    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+  $VerseKeyCopyWith<$Res>? get verseKey {
+    if (_value.verseKey == null) {
+      return null;
+    }
+
+    return $VerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
       return _then(_value.copyWith(verseKey: value) as $Val);
     });
   }
@@ -189,22 +193,22 @@ abstract class _$$TranslationImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: "resource_id") int resourceId,
-      @JsonKey(name: "resource_name") String resourceName,
-      @JsonKey(name: "id") int id,
+      @JsonKey(name: "resource_name") String? resourceName,
+      @JsonKey(name: "id") int? id,
       @JsonKey(name: "text") String text,
-      @JsonKey(name: "verse_id") int verseId,
-      @JsonKey(name: "language_id") int languageId,
-      @JsonKey(name: "language_name") String languageName,
-      @JsonKey(name: "verse_key") VerseKey verseKey,
-      @JsonKey(name: "chapter_id") int chapterId,
-      @JsonKey(name: "verse_number") int verseNumber,
-      @JsonKey(name: "juz_number") int juzNumber,
-      @JsonKey(name: "hizb_number") int hizbNumber,
-      @JsonKey(name: "rub_number") int rubNumber,
-      @JsonKey(name: "page_number") int pageNumber});
+      @JsonKey(name: "verse_id") int? verseId,
+      @JsonKey(name: "language_id") int? languageId,
+      @JsonKey(name: "language_name") String? languageName,
+      @JsonKey(name: "verse_key") VerseKey? verseKey,
+      @JsonKey(name: "chapter_id") int? chapterId,
+      @JsonKey(name: "verse_number") int? verseNumber,
+      @JsonKey(name: "juz_number") int? juzNumber,
+      @JsonKey(name: "hizb_number") int? hizbNumber,
+      @JsonKey(name: "rub_number") int? rubNumber,
+      @JsonKey(name: "page_number") int? pageNumber});
 
   @override
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $VerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -219,77 +223,77 @@ class __$$TranslationImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceId = null,
-    Object? resourceName = null,
-    Object? id = null,
+    Object? resourceName = freezed,
+    Object? id = freezed,
     Object? text = null,
-    Object? verseId = null,
-    Object? languageId = null,
-    Object? languageName = null,
-    Object? verseKey = null,
-    Object? chapterId = null,
-    Object? verseNumber = null,
-    Object? juzNumber = null,
-    Object? hizbNumber = null,
-    Object? rubNumber = null,
-    Object? pageNumber = null,
+    Object? verseId = freezed,
+    Object? languageId = freezed,
+    Object? languageName = freezed,
+    Object? verseKey = freezed,
+    Object? chapterId = freezed,
+    Object? verseNumber = freezed,
+    Object? juzNumber = freezed,
+    Object? hizbNumber = freezed,
+    Object? rubNumber = freezed,
+    Object? pageNumber = freezed,
   }) {
     return _then(_$TranslationImpl(
       resourceId: null == resourceId
           ? _value.resourceId
           : resourceId // ignore: cast_nullable_to_non_nullable
               as int,
-      resourceName: null == resourceName
+      resourceName: freezed == resourceName
           ? _value.resourceName
           : resourceName // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
+              as String?,
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      verseId: null == verseId
+      verseId: freezed == verseId
           ? _value.verseId
           : verseId // ignore: cast_nullable_to_non_nullable
-              as int,
-      languageId: null == languageId
+              as int?,
+      languageId: freezed == languageId
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      languageName: null == languageName
+              as int?,
+      languageName: freezed == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
-              as String,
-      verseKey: null == verseKey
+              as String?,
+      verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
-      chapterId: null == chapterId
+              as VerseKey?,
+      chapterId: freezed == chapterId
           ? _value.chapterId
           : chapterId // ignore: cast_nullable_to_non_nullable
-              as int,
-      verseNumber: null == verseNumber
+              as int?,
+      verseNumber: freezed == verseNumber
           ? _value.verseNumber
           : verseNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      juzNumber: null == juzNumber
+              as int?,
+      juzNumber: freezed == juzNumber
           ? _value.juzNumber
           : juzNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      hizbNumber: null == hizbNumber
+              as int?,
+      hizbNumber: freezed == hizbNumber
           ? _value.hizbNumber
           : hizbNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      rubNumber: null == rubNumber
+              as int?,
+      rubNumber: freezed == rubNumber
           ? _value.rubNumber
           : rubNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      pageNumber: null == pageNumber
+              as int?,
+      pageNumber: freezed == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -322,10 +326,10 @@ class _$TranslationImpl extends _Translation {
   final int resourceId;
   @override
   @JsonKey(name: "resource_name")
-  final String resourceName;
+  final String? resourceName;
   @override
   @JsonKey(name: "id")
-  final int id;
+  final int? id;
 
   /// Text of the translation, text could have HTML tags for formatting and footnotes.
   @override
@@ -333,34 +337,34 @@ class _$TranslationImpl extends _Translation {
   final String text;
   @override
   @JsonKey(name: "verse_id")
-  final int verseId;
+  final int? verseId;
   @override
   @JsonKey(name: "language_id")
-  final int languageId;
+  final int? languageId;
   @override
   @JsonKey(name: "language_name")
-  final String languageName;
+  final String? languageName;
   @override
   @JsonKey(name: "verse_key")
-  final VerseKey verseKey;
+  final VerseKey? verseKey;
   @override
   @JsonKey(name: "chapter_id")
-  final int chapterId;
+  final int? chapterId;
   @override
   @JsonKey(name: "verse_number")
-  final int verseNumber;
+  final int? verseNumber;
   @override
   @JsonKey(name: "juz_number")
-  final int juzNumber;
+  final int? juzNumber;
   @override
   @JsonKey(name: "hizb_number")
-  final int hizbNumber;
+  final int? hizbNumber;
   @override
   @JsonKey(name: "rub_number")
-  final int rubNumber;
+  final int? rubNumber;
   @override
   @JsonKey(name: "page_number")
-  final int pageNumber;
+  final int? pageNumber;
 
   @override
   String toString() {
@@ -435,19 +439,19 @@ class _$TranslationImpl extends _Translation {
 abstract class _Translation extends Translation {
   const factory _Translation(
           {@JsonKey(name: "resource_id") required final int resourceId,
-          @JsonKey(name: "resource_name") required final String resourceName,
-          @JsonKey(name: "id") required final int id,
+          @JsonKey(name: "resource_name") required final String? resourceName,
+          @JsonKey(name: "id") required final int? id,
           @JsonKey(name: "text") required final String text,
-          @JsonKey(name: "verse_id") required final int verseId,
-          @JsonKey(name: "language_id") required final int languageId,
-          @JsonKey(name: "language_name") required final String languageName,
-          @JsonKey(name: "verse_key") required final VerseKey verseKey,
-          @JsonKey(name: "chapter_id") required final int chapterId,
-          @JsonKey(name: "verse_number") required final int verseNumber,
-          @JsonKey(name: "juz_number") required final int juzNumber,
-          @JsonKey(name: "hizb_number") required final int hizbNumber,
-          @JsonKey(name: "rub_number") required final int rubNumber,
-          @JsonKey(name: "page_number") required final int pageNumber}) =
+          @JsonKey(name: "verse_id") required final int? verseId,
+          @JsonKey(name: "language_id") required final int? languageId,
+          @JsonKey(name: "language_name") required final String? languageName,
+          @JsonKey(name: "verse_key") required final VerseKey? verseKey,
+          @JsonKey(name: "chapter_id") required final int? chapterId,
+          @JsonKey(name: "verse_number") required final int? verseNumber,
+          @JsonKey(name: "juz_number") required final int? juzNumber,
+          @JsonKey(name: "hizb_number") required final int? hizbNumber,
+          @JsonKey(name: "rub_number") required final int? rubNumber,
+          @JsonKey(name: "page_number") required final int? pageNumber}) =
       _$TranslationImpl;
   const _Translation._() : super._();
 
@@ -459,10 +463,10 @@ abstract class _Translation extends Translation {
   int get resourceId;
   @override
   @JsonKey(name: "resource_name")
-  String get resourceName;
+  String? get resourceName;
   @override
   @JsonKey(name: "id")
-  int get id;
+  int? get id;
   @override
 
   /// Text of the translation, text could have HTML tags for formatting and footnotes.
@@ -470,34 +474,34 @@ abstract class _Translation extends Translation {
   String get text;
   @override
   @JsonKey(name: "verse_id")
-  int get verseId;
+  int? get verseId;
   @override
   @JsonKey(name: "language_id")
-  int get languageId;
+  int? get languageId;
   @override
   @JsonKey(name: "language_name")
-  String get languageName;
+  String? get languageName;
   @override
   @JsonKey(name: "verse_key")
-  VerseKey get verseKey;
+  VerseKey? get verseKey;
   @override
   @JsonKey(name: "chapter_id")
-  int get chapterId;
+  int? get chapterId;
   @override
   @JsonKey(name: "verse_number")
-  int get verseNumber;
+  int? get verseNumber;
   @override
   @JsonKey(name: "juz_number")
-  int get juzNumber;
+  int? get juzNumber;
   @override
   @JsonKey(name: "hizb_number")
-  int get hizbNumber;
+  int? get hizbNumber;
   @override
   @JsonKey(name: "rub_number")
-  int get rubNumber;
+  int? get rubNumber;
   @override
   @JsonKey(name: "page_number")
-  int get pageNumber;
+  int? get pageNumber;
   @override
   @JsonKey(ignore: true)
   _$$TranslationImplCopyWith<_$TranslationImpl> get copyWith =>

@@ -3,6 +3,40 @@
 part of 'verses_client.dart';
 
 // **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$VersesByChapterNumberQueriesImpl _$$VersesByChapterNumberQueriesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$VersesByChapterNumberQueriesImpl(
+      language: json['language'] as String?,
+      words: json['words'] as String?,
+      translations: json['translations'] as String?,
+      audio: json['audio'] as int?,
+      tafsirs: json['tafsirs'] as String?,
+      wordFields: json['word_fields'] as String?,
+      translationFields: json['translation_fields'] as String?,
+      fields: json['fields'] as String?,
+      page: json['page'] as int?,
+      perPage: json['per_page'] as int?,
+    );
+
+Map<String, dynamic> _$$VersesByChapterNumberQueriesImplToJson(
+        _$VersesByChapterNumberQueriesImpl instance) =>
+    <String, dynamic>{
+      'language': instance.language,
+      'words': instance.words,
+      'translations': instance.translations,
+      'audio': instance.audio,
+      'tafsirs': instance.tafsirs,
+      'word_fields': instance.wordFields,
+      'translation_fields': instance.translationFields,
+      'fields': instance.fields,
+      'page': instance.page,
+      'per_page': instance.perPage,
+    };
+
+// **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
@@ -19,43 +53,25 @@ class _VersesClient implements VersesClient {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<dynamic>> versesByChapterNumber({
-    String? language,
-    String? words,
-    String? translations,
-    int? audio,
-    String? tafsirs,
-    String? wordFields,
-    String? translationFields,
-    String? fields,
-    int? page,
-    int? perPage,
+  Future<HttpResponse<VersesByChapterNumberResponse>> versesByChapterNumber({
+    required int chapterNumber,
+    VersesByChapterNumberQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'language': language,
-      r'words': words,
-      r'translations': translations,
-      r'audio': audio,
-      r'tafsirs': tafsirs,
-      r'word_fields': wordFields,
-      r'translation_fields': translationFields,
-      r'fields': fields,
-      r'page': page,
-      r'per_page': perPage,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch(_setStreamType<HttpResponse<dynamic>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<VersesByChapterNumberResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/verses/by_chapter/{chapter_number}',
+              '/verses/by_chapter/${chapterNumber}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -64,7 +80,7 @@ class _VersesClient implements VersesClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data;
+    final value = VersesByChapterNumberResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

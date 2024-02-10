@@ -69,7 +69,7 @@ class QuranApi {
 
   QuranClient get quran => QuranClient(dio);
 
-  // VersesClient get verses => VersesClient(dio);
+  VersesClient get verses => VersesClient(dio);
 
   // ResourcesClient get resources => ResourcesClient(dio);
 

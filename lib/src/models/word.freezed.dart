@@ -21,7 +21,7 @@ Word _$WordFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Word {
   @JsonKey(name: "id")
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
 
   /// Word position within ayah
   @JsonKey(name: "position")
@@ -29,37 +29,37 @@ mixin _$Word {
 
   /// Word text in Uthmanic script
   @JsonKey(name: "text_uthmani")
-  String get textUthmani => throw _privateConstructorUsedError;
+  String? get textUthmani => throw _privateConstructorUsedError;
   @JsonKey(name: "text_indopak")
-  String get textIndopak => throw _privateConstructorUsedError;
+  String? get textIndopak => throw _privateConstructorUsedError;
 
   /// Word text in simple/Imlaei script
   @JsonKey(name: "text_imlaei")
-  String get textImlaei => throw _privateConstructorUsedError;
+  String? get textImlaei => throw _privateConstructorUsedError;
   @JsonKey(name: "verse_key")
-  VerseKey get verseKey => throw _privateConstructorUsedError;
+  VerseKey? get verseKey => throw _privateConstructorUsedError;
 
   /// page_number is deperacted, please use `v1_page` instead.
   @JsonKey(name: "page_number")
-  int get pageNumber => throw _privateConstructorUsedError;
+  int? get pageNumber => throw _privateConstructorUsedError;
 
   /// Line number in the Muhsaf for this word
   @JsonKey(name: "line_number")
-  int get lineNumber => throw _privateConstructorUsedError;
+  int? get lineNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "audio_url")
-  String get audioUrl => throw _privateConstructorUsedError;
+  String? get audioUrl => throw _privateConstructorUsedError;
   @JsonKey(name: "location")
-  String get location => throw _privateConstructorUsedError;
+  String? get location => throw _privateConstructorUsedError;
   @JsonKey(name: "char_type_name")
   String get charTypeName => throw _privateConstructorUsedError;
 
   /// glyph code that you can use to render the word using QCF  v1 font.
   @JsonKey(name: "code_v1")
-  String get codeV1 => throw _privateConstructorUsedError;
+  String? get codeV1 => throw _privateConstructorUsedError;
 
   /// glyph code that you can use to render the word using QCF  v2 font.
   @JsonKey(name: "code_v2")
-  String get codeV2 => throw _privateConstructorUsedError;
+  String? get codeV2 => throw _privateConstructorUsedError;
   @JsonKey(name: "translation")
   WordTranslation get translation => throw _privateConstructorUsedError;
   @JsonKey(name: "transliteration")
@@ -67,11 +67,11 @@ mixin _$Word {
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this word using v1 glyph codes.
   @JsonKey(name: "v1_page")
-  int get v1Page => throw _privateConstructorUsedError;
+  int? get v1Page => throw _privateConstructorUsedError;
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
   @JsonKey(name: "v2_page")
-  int get v2Page => throw _privateConstructorUsedError;
+  int? get v2Page => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -84,25 +84,25 @@ abstract class $WordCopyWith<$Res> {
       _$WordCopyWithImpl<$Res, Word>;
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
+      {@JsonKey(name: "id") int? id,
       @JsonKey(name: "position") int position,
-      @JsonKey(name: "text_uthmani") String textUthmani,
-      @JsonKey(name: "text_indopak") String textIndopak,
-      @JsonKey(name: "text_imlaei") String textImlaei,
-      @JsonKey(name: "verse_key") VerseKey verseKey,
-      @JsonKey(name: "page_number") int pageNumber,
-      @JsonKey(name: "line_number") int lineNumber,
-      @JsonKey(name: "audio_url") String audioUrl,
-      @JsonKey(name: "location") String location,
+      @JsonKey(name: "text_uthmani") String? textUthmani,
+      @JsonKey(name: "text_indopak") String? textIndopak,
+      @JsonKey(name: "text_imlaei") String? textImlaei,
+      @JsonKey(name: "verse_key") VerseKey? verseKey,
+      @JsonKey(name: "page_number") int? pageNumber,
+      @JsonKey(name: "line_number") int? lineNumber,
+      @JsonKey(name: "audio_url") String? audioUrl,
+      @JsonKey(name: "location") String? location,
       @JsonKey(name: "char_type_name") String charTypeName,
-      @JsonKey(name: "code_v1") String codeV1,
-      @JsonKey(name: "code_v2") String codeV2,
+      @JsonKey(name: "code_v1") String? codeV1,
+      @JsonKey(name: "code_v2") String? codeV2,
       @JsonKey(name: "translation") WordTranslation translation,
       @JsonKey(name: "transliteration") WordTransliteration transliteration,
-      @JsonKey(name: "v1_page") int v1Page,
-      @JsonKey(name: "v2_page") int v2Page});
+      @JsonKey(name: "v1_page") int? v1Page,
+      @JsonKey(name: "v2_page") int? v2Page});
 
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $VerseKeyCopyWith<$Res>? get verseKey;
   $WordTranslationCopyWith<$Res> get translation;
   $WordTransliterationCopyWith<$Res> get transliteration;
 }
@@ -120,77 +120,77 @@ class _$WordCopyWithImpl<$Res, $Val extends Word>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? position = null,
-    Object? textUthmani = null,
-    Object? textIndopak = null,
-    Object? textImlaei = null,
-    Object? verseKey = null,
-    Object? pageNumber = null,
-    Object? lineNumber = null,
-    Object? audioUrl = null,
-    Object? location = null,
+    Object? textUthmani = freezed,
+    Object? textIndopak = freezed,
+    Object? textImlaei = freezed,
+    Object? verseKey = freezed,
+    Object? pageNumber = freezed,
+    Object? lineNumber = freezed,
+    Object? audioUrl = freezed,
+    Object? location = freezed,
     Object? charTypeName = null,
-    Object? codeV1 = null,
-    Object? codeV2 = null,
+    Object? codeV1 = freezed,
+    Object? codeV2 = freezed,
     Object? translation = null,
     Object? transliteration = null,
-    Object? v1Page = null,
-    Object? v2Page = null,
+    Object? v1Page = freezed,
+    Object? v2Page = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       position: null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as int,
-      textUthmani: null == textUthmani
+      textUthmani: freezed == textUthmani
           ? _value.textUthmani
           : textUthmani // ignore: cast_nullable_to_non_nullable
-              as String,
-      textIndopak: null == textIndopak
+              as String?,
+      textIndopak: freezed == textIndopak
           ? _value.textIndopak
           : textIndopak // ignore: cast_nullable_to_non_nullable
-              as String,
-      textImlaei: null == textImlaei
+              as String?,
+      textImlaei: freezed == textImlaei
           ? _value.textImlaei
           : textImlaei // ignore: cast_nullable_to_non_nullable
-              as String,
-      verseKey: null == verseKey
+              as String?,
+      verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
-      pageNumber: null == pageNumber
+              as VerseKey?,
+      pageNumber: freezed == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      lineNumber: null == lineNumber
+              as int?,
+      lineNumber: freezed == lineNumber
           ? _value.lineNumber
           : lineNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      audioUrl: null == audioUrl
+              as int?,
+      audioUrl: freezed == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      location: null == location
+              as String?,
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       charTypeName: null == charTypeName
           ? _value.charTypeName
           : charTypeName // ignore: cast_nullable_to_non_nullable
               as String,
-      codeV1: null == codeV1
+      codeV1: freezed == codeV1
           ? _value.codeV1
           : codeV1 // ignore: cast_nullable_to_non_nullable
-              as String,
-      codeV2: null == codeV2
+              as String?,
+      codeV2: freezed == codeV2
           ? _value.codeV2
           : codeV2 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       translation: null == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
@@ -199,21 +199,25 @@ class _$WordCopyWithImpl<$Res, $Val extends Word>
           ? _value.transliteration
           : transliteration // ignore: cast_nullable_to_non_nullable
               as WordTransliteration,
-      v1Page: null == v1Page
+      v1Page: freezed == v1Page
           ? _value.v1Page
           : v1Page // ignore: cast_nullable_to_non_nullable
-              as int,
-      v2Page: null == v2Page
+              as int?,
+      v2Page: freezed == v2Page
           ? _value.v2Page
           : v2Page // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseKeyCopyWith<$Res> get verseKey {
-    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+  $VerseKeyCopyWith<$Res>? get verseKey {
+    if (_value.verseKey == null) {
+      return null;
+    }
+
+    return $VerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
       return _then(_value.copyWith(verseKey: value) as $Val);
     });
   }
@@ -243,26 +247,26 @@ abstract class _$$WordImplCopyWith<$Res> implements $WordCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
+      {@JsonKey(name: "id") int? id,
       @JsonKey(name: "position") int position,
-      @JsonKey(name: "text_uthmani") String textUthmani,
-      @JsonKey(name: "text_indopak") String textIndopak,
-      @JsonKey(name: "text_imlaei") String textImlaei,
-      @JsonKey(name: "verse_key") VerseKey verseKey,
-      @JsonKey(name: "page_number") int pageNumber,
-      @JsonKey(name: "line_number") int lineNumber,
-      @JsonKey(name: "audio_url") String audioUrl,
-      @JsonKey(name: "location") String location,
+      @JsonKey(name: "text_uthmani") String? textUthmani,
+      @JsonKey(name: "text_indopak") String? textIndopak,
+      @JsonKey(name: "text_imlaei") String? textImlaei,
+      @JsonKey(name: "verse_key") VerseKey? verseKey,
+      @JsonKey(name: "page_number") int? pageNumber,
+      @JsonKey(name: "line_number") int? lineNumber,
+      @JsonKey(name: "audio_url") String? audioUrl,
+      @JsonKey(name: "location") String? location,
       @JsonKey(name: "char_type_name") String charTypeName,
-      @JsonKey(name: "code_v1") String codeV1,
-      @JsonKey(name: "code_v2") String codeV2,
+      @JsonKey(name: "code_v1") String? codeV1,
+      @JsonKey(name: "code_v2") String? codeV2,
       @JsonKey(name: "translation") WordTranslation translation,
       @JsonKey(name: "transliteration") WordTransliteration transliteration,
-      @JsonKey(name: "v1_page") int v1Page,
-      @JsonKey(name: "v2_page") int v2Page});
+      @JsonKey(name: "v1_page") int? v1Page,
+      @JsonKey(name: "v2_page") int? v2Page});
 
   @override
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $VerseKeyCopyWith<$Res>? get verseKey;
   @override
   $WordTranslationCopyWith<$Res> get translation;
   @override
@@ -279,77 +283,77 @@ class __$$WordImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? position = null,
-    Object? textUthmani = null,
-    Object? textIndopak = null,
-    Object? textImlaei = null,
-    Object? verseKey = null,
-    Object? pageNumber = null,
-    Object? lineNumber = null,
-    Object? audioUrl = null,
-    Object? location = null,
+    Object? textUthmani = freezed,
+    Object? textIndopak = freezed,
+    Object? textImlaei = freezed,
+    Object? verseKey = freezed,
+    Object? pageNumber = freezed,
+    Object? lineNumber = freezed,
+    Object? audioUrl = freezed,
+    Object? location = freezed,
     Object? charTypeName = null,
-    Object? codeV1 = null,
-    Object? codeV2 = null,
+    Object? codeV1 = freezed,
+    Object? codeV2 = freezed,
     Object? translation = null,
     Object? transliteration = null,
-    Object? v1Page = null,
-    Object? v2Page = null,
+    Object? v1Page = freezed,
+    Object? v2Page = freezed,
   }) {
     return _then(_$WordImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       position: null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as int,
-      textUthmani: null == textUthmani
+      textUthmani: freezed == textUthmani
           ? _value.textUthmani
           : textUthmani // ignore: cast_nullable_to_non_nullable
-              as String,
-      textIndopak: null == textIndopak
+              as String?,
+      textIndopak: freezed == textIndopak
           ? _value.textIndopak
           : textIndopak // ignore: cast_nullable_to_non_nullable
-              as String,
-      textImlaei: null == textImlaei
+              as String?,
+      textImlaei: freezed == textImlaei
           ? _value.textImlaei
           : textImlaei // ignore: cast_nullable_to_non_nullable
-              as String,
-      verseKey: null == verseKey
+              as String?,
+      verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
-      pageNumber: null == pageNumber
+              as VerseKey?,
+      pageNumber: freezed == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      lineNumber: null == lineNumber
+              as int?,
+      lineNumber: freezed == lineNumber
           ? _value.lineNumber
           : lineNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      audioUrl: null == audioUrl
+              as int?,
+      audioUrl: freezed == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      location: null == location
+              as String?,
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       charTypeName: null == charTypeName
           ? _value.charTypeName
           : charTypeName // ignore: cast_nullable_to_non_nullable
               as String,
-      codeV1: null == codeV1
+      codeV1: freezed == codeV1
           ? _value.codeV1
           : codeV1 // ignore: cast_nullable_to_non_nullable
-              as String,
-      codeV2: null == codeV2
+              as String?,
+      codeV2: freezed == codeV2
           ? _value.codeV2
           : codeV2 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       translation: null == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
@@ -358,14 +362,14 @@ class __$$WordImplCopyWithImpl<$Res>
           ? _value.transliteration
           : transliteration // ignore: cast_nullable_to_non_nullable
               as WordTransliteration,
-      v1Page: null == v1Page
+      v1Page: freezed == v1Page
           ? _value.v1Page
           : v1Page // ignore: cast_nullable_to_non_nullable
-              as int,
-      v2Page: null == v2Page
+              as int?,
+      v2Page: freezed == v2Page
           ? _value.v2Page
           : v2Page // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -398,7 +402,7 @@ class _$WordImpl extends _Word {
 
   @override
   @JsonKey(name: "id")
-  final int id;
+  final int? id;
 
   /// Word position within ayah
   @override
@@ -408,34 +412,34 @@ class _$WordImpl extends _Word {
   /// Word text in Uthmanic script
   @override
   @JsonKey(name: "text_uthmani")
-  final String textUthmani;
+  final String? textUthmani;
   @override
   @JsonKey(name: "text_indopak")
-  final String textIndopak;
+  final String? textIndopak;
 
   /// Word text in simple/Imlaei script
   @override
   @JsonKey(name: "text_imlaei")
-  final String textImlaei;
+  final String? textImlaei;
   @override
   @JsonKey(name: "verse_key")
-  final VerseKey verseKey;
+  final VerseKey? verseKey;
 
   /// page_number is deperacted, please use `v1_page` instead.
   @override
   @JsonKey(name: "page_number")
-  final int pageNumber;
+  final int? pageNumber;
 
   /// Line number in the Muhsaf for this word
   @override
   @JsonKey(name: "line_number")
-  final int lineNumber;
+  final int? lineNumber;
   @override
   @JsonKey(name: "audio_url")
-  final String audioUrl;
+  final String? audioUrl;
   @override
   @JsonKey(name: "location")
-  final String location;
+  final String? location;
   @override
   @JsonKey(name: "char_type_name")
   final String charTypeName;
@@ -443,12 +447,12 @@ class _$WordImpl extends _Word {
   /// glyph code that you can use to render the word using QCF  v1 font.
   @override
   @JsonKey(name: "code_v1")
-  final String codeV1;
+  final String? codeV1;
 
   /// glyph code that you can use to render the word using QCF  v2 font.
   @override
   @JsonKey(name: "code_v2")
-  final String codeV2;
+  final String? codeV2;
   @override
   @JsonKey(name: "translation")
   final WordTranslation translation;
@@ -459,12 +463,12 @@ class _$WordImpl extends _Word {
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this word using v1 glyph codes.
   @override
   @JsonKey(name: "v1_page")
-  final int v1Page;
+  final int? v1Page;
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
   @override
   @JsonKey(name: "v2_page")
-  final int v2Page;
+  final int? v2Page;
 
   @override
   String toString() {
@@ -545,31 +549,31 @@ class _$WordImpl extends _Word {
 
 abstract class _Word extends Word {
   const factory _Word(
-      {@JsonKey(name: "id") required final int id,
+      {@JsonKey(name: "id") required final int? id,
       @JsonKey(name: "position") required final int position,
-      @JsonKey(name: "text_uthmani") required final String textUthmani,
-      @JsonKey(name: "text_indopak") required final String textIndopak,
-      @JsonKey(name: "text_imlaei") required final String textImlaei,
-      @JsonKey(name: "verse_key") required final VerseKey verseKey,
-      @JsonKey(name: "page_number") required final int pageNumber,
-      @JsonKey(name: "line_number") required final int lineNumber,
-      @JsonKey(name: "audio_url") required final String audioUrl,
-      @JsonKey(name: "location") required final String location,
+      @JsonKey(name: "text_uthmani") required final String? textUthmani,
+      @JsonKey(name: "text_indopak") required final String? textIndopak,
+      @JsonKey(name: "text_imlaei") required final String? textImlaei,
+      @JsonKey(name: "verse_key") required final VerseKey? verseKey,
+      @JsonKey(name: "page_number") required final int? pageNumber,
+      @JsonKey(name: "line_number") required final int? lineNumber,
+      @JsonKey(name: "audio_url") required final String? audioUrl,
+      @JsonKey(name: "location") required final String? location,
       @JsonKey(name: "char_type_name") required final String charTypeName,
-      @JsonKey(name: "code_v1") required final String codeV1,
-      @JsonKey(name: "code_v2") required final String codeV2,
+      @JsonKey(name: "code_v1") required final String? codeV1,
+      @JsonKey(name: "code_v2") required final String? codeV2,
       @JsonKey(name: "translation") required final WordTranslation translation,
       @JsonKey(name: "transliteration")
       required final WordTransliteration transliteration,
-      @JsonKey(name: "v1_page") required final int v1Page,
-      @JsonKey(name: "v2_page") required final int v2Page}) = _$WordImpl;
+      @JsonKey(name: "v1_page") required final int? v1Page,
+      @JsonKey(name: "v2_page") required final int? v2Page}) = _$WordImpl;
   const _Word._() : super._();
 
   factory _Word.fromJson(Map<String, dynamic> json) = _$WordImpl.fromJson;
 
   @override
   @JsonKey(name: "id")
-  int get id;
+  int? get id;
   @override
 
   /// Word position within ayah
@@ -579,34 +583,34 @@ abstract class _Word extends Word {
 
   /// Word text in Uthmanic script
   @JsonKey(name: "text_uthmani")
-  String get textUthmani;
+  String? get textUthmani;
   @override
   @JsonKey(name: "text_indopak")
-  String get textIndopak;
+  String? get textIndopak;
   @override
 
   /// Word text in simple/Imlaei script
   @JsonKey(name: "text_imlaei")
-  String get textImlaei;
+  String? get textImlaei;
   @override
   @JsonKey(name: "verse_key")
-  VerseKey get verseKey;
+  VerseKey? get verseKey;
   @override
 
   /// page_number is deperacted, please use `v1_page` instead.
   @JsonKey(name: "page_number")
-  int get pageNumber;
+  int? get pageNumber;
   @override
 
   /// Line number in the Muhsaf for this word
   @JsonKey(name: "line_number")
-  int get lineNumber;
+  int? get lineNumber;
   @override
   @JsonKey(name: "audio_url")
-  String get audioUrl;
+  String? get audioUrl;
   @override
   @JsonKey(name: "location")
-  String get location;
+  String? get location;
   @override
   @JsonKey(name: "char_type_name")
   String get charTypeName;
@@ -614,12 +618,12 @@ abstract class _Word extends Word {
 
   /// glyph code that you can use to render the word using QCF  v1 font.
   @JsonKey(name: "code_v1")
-  String get codeV1;
+  String? get codeV1;
   @override
 
   /// glyph code that you can use to render the word using QCF  v2 font.
   @JsonKey(name: "code_v2")
-  String get codeV2;
+  String? get codeV2;
   @override
   @JsonKey(name: "translation")
   WordTranslation get translation;
@@ -630,12 +634,12 @@ abstract class _Word extends Word {
 
   /// Madani Muhsaf Page number for v1 font. If `v1_page` value is 2, that means you'll use page 2 font file to render this word using v1 glyph codes.
   @JsonKey(name: "v1_page")
-  int get v1Page;
+  int? get v1Page;
   @override
 
   /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
   @JsonKey(name: "v2_page")
-  int get v2Page;
+  int? get v2Page;
   @override
   @JsonKey(ignore: true)
   _$$WordImplCopyWith<_$WordImpl> get copyWith =>
@@ -649,9 +653,9 @@ WordTranslation _$WordTranslationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$WordTranslation {
   @JsonKey(name: "text")
-  String get text => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
   @JsonKey(name: "language_name")
-  String get languageName => throw _privateConstructorUsedError;
+  String? get languageName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -666,8 +670,8 @@ abstract class $WordTranslationCopyWith<$Res> {
       _$WordTranslationCopyWithImpl<$Res, WordTranslation>;
   @useResult
   $Res call(
-      {@JsonKey(name: "text") String text,
-      @JsonKey(name: "language_name") String languageName});
+      {@JsonKey(name: "text") String? text,
+      @JsonKey(name: "language_name") String? languageName});
 }
 
 /// @nodoc
@@ -683,18 +687,18 @@ class _$WordTranslationCopyWithImpl<$Res, $Val extends WordTranslation>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = null,
-    Object? languageName = null,
+    Object? text = freezed,
+    Object? languageName = freezed,
   }) {
     return _then(_value.copyWith(
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      languageName: null == languageName
+              as String?,
+      languageName: freezed == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -708,8 +712,8 @@ abstract class _$$WordTranslationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "text") String text,
-      @JsonKey(name: "language_name") String languageName});
+      {@JsonKey(name: "text") String? text,
+      @JsonKey(name: "language_name") String? languageName});
 }
 
 /// @nodoc
@@ -723,18 +727,18 @@ class __$$WordTranslationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = null,
-    Object? languageName = null,
+    Object? text = freezed,
+    Object? languageName = freezed,
   }) {
     return _then(_$WordTranslationImpl(
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      languageName: null == languageName
+              as String?,
+      languageName: freezed == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -752,10 +756,10 @@ class _$WordTranslationImpl extends _WordTranslation {
 
   @override
   @JsonKey(name: "text")
-  final String text;
+  final String? text;
   @override
   @JsonKey(name: "language_name")
-  final String languageName;
+  final String? languageName;
 
   @override
   String toString() {
@@ -793,9 +797,9 @@ class _$WordTranslationImpl extends _WordTranslation {
 
 abstract class _WordTranslation extends WordTranslation {
   const factory _WordTranslation(
-          {@JsonKey(name: "text") required final String text,
-          @JsonKey(name: "language_name") required final String languageName}) =
-      _$WordTranslationImpl;
+      {@JsonKey(name: "text") required final String? text,
+      @JsonKey(name: "language_name")
+      required final String? languageName}) = _$WordTranslationImpl;
   const _WordTranslation._() : super._();
 
   factory _WordTranslation.fromJson(Map<String, dynamic> json) =
@@ -803,10 +807,10 @@ abstract class _WordTranslation extends WordTranslation {
 
   @override
   @JsonKey(name: "text")
-  String get text;
+  String? get text;
   @override
   @JsonKey(name: "language_name")
-  String get languageName;
+  String? get languageName;
   @override
   @JsonKey(ignore: true)
   _$$WordTranslationImplCopyWith<_$WordTranslationImpl> get copyWith =>
@@ -820,9 +824,9 @@ WordTransliteration _$WordTransliterationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$WordTransliteration {
   @JsonKey(name: "text")
-  String get text => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
   @JsonKey(name: "language_name")
-  String get languageName => throw _privateConstructorUsedError;
+  String? get languageName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -837,8 +841,8 @@ abstract class $WordTransliterationCopyWith<$Res> {
       _$WordTransliterationCopyWithImpl<$Res, WordTransliteration>;
   @useResult
   $Res call(
-      {@JsonKey(name: "text") String text,
-      @JsonKey(name: "language_name") String languageName});
+      {@JsonKey(name: "text") String? text,
+      @JsonKey(name: "language_name") String? languageName});
 }
 
 /// @nodoc
@@ -854,18 +858,18 @@ class _$WordTransliterationCopyWithImpl<$Res, $Val extends WordTransliteration>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = null,
-    Object? languageName = null,
+    Object? text = freezed,
+    Object? languageName = freezed,
   }) {
     return _then(_value.copyWith(
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      languageName: null == languageName
+              as String?,
+      languageName: freezed == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -879,8 +883,8 @@ abstract class _$$WordTransliterationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "text") String text,
-      @JsonKey(name: "language_name") String languageName});
+      {@JsonKey(name: "text") String? text,
+      @JsonKey(name: "language_name") String? languageName});
 }
 
 /// @nodoc
@@ -894,18 +898,18 @@ class __$$WordTransliterationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = null,
-    Object? languageName = null,
+    Object? text = freezed,
+    Object? languageName = freezed,
   }) {
     return _then(_$WordTransliterationImpl(
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      languageName: null == languageName
+              as String?,
+      languageName: freezed == languageName
           ? _value.languageName
           : languageName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -923,10 +927,10 @@ class _$WordTransliterationImpl extends _WordTransliteration {
 
   @override
   @JsonKey(name: "text")
-  final String text;
+  final String? text;
   @override
   @JsonKey(name: "language_name")
-  final String languageName;
+  final String? languageName;
 
   @override
   String toString() {
@@ -964,9 +968,9 @@ class _$WordTransliterationImpl extends _WordTransliteration {
 
 abstract class _WordTransliteration extends WordTransliteration {
   const factory _WordTransliteration(
-          {@JsonKey(name: "text") required final String text,
-          @JsonKey(name: "language_name") required final String languageName}) =
-      _$WordTransliterationImpl;
+      {@JsonKey(name: "text") required final String? text,
+      @JsonKey(name: "language_name")
+      required final String? languageName}) = _$WordTransliterationImpl;
   const _WordTransliteration._() : super._();
 
   factory _WordTransliteration.fromJson(Map<String, dynamic> json) =
@@ -974,10 +978,10 @@ abstract class _WordTransliteration extends WordTransliteration {
 
   @override
   @JsonKey(name: "text")
-  String get text;
+  String? get text;
   @override
   @JsonKey(name: "language_name")
-  String get languageName;
+  String? get languageName;
   @override
   @JsonKey(ignore: true)
   _$$WordTransliterationImplCopyWith<_$WordTransliterationImpl> get copyWith =>

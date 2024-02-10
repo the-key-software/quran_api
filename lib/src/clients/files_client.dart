@@ -11,9 +11,9 @@ part "files_client.g.dart";
 abstract class FilesClient {
   factory FilesClient(Dio dio, {String baseUrl}) = _FilesClient;
 
+  /// [number] 001, 002, 003, ... 604
   @GET("/page{number}.png")
   Future<HttpResponse<dynamic>> page({
-    // 001, 002, 003, ... 604
-    @Path("number") String number,
+    @Path("number") required String number,
   });
 }

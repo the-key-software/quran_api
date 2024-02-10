@@ -61,7 +61,7 @@ mixin _$Verse {
   @JsonKey(name: "hizb_number")
   int get hizbNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "rub_number")
-  int get rubNumber => throw _privateConstructorUsedError;
+  int? get rubNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "sajdah_type")
   Object? get sajdahType => throw _privateConstructorUsedError;
   @JsonKey(name: "sajdah_number")
@@ -121,7 +121,7 @@ abstract class $VerseCopyWith<$Res> {
       @JsonKey(name: "text_uthmani_tajweed") String? textUthmaniTajweed,
       @JsonKey(name: "juz_number") int juzNumber,
       @JsonKey(name: "hizb_number") int hizbNumber,
-      @JsonKey(name: "rub_number") int rubNumber,
+      @JsonKey(name: "rub_number") int? rubNumber,
       @JsonKey(name: "sajdah_type") Object? sajdahType,
       @JsonKey(name: "sajdah_number") Object? sajdahNumber,
       @JsonKey(name: "page_number") int pageNumber,
@@ -164,7 +164,7 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
     Object? textUthmaniTajweed = freezed,
     Object? juzNumber = null,
     Object? hizbNumber = null,
-    Object? rubNumber = null,
+    Object? rubNumber = freezed,
     Object? sajdahType = freezed,
     Object? sajdahNumber = freezed,
     Object? pageNumber = null,
@@ -231,10 +231,10 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
           ? _value.hizbNumber
           : hizbNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      rubNumber: null == rubNumber
+      rubNumber: freezed == rubNumber
           ? _value.rubNumber
           : rubNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sajdahType: freezed == sajdahType ? _value.sajdahType : sajdahType,
       sajdahNumber:
           freezed == sajdahNumber ? _value.sajdahNumber : sajdahNumber,
@@ -308,7 +308,7 @@ abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
       @JsonKey(name: "text_uthmani_tajweed") String? textUthmaniTajweed,
       @JsonKey(name: "juz_number") int juzNumber,
       @JsonKey(name: "hizb_number") int hizbNumber,
-      @JsonKey(name: "rub_number") int rubNumber,
+      @JsonKey(name: "rub_number") int? rubNumber,
       @JsonKey(name: "sajdah_type") Object? sajdahType,
       @JsonKey(name: "sajdah_number") Object? sajdahNumber,
       @JsonKey(name: "page_number") int pageNumber,
@@ -350,7 +350,7 @@ class __$$VerseImplCopyWithImpl<$Res>
     Object? textUthmaniTajweed = freezed,
     Object? juzNumber = null,
     Object? hizbNumber = null,
-    Object? rubNumber = null,
+    Object? rubNumber = freezed,
     Object? sajdahType = freezed,
     Object? sajdahNumber = freezed,
     Object? pageNumber = null,
@@ -417,10 +417,10 @@ class __$$VerseImplCopyWithImpl<$Res>
           ? _value.hizbNumber
           : hizbNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      rubNumber: null == rubNumber
+      rubNumber: freezed == rubNumber
           ? _value.rubNumber
           : rubNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sajdahType: freezed == sajdahType ? _value.sajdahType : sajdahType,
       sajdahNumber:
           freezed == sajdahNumber ? _value.sajdahNumber : sajdahNumber,
@@ -558,7 +558,7 @@ class _$VerseImpl extends _Verse {
   final int hizbNumber;
   @override
   @JsonKey(name: "rub_number")
-  final int rubNumber;
+  final int? rubNumber;
   @override
   @JsonKey(name: "sajdah_type")
   final Object? sajdahType;
@@ -742,7 +742,7 @@ abstract class _Verse extends Verse {
       required final String? textUthmaniTajweed,
       @JsonKey(name: "juz_number") required final int juzNumber,
       @JsonKey(name: "hizb_number") required final int hizbNumber,
-      @JsonKey(name: "rub_number") required final int rubNumber,
+      @JsonKey(name: "rub_number") required final int? rubNumber,
       @JsonKey(name: "sajdah_type") required final Object? sajdahType,
       @JsonKey(name: "sajdah_number") required final Object? sajdahNumber,
       @JsonKey(name: "page_number") required final int pageNumber,
@@ -815,7 +815,7 @@ abstract class _Verse extends Verse {
   int get hizbNumber;
   @override
   @JsonKey(name: "rub_number")
-  int get rubNumber;
+  int? get rubNumber;
   @override
   @JsonKey(name: "sajdah_type")
   Object? get sajdahType;

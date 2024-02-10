@@ -6,6 +6,7 @@ export "juzs_response.dart";
 export "quran_verses_indopak_response.dart";
 export "recitations_response.dart";
 export "chapter_reciter_audio_files_response.dart";
+export "verses_by_chapter_number_response.dart";
 export "chapter_reciters_response.dart";
 export "verse_media_response.dart";
 export "recitation_audio_files_response.dart";
