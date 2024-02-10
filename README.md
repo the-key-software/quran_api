@@ -26,7 +26,7 @@ Future<void> main() async {
 - All models support ```.toJson()``` and ```.fromJson()``` and ```.copyWith``` methods.
 - Clients
     - [x] Audio
-    - [ ] Chapters
+    - [X] Chapters
     - [x] Juz
     - [x] Quran
     - [x] Verses
