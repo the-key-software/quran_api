@@ -300,6 +300,7 @@ class __$$TranslationImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@Fields(fieldRename: FieldRename.snake)
 class _$TranslationImpl extends _Translation {
   const _$TranslationImpl(
       {@JsonKey(name: "resource_id") required this.resourceId,

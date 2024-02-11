@@ -9,13 +9,16 @@ part of 'verses_client.dart';
 _$VersesQueriesImpl _$$VersesQueriesImplFromJson(Map<String, dynamic> json) =>
     _$VersesQueriesImpl(
       language: json['language'] as String?,
-      words: json['words'] as String?,
+      words: json['words'] as bool?,
       translations: json['translations'] as String?,
       audio: json['audio'] as int?,
       tafsirs: json['tafsirs'] as String?,
-      wordFields: json['word_fields'] as String?,
-      translationFields: json['translation_fields'] as String?,
-      fields: json['fields'] as String?,
+      wordFields: _$JsonConverterFromJson<String, List<String>>(
+          json['word_fields'], const ListJoinJsonConvertor().fromJson),
+      translationFields: _$JsonConverterFromJson<String, List<String>>(
+          json['translation_fields'], const ListJoinJsonConvertor().fromJson),
+      fields: _$JsonConverterFromJson<String, List<String>>(
+          json['fields'], const ListJoinJsonConvertor().fromJson),
       page: json['page'] as int?,
       perPage: json['per_page'] as int?,
     );
@@ -34,13 +37,34 @@ Map<String, dynamic> _$$VersesQueriesImplToJson(_$VersesQueriesImpl instance) {
   writeNotNull('translations', instance.translations);
   writeNotNull('audio', instance.audio);
   writeNotNull('tafsirs', instance.tafsirs);
-  writeNotNull('word_fields', instance.wordFields);
-  writeNotNull('translation_fields', instance.translationFields);
-  writeNotNull('fields', instance.fields);
+  writeNotNull(
+      'word_fields',
+      _$JsonConverterToJson<String, List<String>>(
+          instance.wordFields, const ListJoinJsonConvertor().toJson));
+  writeNotNull(
+      'translation_fields',
+      _$JsonConverterToJson<String, List<String>>(
+          instance.translationFields, const ListJoinJsonConvertor().toJson));
+  writeNotNull(
+      'fields',
+      _$JsonConverterToJson<String, List<String>>(
+          instance.fields, const ListJoinJsonConvertor().toJson));
   writeNotNull('page', instance.page);
   writeNotNull('per_page', instance.perPage);
   return val;
 }
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 // **************************************************************************
 // RetrofitGenerator

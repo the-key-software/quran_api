@@ -1,5 +1,9 @@
+import "package:fields_generator/fields_generator.dart";
 import "package:freezed_annotation/freezed_annotation.dart";
+
 import "models.dart";
+
+part "translation.fields.dart";
 part "translation.freezed.dart";
 part "translation.g.dart";
 
@@ -9,6 +13,7 @@ part "translation.g.dart";
 class Translation with _$Translation {
   const Translation._();
 
+  @Fields(fieldRename: FieldRename.snake)
   const factory Translation({
     @JsonKey(name: "resource_id") required int resourceId,
     @JsonKey(name: "resource_name") required String? resourceName,

@@ -376,6 +376,7 @@ class __$$WordImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@Fields(fieldRename: FieldRename.snake)
 class _$WordImpl extends _Word {
   const _$WordImpl(
       {@JsonKey(name: "id") required this.id,

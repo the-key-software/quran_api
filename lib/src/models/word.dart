@@ -1,5 +1,8 @@
+import "package:fields_generator/fields_generator.dart";
 import "package:freezed_annotation/freezed_annotation.dart";
 import "models.dart";
+
+part "word.fields.dart";
 part "word.freezed.dart";
 part "word.g.dart";
 
@@ -9,11 +12,7 @@ part "word.g.dart";
 class Word with _$Word {
   const Word._();
 
-  /// [position]
-  /// [audio_url]
-  /// [char_type_name]
-  /// [translation]
-  /// [transliteration]
+  @Fields(fieldRename: FieldRename.snake)
   const factory Word({
     @JsonKey(name: "id") required int? id,
 

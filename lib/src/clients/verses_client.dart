@@ -88,31 +88,64 @@ class VersesQueries with _$VersesQueries {
   /// https://api.qurancdn.com/api/qdc/verses/by_chapter/1?words=true&translation_fields=resource_name%2Clanguage_id&per_page=7&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=131&reciter=9&word_translation_language=en&page=1&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ccode_v1%2Cqpc_uthmani_hafs&mushaf=2
   const factory VersesQueries({
     @JsonKey(name: "language") String? language,
-    @JsonKey(name: "words") String? words,
+    @JsonKey(name: "words") bool? words,
     @JsonKey(name: "translations") String? translations,
     @JsonKey(name: "audio") int? audio,
     @JsonKey(name: "tafsirs") String? tafsirs,
-    @JsonKey(name: "word_fields") String? wordFields,
-    @JsonKey(name: "translation_fields") String? translationFields,
-    @JsonKey(name: "fields") String? fields,
+    @JsonKey(name: "word_fields")
+    @ListJoinJsonConvertor()
+    List<String>? wordFields,
+    @JsonKey(name: "translation_fields")
+    @ListJoinJsonConvertor()
+    List<String>? translationFields,
+    @JsonKey(name: "fields") @ListJoinJsonConvertor() List<String>? fields,
     @JsonKey(name: "page", includeIfNull: false) int? page,
     @JsonKey(name: "per_page", includeIfNull: false) int? perPage,
   }) = _VersesQueries;
 
   static const VersesQueries defaultValue = const VersesQueries(
     language: "en",
-    words: "true",
+    words: true,
     translations: "131",
     audio: 9,
     tafsirs: "1",
-    wordFields:
-        "verse_key,verse_id,page_number,location,text_uthmani,code_v1,qpc_uthmani_hafs",
-    fields: "text_uthmani,chapter_id,hizb_number,text_imlaei_simple",
-    translationFields: "resource_name,language_id",
+    wordFields: [
+      WordFields.verseKeyFieldName,
+      "verse_id",
+      WordFields.pageNumberFieldName,
+      WordFields.locationFieldName,
+      WordFields.textUthmaniFieldName,
+      WordFields.codeV1FieldName,
+      "qpc_uthmani_hafs",
+    ],
+    fields: [
+      VerseFields.textUthmaniFieldName,
+      VerseFields.chapterIdFieldName,
+      VerseFields.hizbNumberFieldName,
+      VerseFields.textImlaeiSimpleFieldName,
+    ],
+    translationFields: [
+      TranslationFields.resourceNameFieldName,
+      TranslationFields.languageIdFieldName
+    ],
     page: 1,
     perPage: 7,
   );
 
   factory VersesQueries.fromJson(Map<String, dynamic> json) =>
       _$VersesQueriesFromJson(json);
+}
+
+class ListJoinJsonConvertor implements JsonConverter<List<String>, String> {
+  const ListJoinJsonConvertor();
+
+  @override
+  List<String> fromJson(String json) {
+    return json.split(",");
+  }
+
+  @override
+  String toJson(List<String> object) {
+    return object.join(",");
+  }
 }

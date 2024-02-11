@@ -23,7 +23,7 @@ mixin _$VersesQueries {
   @JsonKey(name: "language")
   String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: "words")
-  String? get words => throw _privateConstructorUsedError;
+  bool? get words => throw _privateConstructorUsedError;
   @JsonKey(name: "translations")
   String? get translations => throw _privateConstructorUsedError;
   @JsonKey(name: "audio")
@@ -31,11 +31,14 @@ mixin _$VersesQueries {
   @JsonKey(name: "tafsirs")
   String? get tafsirs => throw _privateConstructorUsedError;
   @JsonKey(name: "word_fields")
-  String? get wordFields => throw _privateConstructorUsedError;
+  @ListJoinJsonConvertor()
+  List<String>? get wordFields => throw _privateConstructorUsedError;
   @JsonKey(name: "translation_fields")
-  String? get translationFields => throw _privateConstructorUsedError;
+  @ListJoinJsonConvertor()
+  List<String>? get translationFields => throw _privateConstructorUsedError;
   @JsonKey(name: "fields")
-  String? get fields => throw _privateConstructorUsedError;
+  @ListJoinJsonConvertor()
+  List<String>? get fields => throw _privateConstructorUsedError;
   @JsonKey(name: "page", includeIfNull: false)
   int? get page => throw _privateConstructorUsedError;
   @JsonKey(name: "per_page", includeIfNull: false)
@@ -55,13 +58,17 @@ abstract class $VersesQueriesCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "language") String? language,
-      @JsonKey(name: "words") String? words,
+      @JsonKey(name: "words") bool? words,
       @JsonKey(name: "translations") String? translations,
       @JsonKey(name: "audio") int? audio,
       @JsonKey(name: "tafsirs") String? tafsirs,
-      @JsonKey(name: "word_fields") String? wordFields,
-      @JsonKey(name: "translation_fields") String? translationFields,
-      @JsonKey(name: "fields") String? fields,
+      @JsonKey(name: "word_fields")
+      @ListJoinJsonConvertor()
+      List<String>? wordFields,
+      @JsonKey(name: "translation_fields")
+      @ListJoinJsonConvertor()
+      List<String>? translationFields,
+      @JsonKey(name: "fields") @ListJoinJsonConvertor() List<String>? fields,
       @JsonKey(name: "page", includeIfNull: false) int? page,
       @JsonKey(name: "per_page", includeIfNull: false) int? perPage});
 }
@@ -98,7 +105,7 @@ class _$VersesQueriesCopyWithImpl<$Res, $Val extends VersesQueries>
       words: freezed == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as bool?,
       translations: freezed == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
@@ -114,15 +121,15 @@ class _$VersesQueriesCopyWithImpl<$Res, $Val extends VersesQueries>
       wordFields: freezed == wordFields
           ? _value.wordFields
           : wordFields // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
       translationFields: freezed == translationFields
           ? _value.translationFields
           : translationFields // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
       fields: freezed == fields
           ? _value.fields
           : fields // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -145,13 +152,17 @@ abstract class _$$VersesQueriesImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: "language") String? language,
-      @JsonKey(name: "words") String? words,
+      @JsonKey(name: "words") bool? words,
       @JsonKey(name: "translations") String? translations,
       @JsonKey(name: "audio") int? audio,
       @JsonKey(name: "tafsirs") String? tafsirs,
-      @JsonKey(name: "word_fields") String? wordFields,
-      @JsonKey(name: "translation_fields") String? translationFields,
-      @JsonKey(name: "fields") String? fields,
+      @JsonKey(name: "word_fields")
+      @ListJoinJsonConvertor()
+      List<String>? wordFields,
+      @JsonKey(name: "translation_fields")
+      @ListJoinJsonConvertor()
+      List<String>? translationFields,
+      @JsonKey(name: "fields") @ListJoinJsonConvertor() List<String>? fields,
       @JsonKey(name: "page", includeIfNull: false) int? page,
       @JsonKey(name: "per_page", includeIfNull: false) int? perPage});
 }
@@ -186,7 +197,7 @@ class __$$VersesQueriesImplCopyWithImpl<$Res>
       words: freezed == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as bool?,
       translations: freezed == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
@@ -200,17 +211,17 @@ class __$$VersesQueriesImplCopyWithImpl<$Res>
           : tafsirs // ignore: cast_nullable_to_non_nullable
               as String?,
       wordFields: freezed == wordFields
-          ? _value.wordFields
+          ? _value._wordFields
           : wordFields // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
       translationFields: freezed == translationFields
-          ? _value.translationFields
+          ? _value._translationFields
           : translationFields // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
       fields: freezed == fields
-          ? _value.fields
+          ? _value._fields
           : fields // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -232,12 +243,21 @@ class _$VersesQueriesImpl extends _VersesQueries {
       @JsonKey(name: "translations") this.translations,
       @JsonKey(name: "audio") this.audio,
       @JsonKey(name: "tafsirs") this.tafsirs,
-      @JsonKey(name: "word_fields") this.wordFields,
-      @JsonKey(name: "translation_fields") this.translationFields,
-      @JsonKey(name: "fields") this.fields,
+      @JsonKey(name: "word_fields")
+      @ListJoinJsonConvertor()
+      final List<String>? wordFields,
+      @JsonKey(name: "translation_fields")
+      @ListJoinJsonConvertor()
+      final List<String>? translationFields,
+      @JsonKey(name: "fields")
+      @ListJoinJsonConvertor()
+      final List<String>? fields,
       @JsonKey(name: "page", includeIfNull: false) this.page,
       @JsonKey(name: "per_page", includeIfNull: false) this.perPage})
-      : super._();
+      : _wordFields = wordFields,
+        _translationFields = translationFields,
+        _fields = fields,
+        super._();
 
   factory _$VersesQueriesImpl.fromJson(Map<String, dynamic> json) =>
       _$$VersesQueriesImplFromJson(json);
@@ -247,7 +267,7 @@ class _$VersesQueriesImpl extends _VersesQueries {
   final String? language;
   @override
   @JsonKey(name: "words")
-  final String? words;
+  final bool? words;
   @override
   @JsonKey(name: "translations")
   final String? translations;
@@ -257,15 +277,43 @@ class _$VersesQueriesImpl extends _VersesQueries {
   @override
   @JsonKey(name: "tafsirs")
   final String? tafsirs;
+  final List<String>? _wordFields;
   @override
   @JsonKey(name: "word_fields")
-  final String? wordFields;
+  @ListJoinJsonConvertor()
+  List<String>? get wordFields {
+    final value = _wordFields;
+    if (value == null) return null;
+    if (_wordFields is EqualUnmodifiableListView) return _wordFields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _translationFields;
   @override
   @JsonKey(name: "translation_fields")
-  final String? translationFields;
+  @ListJoinJsonConvertor()
+  List<String>? get translationFields {
+    final value = _translationFields;
+    if (value == null) return null;
+    if (_translationFields is EqualUnmodifiableListView)
+      return _translationFields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fields;
   @override
   @JsonKey(name: "fields")
-  final String? fields;
+  @ListJoinJsonConvertor()
+  List<String>? get fields {
+    final value = _fields;
+    if (value == null) return null;
+    if (_fields is EqualUnmodifiableListView) return _fields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: "page", includeIfNull: false)
   final int? page;
@@ -290,19 +338,29 @@ class _$VersesQueriesImpl extends _VersesQueries {
                 other.translations == translations) &&
             (identical(other.audio, audio) || other.audio == audio) &&
             (identical(other.tafsirs, tafsirs) || other.tafsirs == tafsirs) &&
-            (identical(other.wordFields, wordFields) ||
-                other.wordFields == wordFields) &&
-            (identical(other.translationFields, translationFields) ||
-                other.translationFields == translationFields) &&
-            (identical(other.fields, fields) || other.fields == fields) &&
+            const DeepCollectionEquality()
+                .equals(other._wordFields, _wordFields) &&
+            const DeepCollectionEquality()
+                .equals(other._translationFields, _translationFields) &&
+            const DeepCollectionEquality().equals(other._fields, _fields) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.perPage, perPage) || other.perPage == perPage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, language, words, translations,
-      audio, tafsirs, wordFields, translationFields, fields, page, perPage);
+  int get hashCode => Object.hash(
+      runtimeType,
+      language,
+      words,
+      translations,
+      audio,
+      tafsirs,
+      const DeepCollectionEquality().hash(_wordFields),
+      const DeepCollectionEquality().hash(_translationFields),
+      const DeepCollectionEquality().hash(_fields),
+      page,
+      perPage);
 
   @JsonKey(ignore: true)
   @override
@@ -321,13 +379,19 @@ class _$VersesQueriesImpl extends _VersesQueries {
 abstract class _VersesQueries extends VersesQueries {
   const factory _VersesQueries(
       {@JsonKey(name: "language") final String? language,
-      @JsonKey(name: "words") final String? words,
+      @JsonKey(name: "words") final bool? words,
       @JsonKey(name: "translations") final String? translations,
       @JsonKey(name: "audio") final int? audio,
       @JsonKey(name: "tafsirs") final String? tafsirs,
-      @JsonKey(name: "word_fields") final String? wordFields,
-      @JsonKey(name: "translation_fields") final String? translationFields,
-      @JsonKey(name: "fields") final String? fields,
+      @JsonKey(name: "word_fields")
+      @ListJoinJsonConvertor()
+      final List<String>? wordFields,
+      @JsonKey(name: "translation_fields")
+      @ListJoinJsonConvertor()
+      final List<String>? translationFields,
+      @JsonKey(name: "fields")
+      @ListJoinJsonConvertor()
+      final List<String>? fields,
       @JsonKey(name: "page", includeIfNull: false) final int? page,
       @JsonKey(name: "per_page", includeIfNull: false)
       final int? perPage}) = _$VersesQueriesImpl;
@@ -341,7 +405,7 @@ abstract class _VersesQueries extends VersesQueries {
   String? get language;
   @override
   @JsonKey(name: "words")
-  String? get words;
+  bool? get words;
   @override
   @JsonKey(name: "translations")
   String? get translations;
@@ -353,13 +417,16 @@ abstract class _VersesQueries extends VersesQueries {
   String? get tafsirs;
   @override
   @JsonKey(name: "word_fields")
-  String? get wordFields;
+  @ListJoinJsonConvertor()
+  List<String>? get wordFields;
   @override
   @JsonKey(name: "translation_fields")
-  String? get translationFields;
+  @ListJoinJsonConvertor()
+  List<String>? get translationFields;
   @override
   @JsonKey(name: "fields")
-  String? get fields;
+  @ListJoinJsonConvertor()
+  List<String>? get fields;
   @override
   @JsonKey(name: "page", includeIfNull: false)
   int? get page;
