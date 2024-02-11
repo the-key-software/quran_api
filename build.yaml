@@ -1,3 +1,11 @@
+global_options:
+  freezed:freezed:
+    runs_before:
+      - fields_generator:fields_generator
+  fields_generator:fields_generator:
+    runs_before:
+      - json_serializable:json_serializable
+      
 targets:
   $default:
     builders:
@@ -6,8 +14,3 @@ targets:
           explicit_to_json: true
           field_rename: snake
           include_if_null: false
-
-global_options:
-  freezed:freezed:
-    runs_before:
-      - fields_generator:fields_generator
