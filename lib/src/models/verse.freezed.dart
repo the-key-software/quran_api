@@ -467,6 +467,7 @@ class __$$VerseImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@Fields(fieldRename: FieldRename.snake)
 class _$VerseImpl extends _Verse {
   const _$VerseImpl(
       {@JsonKey(name: "id") required this.id,

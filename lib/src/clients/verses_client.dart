@@ -107,8 +107,8 @@ class VersesQueries with _$VersesQueries {
     tafsirs: "1",
     wordFields:
         "verse_key,verse_id,page_number,location,text_uthmani,code_v1,qpc_uthmani_hafs",
-    translationFields: "resource_name,language_id",
     fields: "text_uthmani,chapter_id,hizb_number,text_imlaei_simple",
+    translationFields: "resource_name,language_id",
     page: 1,
     perPage: 7,
   );

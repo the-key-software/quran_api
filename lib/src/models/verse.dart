@@ -1,14 +1,18 @@
+import "package:fields_generator/fields_generator.dart";
 import "package:freezed_annotation/freezed_annotation.dart";
+
 import "models.dart";
+
+part "verse.fields.dart";
 part "verse.freezed.dart";
 part "verse.g.dart";
 
-@freezed
-
 /// Verse
+@freezed
 class Verse with _$Verse {
   const Verse._();
 
+  @Fields(fieldRename: FieldRename.snake)
   const factory Verse({
     @JsonKey(name: "id") required int id,
 
@@ -100,3 +104,4 @@ class Verse with _$Verse {
 
   factory Verse.fromJson(Map<String, dynamic> json) => _$VerseFromJson(json);
 }
+
