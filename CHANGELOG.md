@@ -21,3 +21,6 @@
 
 ## 0.0.8
 - json_serializable: include_if_null: false
+
+## 0.0.9
+- fix the resources client implementation and add tests.
