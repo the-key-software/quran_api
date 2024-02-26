@@ -43,6 +43,8 @@ class QuranApi {
   static const int recordsPerPageMinimum = 1;
   static const int recordsPerPageMaximum = 50;
 
+  static const int surahsCount = 114;
+
   static const int chapterNumberMinimum = 1;
   static const int chapterNumberMaximum = 114;
 
