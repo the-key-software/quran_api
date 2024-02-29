@@ -5,20 +5,20 @@ part "verse_key.freezed.dart";
 @freezed
 
 /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
-class VerseKey with _$VerseKey {
-  const VerseKey._();
+class QuranVerseKey with _$QuranVerseKey {
+  const QuranVerseKey._();
 
-  const factory VerseKey({
-    required int ayah,
+  const factory QuranVerseKey({
     required int surah,
-  }) = _VerseKey;
+    required int ayah,
+  }) = _QuranVerseKey;
 
-  factory VerseKey.fromJson(String json) {
+  factory QuranVerseKey.fromJson(String json) {
     final parts = json.split(":");
 
-    return VerseKey(
-      ayah: int.parse(parts.first),
-      surah: int.parse(parts.last),
+    return QuranVerseKey(
+      surah: int.parse(parts.first),
+      ayah: int.parse(parts.last),
     );
   }
 

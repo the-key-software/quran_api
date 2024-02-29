@@ -31,7 +31,7 @@ class QuranVersesIndopakResponseVerse with _$QuranVersesIndopakResponseVerse {
   const QuranVersesIndopakResponseVerse._();
   const factory QuranVersesIndopakResponseVerse({
     required int id,
-    required VerseKey verseKey,
+    required QuranVerseKey verseKey,
     required String textIndopak,
   }) = _QuranVersesIndopakResponseVerse;
 

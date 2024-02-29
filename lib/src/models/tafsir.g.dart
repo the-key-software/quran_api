@@ -13,7 +13,7 @@ _$TafsirImpl _$$TafsirImplFromJson(Map<String, dynamic> json) => _$TafsirImpl(
       text: json['text'] as String,
       languageName: json['language_name'] as String,
       resourceName: json['resource_name'] as String,
-      verseKey: VerseKey.fromJson(json['verse_key'] as String),
+      verseKey: QuranVerseKey.fromJson(json['verse_key'] as String),
       chapterId: json['chapter_id'] as int,
       verseNumber: json['verse_number'] as int,
       juzNumber: json['juz_number'] as int,

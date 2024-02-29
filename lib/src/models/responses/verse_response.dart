@@ -10,7 +10,7 @@ class VerseResponse with _$VerseResponse {
   const VerseResponse._();
 
   const factory VerseResponse({
-    required Verse verse,
+    required QuranVerse verse,
   }) = _VerseResponse;
 
   factory VerseResponse.fromJson(Map<String, dynamic> json) =>

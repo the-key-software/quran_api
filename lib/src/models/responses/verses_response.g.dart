@@ -9,7 +9,7 @@ part of 'verses_response.dart';
 _$VersesResponseImpl _$$VersesResponseImplFromJson(Map<String, dynamic> json) =>
     _$VersesResponseImpl(
       verses: (json['verses'] as List<dynamic>)
-          .map((e) => Verse.fromJson(e as Map<String, dynamic>))
+          .map((e) => QuranVerse.fromJson(e as Map<String, dynamic>))
           .toList(),
       pagination: json['pagination'] == null
           ? null

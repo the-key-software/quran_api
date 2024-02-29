@@ -24,7 +24,7 @@ class Translation with _$Translation {
     @JsonKey(name: "verse_id") required int? verseId,
     @JsonKey(name: "language_id") required int? languageId,
     @JsonKey(name: "language_name") required String? languageName,
-    @JsonKey(name: "verse_key") required VerseKey? verseKey,
+    @JsonKey(name: "verse_key") required QuranVerseKey? verseKey,
     @JsonKey(name: "chapter_id") required int? chapterId,
     @JsonKey(name: "verse_number") required int? verseNumber,
     @JsonKey(name: "juz_number") required int? juzNumber,

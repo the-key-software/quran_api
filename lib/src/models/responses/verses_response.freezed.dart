@@ -20,7 +20,7 @@ VersesResponse _$VersesResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$VersesResponse {
-  List<Verse> get verses => throw _privateConstructorUsedError;
+  List<QuranVerse> get verses => throw _privateConstructorUsedError;
   Pagination? get pagination => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $VersesResponseCopyWith<$Res> {
           VersesResponse value, $Res Function(VersesResponse) then) =
       _$VersesResponseCopyWithImpl<$Res, VersesResponse>;
   @useResult
-  $Res call({List<Verse> verses, Pagination? pagination});
+  $Res call({List<QuranVerse> verses, Pagination? pagination});
 
   $PaginationCopyWith<$Res>? get pagination;
 }
@@ -60,7 +60,7 @@ class _$VersesResponseCopyWithImpl<$Res, $Val extends VersesResponse>
       verses: null == verses
           ? _value.verses
           : verses // ignore: cast_nullable_to_non_nullable
-              as List<Verse>,
+              as List<QuranVerse>,
       pagination: freezed == pagination
           ? _value.pagination
           : pagination // ignore: cast_nullable_to_non_nullable
@@ -89,7 +89,7 @@ abstract class _$$VersesResponseImplCopyWith<$Res>
       __$$VersesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Verse> verses, Pagination? pagination});
+  $Res call({List<QuranVerse> verses, Pagination? pagination});
 
   @override
   $PaginationCopyWith<$Res>? get pagination;
@@ -113,7 +113,7 @@ class __$$VersesResponseImplCopyWithImpl<$Res>
       verses: null == verses
           ? _value._verses
           : verses // ignore: cast_nullable_to_non_nullable
-              as List<Verse>,
+              as List<QuranVerse>,
       pagination: freezed == pagination
           ? _value.pagination
           : pagination // ignore: cast_nullable_to_non_nullable
@@ -126,16 +126,16 @@ class __$$VersesResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$VersesResponseImpl extends _VersesResponse {
   const _$VersesResponseImpl(
-      {required final List<Verse> verses, required this.pagination})
+      {required final List<QuranVerse> verses, required this.pagination})
       : _verses = verses,
         super._();
 
   factory _$VersesResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$VersesResponseImplFromJson(json);
 
-  final List<Verse> _verses;
+  final List<QuranVerse> _verses;
   @override
-  List<Verse> get verses {
+  List<QuranVerse> get verses {
     if (_verses is EqualUnmodifiableListView) return _verses;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_verses);
@@ -181,7 +181,7 @@ class _$VersesResponseImpl extends _VersesResponse {
 
 abstract class _VersesResponse extends VersesResponse {
   const factory _VersesResponse(
-      {required final List<Verse> verses,
+      {required final List<QuranVerse> verses,
       required final Pagination? pagination}) = _$VersesResponseImpl;
   const _VersesResponse._() : super._();
 
@@ -189,7 +189,7 @@ abstract class _VersesResponse extends VersesResponse {
       _$VersesResponseImpl.fromJson;
 
   @override
-  List<Verse> get verses;
+  List<QuranVerse> get verses;
   @override
   Pagination? get pagination;
   @override

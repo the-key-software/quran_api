@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Verse _$VerseFromJson(Map<String, dynamic> json) {
-  return _Verse.fromJson(json);
+QuranVerse _$QuranVerseFromJson(Map<String, dynamic> json) {
+  return _QuranVerse.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Verse {
+mixin _$QuranVerse {
   @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
 
@@ -31,7 +31,7 @@ mixin _$Verse {
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @JsonKey(name: "verse_key")
-  VerseKey get verseKey => throw _privateConstructorUsedError;
+  QuranVerseKey get verseKey => throw _privateConstructorUsedError;
   @JsonKey(name: "verse_index")
   int? get verseIndex => throw _privateConstructorUsedError;
 
@@ -75,7 +75,7 @@ mixin _$Verse {
   @JsonKey(name: "image_width")
   int? get imageWidth => throw _privateConstructorUsedError;
   @JsonKey(name: "words")
-  List<Word>? get words => throw _privateConstructorUsedError;
+  List<QuranWord>? get words => throw _privateConstructorUsedError;
   @JsonKey(name: "audio")
   Object? get audio => throw _privateConstructorUsedError;
   @JsonKey(name: "translations")
@@ -99,19 +99,21 @@ mixin _$Verse {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $VerseCopyWith<Verse> get copyWith => throw _privateConstructorUsedError;
+  $QuranVerseCopyWith<QuranVerse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VerseCopyWith<$Res> {
-  factory $VerseCopyWith(Verse value, $Res Function(Verse) then) =
-      _$VerseCopyWithImpl<$Res, Verse>;
+abstract class $QuranVerseCopyWith<$Res> {
+  factory $QuranVerseCopyWith(
+          QuranVerse value, $Res Function(QuranVerse) then) =
+      _$QuranVerseCopyWithImpl<$Res, QuranVerse>;
   @useResult
   $Res call(
       {@JsonKey(name: "id") int id,
       @JsonKey(name: "chapter_id") int? chapterId,
       @JsonKey(name: "verse_number") int verseNumber,
-      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "verse_key") QuranVerseKey verseKey,
       @JsonKey(name: "verse_index") int? verseIndex,
       @JsonKey(name: "text_uthmani") String? textUthmani,
       @JsonKey(name: "text_uthmani_simple") String? textUthmaniSimple,
@@ -127,7 +129,7 @@ abstract class $VerseCopyWith<$Res> {
       @JsonKey(name: "page_number") int pageNumber,
       @JsonKey(name: "image_url") String? imageUrl,
       @JsonKey(name: "image_width") int? imageWidth,
-      @JsonKey(name: "words") List<Word>? words,
+      @JsonKey(name: "words") List<QuranWord>? words,
       @JsonKey(name: "audio") Object? audio,
       @JsonKey(name: "translations") List<Translation>? translations,
       @JsonKey(name: "code_v1") String? codeV1,
@@ -135,13 +137,13 @@ abstract class $VerseCopyWith<$Res> {
       @JsonKey(name: "v1_page") int? v1Page,
       @JsonKey(name: "v2_page") int? v2Page});
 
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $QuranVerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
-class _$VerseCopyWithImpl<$Res, $Val extends Verse>
-    implements $VerseCopyWith<$Res> {
-  _$VerseCopyWithImpl(this._value, this._then);
+class _$QuranVerseCopyWithImpl<$Res, $Val extends QuranVerse>
+    implements $QuranVerseCopyWith<$Res> {
+  _$QuranVerseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -194,7 +196,7 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
+              as QuranVerseKey,
       verseIndex: freezed == verseIndex
           ? _value.verseIndex
           : verseIndex // ignore: cast_nullable_to_non_nullable
@@ -253,7 +255,7 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
       words: freezed == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Word>?,
+              as List<QuranWord>?,
       audio: freezed == audio ? _value.audio : audio,
       translations: freezed == translations
           ? _value.translations
@@ -280,25 +282,26 @@ class _$VerseCopyWithImpl<$Res, $Val extends Verse>
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseKeyCopyWith<$Res> get verseKey {
-    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+  $QuranVerseKeyCopyWith<$Res> get verseKey {
+    return $QuranVerseKeyCopyWith<$Res>(_value.verseKey, (value) {
       return _then(_value.copyWith(verseKey: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
-  factory _$$VerseImplCopyWith(
-          _$VerseImpl value, $Res Function(_$VerseImpl) then) =
-      __$$VerseImplCopyWithImpl<$Res>;
+abstract class _$$QuranVerseImplCopyWith<$Res>
+    implements $QuranVerseCopyWith<$Res> {
+  factory _$$QuranVerseImplCopyWith(
+          _$QuranVerseImpl value, $Res Function(_$QuranVerseImpl) then) =
+      __$$QuranVerseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: "id") int id,
       @JsonKey(name: "chapter_id") int? chapterId,
       @JsonKey(name: "verse_number") int verseNumber,
-      @JsonKey(name: "verse_key") VerseKey verseKey,
+      @JsonKey(name: "verse_key") QuranVerseKey verseKey,
       @JsonKey(name: "verse_index") int? verseIndex,
       @JsonKey(name: "text_uthmani") String? textUthmani,
       @JsonKey(name: "text_uthmani_simple") String? textUthmaniSimple,
@@ -314,7 +317,7 @@ abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
       @JsonKey(name: "page_number") int pageNumber,
       @JsonKey(name: "image_url") String? imageUrl,
       @JsonKey(name: "image_width") int? imageWidth,
-      @JsonKey(name: "words") List<Word>? words,
+      @JsonKey(name: "words") List<QuranWord>? words,
       @JsonKey(name: "audio") Object? audio,
       @JsonKey(name: "translations") List<Translation>? translations,
       @JsonKey(name: "code_v1") String? codeV1,
@@ -323,15 +326,15 @@ abstract class _$$VerseImplCopyWith<$Res> implements $VerseCopyWith<$Res> {
       @JsonKey(name: "v2_page") int? v2Page});
 
   @override
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $QuranVerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
-class __$$VerseImplCopyWithImpl<$Res>
-    extends _$VerseCopyWithImpl<$Res, _$VerseImpl>
-    implements _$$VerseImplCopyWith<$Res> {
-  __$$VerseImplCopyWithImpl(
-      _$VerseImpl _value, $Res Function(_$VerseImpl) _then)
+class __$$QuranVerseImplCopyWithImpl<$Res>
+    extends _$QuranVerseCopyWithImpl<$Res, _$QuranVerseImpl>
+    implements _$$QuranVerseImplCopyWith<$Res> {
+  __$$QuranVerseImplCopyWithImpl(
+      _$QuranVerseImpl _value, $Res Function(_$QuranVerseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -364,7 +367,7 @@ class __$$VerseImplCopyWithImpl<$Res>
     Object? v1Page = freezed,
     Object? v2Page = freezed,
   }) {
-    return _then(_$VerseImpl(
+    return _then(_$QuranVerseImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -380,7 +383,7 @@ class __$$VerseImplCopyWithImpl<$Res>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
+              as QuranVerseKey,
       verseIndex: freezed == verseIndex
           ? _value.verseIndex
           : verseIndex // ignore: cast_nullable_to_non_nullable
@@ -439,7 +442,7 @@ class __$$VerseImplCopyWithImpl<$Res>
       words: freezed == words
           ? _value._words
           : words // ignore: cast_nullable_to_non_nullable
-              as List<Word>?,
+              as List<QuranWord>?,
       audio: freezed == audio ? _value.audio : audio,
       translations: freezed == translations
           ? _value._translations
@@ -468,8 +471,8 @@ class __$$VerseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 @Fields(fieldRename: FieldRename.snake)
-class _$VerseImpl extends _Verse {
-  const _$VerseImpl(
+class _$QuranVerseImpl extends _QuranVerse {
+  const _$QuranVerseImpl(
       {@JsonKey(name: "id") required this.id,
       @JsonKey(name: "chapter_id") required this.chapterId,
       @JsonKey(name: "verse_number") required this.verseNumber,
@@ -489,7 +492,7 @@ class _$VerseImpl extends _Verse {
       @JsonKey(name: "page_number") required this.pageNumber,
       @JsonKey(name: "image_url") required this.imageUrl,
       @JsonKey(name: "image_width") required this.imageWidth,
-      @JsonKey(name: "words") required final List<Word>? words,
+      @JsonKey(name: "words") required final List<QuranWord>? words,
       @JsonKey(name: "audio") required this.audio,
       @JsonKey(name: "translations")
       required final List<Translation>? translations,
@@ -501,8 +504,8 @@ class _$VerseImpl extends _Verse {
         _translations = translations,
         super._();
 
-  factory _$VerseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$VerseImplFromJson(json);
+  factory _$QuranVerseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuranVerseImplFromJson(json);
 
   @override
   @JsonKey(name: "id")
@@ -519,7 +522,7 @@ class _$VerseImpl extends _Verse {
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @override
   @JsonKey(name: "verse_key")
-  final VerseKey verseKey;
+  final QuranVerseKey verseKey;
   @override
   @JsonKey(name: "verse_index")
   final int? verseIndex;
@@ -577,10 +580,10 @@ class _$VerseImpl extends _Verse {
   @override
   @JsonKey(name: "image_width")
   final int? imageWidth;
-  final List<Word>? _words;
+  final List<QuranWord>? _words;
   @override
   @JsonKey(name: "words")
-  List<Word>? get words {
+  List<QuranWord>? get words {
     final value = _words;
     if (value == null) return null;
     if (_words is EqualUnmodifiableListView) return _words;
@@ -624,14 +627,14 @@ class _$VerseImpl extends _Verse {
 
   @override
   String toString() {
-    return 'Verse(id: $id, chapterId: $chapterId, verseNumber: $verseNumber, verseKey: $verseKey, verseIndex: $verseIndex, textUthmani: $textUthmani, textUthmaniSimple: $textUthmaniSimple, textImlaei: $textImlaei, textImlaeiSimple: $textImlaeiSimple, textIndopak: $textIndopak, textUthmaniTajweed: $textUthmaniTajweed, juzNumber: $juzNumber, hizbNumber: $hizbNumber, rubNumber: $rubNumber, sajdahType: $sajdahType, sajdahNumber: $sajdahNumber, pageNumber: $pageNumber, imageUrl: $imageUrl, imageWidth: $imageWidth, words: $words, audio: $audio, translations: $translations, codeV1: $codeV1, codeV2: $codeV2, v1Page: $v1Page, v2Page: $v2Page)';
+    return 'QuranVerse(id: $id, chapterId: $chapterId, verseNumber: $verseNumber, verseKey: $verseKey, verseIndex: $verseIndex, textUthmani: $textUthmani, textUthmaniSimple: $textUthmaniSimple, textImlaei: $textImlaei, textImlaeiSimple: $textImlaeiSimple, textIndopak: $textIndopak, textUthmaniTajweed: $textUthmaniTajweed, juzNumber: $juzNumber, hizbNumber: $hizbNumber, rubNumber: $rubNumber, sajdahType: $sajdahType, sajdahNumber: $sajdahNumber, pageNumber: $pageNumber, imageUrl: $imageUrl, imageWidth: $imageWidth, words: $words, audio: $audio, translations: $translations, codeV1: $codeV1, codeV2: $codeV2, v1Page: $v1Page, v2Page: $v2Page)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$VerseImpl &&
+            other is _$QuranVerseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.chapterId, chapterId) ||
                 other.chapterId == chapterId) &&
@@ -714,23 +717,23 @@ class _$VerseImpl extends _Verse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$VerseImplCopyWith<_$VerseImpl> get copyWith =>
-      __$$VerseImplCopyWithImpl<_$VerseImpl>(this, _$identity);
+  _$$QuranVerseImplCopyWith<_$QuranVerseImpl> get copyWith =>
+      __$$QuranVerseImplCopyWithImpl<_$QuranVerseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VerseImplToJson(
+    return _$$QuranVerseImplToJson(
       this,
     );
   }
 }
 
-abstract class _Verse extends Verse {
-  const factory _Verse(
+abstract class _QuranVerse extends QuranVerse {
+  const factory _QuranVerse(
       {@JsonKey(name: "id") required final int id,
       @JsonKey(name: "chapter_id") required final int? chapterId,
       @JsonKey(name: "verse_number") required final int verseNumber,
-      @JsonKey(name: "verse_key") required final VerseKey verseKey,
+      @JsonKey(name: "verse_key") required final QuranVerseKey verseKey,
       @JsonKey(name: "verse_index") required final int? verseIndex,
       @JsonKey(name: "text_uthmani") required final String? textUthmani,
       @JsonKey(name: "text_uthmani_simple")
@@ -749,17 +752,18 @@ abstract class _Verse extends Verse {
       @JsonKey(name: "page_number") required final int pageNumber,
       @JsonKey(name: "image_url") required final String? imageUrl,
       @JsonKey(name: "image_width") required final int? imageWidth,
-      @JsonKey(name: "words") required final List<Word>? words,
+      @JsonKey(name: "words") required final List<QuranWord>? words,
       @JsonKey(name: "audio") required final Object? audio,
       @JsonKey(name: "translations")
       required final List<Translation>? translations,
       @JsonKey(name: "code_v1") required final String? codeV1,
       @JsonKey(name: "code_v2") required final String? codeV2,
       @JsonKey(name: "v1_page") required final int? v1Page,
-      @JsonKey(name: "v2_page") required final int? v2Page}) = _$VerseImpl;
-  const _Verse._() : super._();
+      @JsonKey(name: "v2_page") required final int? v2Page}) = _$QuranVerseImpl;
+  const _QuranVerse._() : super._();
 
-  factory _Verse.fromJson(Map<String, dynamic> json) = _$VerseImpl.fromJson;
+  factory _QuranVerse.fromJson(Map<String, dynamic> json) =
+      _$QuranVerseImpl.fromJson;
 
   @override
   @JsonKey(name: "id")
@@ -776,7 +780,7 @@ abstract class _Verse extends Verse {
 
   /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
   @JsonKey(name: "verse_key")
-  VerseKey get verseKey;
+  QuranVerseKey get verseKey;
   @override
   @JsonKey(name: "verse_index")
   int? get verseIndex;
@@ -836,7 +840,7 @@ abstract class _Verse extends Verse {
   int? get imageWidth;
   @override
   @JsonKey(name: "words")
-  List<Word>? get words;
+  List<QuranWord>? get words;
   @override
   @JsonKey(name: "audio")
   Object? get audio;
@@ -865,6 +869,6 @@ abstract class _Verse extends Verse {
   int? get v2Page;
   @override
   @JsonKey(ignore: true)
-  _$$VerseImplCopyWith<_$VerseImpl> get copyWith =>
+  _$$QuranVerseImplCopyWith<_$QuranVerseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

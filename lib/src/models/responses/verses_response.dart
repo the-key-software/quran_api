@@ -10,7 +10,7 @@ class VersesResponse with _$VersesResponse {
   const VersesResponse._();
 
   const factory VersesResponse({
-    required List<Verse> verses,
+    required List<QuranVerse> verses,
     required Pagination? pagination,
   }) = _VersesResponse;
 

@@ -21,7 +21,7 @@ _$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
           json['rub_el_hizb_number'], const IntStringJsonConverter().fromJson),
       verseKey: json['verse_key'] == null
           ? null
-          : VerseKey.fromJson(json['verse_key'] as String),
+          : QuranVerseKey.fromJson(json['verse_key'] as String),
     );
 
 Map<String, dynamic> _$$QuranVersesIndopakQueriesImplToJson(
@@ -124,7 +124,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -167,7 +167,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -210,7 +210,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -253,7 +253,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -297,7 +297,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -342,7 +342,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -386,7 +386,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -429,7 +429,7 @@ class _QuranClient implements QuranClient {
     int? pageNumber,
     int? hizbNumber,
     int? rubElHizbNumber,
-    VerseKey? verseKey,
+    QuranVerseKey? verseKey,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{

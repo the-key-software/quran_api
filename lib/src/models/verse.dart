@@ -7,13 +7,13 @@ part "verse.fields.dart";
 part "verse.freezed.dart";
 part "verse.g.dart";
 
-/// Verse
+/// QuranVerse
 @freezed
-class Verse with _$Verse {
-  const Verse._();
+class QuranVerse with _$QuranVerse {
+  const QuranVerse._();
 
   @Fields(fieldRename: FieldRename.snake)
-  const factory Verse({
+  const factory QuranVerse({
     @JsonKey(name: "id") required int id,
 
     /// Chapter number of this verse
@@ -21,7 +21,7 @@ class Verse with _$Verse {
     @JsonKey(name: "verse_number") required int verseNumber,
 
     /// key of the verse, key is generated using chapter number and ayah number. e.g 1:1 is first ayah of first surah.
-    @JsonKey(name: "verse_key") required VerseKey verseKey,
+    @JsonKey(name: "verse_key") required QuranVerseKey verseKey,
     @JsonKey(name: "verse_index") required int? verseIndex,
 
     /// Ayah text in Uthmani Script.
@@ -49,7 +49,7 @@ class Verse with _$Verse {
     @JsonKey(name: "page_number") required int pageNumber,
     @JsonKey(name: "image_url") required String? imageUrl,
     @JsonKey(name: "image_width") required int? imageWidth,
-    @JsonKey(name: "words") required List<Word>? words,
+    @JsonKey(name: "words") required List<QuranWord>? words,
     @JsonKey(name: "audio") required Object? audio,
     @JsonKey(name: "translations") required List<Translation>? translations,
 
@@ -64,9 +64,9 @@ class Verse with _$Verse {
 
     /// Madani Muhsaf Page number for v2 font. If `v2_page` value is 2, that means you'll use page 2 font file to render this ayah using v2 glyph codes.
     @JsonKey(name: "v2_page") required int? v2Page,
-  }) = _Verse;
+  }) = _QuranVerse;
 
-  static Verse get example => Verse.fromJson({
+  static QuranVerse get example => QuranVerse.fromJson({
         "id": 1,
         "chapter_id": 1,
         "verse_number": 1,
@@ -102,6 +102,6 @@ class Verse with _$Verse {
         ]
       });
 
-  factory Verse.fromJson(Map<String, dynamic> json) => _$VerseFromJson(json);
+  factory QuranVerse.fromJson(Map<String, dynamic> json) =>
+      _$QuranVerseFromJson(json);
 }
-

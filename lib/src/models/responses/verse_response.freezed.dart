@@ -20,7 +20,7 @@ VerseResponse _$VerseResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$VerseResponse {
-  Verse get verse => throw _privateConstructorUsedError;
+  QuranVerse get verse => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,9 +34,9 @@ abstract class $VerseResponseCopyWith<$Res> {
           VerseResponse value, $Res Function(VerseResponse) then) =
       _$VerseResponseCopyWithImpl<$Res, VerseResponse>;
   @useResult
-  $Res call({Verse verse});
+  $Res call({QuranVerse verse});
 
-  $VerseCopyWith<$Res> get verse;
+  $QuranVerseCopyWith<$Res> get verse;
 }
 
 /// @nodoc
@@ -58,14 +58,14 @@ class _$VerseResponseCopyWithImpl<$Res, $Val extends VerseResponse>
       verse: null == verse
           ? _value.verse
           : verse // ignore: cast_nullable_to_non_nullable
-              as Verse,
+              as QuranVerse,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseCopyWith<$Res> get verse {
-    return $VerseCopyWith<$Res>(_value.verse, (value) {
+  $QuranVerseCopyWith<$Res> get verse {
+    return $QuranVerseCopyWith<$Res>(_value.verse, (value) {
       return _then(_value.copyWith(verse: value) as $Val);
     });
   }
@@ -79,10 +79,10 @@ abstract class _$$VerseResponseImplCopyWith<$Res>
       __$$VerseResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Verse verse});
+  $Res call({QuranVerse verse});
 
   @override
-  $VerseCopyWith<$Res> get verse;
+  $QuranVerseCopyWith<$Res> get verse;
 }
 
 /// @nodoc
@@ -102,7 +102,7 @@ class __$$VerseResponseImplCopyWithImpl<$Res>
       verse: null == verse
           ? _value.verse
           : verse // ignore: cast_nullable_to_non_nullable
-              as Verse,
+              as QuranVerse,
     ));
   }
 }
@@ -116,7 +116,7 @@ class _$VerseResponseImpl extends _VerseResponse {
       _$$VerseResponseImplFromJson(json);
 
   @override
-  final Verse verse;
+  final QuranVerse verse;
 
   @override
   String toString() {
@@ -150,7 +150,7 @@ class _$VerseResponseImpl extends _VerseResponse {
 }
 
 abstract class _VerseResponse extends VerseResponse {
-  const factory _VerseResponse({required final Verse verse}) =
+  const factory _VerseResponse({required final QuranVerse verse}) =
       _$VerseResponseImpl;
   const _VerseResponse._() : super._();
 
@@ -158,7 +158,7 @@ abstract class _VerseResponse extends VerseResponse {
       _$VerseResponseImpl.fromJson;
 
   @override
-  Verse get verse;
+  QuranVerse get verse;
   @override
   @JsonKey(ignore: true)
   _$$VerseResponseImplCopyWith<_$VerseResponseImpl> get copyWith =>

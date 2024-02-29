@@ -32,7 +32,7 @@ mixin _$QuranVersesIndopakQueries {
   @JsonKey(name: "rub_el_hizb_number")
   int? get rubElHizbNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "verse_key")
-  VerseKey? get verseKey => throw _privateConstructorUsedError;
+  QuranVerseKey? get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -52,9 +52,9 @@ abstract class $QuranVersesIndopakQueriesCopyWith<$Res> {
       @JsonKey(name: "page_number") int? pageNumber,
       @JsonKey(name: "hizb_number") int? hizbNumber,
       @JsonKey(name: "rub_el_hizb_number") int? rubElHizbNumber,
-      @JsonKey(name: "verse_key") VerseKey? verseKey});
+      @JsonKey(name: "verse_key") QuranVerseKey? verseKey});
 
-  $VerseKeyCopyWith<$Res>? get verseKey;
+  $QuranVerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -102,18 +102,18 @@ class _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
       verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey?,
+              as QuranVerseKey?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseKeyCopyWith<$Res>? get verseKey {
+  $QuranVerseKeyCopyWith<$Res>? get verseKey {
     if (_value.verseKey == null) {
       return null;
     }
 
-    return $VerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
+    return $QuranVerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
       return _then(_value.copyWith(verseKey: value) as $Val);
     });
   }
@@ -134,10 +134,10 @@ abstract class _$$QuranVersesIndopakQueriesImplCopyWith<$Res>
       @JsonKey(name: "page_number") int? pageNumber,
       @JsonKey(name: "hizb_number") int? hizbNumber,
       @JsonKey(name: "rub_el_hizb_number") int? rubElHizbNumber,
-      @JsonKey(name: "verse_key") VerseKey? verseKey});
+      @JsonKey(name: "verse_key") QuranVerseKey? verseKey});
 
   @override
-  $VerseKeyCopyWith<$Res>? get verseKey;
+  $QuranVerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -184,7 +184,7 @@ class __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>
       verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey?,
+              as QuranVerseKey?,
     ));
   }
 }
@@ -222,7 +222,7 @@ class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
   final int? rubElHizbNumber;
   @override
   @JsonKey(name: "verse_key")
-  final VerseKey? verseKey;
+  final QuranVerseKey? verseKey;
 
   @override
   String toString() {
@@ -275,7 +275,7 @@ abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
           @JsonKey(name: "page_number") final int? pageNumber,
           @JsonKey(name: "hizb_number") final int? hizbNumber,
           @JsonKey(name: "rub_el_hizb_number") final int? rubElHizbNumber,
-          @JsonKey(name: "verse_key") final VerseKey? verseKey}) =
+          @JsonKey(name: "verse_key") final QuranVerseKey? verseKey}) =
       _$QuranVersesIndopakQueriesImpl;
   const _QuranVersesIndopakQueries._() : super._();
 
@@ -299,7 +299,7 @@ abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
   int? get rubElHizbNumber;
   @override
   @JsonKey(name: "verse_key")
-  VerseKey? get verseKey;
+  QuranVerseKey? get verseKey;
   @override
   @JsonKey(ignore: true)
   _$$QuranVersesIndopakQueriesImplCopyWith<_$QuranVersesIndopakQueriesImpl>

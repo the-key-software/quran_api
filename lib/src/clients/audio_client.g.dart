@@ -17,7 +17,7 @@ _$RecitationAudioFilesQueriesImpl _$$RecitationAudioFilesQueriesImplFromJson(
       rubElHizbNumber: json['rub_el_hizb_number'] as int?,
       verseKey: json['verse_key'] == null
           ? null
-          : VerseKey.fromJson(json['verse_key'] as String),
+          : QuranVerseKey.fromJson(json['verse_key'] as String),
     );
 
 Map<String, dynamic> _$$RecitationAudioFilesQueriesImplToJson(

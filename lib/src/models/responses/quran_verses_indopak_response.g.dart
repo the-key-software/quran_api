@@ -41,7 +41,7 @@ _$QuranVersesIndopakResponseVerseImpl
     _$$QuranVersesIndopakResponseVerseImplFromJson(Map<String, dynamic> json) =>
         _$QuranVersesIndopakResponseVerseImpl(
           id: json['id'] as int,
-          verseKey: VerseKey.fromJson(json['verse_key'] as String),
+          verseKey: QuranVerseKey.fromJson(json['verse_key'] as String),
           textIndopak: json['text_indopak'] as String,
         );
 

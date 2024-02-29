@@ -379,7 +379,7 @@ QuranVersesIndopakResponseVerse _$QuranVersesIndopakResponseVerseFromJson(
 /// @nodoc
 mixin _$QuranVersesIndopakResponseVerse {
   int get id => throw _privateConstructorUsedError;
-  VerseKey get verseKey => throw _privateConstructorUsedError;
+  QuranVerseKey get verseKey => throw _privateConstructorUsedError;
   String get textIndopak => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -396,9 +396,9 @@ abstract class $QuranVersesIndopakResponseVerseCopyWith<$Res> {
       _$QuranVersesIndopakResponseVerseCopyWithImpl<$Res,
           QuranVersesIndopakResponseVerse>;
   @useResult
-  $Res call({int id, VerseKey verseKey, String textIndopak});
+  $Res call({int id, QuranVerseKey verseKey, String textIndopak});
 
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $QuranVerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -427,7 +427,7 @@ class _$QuranVersesIndopakResponseVerseCopyWithImpl<$Res,
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
+              as QuranVerseKey,
       textIndopak: null == textIndopak
           ? _value.textIndopak
           : textIndopak // ignore: cast_nullable_to_non_nullable
@@ -437,8 +437,8 @@ class _$QuranVersesIndopakResponseVerseCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseKeyCopyWith<$Res> get verseKey {
-    return $VerseKeyCopyWith<$Res>(_value.verseKey, (value) {
+  $QuranVerseKeyCopyWith<$Res> get verseKey {
+    return $QuranVerseKeyCopyWith<$Res>(_value.verseKey, (value) {
       return _then(_value.copyWith(verseKey: value) as $Val);
     });
   }
@@ -453,10 +453,10 @@ abstract class _$$QuranVersesIndopakResponseVerseImplCopyWith<$Res>
       __$$QuranVersesIndopakResponseVerseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, VerseKey verseKey, String textIndopak});
+  $Res call({int id, QuranVerseKey verseKey, String textIndopak});
 
   @override
-  $VerseKeyCopyWith<$Res> get verseKey;
+  $QuranVerseKeyCopyWith<$Res> get verseKey;
 }
 
 /// @nodoc
@@ -484,7 +484,7 @@ class __$$QuranVersesIndopakResponseVerseImplCopyWithImpl<$Res>
       verseKey: null == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey,
+              as QuranVerseKey,
       textIndopak: null == textIndopak
           ? _value.textIndopak
           : textIndopak // ignore: cast_nullable_to_non_nullable
@@ -508,7 +508,7 @@ class _$QuranVersesIndopakResponseVerseImpl
   @override
   final int id;
   @override
-  final VerseKey verseKey;
+  final QuranVerseKey verseKey;
   @override
   final String textIndopak;
 
@@ -553,7 +553,7 @@ abstract class _QuranVersesIndopakResponseVerse
     extends QuranVersesIndopakResponseVerse {
   const factory _QuranVersesIndopakResponseVerse(
           {required final int id,
-          required final VerseKey verseKey,
+          required final QuranVerseKey verseKey,
           required final String textIndopak}) =
       _$QuranVersesIndopakResponseVerseImpl;
   const _QuranVersesIndopakResponseVerse._() : super._();
@@ -564,7 +564,7 @@ abstract class _QuranVersesIndopakResponseVerse
   @override
   int get id;
   @override
-  VerseKey get verseKey;
+  QuranVerseKey get verseKey;
   @override
   String get textIndopak;
   @override

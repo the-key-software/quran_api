@@ -6,12 +6,15 @@ void main() {
     final client = QuranApi.instance.verses;
 
     test("versesByChapterNumber", () async {
-      final value = await client.versesByChapterNumber(
-        chapterNumber: 1,
-        queries: VersesQueries.defaultValue,
+      final value = await client.versesByPageNumber(
+        pageNumber: 2,
+        queries: VersesQueries(
+          wordFields: QuranWordFields.fieldsNames,
+          fields: QuranVerseFields.fieldsNames,
+        ),
       );
 
-      expect(value.response.statusCode, 200);
+      expect(value.data.verses.last.verseKey, QuranVerseKey(surah: 2, ayah: 5));
     });
 
     test("versesByPageNumber", () async {
@@ -49,8 +52,8 @@ void main() {
       expect(value.response.statusCode, 200);
     });
 
-    test("versesByVerseKey", () async {
-      final value = await client.versesByVerseKey(
+    test("versesByQuranVerseKey", () async {
+      final value = await client.versesByQuranVerseKey(
         verseKey: "1:1",
         queries: VersesQueries.defaultValue,
       );

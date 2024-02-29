@@ -6,59 +6,59 @@
 
 part of 'word.dart';
 
-/// [Word] fields
-abstract final class WordFields {
-  const WordFields._();
+/// [QuranWord] fields
+abstract final class QuranWordFields {
+  const QuranWordFields._();
 
-  /// [Word.id]
+  /// [QuranWord.id]
   static const String idFieldName = 'id';
 
-  /// [Word.position]
+  /// [QuranWord.position]
   static const String positionFieldName = 'position';
 
-  /// [Word.textUthmani]
+  /// [QuranWord.textUthmani]
   static const String textUthmaniFieldName = 'text_uthmani';
 
-  /// [Word.textIndopak]
+  /// [QuranWord.textIndopak]
   static const String textIndopakFieldName = 'text_indopak';
 
-  /// [Word.textImlaei]
+  /// [QuranWord.textImlaei]
   static const String textImlaeiFieldName = 'text_imlaei';
 
-  /// [Word.verseKey]
+  /// [QuranWord.verseKey]
   static const String verseKeyFieldName = 'verse_key';
 
-  /// [Word.pageNumber]
+  /// [QuranWord.pageNumber]
   static const String pageNumberFieldName = 'page_number';
 
-  /// [Word.lineNumber]
+  /// [QuranWord.lineNumber]
   static const String lineNumberFieldName = 'line_number';
 
-  /// [Word.audioUrl]
+  /// [QuranWord.audioUrl]
   static const String audioUrlFieldName = 'audio_url';
 
-  /// [Word.location]
+  /// [QuranWord.location]
   static const String locationFieldName = 'location';
 
-  /// [Word.charTypeName]
+  /// [QuranWord.charTypeName]
   static const String charTypeNameFieldName = 'char_type_name';
 
-  /// [Word.codeV1]
+  /// [QuranWord.codeV1]
   static const String codeV1FieldName = 'code_v1';
 
-  /// [Word.codeV2]
+  /// [QuranWord.codeV2]
   static const String codeV2FieldName = 'code_v2';
 
-  /// [Word.translation]
+  /// [QuranWord.translation]
   static const String translationFieldName = 'translation';
 
-  /// [Word.transliteration]
+  /// [QuranWord.transliteration]
   static const String transliterationFieldName = 'transliteration';
 
-  /// [Word.v1Page]
+  /// [QuranWord.v1Page]
   static const String v1PageFieldName = 'v1_page';
 
-  /// [Word.v2Page]
+  /// [QuranWord.v2Page]
   static const String v2PageFieldName = 'v2_page';
 
   static const List<String> fieldsNames = [
@@ -82,12 +82,12 @@ abstract final class WordFields {
   ];
 }
 
-/// [Word] fields
+/// [QuranWord] fields
 @JsonEnum(
   fieldRename: FieldRename.snake,
   valueField: 'value',
 )
-enum WordFieldsEnum {
+enum QuranWordFieldsEnum {
   id('id'),
   position('position'),
   textUthmani('text_uthmani'),
@@ -107,5 +107,5 @@ enum WordFieldsEnum {
   v2Page('v2_page');
 
   final String value;
-  const WordFieldsEnum(this.value);
+  const QuranWordFieldsEnum(this.value);
 }

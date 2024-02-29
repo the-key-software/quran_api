@@ -52,9 +52,9 @@ abstract class VersesClient {
   });
 
   /// By Specific Verse By Key
-  /// [verseKey] Verse key
+  /// [QuranVerseKey] Verse key
   @GET("/verses/by_key/{verse_key}")
-  Future<HttpResponse<VerseResponse>> versesByVerseKey({
+  Future<HttpResponse<VerseResponse>> versesByQuranVerseKey({
     @Path("verse_key") required String verseKey,
     @Queries() VersesQueries? queries,
   });
@@ -110,19 +110,19 @@ class VersesQueries with _$VersesQueries {
     audio: 9,
     tafsirs: "1",
     wordFields: [
-      WordFields.verseKeyFieldName,
+      QuranWordFields.verseKeyFieldName,
       "verse_id",
-      WordFields.pageNumberFieldName,
-      WordFields.locationFieldName,
-      WordFields.textUthmaniFieldName,
-      WordFields.codeV1FieldName,
+      QuranWordFields.pageNumberFieldName,
+      QuranWordFields.locationFieldName,
+      QuranWordFields.textUthmaniFieldName,
+      QuranWordFields.codeV1FieldName,
       "qpc_uthmani_hafs",
     ],
     fields: [
-      VerseFields.textUthmaniFieldName,
-      VerseFields.chapterIdFieldName,
-      VerseFields.hizbNumberFieldName,
-      VerseFields.textImlaeiSimpleFieldName,
+      QuranVerseFields.textUthmaniFieldName,
+      QuranVerseFields.chapterIdFieldName,
+      QuranVerseFields.hizbNumberFieldName,
+      QuranVerseFields.textImlaeiSimpleFieldName,
     ],
     translationFields: [
       TranslationFields.resourceNameFieldName,

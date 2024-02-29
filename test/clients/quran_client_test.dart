@@ -9,7 +9,7 @@ void main() async {
       test("first ayah", () async {
         final value = await client.quranVersesIndopak(
           queries: QuranVersesIndopakQueries(
-            verseKey: VerseKey(ayah: 1, surah: 1),
+            verseKey: QuranVerseKey(ayah: 1, surah: 1),
           ),
         );
         expect(
@@ -20,7 +20,7 @@ void main() async {
       test("last ayah", () async {
         final value = await client.quranVersesIndopak(
           queries: QuranVersesIndopakQueries(
-            verseKey: VerseKey.fromJson("114:6"),
+            verseKey: QuranVerseKey.fromJson("114:6"),
           ),
         );
         expect(

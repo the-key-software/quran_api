@@ -6,7 +6,8 @@ part of 'word.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$WordImpl _$$WordImplFromJson(Map<String, dynamic> json) => _$WordImpl(
+_$QuranWordImpl _$$QuranWordImplFromJson(Map<String, dynamic> json) =>
+    _$QuranWordImpl(
       id: json['id'] as int?,
       position: json['position'] as int,
       textUthmani: json['text_uthmani'] as String?,
@@ -14,23 +15,23 @@ _$WordImpl _$$WordImplFromJson(Map<String, dynamic> json) => _$WordImpl(
       textImlaei: json['text_imlaei'] as String?,
       verseKey: json['verse_key'] == null
           ? null
-          : VerseKey.fromJson(json['verse_key'] as String),
+          : QuranVerseKey.fromJson(json['verse_key'] as String),
       pageNumber: json['page_number'] as int?,
       lineNumber: json['line_number'] as int?,
       audioUrl: json['audio_url'] as String?,
       location: json['location'] as String?,
-      charTypeName: json['char_type_name'] as String,
+      charTypeName: $enumDecode(_$CharTypeNameEnumMap, json['char_type_name']),
       codeV1: json['code_v1'] as String?,
       codeV2: json['code_v2'] as String?,
-      translation:
-          WordTranslation.fromJson(json['translation'] as Map<String, dynamic>),
-      transliteration: WordTransliteration.fromJson(
+      translation: QuranWordTranslation.fromJson(
+          json['translation'] as Map<String, dynamic>),
+      transliteration: QuranWordTransliteration.fromJson(
           json['transliteration'] as Map<String, dynamic>),
       v1Page: json['v1_page'] as int?,
       v2Page: json['v2_page'] as int?,
     );
 
-Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) {
+Map<String, dynamic> _$$QuranWordImplToJson(_$QuranWordImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -49,7 +50,7 @@ Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) {
   writeNotNull('line_number', instance.lineNumber);
   writeNotNull('audio_url', instance.audioUrl);
   writeNotNull('location', instance.location);
-  val['char_type_name'] = instance.charTypeName;
+  val['char_type_name'] = _$CharTypeNameEnumMap[instance.charTypeName]!;
   writeNotNull('code_v1', instance.codeV1);
   writeNotNull('code_v2', instance.codeV2);
   val['translation'] = instance.translation.toJson();
@@ -59,15 +60,20 @@ Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) {
   return val;
 }
 
-_$WordTranslationImpl _$$WordTranslationImplFromJson(
+const _$CharTypeNameEnumMap = {
+  CharTypeName.word: 'word',
+  CharTypeName.end: 'end',
+};
+
+_$QuranWordTranslationImpl _$$QuranWordTranslationImplFromJson(
         Map<String, dynamic> json) =>
-    _$WordTranslationImpl(
+    _$QuranWordTranslationImpl(
       text: json['text'] as String?,
       languageName: json['language_name'] as String?,
     );
 
-Map<String, dynamic> _$$WordTranslationImplToJson(
-    _$WordTranslationImpl instance) {
+Map<String, dynamic> _$$QuranWordTranslationImplToJson(
+    _$QuranWordTranslationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -81,15 +87,15 @@ Map<String, dynamic> _$$WordTranslationImplToJson(
   return val;
 }
 
-_$WordTransliterationImpl _$$WordTransliterationImplFromJson(
+_$QuranWordTransliterationImpl _$$QuranWordTransliterationImplFromJson(
         Map<String, dynamic> json) =>
-    _$WordTransliterationImpl(
+    _$QuranWordTransliterationImpl(
       text: json['text'] as String?,
       languageName: json['language_name'] as String?,
     );
 
-Map<String, dynamic> _$$WordTransliterationImplToJson(
-    _$WordTransliterationImpl instance) {
+Map<String, dynamic> _$$QuranWordTransliterationImplToJson(
+    _$QuranWordTransliterationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

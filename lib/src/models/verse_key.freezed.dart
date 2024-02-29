@@ -15,27 +15,28 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$VerseKey {
-  int get ayah => throw _privateConstructorUsedError;
+mixin _$QuranVerseKey {
   int get surah => throw _privateConstructorUsedError;
+  int get ayah => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $VerseKeyCopyWith<VerseKey> get copyWith =>
+  $QuranVerseKeyCopyWith<QuranVerseKey> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VerseKeyCopyWith<$Res> {
-  factory $VerseKeyCopyWith(VerseKey value, $Res Function(VerseKey) then) =
-      _$VerseKeyCopyWithImpl<$Res, VerseKey>;
+abstract class $QuranVerseKeyCopyWith<$Res> {
+  factory $QuranVerseKeyCopyWith(
+          QuranVerseKey value, $Res Function(QuranVerseKey) then) =
+      _$QuranVerseKeyCopyWithImpl<$Res, QuranVerseKey>;
   @useResult
-  $Res call({int ayah, int surah});
+  $Res call({int surah, int ayah});
 }
 
 /// @nodoc
-class _$VerseKeyCopyWithImpl<$Res, $Val extends VerseKey>
-    implements $VerseKeyCopyWith<$Res> {
-  _$VerseKeyCopyWithImpl(this._value, this._then);
+class _$QuranVerseKeyCopyWithImpl<$Res, $Val extends QuranVerseKey>
+    implements $QuranVerseKeyCopyWith<$Res> {
+  _$QuranVerseKeyCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -45,55 +46,55 @@ class _$VerseKeyCopyWithImpl<$Res, $Val extends VerseKey>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ayah = null,
     Object? surah = null,
+    Object? ayah = null,
   }) {
     return _then(_value.copyWith(
-      ayah: null == ayah
-          ? _value.ayah
-          : ayah // ignore: cast_nullable_to_non_nullable
-              as int,
       surah: null == surah
           ? _value.surah
           : surah // ignore: cast_nullable_to_non_nullable
+              as int,
+      ayah: null == ayah
+          ? _value.ayah
+          : ayah // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$VerseKeyImplCopyWith<$Res>
-    implements $VerseKeyCopyWith<$Res> {
-  factory _$$VerseKeyImplCopyWith(
-          _$VerseKeyImpl value, $Res Function(_$VerseKeyImpl) then) =
-      __$$VerseKeyImplCopyWithImpl<$Res>;
+abstract class _$$QuranVerseKeyImplCopyWith<$Res>
+    implements $QuranVerseKeyCopyWith<$Res> {
+  factory _$$QuranVerseKeyImplCopyWith(
+          _$QuranVerseKeyImpl value, $Res Function(_$QuranVerseKeyImpl) then) =
+      __$$QuranVerseKeyImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int ayah, int surah});
+  $Res call({int surah, int ayah});
 }
 
 /// @nodoc
-class __$$VerseKeyImplCopyWithImpl<$Res>
-    extends _$VerseKeyCopyWithImpl<$Res, _$VerseKeyImpl>
-    implements _$$VerseKeyImplCopyWith<$Res> {
-  __$$VerseKeyImplCopyWithImpl(
-      _$VerseKeyImpl _value, $Res Function(_$VerseKeyImpl) _then)
+class __$$QuranVerseKeyImplCopyWithImpl<$Res>
+    extends _$QuranVerseKeyCopyWithImpl<$Res, _$QuranVerseKeyImpl>
+    implements _$$QuranVerseKeyImplCopyWith<$Res> {
+  __$$QuranVerseKeyImplCopyWithImpl(
+      _$QuranVerseKeyImpl _value, $Res Function(_$QuranVerseKeyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ayah = null,
     Object? surah = null,
+    Object? ayah = null,
   }) {
-    return _then(_$VerseKeyImpl(
-      ayah: null == ayah
-          ? _value.ayah
-          : ayah // ignore: cast_nullable_to_non_nullable
-              as int,
+    return _then(_$QuranVerseKeyImpl(
       surah: null == surah
           ? _value.surah
           : surah // ignore: cast_nullable_to_non_nullable
+              as int,
+      ayah: null == ayah
+          ? _value.ayah
+          : ayah // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -101,49 +102,51 @@ class __$$VerseKeyImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$VerseKeyImpl extends _VerseKey {
-  const _$VerseKeyImpl({required this.ayah, required this.surah}) : super._();
+class _$QuranVerseKeyImpl extends _QuranVerseKey {
+  const _$QuranVerseKeyImpl({required this.surah, required this.ayah})
+      : super._();
 
   @override
-  final int ayah;
-  @override
   final int surah;
+  @override
+  final int ayah;
 
   @override
   String toString() {
-    return 'VerseKey(ayah: $ayah, surah: $surah)';
+    return 'QuranVerseKey(surah: $surah, ayah: $ayah)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$VerseKeyImpl &&
-            (identical(other.ayah, ayah) || other.ayah == ayah) &&
-            (identical(other.surah, surah) || other.surah == surah));
+            other is _$QuranVerseKeyImpl &&
+            (identical(other.surah, surah) || other.surah == surah) &&
+            (identical(other.ayah, ayah) || other.ayah == ayah));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, ayah, surah);
+  int get hashCode => Object.hash(runtimeType, surah, ayah);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$VerseKeyImplCopyWith<_$VerseKeyImpl> get copyWith =>
-      __$$VerseKeyImplCopyWithImpl<_$VerseKeyImpl>(this, _$identity);
+  _$$QuranVerseKeyImplCopyWith<_$QuranVerseKeyImpl> get copyWith =>
+      __$$QuranVerseKeyImplCopyWithImpl<_$QuranVerseKeyImpl>(this, _$identity);
 }
 
-abstract class _VerseKey extends VerseKey {
-  const factory _VerseKey({required final int ayah, required final int surah}) =
-      _$VerseKeyImpl;
-  const _VerseKey._() : super._();
+abstract class _QuranVerseKey extends QuranVerseKey {
+  const factory _QuranVerseKey(
+      {required final int surah,
+      required final int ayah}) = _$QuranVerseKeyImpl;
+  const _QuranVerseKey._() : super._();
 
-  @override
-  int get ayah;
   @override
   int get surah;
   @override
+  int get ayah;
+  @override
   @JsonKey(ignore: true)
-  _$$VerseKeyImplCopyWith<_$VerseKeyImpl> get copyWith =>
+  _$$QuranVerseKeyImplCopyWith<_$QuranVerseKeyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

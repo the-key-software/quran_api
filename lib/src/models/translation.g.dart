@@ -17,7 +17,7 @@ _$TranslationImpl _$$TranslationImplFromJson(Map<String, dynamic> json) =>
       languageName: json['language_name'] as String?,
       verseKey: json['verse_key'] == null
           ? null
-          : VerseKey.fromJson(json['verse_key'] as String),
+          : QuranVerseKey.fromJson(json['verse_key'] as String),
       chapterId: json['chapter_id'] as int?,
       verseNumber: json['verse_number'] as int?,
       juzNumber: json['juz_number'] as int?,

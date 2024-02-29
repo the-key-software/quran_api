@@ -17,7 +17,7 @@ class Tafsir with _$Tafsir {
     @JsonKey(name: "text") required String text,
     @JsonKey(name: "language_name") required String languageName,
     @JsonKey(name: "resource_name") required String resourceName,
-    @JsonKey(name: "verse_key") required VerseKey verseKey,
+    @JsonKey(name: "verse_key") required QuranVerseKey verseKey,
     @JsonKey(name: "chapter_id") required int chapterId,
     @JsonKey(name: "verse_number") required int verseNumber,
     @JsonKey(name: "juz_number") required int juzNumber,

@@ -90,7 +90,7 @@ class RecitationAudioFilesQueries with _$RecitationAudioFilesQueries {
   /// [pageNumber] If you want to get audio file of a Madani Muhsaf page
   /// [hizbNumber] If you want to get audio file of a specific hizb.
   /// [rubElHizbNumber] If you want to get audio file of a specific Rub el Hizb.
-  /// [verseKey] If you want to get audio file of a specific ayah.
+  /// [QuranVerseKey] If you want to get audio file of a specific ayah.
   const factory RecitationAudioFilesQueries({
     @Query("fields") String? fields,
     @Query("chapter_number") int? chapterNumber,
@@ -98,7 +98,7 @@ class RecitationAudioFilesQueries with _$RecitationAudioFilesQueries {
     @Query("page_number") int? pageNumber,
     @Query("hizb_number") int? hizbNumber,
     @Query("rub_el_hizb_number") int? rubElHizbNumber,
-    @Query("verse_key") VerseKey? verseKey,
+    @Query("verse_key") QuranVerseKey? verseKey,
   }) = _RecitationAudioFilesQueries;
 
   factory RecitationAudioFilesQueries.fromJson(Map<String, dynamic> json) =>

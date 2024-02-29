@@ -6,11 +6,12 @@ part of 'verse.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$VerseImpl _$$VerseImplFromJson(Map<String, dynamic> json) => _$VerseImpl(
+_$QuranVerseImpl _$$QuranVerseImplFromJson(Map<String, dynamic> json) =>
+    _$QuranVerseImpl(
       id: json['id'] as int,
       chapterId: json['chapter_id'] as int?,
       verseNumber: json['verse_number'] as int,
-      verseKey: VerseKey.fromJson(json['verse_key'] as String),
+      verseKey: QuranVerseKey.fromJson(json['verse_key'] as String),
       verseIndex: json['verse_index'] as int?,
       textUthmani: json['text_uthmani'] as String?,
       textUthmaniSimple: json['text_uthmani_simple'] as String?,
@@ -27,7 +28,7 @@ _$VerseImpl _$$VerseImplFromJson(Map<String, dynamic> json) => _$VerseImpl(
       imageUrl: json['image_url'] as String?,
       imageWidth: json['image_width'] as int?,
       words: (json['words'] as List<dynamic>?)
-          ?.map((e) => Word.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => QuranWord.fromJson(e as Map<String, dynamic>))
           .toList(),
       audio: json['audio'],
       translations: (json['translations'] as List<dynamic>?)
@@ -39,7 +40,7 @@ _$VerseImpl _$$VerseImplFromJson(Map<String, dynamic> json) => _$VerseImpl(
       v2Page: json['v2_page'] as int?,
     );
 
-Map<String, dynamic> _$$VerseImplToJson(_$VerseImpl instance) {
+Map<String, dynamic> _$$QuranVerseImplToJson(_$QuranVerseImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };

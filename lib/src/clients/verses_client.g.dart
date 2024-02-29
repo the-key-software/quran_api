@@ -248,7 +248,7 @@ class _VersesClient implements VersesClient {
   }
 
   @override
-  Future<HttpResponse<VerseResponse>> versesByVerseKey({
+  Future<HttpResponse<VerseResponse>> versesByQuranVerseKey({
     required String verseKey,
     VersesQueries? queries,
   }) async {

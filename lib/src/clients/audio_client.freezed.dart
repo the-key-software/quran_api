@@ -34,7 +34,7 @@ mixin _$RecitationAudioFilesQueries {
   @Query("rub_el_hizb_number")
   int? get rubElHizbNumber => throw _privateConstructorUsedError;
   @Query("verse_key")
-  VerseKey? get verseKey => throw _privateConstructorUsedError;
+  QuranVerseKey? get verseKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -57,9 +57,9 @@ abstract class $RecitationAudioFilesQueriesCopyWith<$Res> {
       @Query("page_number") int? pageNumber,
       @Query("hizb_number") int? hizbNumber,
       @Query("rub_el_hizb_number") int? rubElHizbNumber,
-      @Query("verse_key") VerseKey? verseKey});
+      @Query("verse_key") QuranVerseKey? verseKey});
 
-  $VerseKeyCopyWith<$Res>? get verseKey;
+  $QuranVerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -112,18 +112,18 @@ class _$RecitationAudioFilesQueriesCopyWithImpl<$Res,
       verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey?,
+              as QuranVerseKey?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VerseKeyCopyWith<$Res>? get verseKey {
+  $QuranVerseKeyCopyWith<$Res>? get verseKey {
     if (_value.verseKey == null) {
       return null;
     }
 
-    return $VerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
+    return $QuranVerseKeyCopyWith<$Res>(_value.verseKey!, (value) {
       return _then(_value.copyWith(verseKey: value) as $Val);
     });
   }
@@ -145,10 +145,10 @@ abstract class _$$RecitationAudioFilesQueriesImplCopyWith<$Res>
       @Query("page_number") int? pageNumber,
       @Query("hizb_number") int? hizbNumber,
       @Query("rub_el_hizb_number") int? rubElHizbNumber,
-      @Query("verse_key") VerseKey? verseKey});
+      @Query("verse_key") QuranVerseKey? verseKey});
 
   @override
-  $VerseKeyCopyWith<$Res>? get verseKey;
+  $QuranVerseKeyCopyWith<$Res>? get verseKey;
 }
 
 /// @nodoc
@@ -200,7 +200,7 @@ class __$$RecitationAudioFilesQueriesImplCopyWithImpl<$Res>
       verseKey: freezed == verseKey
           ? _value.verseKey
           : verseKey // ignore: cast_nullable_to_non_nullable
-              as VerseKey?,
+              as QuranVerseKey?,
     ));
   }
 }
@@ -242,7 +242,7 @@ class _$RecitationAudioFilesQueriesImpl
   final int? rubElHizbNumber;
   @override
   @Query("verse_key")
-  final VerseKey? verseKey;
+  final QuranVerseKey? verseKey;
 
   @override
   String toString() {
@@ -298,7 +298,7 @@ abstract class _RecitationAudioFilesQueries
           @Query("page_number") final int? pageNumber,
           @Query("hizb_number") final int? hizbNumber,
           @Query("rub_el_hizb_number") final int? rubElHizbNumber,
-          @Query("verse_key") final VerseKey? verseKey}) =
+          @Query("verse_key") final QuranVerseKey? verseKey}) =
       _$RecitationAudioFilesQueriesImpl;
 
   factory _RecitationAudioFilesQueries.fromJson(Map<String, dynamic> json) =
@@ -324,7 +324,7 @@ abstract class _RecitationAudioFilesQueries
   int? get rubElHizbNumber;
   @override
   @Query("verse_key")
-  VerseKey? get verseKey;
+  QuranVerseKey? get verseKey;
   @override
   @JsonKey(ignore: true)
   _$$RecitationAudioFilesQueriesImplCopyWith<_$RecitationAudioFilesQueriesImpl>
