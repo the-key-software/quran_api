@@ -18,41 +18,31 @@ abstract class QuranClient {
   });
 
   /// Get Uthmani Tajweed Script of ayah
-  /// [chapterNumber] If you want to get text of a specific surah.
-  /// [QuranVerseKey] If you want to get text of a specific ayah.
   @GET("/quran/verses/uthmani_tajweed")
   Future<HttpResponse<dynamic>> quranVersesUthmaniTajweed({
     @Queries() QuranVersesQueries? queries,
   });
 
   /// Get Uthmani Script of ayah
-  /// [chapterNumber] If you want to get Uthmani script of a specific surah.
-  /// [QuranVerseKey] If you want to get Uthmani script of a specific ayah.
   @GET("/quran/verses/uthmani")
   Future<HttpResponse<dynamic>> quranVersesUthmani({
     @Queries() QuranVersesQueries? queries,
   });
 
   /// Get Uthmani simple script of ayah
-  /// [chapterNumber] If you want to get Uthmani script of a specific surah.
-  /// [QuranVerseKey] If you want to get Uthmani script of a specific ayah.
   @GET("/quran/verses/uthmani_simple")
   Future<HttpResponse<dynamic>> quranVersesUthmaniSimple({
     @Queries() QuranVersesQueries? queries,
   });
 
   /// Get Imlaei Simple text of ayah
-  /// [chapterNumber] If you want to get text of a specific surah.
-  /// [QuranVerseKey] If you want to get text of a specific ayah.
   @GET("/quran/verses/imlaei")
   Future<HttpResponse<dynamic>> quranVersesImlaei({
     @Queries() QuranVersesQueries? queries,
   });
 
   /// Get a single translation
-  /// [fields] comma seperated fields of translation.
-  /// [chapterNumber] If you want to get translation of a specific surah.
-  /// [QuranVerseKey] If you want to get translation of a specific ayah.
+  /// [fields] comma separated fields of translation.
   @GET("/quran/translations/{translation_id}")
   Future<HttpResponse<dynamic>> translation({
     @Query("fields") String? fields,
@@ -60,9 +50,7 @@ abstract class QuranClient {
   });
 
   /// Get a single tafsir
-  /// [fields] comma seperated fields of tafsir.
-  /// [chapterNumber] If you want to get tafsir of a specific surah.
-  /// [QuranVerseKey] If you want to get tafsir of a specific ayah.
+  /// [fields] comma separated fields of tafsir.
   @GET("/quran/tafsirs/{tafsir_id}")
   Future<HttpResponse<dynamic>> tafsir({
     @Query("fields") String? fields,
@@ -70,16 +58,12 @@ abstract class QuranClient {
   });
 
   /// Get V1 Glyph codes of ayah
-  /// [chapterNumber] If you want to get text of a specific surah.
-  /// [QuranVerseKey] If you want to get text of a specific ayah.
   @GET("/quran/verses/code_v1")
   Future<HttpResponse<dynamic>> quranVersesCodeV1({
     @Queries() QuranVersesQueries? queries,
   });
 
   /// Get V2 Glyph codes of ayah
-  /// [chapterNumber] If you want to get text of a specific surah.
-  /// [QuranVerseKey] If you want to get text of a specific ayah.
   @GET("/quran/verses/code_v2")
   Future<HttpResponse<dynamic>> quranVersesCodeV2({
     @Queries() QuranVersesQueries? queries,
