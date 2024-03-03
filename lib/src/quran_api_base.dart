@@ -1,3 +1,4 @@
+import "package:awesome_dio_interceptor_plus/awesome_dio_interceptor_plus.dart";
 import "package:dio/dio.dart";
 
 import "clients/clients.dart";
@@ -26,15 +27,20 @@ class QuranApi {
     );
 
     dio.interceptors.addAll([
-      LogInterceptor(
-        request: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: true,
-        error: true,
-        requestHeader: true,
-        logPrint: _debugPrint,
+      AwesomeDioInterceptorPlus(
+        logRequestHeaders: true,
+        logResponseHeaders: true,
+        logRequestTimeout: true,
       ),
+      // LogInterceptor(
+      //   request: true,
+      //   requestBody: true,
+      //   responseBody: true,
+      //   responseHeader: true,
+      //   error: true,
+      //   requestHeader: true,
+      //   logPrint: _debugPrint,
+      // ),
     ]);
 
     return dio;
@@ -55,12 +61,11 @@ class QuranApi {
   SearchClient get search => SearchClient(dio);
 
   // Print debug logs only in development mode
-  void _debugPrint(Object object) {
-    assert(() {
-      print(object);
+  // void _debugPrint(Object object) {
+  //   assert(() {
+  //     print(object);
 
-      return true;
-    }());
-  }
+  //     return true;
+  //   }());
+  // }
 }
-
