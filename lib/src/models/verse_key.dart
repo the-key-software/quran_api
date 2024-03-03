@@ -23,6 +23,6 @@ class QuranVerseKey with _$QuranVerseKey {
   }
 
   String toJson() {
-    return "$ayah:$surah";
+    return "$surah:$ayah";
   }
 }

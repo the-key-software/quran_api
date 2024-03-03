@@ -1,11 +1,17 @@
-abstract class QuranDataValidation {
-  const QuranDataValidation._();
+abstract class QuranInfo {
+  const QuranInfo._();
 
   static const int theOpenerPage = 1;
 
+  static const int theCowPage = 2;
+
   static const int theRepentancePage = 187;
 
-  static const List<int> notBismillahPages = [theOpenerPage, theRepentancePage];
+  static const List<int> withoutBismillahPages = [
+    theOpenerPage,
+    theRepentancePage
+  ];
+  static const List<int> smallPages = [theOpenerPage, theCowPage];
 
   /// 1
   static const int recordsPerPageMinimum = 1;
