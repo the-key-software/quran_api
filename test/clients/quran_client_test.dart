@@ -8,7 +8,7 @@ void main() async {
     group("quranVersesIndopak", () {
       test("first ayah", () async {
         final value = await client.quranVersesIndopak(
-          queries: QuranVersesIndopakQueries(
+          queries: QuranVersesQueries(
             verseKey: QuranVerseKey(ayah: 1, surah: 1),
           ),
         );
@@ -19,7 +19,7 @@ void main() async {
       });
       test("last ayah", () async {
         final value = await client.quranVersesIndopak(
-          queries: QuranVersesIndopakQueries(
+          queries: QuranVersesQueries(
             verseKey: QuranVerseKey.fromJson("114:6"),
           ),
         );

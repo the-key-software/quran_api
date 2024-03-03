@@ -19,7 +19,7 @@ class QuranVersesIndopakResponse with _$QuranVersesIndopakResponse {
 @freezed
 class QuranVersesIndopakResponseMeta with _$QuranVersesIndopakResponseMeta {
   factory QuranVersesIndopakResponseMeta({
-    required QuranVersesIndopakQueries filters,
+    required QuranVersesQueries filters,
   }) = _QuranVersesIndopakResponseMeta;
 
   factory QuranVersesIndopakResponseMeta.fromJson(Map<String, dynamic> json) =>

@@ -12,15 +12,14 @@ part of 'quran_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-QuranVersesIndopakQueries _$QuranVersesIndopakQueriesFromJson(
-    Map<String, dynamic> json) {
-  return _QuranVersesIndopakQueries.fromJson(json);
+QuranVersesQueries _$QuranVersesQueriesFromJson(Map<String, dynamic> json) {
+  return _QuranVersesQueries.fromJson(json);
 }
 
 /// @nodoc
-mixin _$QuranVersesIndopakQueries {
+mixin _$QuranVersesQueries {
   @JsonKey(name: "chapter_number")
   int? get chapterNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "juz_number")
@@ -36,15 +35,15 @@ mixin _$QuranVersesIndopakQueries {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $QuranVersesIndopakQueriesCopyWith<QuranVersesIndopakQueries> get copyWith =>
+  $QuranVersesQueriesCopyWith<QuranVersesQueries> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $QuranVersesIndopakQueriesCopyWith<$Res> {
-  factory $QuranVersesIndopakQueriesCopyWith(QuranVersesIndopakQueries value,
-          $Res Function(QuranVersesIndopakQueries) then) =
-      _$QuranVersesIndopakQueriesCopyWithImpl<$Res, QuranVersesIndopakQueries>;
+abstract class $QuranVersesQueriesCopyWith<$Res> {
+  factory $QuranVersesQueriesCopyWith(
+          QuranVersesQueries value, $Res Function(QuranVersesQueries) then) =
+      _$QuranVersesQueriesCopyWithImpl<$Res, QuranVersesQueries>;
   @useResult
   $Res call(
       {@JsonKey(name: "chapter_number") int? chapterNumber,
@@ -58,10 +57,9 @@ abstract class $QuranVersesIndopakQueriesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
-        $Val extends QuranVersesIndopakQueries>
-    implements $QuranVersesIndopakQueriesCopyWith<$Res> {
-  _$QuranVersesIndopakQueriesCopyWithImpl(this._value, this._then);
+class _$QuranVersesQueriesCopyWithImpl<$Res, $Val extends QuranVersesQueries>
+    implements $QuranVersesQueriesCopyWith<$Res> {
+  _$QuranVersesQueriesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -120,12 +118,11 @@ class _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$QuranVersesIndopakQueriesImplCopyWith<$Res>
-    implements $QuranVersesIndopakQueriesCopyWith<$Res> {
-  factory _$$QuranVersesIndopakQueriesImplCopyWith(
-          _$QuranVersesIndopakQueriesImpl value,
-          $Res Function(_$QuranVersesIndopakQueriesImpl) then) =
-      __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>;
+abstract class _$$QuranVersesQueriesImplCopyWith<$Res>
+    implements $QuranVersesQueriesCopyWith<$Res> {
+  factory _$$QuranVersesQueriesImplCopyWith(_$QuranVersesQueriesImpl value,
+          $Res Function(_$QuranVersesQueriesImpl) then) =
+      __$$QuranVersesQueriesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -141,13 +138,11 @@ abstract class _$$QuranVersesIndopakQueriesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>
-    extends _$QuranVersesIndopakQueriesCopyWithImpl<$Res,
-        _$QuranVersesIndopakQueriesImpl>
-    implements _$$QuranVersesIndopakQueriesImplCopyWith<$Res> {
-  __$$QuranVersesIndopakQueriesImplCopyWithImpl(
-      _$QuranVersesIndopakQueriesImpl _value,
-      $Res Function(_$QuranVersesIndopakQueriesImpl) _then)
+class __$$QuranVersesQueriesImplCopyWithImpl<$Res>
+    extends _$QuranVersesQueriesCopyWithImpl<$Res, _$QuranVersesQueriesImpl>
+    implements _$$QuranVersesQueriesImplCopyWith<$Res> {
+  __$$QuranVersesQueriesImplCopyWithImpl(_$QuranVersesQueriesImpl _value,
+      $Res Function(_$QuranVersesQueriesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -160,7 +155,7 @@ class __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>
     Object? rubElHizbNumber = freezed,
     Object? verseKey = freezed,
   }) {
-    return _then(_$QuranVersesIndopakQueriesImpl(
+    return _then(_$QuranVersesQueriesImpl(
       chapterNumber: freezed == chapterNumber
           ? _value.chapterNumber
           : chapterNumber // ignore: cast_nullable_to_non_nullable
@@ -192,8 +187,8 @@ class __$$QuranVersesIndopakQueriesImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [IntStringJsonConverter()])
-class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
-  const _$QuranVersesIndopakQueriesImpl(
+class _$QuranVersesQueriesImpl extends _QuranVersesQueries {
+  const _$QuranVersesQueriesImpl(
       {@JsonKey(name: "chapter_number") this.chapterNumber,
       @JsonKey(name: "juz_number") this.juzNumber,
       @JsonKey(name: "page_number") this.pageNumber,
@@ -202,8 +197,8 @@ class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
       @JsonKey(name: "verse_key") this.verseKey})
       : super._();
 
-  factory _$QuranVersesIndopakQueriesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$QuranVersesIndopakQueriesImplFromJson(json);
+  factory _$QuranVersesQueriesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuranVersesQueriesImplFromJson(json);
 
   @override
   @JsonKey(name: "chapter_number")
@@ -226,14 +221,14 @@ class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
 
   @override
   String toString() {
-    return 'QuranVersesIndopakQueries(chapterNumber: $chapterNumber, juzNumber: $juzNumber, pageNumber: $pageNumber, hizbNumber: $hizbNumber, rubElHizbNumber: $rubElHizbNumber, verseKey: $verseKey)';
+    return 'QuranVersesQueries(chapterNumber: $chapterNumber, juzNumber: $juzNumber, pageNumber: $pageNumber, hizbNumber: $hizbNumber, rubElHizbNumber: $rubElHizbNumber, verseKey: $verseKey)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$QuranVersesIndopakQueriesImpl &&
+            other is _$QuranVersesQueriesImpl &&
             (identical(other.chapterNumber, chapterNumber) ||
                 other.chapterNumber == chapterNumber) &&
             (identical(other.juzNumber, juzNumber) ||
@@ -256,31 +251,31 @@ class _$QuranVersesIndopakQueriesImpl extends _QuranVersesIndopakQueries {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$QuranVersesIndopakQueriesImplCopyWith<_$QuranVersesIndopakQueriesImpl>
-      get copyWith => __$$QuranVersesIndopakQueriesImplCopyWithImpl<
-          _$QuranVersesIndopakQueriesImpl>(this, _$identity);
+  _$$QuranVersesQueriesImplCopyWith<_$QuranVersesQueriesImpl> get copyWith =>
+      __$$QuranVersesQueriesImplCopyWithImpl<_$QuranVersesQueriesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$QuranVersesIndopakQueriesImplToJson(
+    return _$$QuranVersesQueriesImplToJson(
       this,
     );
   }
 }
 
-abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
-  const factory _QuranVersesIndopakQueries(
+abstract class _QuranVersesQueries extends QuranVersesQueries {
+  const factory _QuranVersesQueries(
           {@JsonKey(name: "chapter_number") final int? chapterNumber,
           @JsonKey(name: "juz_number") final int? juzNumber,
           @JsonKey(name: "page_number") final int? pageNumber,
           @JsonKey(name: "hizb_number") final int? hizbNumber,
           @JsonKey(name: "rub_el_hizb_number") final int? rubElHizbNumber,
           @JsonKey(name: "verse_key") final QuranVerseKey? verseKey}) =
-      _$QuranVersesIndopakQueriesImpl;
-  const _QuranVersesIndopakQueries._() : super._();
+      _$QuranVersesQueriesImpl;
+  const _QuranVersesQueries._() : super._();
 
-  factory _QuranVersesIndopakQueries.fromJson(Map<String, dynamic> json) =
-      _$QuranVersesIndopakQueriesImpl.fromJson;
+  factory _QuranVersesQueries.fromJson(Map<String, dynamic> json) =
+      _$QuranVersesQueriesImpl.fromJson;
 
   @override
   @JsonKey(name: "chapter_number")
@@ -302,6 +297,6 @@ abstract class _QuranVersesIndopakQueries extends QuranVersesIndopakQueries {
   QuranVerseKey? get verseKey;
   @override
   @JsonKey(ignore: true)
-  _$$QuranVersesIndopakQueriesImplCopyWith<_$QuranVersesIndopakQueriesImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$QuranVersesQueriesImplCopyWith<_$QuranVersesQueriesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

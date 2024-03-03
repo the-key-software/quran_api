@@ -12,7 +12,7 @@ part of 'quran_verses_indopak_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 QuranVersesIndopakResponse _$QuranVersesIndopakResponseFromJson(
     Map<String, dynamic> json) {
@@ -214,7 +214,7 @@ QuranVersesIndopakResponseMeta _$QuranVersesIndopakResponseMetaFromJson(
 
 /// @nodoc
 mixin _$QuranVersesIndopakResponseMeta {
-  QuranVersesIndopakQueries get filters => throw _privateConstructorUsedError;
+  QuranVersesQueries get filters => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -230,9 +230,9 @@ abstract class $QuranVersesIndopakResponseMetaCopyWith<$Res> {
       _$QuranVersesIndopakResponseMetaCopyWithImpl<$Res,
           QuranVersesIndopakResponseMeta>;
   @useResult
-  $Res call({QuranVersesIndopakQueries filters});
+  $Res call({QuranVersesQueries filters});
 
-  $QuranVersesIndopakQueriesCopyWith<$Res> get filters;
+  $QuranVersesQueriesCopyWith<$Res> get filters;
 }
 
 /// @nodoc
@@ -255,14 +255,14 @@ class _$QuranVersesIndopakResponseMetaCopyWithImpl<$Res,
       filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
-              as QuranVersesIndopakQueries,
+              as QuranVersesQueries,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $QuranVersesIndopakQueriesCopyWith<$Res> get filters {
-    return $QuranVersesIndopakQueriesCopyWith<$Res>(_value.filters, (value) {
+  $QuranVersesQueriesCopyWith<$Res> get filters {
+    return $QuranVersesQueriesCopyWith<$Res>(_value.filters, (value) {
       return _then(_value.copyWith(filters: value) as $Val);
     });
   }
@@ -277,10 +277,10 @@ abstract class _$$QuranVersesIndopakResponseMetaImplCopyWith<$Res>
       __$$QuranVersesIndopakResponseMetaImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({QuranVersesIndopakQueries filters});
+  $Res call({QuranVersesQueries filters});
 
   @override
-  $QuranVersesIndopakQueriesCopyWith<$Res> get filters;
+  $QuranVersesQueriesCopyWith<$Res> get filters;
 }
 
 /// @nodoc
@@ -302,7 +302,7 @@ class __$$QuranVersesIndopakResponseMetaImplCopyWithImpl<$Res>
       filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
-              as QuranVersesIndopakQueries,
+              as QuranVersesQueries,
     ));
   }
 }
@@ -318,7 +318,7 @@ class _$QuranVersesIndopakResponseMetaImpl
       _$$QuranVersesIndopakResponseMetaImplFromJson(json);
 
   @override
-  final QuranVersesIndopakQueries filters;
+  final QuranVersesQueries filters;
 
   @override
   String toString() {
@@ -356,14 +356,14 @@ class _$QuranVersesIndopakResponseMetaImpl
 abstract class _QuranVersesIndopakResponseMeta
     implements QuranVersesIndopakResponseMeta {
   factory _QuranVersesIndopakResponseMeta(
-          {required final QuranVersesIndopakQueries filters}) =
+          {required final QuranVersesQueries filters}) =
       _$QuranVersesIndopakResponseMetaImpl;
 
   factory _QuranVersesIndopakResponseMeta.fromJson(Map<String, dynamic> json) =
       _$QuranVersesIndopakResponseMetaImpl.fromJson;
 
   @override
-  QuranVersesIndopakQueries get filters;
+  QuranVersesQueries get filters;
   @override
   @JsonKey(ignore: true)
   _$$QuranVersesIndopakResponseMetaImplCopyWith<

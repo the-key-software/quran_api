@@ -6,9 +6,9 @@ part of 'quran_client.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
+_$QuranVersesQueriesImpl _$$QuranVersesQueriesImplFromJson(
         Map<String, dynamic> json) =>
-    _$QuranVersesIndopakQueriesImpl(
+    _$QuranVersesQueriesImpl(
       chapterNumber: _$JsonConverterFromJson<String, int>(
           json['chapter_number'], const IntStringJsonConverter().fromJson),
       juzNumber: _$JsonConverterFromJson<String, int>(
@@ -24,8 +24,8 @@ _$QuranVersesIndopakQueriesImpl _$$QuranVersesIndopakQueriesImplFromJson(
           : QuranVerseKey.fromJson(json['verse_key'] as String),
     );
 
-Map<String, dynamic> _$$QuranVersesIndopakQueriesImplToJson(
-    _$QuranVersesIndopakQueriesImpl instance) {
+Map<String, dynamic> _$$QuranVersesQueriesImplToJson(
+    _$QuranVersesQueriesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -88,7 +88,7 @@ class _QuranClient implements QuranClient {
 
   @override
   Future<HttpResponse<QuranVersesIndopakResponse>> quranVersesIndopak(
-      {QuranVersesIndopakQueries? queries}) async {
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
@@ -118,23 +118,11 @@ class _QuranClient implements QuranClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesUthmaniTajweed({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesUthmaniTajweed(
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -161,23 +149,11 @@ class _QuranClient implements QuranClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesUthmani({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesUthmani(
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -204,23 +180,11 @@ class _QuranClient implements QuranClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesUthmaniSimple({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesUthmaniSimple(
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -247,23 +211,11 @@ class _QuranClient implements QuranClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesImlaei({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesImlaei(
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -292,23 +244,11 @@ class _QuranClient implements QuranClient {
   @override
   Future<HttpResponse<dynamic>> translation({
     String? fields,
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
+    QuranVersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'fields': fields,
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{r'fields': fields};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -337,23 +277,11 @@ class _QuranClient implements QuranClient {
   @override
   Future<HttpResponse<dynamic>> tafsir({
     String? fields,
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
+    QuranVersesQueries? queries,
   }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'fields': fields,
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{r'fields': fields};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -380,23 +308,11 @@ class _QuranClient implements QuranClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesCodeV1({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesCodeV1(
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
@@ -423,23 +339,11 @@ class _QuranClient implements QuranClient {
   }
 
   @override
-  Future<HttpResponse<dynamic>> quranVersesCodeV2({
-    int? chapterNumber,
-    int? juzNumber,
-    int? pageNumber,
-    int? hizbNumber,
-    int? rubElHizbNumber,
-    QuranVerseKey? verseKey,
-  }) async {
+  Future<HttpResponse<dynamic>> quranVersesCodeV2(
+      {QuranVersesQueries? queries}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'chapter_number': chapterNumber,
-      r'juz_number': juzNumber,
-      r'page_number': pageNumber,
-      r'hizb_number': hizbNumber,
-      r'rub_el_hizb_number': rubElHizbNumber,
-      r'verse_key': verseKey?.toJson(),
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(queries?.toJson() ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;

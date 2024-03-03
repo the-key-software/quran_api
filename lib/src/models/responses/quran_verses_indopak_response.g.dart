@@ -27,7 +27,7 @@ Map<String, dynamic> _$$QuranVersesIndopakResponseImplToJson(
 _$QuranVersesIndopakResponseMetaImpl
     _$$QuranVersesIndopakResponseMetaImplFromJson(Map<String, dynamic> json) =>
         _$QuranVersesIndopakResponseMetaImpl(
-          filters: QuranVersesIndopakQueries.fromJson(
+          filters: QuranVersesQueries.fromJson(
               json['filters'] as Map<String, dynamic>),
         );
 
