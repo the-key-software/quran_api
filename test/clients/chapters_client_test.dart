@@ -14,7 +14,8 @@ void main() {
     test("getChapter", () async {
       final value = await client.getChapter(id: 1);
 
-      expect(value.response.statusCode, 200);
+      print(value.data.toJson());
+      expect(value.data, isA<GetChapterResponse>());
     });
 
     test("info", () async {
