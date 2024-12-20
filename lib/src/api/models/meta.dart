@@ -2,23 +2,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'meta.freezed.dart';
 part 'meta.g.dart';
 
-@JsonSerializable()
-class Meta {
-  const Meta({
-    required this.reciterName,
-    required this.recitationStyle,
-  });
+@Freezed()
+class Meta with _$Meta {
+  const factory Meta({
+    @JsonKey(name: 'reciter_name')
+    required String reciterName,
+    @JsonKey(name: 'recitation_style')
+    required String? recitationStyle,
+  }) = _Meta;
   
   factory Meta.fromJson(Map<String, Object?> json) => _$MetaFromJson(json);
-  
-  @JsonKey(name: 'reciter_name')
-  final String reciterName;
-  @JsonKey(name: 'recitation_style')
-  final String? recitationStyle;
-
-  Map<String, Object?> toJson() => _$MetaToJson(this);
 }

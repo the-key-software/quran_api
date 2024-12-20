@@ -2,25 +2,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'audiofile.dart';
 import 'meta.dart';
 
+part 'get_quran_recitations_recitation_id_response.freezed.dart';
 part 'get_quran_recitations_recitation_id_response.g.dart';
 
-@JsonSerializable()
-class GetQuranRecitationsRecitationIdResponse {
-  const GetQuranRecitationsRecitationIdResponse({
-    required this.audioFiles,
-    required this.meta,
-  });
+@Freezed()
+class GetQuranRecitationsRecitationIdResponse with _$GetQuranRecitationsRecitationIdResponse {
+  const factory GetQuranRecitationsRecitationIdResponse({
+    @JsonKey(name: 'audio_files')
+    required List<Audiofile> audioFiles,
+    required Meta meta,
+  }) = _GetQuranRecitationsRecitationIdResponse;
   
   factory GetQuranRecitationsRecitationIdResponse.fromJson(Map<String, Object?> json) => _$GetQuranRecitationsRecitationIdResponseFromJson(json);
-  
-  @JsonKey(name: 'audio_files')
-  final List<Audiofile> audioFiles;
-  final Meta meta;
-
-  Map<String, Object?> toJson() => _$GetQuranRecitationsRecitationIdResponseToJson(this);
 }

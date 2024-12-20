@@ -6,13 +6,14 @@ part of 'get_chapters_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetChaptersResponse _$GetChaptersResponseFromJson(Map<String, dynamic> json) =>
-    GetChaptersResponse(
+_$GetChaptersResponseImpl _$$GetChaptersResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetChaptersResponseImpl(
       chapters: json['chapters'] as List<dynamic>,
     );
 
-Map<String, dynamic> _$GetChaptersResponseToJson(
-        GetChaptersResponse instance) =>
+Map<String, dynamic> _$$GetChaptersResponseImplToJson(
+        _$GetChaptersResponseImpl instance) =>
     <String, dynamic>{
       'chapters': instance.chapters,
     };

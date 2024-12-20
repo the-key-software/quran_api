@@ -2,25 +2,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'verses.freezed.dart';
 part 'verses.g.dart';
 
-@JsonSerializable()
-class Verses {
-  const Verses({
-    required this.id,
-    required this.verseKey,
-    required this.textIndopak,
-  });
+@Freezed()
+class Verses with _$Verses {
+  const factory Verses({
+    required int id,
+    @JsonKey(name: 'verse_key')
+    required String verseKey,
+    @JsonKey(name: 'text_indopak')
+    required String textIndopak,
+  }) = _Verses;
   
   factory Verses.fromJson(Map<String, Object?> json) => _$VersesFromJson(json);
-  
-  final int id;
-  @JsonKey(name: 'verse_key')
-  final String verseKey;
-  @JsonKey(name: 'text_indopak')
-  final String textIndopak;
-
-  Map<String, Object?> toJson() => _$VersesToJson(this);
 }

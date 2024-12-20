@@ -2,25 +2,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'verse.dart';
 import 'pagination.dart';
 
+part 'get_verses_by_juz_juz_number_response.freezed.dart';
 part 'get_verses_by_juz_juz_number_response.g.dart';
 
-@JsonSerializable()
-class GetVersesByJuzJuzNumberResponse {
-  const GetVersesByJuzJuzNumberResponse({
-    required this.verses,
-    required this.pagination,
-  });
+@Freezed()
+class GetVersesByJuzJuzNumberResponse with _$GetVersesByJuzJuzNumberResponse {
+  const factory GetVersesByJuzJuzNumberResponse({
+    required List<Verse> verses,
+    @JsonKey(name: 'Pagination')
+    required Pagination pagination,
+  }) = _GetVersesByJuzJuzNumberResponse;
   
   factory GetVersesByJuzJuzNumberResponse.fromJson(Map<String, Object?> json) => _$GetVersesByJuzJuzNumberResponseFromJson(json);
-  
-  final List<Verse> verses;
-  @JsonKey(name: 'Pagination')
-  final Pagination pagination;
-
-  Map<String, Object?> toJson() => _$GetVersesByJuzJuzNumberResponseToJson(this);
 }

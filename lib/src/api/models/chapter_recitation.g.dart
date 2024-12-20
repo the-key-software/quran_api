@@ -6,8 +6,9 @@ part of 'chapter_recitation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ChapterRecitation _$ChapterRecitationFromJson(Map<String, dynamic> json) =>
-    ChapterRecitation(
+_$ChapterRecitationImpl _$$ChapterRecitationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ChapterRecitationImpl(
       id: (json['id'] as num).toInt(),
       chapterId: (json['chapter_id'] as num).toInt(),
       fileSize: (json['file_size'] as num).toInt(),
@@ -16,7 +17,8 @@ ChapterRecitation _$ChapterRecitationFromJson(Map<String, dynamic> json) =>
       audioUrl: json['audio_url'] as String,
     );
 
-Map<String, dynamic> _$ChapterRecitationToJson(ChapterRecitation instance) =>
+Map<String, dynamic> _$$ChapterRecitationImplToJson(
+        _$ChapterRecitationImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'chapter_id': instance.chapterId,

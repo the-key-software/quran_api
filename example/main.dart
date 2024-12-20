@@ -3,7 +3,7 @@ import 'package:quran_api/quran_api.dart';
 
 Future<void> main() async {
   final dio = Dio();
-  final client = QuranApiClient(dio, baseUrl: '');
+  final client = QuranApiClient(dio, baseUrl: 'https://api.quran.com/api/v4');
   final value = await client.search.search(
     language: 'en',
     page: 0,

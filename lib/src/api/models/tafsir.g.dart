@@ -6,7 +6,7 @@ part of 'tafsir.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Tafsir _$TafsirFromJson(Map<String, dynamic> json) => Tafsir(
+_$TafsirImpl _$$TafsirImplFromJson(Map<String, dynamic> json) => _$TafsirImpl(
       id: (json['id'] as num).toInt(),
       verseId: (json['verse_id'] as num).toInt(),
       languageId: (json['language_id'] as num).toInt(),
@@ -22,7 +22,8 @@ Tafsir _$TafsirFromJson(Map<String, dynamic> json) => Tafsir(
       pageNumber: (json['page_number'] as num).toInt(),
     );
 
-Map<String, dynamic> _$TafsirToJson(Tafsir instance) => <String, dynamic>{
+Map<String, dynamic> _$$TafsirImplToJson(_$TafsirImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'verse_id': instance.verseId,
       'language_id': instance.languageId,

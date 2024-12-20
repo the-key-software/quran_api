@@ -2,22 +2,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'chapter_infos.dart';
 
+part 'get_resources_chapter_infos_response.freezed.dart';
 part 'get_resources_chapter_infos_response.g.dart';
 
-@JsonSerializable()
-class GetResourcesChapterInfosResponse {
-  const GetResourcesChapterInfosResponse({
-    required this.chapterInfos,
-  });
+@Freezed()
+class GetResourcesChapterInfosResponse with _$GetResourcesChapterInfosResponse {
+  const factory GetResourcesChapterInfosResponse({
+    @JsonKey(name: 'chapter_infos')
+    required List<ChapterInfos> chapterInfos,
+  }) = _GetResourcesChapterInfosResponse;
   
   factory GetResourcesChapterInfosResponse.fromJson(Map<String, Object?> json) => _$GetResourcesChapterInfosResponseFromJson(json);
-  
-  @JsonKey(name: 'chapter_infos')
-  final List<ChapterInfos> chapterInfos;
-
-  Map<String, Object?> toJson() => _$GetResourcesChapterInfosResponseToJson(this);
 }

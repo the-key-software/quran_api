@@ -6,14 +6,16 @@ part of 'verses7.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Verses7 _$Verses7FromJson(Map<String, dynamic> json) => Verses7(
+_$Verses7Impl _$$Verses7ImplFromJson(Map<String, dynamic> json) =>
+    _$Verses7Impl(
       id: (json['id'] as num).toInt(),
       verseKey: json['verse_key'] as String,
       codeV2: json['code_v2'] as String,
       v2Page: (json['v2_page'] as num).toInt(),
     );
 
-Map<String, dynamic> _$Verses7ToJson(Verses7 instance) => <String, dynamic>{
+Map<String, dynamic> _$$Verses7ImplToJson(_$Verses7Impl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'verse_key': instance.verseKey,
       'code_v2': instance.codeV2,

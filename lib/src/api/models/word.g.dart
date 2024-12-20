@@ -6,7 +6,7 @@ part of 'word.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Word _$WordFromJson(Map<String, dynamic> json) => Word(
+_$WordImpl _$$WordImplFromJson(Map<String, dynamic> json) => _$WordImpl(
       id: (json['id'] as num).toInt(),
       position: (json['position'] as num).toInt(),
       textUthmani: json['text_uthmani'] as String,
@@ -28,7 +28,8 @@ Word _$WordFromJson(Map<String, dynamic> json) => Word(
       v2Page: (json['v2_page'] as num).toInt(),
     );
 
-Map<String, dynamic> _$WordToJson(Word instance) => <String, dynamic>{
+Map<String, dynamic> _$$WordImplToJson(_$WordImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'position': instance.position,
       'text_uthmani': instance.textUthmani,

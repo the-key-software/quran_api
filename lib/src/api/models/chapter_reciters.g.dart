@@ -6,8 +6,9 @@ part of 'chapter_reciters.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ChapterReciters _$ChapterRecitersFromJson(Map<String, dynamic> json) =>
-    ChapterReciters(
+_$ChapterRecitersImpl _$$ChapterRecitersImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ChapterRecitersImpl(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       arabicName: json['arabic_name'] as String,
@@ -16,12 +17,13 @@ ChapterReciters _$ChapterRecitersFromJson(Map<String, dynamic> json) =>
       format: json['format'] as String? ?? 'mp3',
     );
 
-Map<String, dynamic> _$ChapterRecitersToJson(ChapterReciters instance) =>
+Map<String, dynamic> _$$ChapterRecitersImplToJson(
+        _$ChapterRecitersImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'arabic_name': instance.arabicName,
       'relative_path': instance.relativePath,
-      'format': instance.format,
       'files_size': instance.filesSize,
+      'format': instance.format,
     };

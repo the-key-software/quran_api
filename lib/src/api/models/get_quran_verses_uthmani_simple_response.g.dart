@@ -6,16 +6,17 @@ part of 'get_quran_verses_uthmani_simple_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetQuranVersesUthmaniSimpleResponse
-    _$GetQuranVersesUthmaniSimpleResponseFromJson(Map<String, dynamic> json) =>
-        GetQuranVersesUthmaniSimpleResponse(
+_$GetQuranVersesUthmaniSimpleResponseImpl
+    _$$GetQuranVersesUthmaniSimpleResponseImplFromJson(
+            Map<String, dynamic> json) =>
+        _$GetQuranVersesUthmaniSimpleResponseImpl(
           verses: (json['verses'] as List<dynamic>)
               .map((e) => Verses4.fromJson(e as Map<String, dynamic>))
               .toList(),
         );
 
-Map<String, dynamic> _$GetQuranVersesUthmaniSimpleResponseToJson(
-        GetQuranVersesUthmaniSimpleResponse instance) =>
+Map<String, dynamic> _$$GetQuranVersesUthmaniSimpleResponseImplToJson(
+        _$GetQuranVersesUthmaniSimpleResponseImpl instance) =>
     <String, dynamic>{
       'verses': instance.verses.map((e) => e.toJson()).toList(),
     };

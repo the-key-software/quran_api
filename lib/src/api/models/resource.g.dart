@@ -6,7 +6,8 @@ part of 'resource.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource(
+_$ResourceImpl _$$ResourceImplFromJson(Map<String, dynamic> json) =>
+    _$ResourceImpl(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       authorName: json['author_name'] as String,
@@ -16,7 +17,8 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource(
           json['translated_name'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$ResourceToJson(Resource instance) => <String, dynamic>{
+Map<String, dynamic> _$$ResourceImplToJson(_$ResourceImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'author_name': instance.authorName,

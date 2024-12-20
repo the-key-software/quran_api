@@ -6,14 +6,14 @@ part of 'get_verses_by_key_verse_key_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetVersesByKeyVerseKeyResponse _$GetVersesByKeyVerseKeyResponseFromJson(
-        Map<String, dynamic> json) =>
-    GetVersesByKeyVerseKeyResponse(
-      verse: Verse.fromJson(json['Verse'] as Map<String, dynamic>),
-    );
+_$GetVersesByKeyVerseKeyResponseImpl
+    _$$GetVersesByKeyVerseKeyResponseImplFromJson(Map<String, dynamic> json) =>
+        _$GetVersesByKeyVerseKeyResponseImpl(
+          verse: Verse.fromJson(json['Verse'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$GetVersesByKeyVerseKeyResponseToJson(
-        GetVersesByKeyVerseKeyResponse instance) =>
+Map<String, dynamic> _$$GetVersesByKeyVerseKeyResponseImplToJson(
+        _$GetVersesByKeyVerseKeyResponseImpl instance) =>
     <String, dynamic>{
       'Verse': instance.verse.toJson(),
     };

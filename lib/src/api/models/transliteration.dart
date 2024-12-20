@@ -2,22 +2,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'transliteration.freezed.dart';
 part 'transliteration.g.dart';
 
-@JsonSerializable()
-class Transliteration {
-  const Transliteration({
-    required this.text,
-    required this.languageName,
-  });
+@Freezed()
+class Transliteration with _$Transliteration {
+  const factory Transliteration({
+    required String text,
+    @JsonKey(name: 'language_name')
+    required String languageName,
+  }) = _Transliteration;
   
   factory Transliteration.fromJson(Map<String, Object?> json) => _$TransliterationFromJson(json);
-  
-  final String text;
-  @JsonKey(name: 'language_name')
-  final String languageName;
-
-  Map<String, Object?> toJson() => _$TransliterationToJson(this);
 }

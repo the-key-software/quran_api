@@ -6,13 +6,15 @@ part of 'transliteration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Transliteration _$TransliterationFromJson(Map<String, dynamic> json) =>
-    Transliteration(
+_$TransliterationImpl _$$TransliterationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TransliterationImpl(
       text: json['text'] as String,
       languageName: json['language_name'] as String,
     );
 
-Map<String, dynamic> _$TransliterationToJson(Transliteration instance) =>
+Map<String, dynamic> _$$TransliterationImplToJson(
+        _$TransliterationImpl instance) =>
     <String, dynamic>{
       'text': instance.text,
       'language_name': instance.languageName,

@@ -2,22 +2,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'verse.dart';
 
+part 'get_verses_random_response.freezed.dart';
 part 'get_verses_random_response.g.dart';
 
-@JsonSerializable()
-class GetVersesRandomResponse {
-  const GetVersesRandomResponse({
-    required this.verse,
-  });
+@Freezed()
+class GetVersesRandomResponse with _$GetVersesRandomResponse {
+  const factory GetVersesRandomResponse({
+    @JsonKey(name: 'Verse')
+    required Verse verse,
+  }) = _GetVersesRandomResponse;
   
   factory GetVersesRandomResponse.fromJson(Map<String, Object?> json) => _$GetVersesRandomResponseFromJson(json);
-  
-  @JsonKey(name: 'Verse')
-  final Verse verse;
-
-  Map<String, Object?> toJson() => _$GetVersesRandomResponseToJson(this);
 }

@@ -6,14 +6,14 @@ part of 'get_verses_random_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetVersesRandomResponse _$GetVersesRandomResponseFromJson(
+_$GetVersesRandomResponseImpl _$$GetVersesRandomResponseImplFromJson(
         Map<String, dynamic> json) =>
-    GetVersesRandomResponse(
+    _$GetVersesRandomResponseImpl(
       verse: Verse.fromJson(json['Verse'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$GetVersesRandomResponseToJson(
-        GetVersesRandomResponse instance) =>
+Map<String, dynamic> _$$GetVersesRandomResponseImplToJson(
+        _$GetVersesRandomResponseImpl instance) =>
     <String, dynamic>{
       'Verse': instance.verse.toJson(),
     };

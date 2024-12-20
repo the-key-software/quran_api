@@ -6,14 +6,15 @@ part of 'media_content.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-MediaContent _$MediaContentFromJson(Map<String, dynamic> json) => MediaContent(
+_$MediaContentImpl _$$MediaContentImplFromJson(Map<String, dynamic> json) =>
+    _$MediaContentImpl(
       url: json['url'] as String,
       embedText: json['embed_text'] as String,
       provider: json['provider'] as String,
       authorName: json['author_name'] as String,
     );
 
-Map<String, dynamic> _$MediaContentToJson(MediaContent instance) =>
+Map<String, dynamic> _$$MediaContentImplToJson(_$MediaContentImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'embed_text': instance.embedText,

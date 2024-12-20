@@ -2,21 +2,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'info.freezed.dart';
 part 'info.g.dart';
 
-@JsonSerializable()
-class Info {
-  const Info({
-    required this.id,
-    required this.info,
-  });
+@Freezed()
+class Info with _$Info {
+  const factory Info({
+    required int id,
+    required String? info,
+  }) = _Info;
   
   factory Info.fromJson(Map<String, Object?> json) => _$InfoFromJson(json);
-  
-  final int id;
-  final String? info;
-
-  Map<String, Object?> toJson() => _$InfoToJson(this);
 }

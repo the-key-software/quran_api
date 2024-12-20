@@ -6,16 +6,16 @@ part of 'get_resources_tafsirs_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetResourcesTafsirsResponse _$GetResourcesTafsirsResponseFromJson(
+_$GetResourcesTafsirsResponseImpl _$$GetResourcesTafsirsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    GetResourcesTafsirsResponse(
+    _$GetResourcesTafsirsResponseImpl(
       tafsirs: (json['tafsirs'] as List<dynamic>)
           .map((e) => Resource.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$GetResourcesTafsirsResponseToJson(
-        GetResourcesTafsirsResponse instance) =>
+Map<String, dynamic> _$$GetResourcesTafsirsResponseImplToJson(
+        _$GetResourcesTafsirsResponseImpl instance) =>
     <String, dynamic>{
       'tafsirs': instance.tafsirs.map((e) => e.toJson()).toList(),
     };

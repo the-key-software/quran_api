@@ -6,14 +6,16 @@ part of 'audiofile.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Audiofile _$AudiofileFromJson(Map<String, dynamic> json) => Audiofile(
+_$AudiofileImpl _$$AudiofileImplFromJson(Map<String, dynamic> json) =>
+    _$AudiofileImpl(
       url: json['url'] as String,
       duration: json['duration'] as num,
       format: json['format'] as String,
       segments: json['segments'] as List<dynamic>,
     );
 
-Map<String, dynamic> _$AudiofileToJson(Audiofile instance) => <String, dynamic>{
+Map<String, dynamic> _$$AudiofileImplToJson(_$AudiofileImpl instance) =>
+    <String, dynamic>{
       'url': instance.url,
       'duration': instance.duration,
       'format': instance.format,

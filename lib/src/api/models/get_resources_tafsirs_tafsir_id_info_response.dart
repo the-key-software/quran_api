@@ -2,21 +2,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'get_resources_tafsirs_tafsir_id_info_response.freezed.dart';
 part 'get_resources_tafsirs_tafsir_id_info_response.g.dart';
 
-@JsonSerializable()
-class GetResourcesTafsirsTafsirIdInfoResponse {
-  const GetResourcesTafsirsTafsirIdInfoResponse({
-    required this.id,
-    required this.info,
-  });
+@Freezed()
+class GetResourcesTafsirsTafsirIdInfoResponse with _$GetResourcesTafsirsTafsirIdInfoResponse {
+  const factory GetResourcesTafsirsTafsirIdInfoResponse({
+    required num id,
+    required String? info,
+  }) = _GetResourcesTafsirsTafsirIdInfoResponse;
   
   factory GetResourcesTafsirsTafsirIdInfoResponse.fromJson(Map<String, Object?> json) => _$GetResourcesTafsirsTafsirIdInfoResponseFromJson(json);
-  
-  final num id;
-  final String? info;
-
-  Map<String, Object?> toJson() => _$GetResourcesTafsirsTafsirIdInfoResponseToJson(this);
 }

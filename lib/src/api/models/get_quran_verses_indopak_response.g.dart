@@ -6,16 +6,16 @@ part of 'get_quran_verses_indopak_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetQuranVersesIndopakResponse _$GetQuranVersesIndopakResponseFromJson(
-        Map<String, dynamic> json) =>
-    GetQuranVersesIndopakResponse(
-      verses: (json['verses'] as List<dynamic>)
-          .map((e) => Verses.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$GetQuranVersesIndopakResponseImpl
+    _$$GetQuranVersesIndopakResponseImplFromJson(Map<String, dynamic> json) =>
+        _$GetQuranVersesIndopakResponseImpl(
+          verses: (json['verses'] as List<dynamic>)
+              .map((e) => Verses.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$GetQuranVersesIndopakResponseToJson(
-        GetQuranVersesIndopakResponse instance) =>
+Map<String, dynamic> _$$GetQuranVersesIndopakResponseImplToJson(
+        _$GetQuranVersesIndopakResponseImpl instance) =>
     <String, dynamic>{
       'verses': instance.verses.map((e) => e.toJson()).toList(),
     };

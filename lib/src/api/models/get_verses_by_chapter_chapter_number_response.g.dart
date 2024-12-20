@@ -6,10 +6,10 @@ part of 'get_verses_by_chapter_chapter_number_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetVersesByChapterChapterNumberResponse
-    _$GetVersesByChapterChapterNumberResponseFromJson(
+_$GetVersesByChapterChapterNumberResponseImpl
+    _$$GetVersesByChapterChapterNumberResponseImplFromJson(
             Map<String, dynamic> json) =>
-        GetVersesByChapterChapterNumberResponse(
+        _$GetVersesByChapterChapterNumberResponseImpl(
           verses: (json['verses'] as List<dynamic>)
               .map((e) => Verse.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -17,8 +17,8 @@ GetVersesByChapterChapterNumberResponse
               Pagination.fromJson(json['Pagination'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$GetVersesByChapterChapterNumberResponseToJson(
-        GetVersesByChapterChapterNumberResponse instance) =>
+Map<String, dynamic> _$$GetVersesByChapterChapterNumberResponseImplToJson(
+        _$GetVersesByChapterChapterNumberResponseImpl instance) =>
     <String, dynamic>{
       'verses': instance.verses.map((e) => e.toJson()).toList(),
       'Pagination': instance.pagination.toJson(),

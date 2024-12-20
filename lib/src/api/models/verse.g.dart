@@ -6,7 +6,7 @@ part of 'verse.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Verse _$VerseFromJson(Map<String, dynamic> json) => Verse(
+_$VerseImpl _$$VerseImplFromJson(Map<String, dynamic> json) => _$VerseImpl(
       id: (json['id'] as num).toInt(),
       chapterId: (json['chapter_id'] as num).toInt(),
       verseNumber: (json['verse_number'] as num).toInt(),
@@ -39,7 +39,8 @@ Verse _$VerseFromJson(Map<String, dynamic> json) => Verse(
       v2Page: (json['v2_page'] as num).toInt(),
     );
 
-Map<String, dynamic> _$VerseToJson(Verse instance) => <String, dynamic>{
+Map<String, dynamic> _$$VerseImplToJson(_$VerseImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'chapter_id': instance.chapterId,
       'verse_number': instance.verseNumber,

@@ -2,34 +2,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, unused_import
 
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'translated_name3.dart';
 
+part 'resource.freezed.dart';
 part 'resource.g.dart';
 
-@JsonSerializable()
-class Resource {
-  const Resource({
-    required this.id,
-    required this.name,
-    required this.authorName,
-    required this.slug,
-    required this.languageName,
-    required this.translatedName,
-  });
+@Freezed()
+class Resource with _$Resource {
+  const factory Resource({
+    required int id,
+    required String name,
+    @JsonKey(name: 'author_name')
+    required String authorName,
+    required String slug,
+    @JsonKey(name: 'language_name')
+    required String languageName,
+    @JsonKey(name: 'translated_name')
+    required TranslatedName3 translatedName,
+  }) = _Resource;
   
   factory Resource.fromJson(Map<String, Object?> json) => _$ResourceFromJson(json);
-  
-  final int id;
-  final String name;
-  @JsonKey(name: 'author_name')
-  final String authorName;
-  final String slug;
-  @JsonKey(name: 'language_name')
-  final String languageName;
-  @JsonKey(name: 'translated_name')
-  final TranslatedName3 translatedName;
-
-  Map<String, Object?> toJson() => _$ResourceToJson(this);
 }

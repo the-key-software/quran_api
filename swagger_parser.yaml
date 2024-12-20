@@ -17,7 +17,7 @@ swagger_parser:
 
   # Optional (dart only).
   # Current available serializers are: json_serializable, freezed, dart_mappable.
-  json_serializer: json_serializable
+  json_serializer: freezed
 
   # Optional. Set default content-type for all requests.
   default_content_type: "application/json"

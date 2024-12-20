@@ -6,7 +6,8 @@ part of 'language.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Language _$LanguageFromJson(Map<String, dynamic> json) => Language(
+_$LanguageImpl _$$LanguageImplFromJson(Map<String, dynamic> json) =>
+    _$LanguageImpl(
       id: json['id'] as num,
       name: json['name'] as String,
       nativeName: json['native_name'] as String,
@@ -17,7 +18,8 @@ Language _$LanguageFromJson(Map<String, dynamic> json) => Language(
           .toList(),
     );
 
-Map<String, dynamic> _$LanguageToJson(Language instance) => <String, dynamic>{
+Map<String, dynamic> _$$LanguageImplToJson(_$LanguageImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'native_name': instance.nativeName,

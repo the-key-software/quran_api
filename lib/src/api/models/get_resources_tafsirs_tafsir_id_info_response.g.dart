@@ -6,16 +6,16 @@ part of 'get_resources_tafsirs_tafsir_id_info_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GetResourcesTafsirsTafsirIdInfoResponse
-    _$GetResourcesTafsirsTafsirIdInfoResponseFromJson(
+_$GetResourcesTafsirsTafsirIdInfoResponseImpl
+    _$$GetResourcesTafsirsTafsirIdInfoResponseImplFromJson(
             Map<String, dynamic> json) =>
-        GetResourcesTafsirsTafsirIdInfoResponse(
+        _$GetResourcesTafsirsTafsirIdInfoResponseImpl(
           id: json['id'] as num,
           info: json['info'] as String?,
         );
 
-Map<String, dynamic> _$GetResourcesTafsirsTafsirIdInfoResponseToJson(
-        GetResourcesTafsirsTafsirIdInfoResponse instance) =>
+Map<String, dynamic> _$$GetResourcesTafsirsTafsirIdInfoResponseImplToJson(
+        _$GetResourcesTafsirsTafsirIdInfoResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       if (instance.info case final value?) 'info': value,

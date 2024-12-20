@@ -6,7 +6,8 @@ part of 'chapter_infos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ChapterInfos _$ChapterInfosFromJson(Map<String, dynamic> json) => ChapterInfos(
+_$ChapterInfosImpl _$$ChapterInfosImplFromJson(Map<String, dynamic> json) =>
+    _$ChapterInfosImpl(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       authorName: json['author_name'] as String,
@@ -16,7 +17,7 @@ ChapterInfos _$ChapterInfosFromJson(Map<String, dynamic> json) => ChapterInfos(
           json['translated_name'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$ChapterInfosToJson(ChapterInfos instance) =>
+Map<String, dynamic> _$$ChapterInfosImplToJson(_$ChapterInfosImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
