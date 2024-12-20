@@ -10,3 +10,7 @@ scripts:
   fix-format:
     $script: fvm dart fix --apply && fvm dart format -o write ./lib
     $description: Fix code warnings and format code
+
+  publish:
+    $script: fvm flutter pub publish
+    $description: Publish the package to pub.dev
