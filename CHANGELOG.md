@@ -27,3 +27,6 @@
 
 ## 0.1.0
 - Auto generate the client using `swagger_parser`
+
+## 0.1.1
+- No Changes
