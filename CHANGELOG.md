@@ -26,4 +26,4 @@
 - fix the resources client implementation and add tests.
 
 ## 0.1.0
-- Auto generate the client using `swagger_to_dart`
+- Auto generate the client using `swagger_parser`
