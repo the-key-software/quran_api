@@ -4,10 +4,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 
 Future<void> main(List<String> args) async {
-  final String url =
-      'https://swift-nice-strictly.ngrok-free.app/swagger/v1/swagger.json';
-
-  // final url = 'http://0.0.0.0:8004/swagger/v1/swagger.json';
+  final String url = 'https://raw.githubusercontent.com/quran/qf-api-docs/refs/heads/main/openAPI/quran.com/v4.json';
 
   print('Downloading OpenAPI schema from $url');
   final dio = Dio();
