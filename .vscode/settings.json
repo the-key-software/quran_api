@@ -1,9 +1,13 @@
 {
-  // "debug.toolBarLocation": "commandCenter",
+  "dart.flutterSdkPath": ".fvm/versions/3.27.1",
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true,
+  "editor.codeLens": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml",
+    "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, scripts.yaml",
+    "l10n.yaml": "untranslated-messages-file.json, unused-messages-file.json",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
     "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
     "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).gr.dart, $(capture).data.dart",
@@ -14,25 +18,7 @@
     "**/*.freezed.dart": true,
     "**/*.gen.dart": true
   },
-  "cSpell.words": [
-    "Abul",
-    "bismillah",
-    "Fatihah",
-    "hafs",
-    "hizb",
-    "imlaei",
-    "indopak",
-    "juzs",
-    "Madani",
-    "madinah",
-    "Maududi",
-    "Muhsaf",
-    "Mushaf",
-    "sajdah",
-    "Tafhim",
-    "tafsir",
-    "tafsirs",
-    "tajweed",
-    "uthmani"
-  ]
+  "dart.renameFilesWithClasses": "prompt",
+  "cSpell.language": "en,ar",
+  "cSpell.words": []
 }

@@ -4,8 +4,8 @@ This package provides a Dart and Flutter implementation of the Quran API based o
 
 
 ## Swagger (OpenApi)  Documentation
-https://github.com/quran/qf-api-docs/blob/main/openAPI/quran.com/v4.json
-
+- https://github.com/quran/qf-api-docs/blob/main/openAPI/quran.com/v4.json
+- https://raw.githubusercontent.com/quran/qf-api-docs/refs/heads/main/openAPI/quran.com/v4.json
 ## Usage
 
 ```dart
