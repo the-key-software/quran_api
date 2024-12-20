@@ -3,6 +3,9 @@
 This package provides a Dart and Flutter implementation of the Quran API based on the [official documentation](https://api-docs.quran.com/docs/category/quran.com-api).
 
 
+## Swagger (OpenApi)  Documentation
+- https://github.com/quran/qf-api-docs/blob/main/openAPI/quran.com/v4.json
+- https://raw.githubusercontent.com/quran/qf-api-docs/refs/heads/main/openAPI/quran.com/v4.json
 ## Usage
 
 ```dart
@@ -16,22 +19,6 @@ Future<void> main() async {
   print(value.data.search.query);
 }
 ```
-
-## Features
-**it's a work in progress, but here's what's supported so far:**
-- Type-safe API calls and model.
-- Tested with 100% coverage.
-- Fully documented.
-- Implemented Using freezed, json_serializable, dio and retrofit.
-- All models support ```.toJson()``` and ```.fromJson()``` and ```.copyWith``` methods.
-- Clients
-    - [x] Audio
-    - [X] Chapters
-    - [x] Juz
-    - [x] Quran
-    - [x] Verses
-    - [x] Resources
-    - [x] Search
 
 ## Getting started
 In your `pubspec.yaml` file, add the following dependency:
